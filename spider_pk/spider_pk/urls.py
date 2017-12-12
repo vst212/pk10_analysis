@@ -1,3 +1,4 @@
+#coding=utf-8
 """spider_pk URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -29,7 +30,7 @@ import cross.cross_month
 
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
-    ##########################################V8#####################################
+    ##########################################V8版本#####################################
     url(r'^admin/$', admin),
     url(r'^index/$', index),
 
@@ -44,7 +45,7 @@ urlpatterns = [
     url(r'^admin_month_times/$', prob.views_month_times.admin_month_times),
     url(r'^index_month_times/$', prob.views_month_times.index_month_times),
     url(r'^index_month_times_evaluation/$', prob.views_month_times.index_month_times_evaluation),
-    ########################################V9#######################################################
+    ########################################V9版本  交叉分析与直线分析###########################################
     url(r'^cross_day_admin/$', cross.cross_day.admin),
     url(r'^cross_day_index/$', cross.cross_day.index),
 
