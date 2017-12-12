@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <title></title>
+</head>
+<body>
+<!--{% for loty in evaluations %}-->
+    <!--<table>-->
+        <!--<tr>-->
+            <!--<td>{{ loty.prob_range }}</td>-->
+            <!--<td>{{ loty.prob_rule }}</td>-->
+            <!--<td>{{ loty.prob_match }}</td>-->
+            <!--<td>{{ loty.prob_nomatch }}</td>-->
+        <!--</tr>-->
+    <!--</table>-->
+<!--{% endfor %}-->
+<ul class="nav nav-tabs">
+				<li class="active">
+					<a rel="nofollow" href="/admin/">按日统计</a>
+				</li>
+				<li >
+					<a rel="nofollow" href="/admin_month/">按月统计</a>
+				</li>
+                <!--<li>-->
+					<!--<a rel="nofollow" href="/admin_times/">按日统计新增重复次数</a>-->
+				<!--</li>-->
+				<!--<li >-->
+					<!--<a rel="nofollow" href="/admin_month_times/">按月统计新增重复次数</a>-->
+				<!--</li>-->
+			</ul>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<h4 align="center">
+				北京PK10
+			</h4>
+			<div class="row clearfix">
+				<div class="col-md-6 column">
+					<h5 align="center" color="red">
+						评估结果
+					</h5>
+					<table class="table" width=50%>
+						<thead>
+								<tr>
+									<th>
+										排名
+									</th>
+									<th>
+										统计规则
+									</th>
+									<th>
+										命中
+									</th>
+									<th>
+										挂子
+									</th>
+									<th>
+										下注
+									</th>
+									<th>
+										本金
+									</th>
+									<th>
+										赢数
+									</th>
+									<th>
+										输数
+									</th>
+									<th>
+										盈利
+									</th>
+								</tr>
+						</thead>
+
+					</table>
+					<div style="overflow-x: auto; overflow-y: auto; height: 250px; width:550px;">
+						<!--<table class="table table-hover table-bordered table-striped">-->
+						<table  class="table table-bordered scrolltable">
+							<!--<thead >-->
+								<!--<tr>-->
+									<!--<th>-->
+										<!--排名-->
+									<!--</th>-->
+									<!--<th>-->
+										<!--统计规则-->
+									<!--</th>-->
+									<!--<th>-->
+										<!--命中-->
+									<!--</th>-->
+									<!--<th>-->
+										<!--挂子-->
+									<!--</th>-->
+									<!--<th>-->
+										<!--下注-->
+									<!--</th>-->
+									<!--<th>-->
+										<!--本金-->
+									<!--</th>-->
+									<!--<th>-->
+										<!--赢数-->
+									<!--</th>-->
+									<!--<th>-->
+										<!--输数-->
+									<!--</th>-->
+									<!--<th>-->
+										<!--盈数-->
+									<!--</th>-->
+								<!--</tr>-->
+							<!--</thead>-->
+							<tbody>
+							{% for prob in probs %}
+								<tr class="success">
+									<td>
+										{{prob.prob_range}}
+									</td>
+									<td>
+										{{prob.prob_rule}}
+									</td>
+									<td>
+										{{prob.prob_match}}
+									</td>
+									<td>
+										{{prob.prob_nomatch}}
+									</td>
+									<td>
+										{{prob.prob_bet}}
+									</td>
+									<td>
+										{{prob.prob_amount}}
+									</td>
+									<td>
+										{{prob.prob_win}}
+									</td>
+									<td>
+										{{prob.prob_lose}}
+									</td>
+									<td>
+										{{prob.prob_gain}}
+									</td>
+								</tr>
+							{% endfor %}
+							</tbody>
+						</table>
+					</div>
+
+                    <table class="table" width=50%>
+						<thead>
+								<tr>
+									<th>
+										规则
+									</th>
+                                    <th>
+										总命中
+									</th>
+                                    <th>
+										总挂子
+									</th>
+                                    <th>
+										总下注
+									</th>
+									<th>
+										总本金
+									</th>
+									<th>
+										总计赢
+									</th>
+									<th>
+										总计输
+									</th>
+									<th>
+										总盈利
+									</th>
+								</tr>
+						</thead>
+
+					</table>
+                    <div style="overflow-x: auto; overflow-y: auto; height: 100px; width:550px;">
+						<!--<table class="table table-hover table-bordered table-striped">-->
+						<table  class="table table-bordered scrolltable">
+
+							<tbody>
+							{% for prob_total in prob_totals %}
+								<tr class="success">
+
+									<td>
+										{{prob_total.probtotal_rule}}
+									</td>
+                                    <td>
+										{{prob_total.probtotal_match}}
+									</td>
+                                    <td>
+										{{prob_total.probtotal_nomatch}}
+									</td>
+                                    <td>
+										{{prob_total.probtotal_bet}}
+									</td>
+									<td>
+										{{prob_total.probtotal_amount}}
+									</td>
+                                    <td>
+										{{prob_total.probtotal_win}}
+									</td>
+                                    <td>
+										{{prob_total.probtotal_lose}}
+									</td>
+                                    <td>
+										{{prob_total.probtotal_gain}}
+									</td>
+
+								</tr>
+							{% endfor %}
+							</tbody>
+						</table>
+					</div>
+
+                <form action="/index/" method="post" id="user_form">
+                <table class="table ">
+                    <tr>
+                        <td>
+                            指定评估日期：<br><input type="date" id="in_date_id" name="in_date" value="{{ p_date }}" />
+                        </td>
+
+                        <td >
+                            起始位置(1-10)：<br><input type="number" id="in_number_id" name="in_number" value="{{ p_number }}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            下注本金(正数)：<input type="number" id="in_monery_id" name="in_monery" value="{{ p_monery }}">
+                        </td>
+
+                        <td>
+                            规则器选择(1-8)：<input type="number" id="in_rule_id" name="in_rule" value="{{ p_rule }}">
+                        </td>
+                    </tr>
+
+                </table>
+                    <table class="table">
+                        <tr>
+                        <td>
+                            1双双单单<br>
+                            1单单双双
+                        </td>
+                        <td>
+                            2单双<br>
+                            2双单
+                        </td>
+                        <td>
+                            3单单单双双双<br>
+                            3双双双单单单
+                        </td>
+                        <td>
+                            4单单单双<br>
+                            4双双双单
+                        </td>
+                        </tr>
+                    <tr>
+                        <td>
+                            5大大小小<br>
+                            5小小大大
+                        </td>
+                        <td>
+                            6大小<br>
+                            6小大
+                        </td>
+                        <td>
+                            7大大大小<br>
+                            7小小小大
+                        </td>
+                        <td>
+                            8大大大小小小<br>
+                            8小小小大大大
+                        </td>
+                    </tr>
+
+                    </table>
+                </form>
+
+                <table class="table">
+                    <th>
+                        <td>
+                            <button onclick="judgeevaluation()"  name="ABC" value="start">开始评估</button>
+                        </td>
+                    </th>
+                </table>
+				</div>
+				<div class="col-md-6 column">
+					<h5 align="center">
+						开奖结果
+					</h5>
+                    <table  class="table">
+						<thead>
+							<tr >
+
+								<th width="100px">
+									时间
+								</th>
+								<th width="200px">
+									期号
+								</th>
+								<th width="150px">
+									号码
+								</th>
+							</tr>
+						</thead>
+                    </table>
+                    <div style="overflow-x: auto; overflow-y: auto; height: 500px; width:550px;">
+					    <table  class="table">
+
+						<tbody>
+                        {% for loty in lottery %}
+
+							<tr class="active">
+								<td width="150px">
+									{{ loty.lottery_time }}
+								</td>
+								<td width="50px">
+									{{ loty.lottery_id }}
+								</td>
+								<td width="150px">
+									{{ loty.lottery_number }}
+								</td>
+							</tr>
+                        {% endfor %}
+
+
+						</tbody>
+					</table>
+                    {%   if result_flag  %}
+                    <table>
+                        <tr>
+                            <td>
+
+                            </td>
+                        </tr>
+                    </table>
+                    {% else %}
+                        <table>
+                        <tr>
+                            <td>
+                                网络异常
+                            </td>
+                        </tr>
+                    </table>
+                    {% endif %}
+                    </div>
+                <!--<table class="table">-->
+                    <!--<tr>-->
+                        <!--<form action="/admin_month/" method="post" id="user_form">-->
+                            <!--<td>-->
+
+                            <!--</td>-->
+                            <!--<td>-->
+                                <!--<button style="background-color: olivedrab">跳转到按月统计</button>-->
+                            <!--</td>-->
+                        <!--</form>-->
+                    <!--</tr>-->
+                <!--</table>-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
+<script>
+function judgeevaluation()
+{
+
+    in_date = document.getElementById('in_date_id').value;
+    in_number = document.getElementById('in_number_id').value;
+    in_monery = document.getElementById('in_monery_id').value;
+    in_rule = document.getElementById('in_rule_id').value;
+
+    if (in_date && in_number && in_monery && in_rule){
+        if(in_number>0 && in_number<11){
+            if(in_monery > 0){
+                if(in_rule>0 && in_rule<=8){
+                    document.getElementById('user_form').submit();
+                }
+                else{
+                    alert('规则选择为1-8！');
+                }
+
+            }else{
+                alert('下注本金为正数！');
+            }
+        }
+        else{
+            alert('开始位置为1-10的整数！');
+        }
+    }
+    else{
+        alert('请输入完整信息！');
+    }
+
+{#    //获得 单选选按钮name集合#}
+{#    var s_radio_flag = document.getElementById('s_radio_id').checked;#}
+{#    var e_radio_flag = document.getElementById('e_radio_id').checked;#}
+{#    if (s_radio_flag || e_radio_flag) {#}
+{#        if (e_radio_flag){#}
+{#            time = document.getElementById('set_time_id').value#}
+{#            if (time>0){#}
+{#                document.getElementById('auto_reply_via_url_content').submit();#}
+{#            }#}
+{#            else{#}
+{#                alert('请确认时间是大于0的整数！')#}
+{#            }#}
+{##}
+{#        }#}
+{#        if (s_radio_flag){#}
+{#            var url_radios = document.getElementsByName("url_radio");#}
+{#            var reply_radios = document.getElementsByName("reply_radio");#}
+{#            var url_flag = 0#}
+{#            var reply_flag = 0#}
+{#            //根据 name集合长度 遍历name集合#}
+{#            for(var i=0;i<url_radios.length;i++)#}
+{#            {#}
+{#                //判断那个单选按钮为选中状态#}
+{#                if(url_radios[i].checked) {#}
+{#                    //弹出选中单选按钮的值#}
+{#                    url_flag = 1#}
+{#                }#}
+{#            }#}
+{#            for(var i=0;i<reply_radios.length;i++)#}
+{#            {#}
+{#                //判断那个单选按钮为选中状态#}
+{#                if(reply_radios[i].checked) {#}
+{#                    //弹出选中单选按钮的值#}
+{#                    reply_flag = 1#}
+{#                }#}
+{#            }#}
+{##}
+{#            if (url_flag && reply_flag) {#}
+{#                time = document.getElementById('set_time_id').value#}
+                {#        count = document.getElementById('set_count_id').value#}
+{#                if (time > 0) {#}
+{#                    document.getElementById('auto_reply_via_url_content').submit();#}
+{#                    alert('点击确定开始回帖！')#}
+{#                }#}
+{#                else {#}
+{#                    alert("请输入正确的时间！")#}
+{#                }#}
+{#            }#}
+{#            else {#}
+{#                alert("请选择url地址和要回复的内容！");#}
+{#            }#}
+{#        }#}
+{#    }#}
+{#    else{#}
+{#        alert('请选择开始或者结束回帖！')#}
+{#    }#}
+}
+
+</script>

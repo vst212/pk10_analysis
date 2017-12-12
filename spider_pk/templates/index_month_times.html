@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <title>月统计,重复鉴别</title>
+</head>
+<body>
+<!--{% for loty in evaluations %}-->
+    <!--<table>-->
+        <!--<tr>-->
+            <!--<td>{{ loty.prob_range }}</td>-->
+            <!--<td>{{ loty.prob_rule }}</td>-->
+            <!--<td>{{ loty.prob_match }}</td>-->
+            <!--<td>{{ loty.prob_nomatch }}</td>-->
+        <!--</tr>-->
+    <!--</table>-->
+<!--{% endfor %}-->
+<ul class="nav nav-tabs">
+				<li >
+					<a rel="nofollow" href="/admin/">按日统计</a>
+				</li>
+				<li >
+					<a rel="nofollow" href="/admin_month/">按月统计</a>
+				</li>
+                <!--<li >-->
+					<!--<a rel="nofollow" href="/admin_times/">按日统计新增重复次数</a>-->
+				<!--</li>-->
+				<!--<li class="active">-->
+					<!--<a rel="nofollow" href="/admin_month_times/">按月统计新增重复次数</a>-->
+				<!--</li>-->
+			</ul>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<h4 align="center">
+				北京PK10
+			</h4>
+			<div class="row clearfix">
+				<div class="col-md-6 column">
+					<h5 align="center" color="red">
+						评估结果
+					</h5>
+					<table class="table" width=50%>
+						<thead>
+								<tr>
+									<th>
+										排名
+									</th>
+									<th>
+										统计规则
+									</th>
+									<th>
+										命中
+									</th>
+									<th>
+										挂子
+									</th>
+									<th>
+										下注
+									</th>
+									<th>
+										本金
+									</th>
+									<th>
+										赢数
+									</th>
+									<th>
+										输数
+									</th>
+									<th>
+										盈利
+									</th>
+								</tr>
+						</thead>
+
+					</table>
+					<div style="overflow-x: auto; overflow-y: auto; height: 250px; width:550px;">
+						<!--<table class="table table-hover table-bordered table-striped">-->
+						<table  class="table table-bordered scrolltable">
+							<!--<thead >-->
+								<!--<tr>-->
+									<!--<th>-->
+										<!--排名-->
+									<!--</th>-->
+									<!--<th>-->
+										<!--统计规则-->
+									<!--</th>-->
+									<!--<th>-->
+										<!--命中-->
+									<!--</th>-->
+									<!--<th>-->
+										<!--挂子-->
+									<!--</th>-->
+									<!--<th>-->
+										<!--下注-->
+									<!--</th>-->
+									<!--<th>-->
+										<!--本金-->
+									<!--</th>-->
+									<!--<th>-->
+										<!--赢数-->
+									<!--</th>-->
+									<!--<th>-->
+										<!--输数-->
+									<!--</th>-->
+									<!--<th>-->
+										<!--盈数-->
+									<!--</th>-->
+								<!--</tr>-->
+							<!--</thead>-->
+							<tbody>
+							{% for prob in probs %}
+								<tr class="success">
+									<td>
+										{{prob.prob_range}}
+									</td>
+									<td>
+										{{prob.prob_rule}}
+									</td>
+									<td>
+										{{prob.prob_match}}
+									</td>
+									<td>
+										{{prob.prob_nomatch}}
+									</td>
+									<td>
+										{{prob.prob_bet}}
+									</td>
+									<td>
+										{{prob.prob_amount}}
+									</td>
+									<td>
+										{{prob.prob_win}}
+									</td>
+									<td>
+										{{prob.prob_lose}}
+									</td>
+									<td>
+										{{prob.prob_gain}}
+									</td>
+								</tr>
+							{% endfor %}
+							</tbody>
+						</table>
+					</div>
+
+                    <table class="table" width=50%>
+						<thead>
+								<tr>
+									<th>
+										规则
+									</th>
+                                    <th>
+										总命中
+									</th>
+                                    <th>
+										总挂子
+									</th>
+                                    <th>
+										总下注
+									</th>
+									<th>
+										总本金
+									</th>
+									<th>
+										总计赢
+									</th>
+									<th>
+										总计输
+									</th>
+									<th>
+										总盈利
+									</th>
+								</tr>
+						</thead>
+
+					</table>
+                    <div style="overflow-x: auto; overflow-y: auto; height: 100px; width:550px;">
+						<!--<table class="table table-hover table-bordered table-striped">-->
+						<table  class="table table-bordered scrolltable">
+
+							<tbody>
+							{% for prob_total in prob_totals %}
+								<tr class="success">
+
+									<td>
+										{{prob_total.probtotal_rule}}
+									</td>
+                                    <td>
+										{{prob_total.probtotal_match}}
+									</td>
+                                    <td>
+										{{prob_total.probtotal_nomatch}}
+									</td>
+                                    <td>
+										{{prob_total.probtotal_bet}}
+									</td>
+									<td>
+										{{prob_total.probtotal_amount}}
+									</td>
+                                    <td>
+										{{prob_total.probtotal_win}}
+									</td>
+                                    <td>
+										{{prob_total.probtotal_lose}}
+									</td>
+                                    <td>
+										{{prob_total.probtotal_gain}}
+									</td>
+
+								</tr>
+							{% endfor %}
+							</tbody>
+						</table>
+					</div>
+
+                <form action="/index_month_times_evaluation/" method="post" id="user_form_month">
+                <table class="table ">
+                    <tr>
+                        <td>
+                            评估月份(当月最后一天)：<br><input type="date" id="in_date_id" name="in_date" value="{{ p_date }}" />
+                        </td>
+                        <td>
+                            重复次数(3-10)：<br><input type="number" id="in_times_id" name="in_times" value="{{ p_times }}" />
+                        </td>
+                        <td >
+                            起始位置(1-10)：<br><input type="number" id="in_number_id" name="in_number" value="{{ p_number }}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            下注本金(正数)：<input type="number" id="in_monery_id" name="in_monery" value="{{ p_monery }}">
+                        </td>
+
+                        <td>
+                            规则器选择(1-8)：<input type="number" id="in_rule_id" name="in_rule" value="{{ p_rule }}">
+                        </td>
+                    </tr>
+
+                </table>
+                    <table class="table">
+                        <tr>
+                        <td>
+                            1双双单单<br>
+                            1单单双双
+                        </td>
+                        <td>
+                            2单双<br>
+                            2双单
+                        </td>
+                        <td>
+                            3单单单双双双<br>
+                            3双双双单单单
+                        </td>
+                        <td>
+                            4单单单双<br>
+                            4双双双单
+                        </td>
+                        </tr>
+                    <tr>
+                        <td>
+                            5大大小小<br>
+                            5小小大大
+                        </td>
+                        <td>
+                            6大小<br>
+                            6小大
+                        </td>
+                        <td>
+                            7大大大小<br>
+                            7小小小大
+                        </td>
+                        <td>
+                            8大大大小小小<br>
+                            8小小小大大大
+                        </td>
+                    </tr>
+
+                    </table>
+                </form>
+
+                <table class="table">
+                    <th>
+                        <td>
+                            <button onclick="judgeevaluation()"  name="ABC" value="start">开始月份评估</button>
+                        </td>
+                    </th>
+                </table>
+				</div>
+				<div class="col-md-6 column">
+					<h5 align="center">
+						开奖结果
+					</h5>
+                    <table  class="table">
+						<thead>
+							<tr >
+
+								<th width="100px">
+									时间
+								</th>
+								<th width="200px">
+									期号
+								</th>
+								<th width="150px">
+									号码
+								</th>
+							</tr>
+						</thead>
+                    </table>
+                    <div style="overflow-x: auto; overflow-y: auto; height: 500px; width:550px;">
+					    <table  class="table">
+						<tbody>
+                        {% for loty in lottery %}
+
+							<tr class="active">
+								<td width="150px">
+									{{ loty.lottery_time }}
+								</td>
+								<td width="50px">
+									{{ loty.lottery_id }}
+								</td>
+								<td width="150px">
+									{{ loty.lottery_number }}
+								</td>
+							</tr>
+                        {% endfor %}
+
+
+						</tbody>
+					</table>
+
+                    </div>
+                {%   if result_flag  %}
+                    <table>
+                        <tr>
+                            <td>
+
+                            </td>
+                        </tr>
+                    </table>
+                    {% else %}
+                    <table>
+                        <tr>
+                            <td>
+                                网络异常,采集失败的日期，请重新采集
+                            </td>
+                            <td>
+                                {{ faild_date }}
+                            </td>
+                        </tr>
+                    </table>
+                {% endif %}
+                <form action="/index_month_times/" method="post" id="user_month_form">
+                    <table class="table ">
+                        <tr>
+                            <td>
+                                选择采集月份的最后一天(当前月份选择当天时间)：<br><input type="date" id="in_month_id" name="in_month_date" value="{{ p_date }}" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+
+                    <table class="table ">
+                        <th>
+                            <td>
+                                <button onclick="judgespider()"  name="month" value="startmonth">开始采集当月数据</button>
+                            </td>
+                            <!--<form action="/admin_times/" method="post" id="user_form">-->
+                                <!--<td>-->
+
+                                    <!--<button style="background-color: olivedrab"> 跳转到按日统计</button>-->
+                                <!--</td>-->
+                            <!--</form>-->
+                        </th>
+                    </table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
+<script>
+function judgeevaluation()
+{
+
+    in_times = document.getElementById('in_times_id').value;
+
+    in_date = document.getElementById('in_date_id').value;
+    in_number = document.getElementById('in_number_id').value;
+    in_monery = document.getElementById('in_monery_id').value;
+    in_rule = document.getElementById('in_rule_id').value;
+
+    if (in_date && in_number && in_monery && in_rule){
+        if(in_number>0 && in_number<11){
+            if(in_monery > 0){
+                if(in_rule>0 && in_rule<=8){
+                    if(in_times >=3 && in_times<=10 ){
+                        document.getElementById('user_form_month').submit();
+                    }
+                    else{
+                        alert('重复次数为3-10！');
+                    }
+
+                }
+                else{
+                    alert('规则选择为1-8！');
+                }
+
+            }else{
+                alert('下注本金为正数！');
+            }
+        }
+        else{
+            alert('开始位置为1-10的整数！');
+        }
+    }
+    else{
+        alert('请输入完整信息！');
+    }
+}
+
+
+function judgespider()
+{
+
+    in_month_date = document.getElementById('in_month_id').value;
+    if (in_month_date){
+        document.getElementById('user_month_form').submit();
+    }
+    else{
+        alert('请选择日期，采集当月信息需选中当月的最后一天！');
+    }
+}
+
+</script>
