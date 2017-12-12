@@ -96,22 +96,24 @@ def index(request):
     print "......................"
     # base_lottery_list,base_lottery_list_left_right_change,parity_lottery_list,larsma_lottery_list = parase_lotterys(lotterys)
 
+    column_num = 10
+    calc_num = 3
     #将model数据转换成对应的数组
     base_lottery_list,base_lottery_list_left_right_change = parase_lotterys(lotterys)
     #对角线转换
-    tran_cross_lottery_list = tran_croos_data(base_lottery_list)
-    tran_cross_lottery_list_left_right_change = tran_croos_data(base_lottery_list_left_right_change)
+    tran_cross_lottery_list = tran_croos_data(base_lottery_list, column_num, calc_num)
+    tran_cross_lottery_list_left_right_change = tran_croos_data(base_lottery_list_left_right_change, column_num, calc_num)
     #获取规则
+    print "p_number", p_number
     rule_num_list = get_num_rule(p_number)
     #评估
     num = int(p_number)
     monery = int(p_monery)
     evaluation_num(monery,num,tran_cross_lottery_list,rule_num_list, tran_cross_lottery_list_left_right_change)
 
-    #获取规则
-    rule_parity_list,rule_larsma_list = get_rule(p_rule)
-
-    evaluation(monery, num, parity_lottery_list, rule_parity_list, larsma_lottery_list, rule_larsma_list )
+    #获取规则 原始
+    # rule_parity_list,rule_larsma_list = get_rule(p_rule)
+    # evaluation(monery, num, parity_lottery_list, rule_parity_list, larsma_lottery_list, rule_larsma_list )
     probs = Probs.objects.all()
     prob_totals = ProbTotals.objects.all()
     return render_to_response('cross_day_index.html',{'lottery':lotterys,'probs':probs,'prob_totals':prob_totals,
@@ -260,10 +262,11 @@ def tran_croos_data(base_data,column_num, calc_num):
 def get_num_rule(p_number):
     #数字规则
     rule_num_list = []
-    rule_times = int(p_number)
+    rule_times = int(p_number) + 1
     for i in range(10):
         num = i + 1
         rule_num_list.append([num]*rule_times)
+    # print rule_num_list
     return rule_num_list
 
 #奇偶大小规则
@@ -307,12 +310,6 @@ def evaluation_num(monery,num,tran_cross_lottery_list,rule_num_list, tran_cross_
     Probs.objects.all().delete()
     ProbTotals.objects.all().delete()
 
-    # tran_parity_lottery_list = map(list, zip(*parity_lottery_list))
-    # tran_larsma_lottery_list = map(list, zip(*larsma_lottery_list))
-
-    #共10列
-
-    total_prob_value = [[]] * 10
     #正向和反向
     for i in range(2):
         #第几名即 第几列写入prob_range
@@ -322,26 +319,31 @@ def evaluation_num(monery,num,tran_cross_lottery_list,rule_num_list, tran_cross_
         else:
             prob_range = '反方向'
             cross_lottery_list = tran_cross_lottery_list_left_right_change
-        j = 0
+        print "1--->  ",prob_range
         for rule_parity in rule_num_list:
             # print 'rule_parity ',rule_parity
             #哪种规则 prob_rule
             prob_rule = ''
             for rule in rule_parity:
                 prob_rule = prob_rule + str(rule)
-
+            prob_match = 0
+            prob_nomatch = 0
             for cross_lottery in cross_lottery_list:
 
                 #填充规则数据
-                rule_parity = rule_parity
+                rule_num = rule_parity
                 target = cross_lottery
                 prob_value_tmp = [0] * len(target)
-                prob_value = compute_rule(num, rule_parity, target, prob_value_tmp)
-            #开始计算行数据 1的个数，-1的个数
-            prob_match = prob_value.count(1)
-            # print 'prob_match ',prob_match
-            prob_nomatch = prob_value.count(-1)
-            # print 'prob_nomatch ',prob_nomatch
+                # print "target  ,rule_num  ",target,rule_num
+                prob_value = compute_rule(num, rule_num, target, prob_value_tmp)
+                # print "prob_value is ",prob_value
+                #开始计算行数据 1的个数，-1的个数
+                prob_match = prob_match + prob_value.count(1)
+                # print 'prob_match ',prob_match
+                prob_nomatch = prob_nomatch + prob_value.count(-1)
+
+            print 'prob_match ',prob_match
+            print 'prob_nomatch ',prob_nomatch
             prob_bet = prob_match + prob_nomatch
 
             prob_amount = prob_bet * monery
@@ -349,20 +351,17 @@ def evaluation_num(monery,num,tran_cross_lottery_list,rule_num_list, tran_cross_
             # prob_lose = prob_nomatch * monery
             # prob_gain = prob_win - prob_lose
 
-            prob_win = prob_match * monery * 1.95
+            prob_win = prob_match * monery * 9.8
             prob_lose = prob_nomatch * monery
-            prob_gain = prob_match * monery * 0.95 - prob_nomatch * monery
+            prob_gain = prob_match * monery * 8.8 - prob_nomatch * monery
 
             #结果值记录总统计
-            total_prob_value[i].append(prob_value)
+            # total_prob_value[i].append(prob_value)
             #写入对象
             obj_pro = Probs(prob_range=prob_range, prob_rule=prob_rule, prob_match=prob_match, prob_nomatch=prob_nomatch,
                             prob_bet=prob_bet, prob_amount=prob_amount, prob_win=prob_win, prob_lose=prob_lose, prob_gain=prob_gain )
             #, prob_win=prob_win, prob_lose=prob_lose, prob_gain=prob_gain
             obj_pro.save()
-
-            j = j + 1
-
 
     current_probs = Probs.objects.all()
     # current_probtatol = ProbTotal.objects.all()
@@ -590,39 +589,7 @@ def evaluation(monery, num, parity_lottery_list, rule_parity_list, larsma_lotter
     tmp_all_total_obj.save()
 
 
-def compute_rule_old(num, rule, target, prob_value):
-    count = 0
-    index = 0
-    max = len(target)- num
-    while(count < max):
-        if(target[count:count+num] == rule[index:index+num]):
-            # print target[count:count+num]
-            #进一步判断target下一位与rule的下一位是否相等
-            count = count + num
-            index = index + num
-            # print count,'   ',target[count],'   ',index,'   ',rule[index]
-            while(target[count] == rule[index]):
-                prob_value[count] = 1
-                count = count + 1
-                index = index + 1
-                #如果到最后一个，跳出循环
-                if (count >= len(target)):
-                    break
-
-            #循环结束即target下一位与rule的下一位不相等，记为-1
-            #下一位开始计数
-            if (count >= len(target)):
-                break
-            else:
-                prob_value[count] = -1
-                count = count + 1
-                index = 0
-        else:
-            # print "not match",count
-            count = count + 1
-
-    return prob_value
-
+##计算规则，出现相同的时候，判断下一个是否一致，不一致为-1，一致为1，重新开始判断
 def compute_rule(num, rule, target, prob_value):
     count = 0
     index = 0
@@ -634,6 +601,8 @@ def compute_rule(num, rule, target, prob_value):
             count = count + num
             index = index + num
             # print count,'   ',target[count],'   ',index,'   ',rule[index]
+            # print 'target, rule ', target, rule
+            # print 'count index  ',count,'     ',index
             if(target[count] == rule[index]):
                 prob_value[count] = 1
                 count = count + 1
