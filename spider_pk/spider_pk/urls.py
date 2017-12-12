@@ -23,6 +23,7 @@ import prob.views_month_times
 
 ######################
 import cross.cross_day
+import cross.cross_month
 
 
 
@@ -46,5 +47,9 @@ urlpatterns = [
     ########################################V9#######################################################
     url(r'^cross_day_admin/$', cross.cross_day.admin),
     url(r'^cross_day_index/$', cross.cross_day.index),
+
+    url(r'^cross_month_admin/$', cross.cross_month.admin_month),
+    url(r'^cross_month_index/$', cross.cross_month.index_month),
+    url(r'^cross_month_evaluation/$', cross.cross_month.index_month_evaluation),
 
 ]

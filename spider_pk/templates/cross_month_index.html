@@ -5,7 +5,7 @@
     <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <title>北京PK10--交叉统计与直线统计--日统计</title>
+    <title>北京PK10--交叉统计与直线统计--月统计</title>
 </head>
 <body>
 <!--{% for loty in evaluations %}-->
@@ -18,11 +18,12 @@
         <!--</tr>-->
     <!--</table>-->
 <!--{% endfor %}-->
-<ul class="nav nav-tabs">
-				<li class="active">
+
+        	<ul class="nav nav-tabs">
+				<li >
 					<a rel="nofollow" href="/cross_day_admin/">按日统计</a>
 				</li>
-				<li >
+				<li class="active">
 					<a rel="nofollow" href="/cross_month_admin/">按月统计</a>
 				</li>
                 <!--<li>-->
@@ -32,11 +33,12 @@
 					<!--<a rel="nofollow" href="/admin_month_times/">按月统计新增重复次数</a>-->
 				<!--</li>-->
 			</ul>
+
 <div class="container">
 	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<h4 align="center">
-				北京PK10--交叉统计与直线统计--按日统计
+				北京PK10--交叉统计与直线统计--按月统计
 			</h4>
 			<div class="row clearfix">
 				<div class="col-md-6 column">
@@ -217,15 +219,15 @@
 						</table>
 					</div>
 
-                <form action="/cross_day_index/" method="post" id="user_form">
+                <form action="/cross_month_evaluation/" method="post" id="user_form_month">
                 <table class="table ">
                     <tr>
                         <td>
-                            指定评估日期：<br><input type="date" id="in_date_id" name="in_date" value="{{ p_date }}" />
+                            评估月份(当月最后一天)：<br><input type="date" id="in_date_id" name="in_date" value="{{ p_date }}" />
                         </td>
 
 {#                        <td >#}
-{#                            出现次数选择器(2)：<br><input type="number" id="in_number_id" name="in_number" value="{{ p_number }}" />#}
+{#                            起始位置(1-10)：<br><input type="number" id="in_number_id" name="in_number" value="{{ p_number }}" />#}
 {#                        </td>#}
                     </tr>
                     <tr>
@@ -234,11 +236,12 @@
                         </td>
 
                         <td>
-                            交叉 直线规则选择器(1 2)：<input type="number" id="in_rule_id" name="in_rule" value="{{ p_rule }}">
+                             交叉 直线规则选择器(1 2)：<input type="number" id="in_rule_id" name="in_rule" value="{{ p_rule }}">
                         </td>
                     </tr>
 
                 </table>
+
                     <table class="table">
                         <tr>
                         <td>
@@ -247,32 +250,6 @@
                         <td>
                             2-直线处理
                         </td>
-{#                        <td>#}
-{#                            3单单单双双双<br>#}
-{#                            3双双双单单单#}
-{#                        </td>#}
-{#                        <td>#}
-{#                            4单单单双<br>#}
-{#                            4双双双单#}
-{#                        </td>#}
-{#                        </tr>#}
-{#                    <tr>#}
-{#                        <td>#}
-{#                            5大大小小<br>#}
-{#                            5小小大大#}
-{#                        </td>#}
-{#                        <td>#}
-{#                            6大小<br>#}
-{#                            6小大#}
-{#                        </td>#}
-{#                        <td>#}
-{#                            7大大大小<br>#}
-{#                            7小小小大#}
-{#                        </td>#}
-{#                        <td>#}
-{#                            8大大大小小小<br>#}
-{#                            8小小小大大大#}
-{#                        </td>#}
                     </tr>
 
                     </table>
@@ -281,7 +258,7 @@
                 <table class="table">
                     <th>
                         <td>
-                            <button onclick="judgeevaluation()"  name="ABC" value="start">开始评估</button>
+                            <button onclick="judgeevaluation()"  name="ABC" value="start">开始月份评估</button>
                         </td>
                     </th>
                 </table>
@@ -308,7 +285,6 @@
                     </table>
                     <div style="overflow-x: auto; overflow-y: auto; height: 500px; width:550px;">
 					    <table  class="table">
-
 						<tbody>
                         {% for loty in lottery %}
 
@@ -328,7 +304,9 @@
 
 						</tbody>
 					</table>
-                    {%   if result_flag  %}
+
+                    </div>
+                {%   if result_flag  %}
                     <table>
                         <tr>
                             <td>
@@ -337,27 +315,40 @@
                         </tr>
                     </table>
                     {% else %}
-                        <table>
+                    <table>
                         <tr>
                             <td>
-                                网络异常
+                                网络异常,采集失败的日期，请重新采集
+                            </td>
+                            <td>
+                                {{ faild_date }}
                             </td>
                         </tr>
                     </table>
-                    {% endif %}
-                    </div>
-                <!--<table class="table">-->
-                    <!--<tr>-->
-                        <!--<form action="/admin_month/" method="post" id="user_form">-->
-                            <!--<td>-->
+                {% endif %}
+                <form action="/cross_month_index/" method="post" id="user_month_form">
+                    <table class="table ">
+                        <tr>
+                            <td>
+                                选择采集月份的最后一天(当前月份选择当天时间)：<br><input type="date" id="in_month_id" name="in_month_date" value="{{ p_date }}" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
 
-                            <!--</td>-->
-                            <!--<td>-->
-                                <!--<button style="background-color: olivedrab">跳转到按月统计</button>-->
-                            <!--</td>-->
-                        <!--</form>-->
-                    <!--</tr>-->
-                <!--</table>-->
+                    <table class="table ">
+                        <th>
+                            <td>
+                                <button onclick="judgespider()"  name="month" value="startmonth">开始采集当月数据</button>
+                            </td>
+                            <!--<form action="/admin/" method="post" id="user_form">-->
+                                <!--<td>-->
+
+                                    <!--<button style="background-color: olivedrab"> 跳转到按日统计</button>-->
+                                <!--</td>-->
+                            <!--</form>-->
+                        </th>
+                    </table>
 				</div>
 			</div>
 		</div>
@@ -381,7 +372,7 @@ function judgeevaluation()
         if(in_number>0 && in_number<11){
             if(in_monery > 0){
                 if(in_rule>0 && in_rule<=8){
-                    document.getElementById('user_form').submit();
+                    document.getElementById('user_form_month').submit();
                 }
                 else{
                     alert('规则选择为1-8！');
@@ -398,63 +389,19 @@ function judgeevaluation()
     else{
         alert('请输入完整信息！');
     }
+}
 
-{#    //获得 单选选按钮name集合#}
-{#    var s_radio_flag = document.getElementById('s_radio_id').checked;#}
-{#    var e_radio_flag = document.getElementById('e_radio_id').checked;#}
-{#    if (s_radio_flag || e_radio_flag) {#}
-{#        if (e_radio_flag){#}
-{#            time = document.getElementById('set_time_id').value#}
-{#            if (time>0){#}
-{#                document.getElementById('auto_reply_via_url_content').submit();#}
-{#            }#}
-{#            else{#}
-{#                alert('请确认时间是大于0的整数！')#}
-{#            }#}
-{##}
-{#        }#}
-{#        if (s_radio_flag){#}
-{#            var url_radios = document.getElementsByName("url_radio");#}
-{#            var reply_radios = document.getElementsByName("reply_radio");#}
-{#            var url_flag = 0#}
-{#            var reply_flag = 0#}
-{#            //根据 name集合长度 遍历name集合#}
-{#            for(var i=0;i<url_radios.length;i++)#}
-{#            {#}
-{#                //判断那个单选按钮为选中状态#}
-{#                if(url_radios[i].checked) {#}
-{#                    //弹出选中单选按钮的值#}
-{#                    url_flag = 1#}
-{#                }#}
-{#            }#}
-{#            for(var i=0;i<reply_radios.length;i++)#}
-{#            {#}
-{#                //判断那个单选按钮为选中状态#}
-{#                if(reply_radios[i].checked) {#}
-{#                    //弹出选中单选按钮的值#}
-{#                    reply_flag = 1#}
-{#                }#}
-{#            }#}
-{##}
-{#            if (url_flag && reply_flag) {#}
-{#                time = document.getElementById('set_time_id').value#}
-                {#        count = document.getElementById('set_count_id').value#}
-{#                if (time > 0) {#}
-{#                    document.getElementById('auto_reply_via_url_content').submit();#}
-{#                    alert('点击确定开始回帖！')#}
-{#                }#}
-{#                else {#}
-{#                    alert("请输入正确的时间！")#}
-{#                }#}
-{#            }#}
-{#            else {#}
-{#                alert("请选择url地址和要回复的内容！");#}
-{#            }#}
-{#        }#}
-{#    }#}
-{#    else{#}
-{#        alert('请选择开始或者结束回帖！')#}
-{#    }#}
+
+function judgespider()
+{
+
+    in_month_date = document.getElementById('in_month_id').value;
+    if (in_month_date){
+        document.getElementById('user_month_form').submit();
+    }
+    else{
+        alert('请选择日期，采集当月信息需选中当月的最后一天！');
+    }
 }
 
 </script>
