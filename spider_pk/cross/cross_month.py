@@ -105,8 +105,6 @@ def index_month(request):
         result_flag = False
     else:
         result_flag = True
-    # return render_to_response('index_month.html', {'lottery': lotterys, 'probs': probs, 'prob_totals': prob_totals,
-    #                                                'p_date': p_date, 'result_flag': result_flag})
     return render_to_response('cross_month_index.html',{'lottery': lotterys,'faild_date':spider_faild_date_list,'p_date':p_date, 'result_flag': result_flag} )
 
 #评估
@@ -157,7 +155,6 @@ def get_html(url):
     try:
         req = urllib2.Request(url = url, headers = headers)
         page = urllib2.urlopen(req,timeout = 10)
-        # page = urllib2.urlopen(url)
         html = page.read()
     except:
         html = None

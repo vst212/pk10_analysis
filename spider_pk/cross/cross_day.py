@@ -401,10 +401,6 @@ def evaluation_column(monery, num, parity_lottery_list, rule_parity_list):
             rule_parity = rule_parity
             target = tran_parity_lottery_list[i]
             prob_value = [0] * len(target)
-            # print 'odd or even'
-            # print 'target,rule_parity  ',target,'    ',rule_parity
-            # f.write(str(target))
-            # f.write('\n')
 
             prob_value = compute_rule(num, rule_parity, target, prob_value)
             # print 'prob_value  ',prob_value
@@ -514,9 +510,7 @@ def compute_rule(num, rule, target, prob_value):
             #进一步判断target下一位与rule的下一位是否相等
             count = count + num
             index = index + num
-            # print count,'   ',target[count],'   ',index,'   ',rule[index]
-            # print 'target, rule ', target, rule
-            # print 'count index  ',count,'     ',index
+
             if(target[count] == rule[index]):
                 prob_value[count] = 1
                 count = count + 1

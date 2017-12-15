@@ -82,37 +82,7 @@
 					<div style="overflow-x: auto; overflow-y: auto; height: 250px; width:550px;">
 						<!--<table class="table table-hover table-bordered table-striped">-->
 						<table  class="table table-bordered scrolltable">
-							<!--<thead >-->
-								<!--<tr>-->
-									<!--<th>-->
-										<!--排名-->
-									<!--</th>-->
-									<!--<th>-->
-										<!--统计规则-->
-									<!--</th>-->
-									<!--<th>-->
-										<!--命中-->
-									<!--</th>-->
-									<!--<th>-->
-										<!--挂子-->
-									<!--</th>-->
-									<!--<th>-->
-										<!--下注-->
-									<!--</th>-->
-									<!--<th>-->
-										<!--本金-->
-									<!--</th>-->
-									<!--<th>-->
-										<!--赢数-->
-									<!--</th>-->
-									<!--<th>-->
-										<!--输数-->
-									<!--</th>-->
-									<!--<th>-->
-										<!--盈数-->
-									<!--</th>-->
-								<!--</tr>-->
-							<!--</thead>-->
+
 							<tbody>
 							{% for prob in probs %}
 								<tr class="success">
@@ -226,9 +196,6 @@
                             评估月份(当月最后一天)：<br><input type="date" id="in_date_id" name="in_date" value="{{ p_date }}" />
                         </td>
 
-{#                        <td >#}
-{#                            起始位置(1-10)：<br><input type="number" id="in_number_id" name="in_number" value="{{ p_number }}" />#}
-{#                        </td>#}
                     </tr>
                     <tr>
                         <td>
@@ -341,12 +308,7 @@
                             <td>
                                 <button onclick="judgespider()"  name="month" value="startmonth">开始采集当月数据</button>
                             </td>
-                            <!--<form action="/admin/" method="post" id="user_form">-->
-                                <!--<td>-->
 
-                                    <!--<button style="background-color: olivedrab"> 跳转到按日统计</button>-->
-                                <!--</td>-->
-                            <!--</form>-->
                         </th>
                     </table>
 				</div>
@@ -371,11 +333,11 @@ function judgeevaluation()
     if (in_date && in_number && in_monery && in_rule){
         if(in_number>0 && in_number<11){
             if(in_monery > 0){
-                if(in_rule>0 && in_rule<=8){
+                if(in_rule>0 && in_rule<=2){
                     document.getElementById('user_form_month').submit();
                 }
                 else{
-                    alert('规则选择为1-8！');
+                    alert('规则选择为1-2！');
                 }
 
             }else{
@@ -403,5 +365,4 @@ function judgespider()
         alert('请选择日期，采集当月信息需选中当月的最后一天！');
     }
 }
-
 </script>

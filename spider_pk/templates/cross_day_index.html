@@ -380,11 +380,11 @@ function judgeevaluation()
     if (in_date && in_number && in_monery && in_rule){
         if(in_number>0 && in_number<11){
             if(in_monery > 0){
-                if(in_rule>0 && in_rule<=8){
+                if(in_rule>0 && in_rule<=2){
                     document.getElementById('user_form').submit();
                 }
                 else{
-                    alert('规则选择为1-8！');
+                    alert('规则选择为1-2！');
                 }
 
             }else{
@@ -398,63 +398,6 @@ function judgeevaluation()
     else{
         alert('请输入完整信息！');
     }
-
-{#    //获得 单选选按钮name集合#}
-{#    var s_radio_flag = document.getElementById('s_radio_id').checked;#}
-{#    var e_radio_flag = document.getElementById('e_radio_id').checked;#}
-{#    if (s_radio_flag || e_radio_flag) {#}
-{#        if (e_radio_flag){#}
-{#            time = document.getElementById('set_time_id').value#}
-{#            if (time>0){#}
-{#                document.getElementById('auto_reply_via_url_content').submit();#}
-{#            }#}
-{#            else{#}
-{#                alert('请确认时间是大于0的整数！')#}
-{#            }#}
-{##}
-{#        }#}
-{#        if (s_radio_flag){#}
-{#            var url_radios = document.getElementsByName("url_radio");#}
-{#            var reply_radios = document.getElementsByName("reply_radio");#}
-{#            var url_flag = 0#}
-{#            var reply_flag = 0#}
-{#            //根据 name集合长度 遍历name集合#}
-{#            for(var i=0;i<url_radios.length;i++)#}
-{#            {#}
-{#                //判断那个单选按钮为选中状态#}
-{#                if(url_radios[i].checked) {#}
-{#                    //弹出选中单选按钮的值#}
-{#                    url_flag = 1#}
-{#                }#}
-{#            }#}
-{#            for(var i=0;i<reply_radios.length;i++)#}
-{#            {#}
-{#                //判断那个单选按钮为选中状态#}
-{#                if(reply_radios[i].checked) {#}
-{#                    //弹出选中单选按钮的值#}
-{#                    reply_flag = 1#}
-{#                }#}
-{#            }#}
-{##}
-{#            if (url_flag && reply_flag) {#}
-{#                time = document.getElementById('set_time_id').value#}
-                {#        count = document.getElementById('set_count_id').value#}
-{#                if (time > 0) {#}
-{#                    document.getElementById('auto_reply_via_url_content').submit();#}
-{#                    alert('点击确定开始回帖！')#}
-{#                }#}
-{#                else {#}
-{#                    alert("请输入正确的时间！")#}
-{#                }#}
-{#            }#}
-{#            else {#}
-{#                alert("请选择url地址和要回复的内容！");#}
-{#            }#}
-{#        }#}
-{#    }#}
-{#    else{#}
-{#        alert('请选择开始或者结束回帖！')#}
-{#    }#}
 }
 
 </script>
