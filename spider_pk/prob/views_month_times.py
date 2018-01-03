@@ -44,7 +44,7 @@ def index_month_times(request):
         in_date = p_month + '-' + (str(day+1)).zfill(2)
         print in_date
         url = "http://api.api68.com/pks/getPksHistoryList.do?date=" + in_date + "&lotCode=10001"
-        print url
+        # print url
 
         #当天时间
         if (current_date == in_date):
@@ -146,80 +146,6 @@ def index_month_times_evaluation(request):
     return render_to_response('index_month_times.html',{'lottery':lotterys,'probs':probs,'prob_totals':prob_totals,
                                             'p_date':p_date, 'p_number':p_number, 'p_monery':p_monery,
                                                   'p_rule':p_rule, 'result_flag':result_flag, 'p_times':p_times})
-
-
-@csrf_exempt   #处理Post请求出错的情况,历史请求
-def index_month_old(request):
-    p_date = request.POST['in_date']
-    p_number = request.POST['in_number']
-    p_monery = request.POST['in_monery']
-
-    p_rule = request.POST['in_rule']
-    # print 'ABC ',request.POST['ABC']
-
-    print 'p_date is ',p_date,' p_number is ',p_number, ' p_monery is ',p_monery
-    # in_date = '2017-11-02'
-    in_date = p_date
-    url = "http://api.api68.com/pks/getPksHistoryList.do?date=" + in_date + "&lotCode=10001"
-    print url
-
-    current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
-    history_data = Lottery.objects.all()
-    #当天时间
-    if (current_date == in_date):
-        print 'today ,delete old data'
-        Lottery.objects.filter(lottery_date=in_date).delete()
-        result_flag = spider_today(url)
-        if(result_flag):
-            print 'today spider success'
-        else:
-            print 'today spider faild'
-        lotterys = Lottery.objects.filter(lottery_date=in_date)
-        print "today count is ",len(lotterys)
-    #历史时间
-    else:
-        print 'history'
-        lotterys = Lottery.objects.filter(lottery_date=in_date)
-        print len(lotterys)
-        #有记录
-        if (lotterys):
-            print  'exists'
-            #等于179不采集
-            if (len(lotterys) ==179):
-                print 'data right'
-                result_flag = True
-            #不等于179删除重新采集
-            else:
-                print 'data lost or rongyu!'
-                Lottery.objects.filter(lottery_date=in_date).delete()
-                result_flag = spider_history(url)
-                if (result_flag):
-                    print 'history spider success'
-                    lotterys = Lottery.objects.filter(lottery_date=in_date)
-                else:
-                    print ' history spider faild'
-        #没有任何记录
-        else:
-            # Lottery.objects.filter(lottery_date=in_date).delete
-            print 'not exists'
-            #返回True,采集完成，否则采集失败
-            result_flag = spider_history(url)
-            if (result_flag):
-                print 'history spider success'
-                lotterys = Lottery.objects.filter(lottery_date=in_date)
-            else:
-                print ' history spider faild'
-    #格式转换，评估
-    base_lottery_list,parity_lottery_list,larsma_lottery_list = parase_lotterys(lotterys)
-    #获取规则
-    rule_parity_list,rule_larsma_list = get_rule(p_rule)
-    num = int(p_number)
-    monery = int(p_monery)
-    evaluation(monery, num, parity_lottery_list, rule_parity_list, larsma_lottery_list, rule_larsma_list )
-    probs = Probs.objects.all()
-    prob_totals = ProbTotals.objects.all()
-    return render_to_response('index_month.html',{'lottery':lotterys,'probs':probs,'prob_totals':prob_totals,
-                                            'p_date':p_date, 'p_number':p_number, 'p_monery':p_monery,'p_rule':p_rule, 'result_flag':result_flag})
 
 
 def get_html(url):

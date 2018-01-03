@@ -26,6 +26,10 @@ import prob.views_month_times
 import cross.cross_day
 import cross.cross_month
 
+########################
+import auto_visit.main
+import auto_visit.list
+
 
 
 urlpatterns = [
@@ -52,5 +56,9 @@ urlpatterns = [
     url(r'^cross_month_admin/$', cross.cross_month.admin_month),
     url(r'^cross_month_index/$', cross.cross_month.index_month),
     url(r'^cross_month_evaluation/$', cross.cross_month.index_month_evaluation),
+
+    ########################################v1.0版本，自动化####################################
+    url(r'^auto_main/$', auto_visit.main.auto_admin),
+    url(r'^auto_list/$', auto_visit.list.auto_list),
 
 ]

@@ -45,7 +45,7 @@ def index_month(request):
         in_date = p_month + '-' + (str(day+1)).zfill(2)
         print in_date
         url = "http://api.api68.com/pks/getPksHistoryList.do?date=" + in_date + "&lotCode=10001"
-        print url
+        # print url
 
         #当天时间
         if (current_date == in_date):

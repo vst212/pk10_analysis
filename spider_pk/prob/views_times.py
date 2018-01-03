@@ -46,7 +46,7 @@ def index(request):
     # in_date = '2017-11-02'
     in_date = p_date
     url = "http://api.api68.com/pks/getPksHistoryList.do?date=" + in_date + "&lotCode=10001"
-    print url
+    # print url
 
     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
     history_data = LotteryMonth.objects.all()
