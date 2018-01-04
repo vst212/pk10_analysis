@@ -61,4 +61,8 @@ urlpatterns = [
     url(r'^auto_main/$', auto_visit.main.auto_admin),
     url(r'^auto_list/$', auto_visit.list.auto_list),
 
+    url(r'^set_user_data/$', auto_visit.main.set_user_data),
+    url(r'^get_user_data/$', auto_visit.main.get_user_data),
+
+
 ]

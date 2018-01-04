@@ -4,12 +4,14 @@ from __future__ import unicode_literals
 from django.db import models
 
 # Create your models here.
+# 开奖号码
 class Lottery(models.Model):
     lottery_date = models.CharField(max_length=100)
     lottery_time = models.CharField(max_length=100)
     lottery_id =  models.IntegerField()
     lottery_number = models.CharField(max_length=500)
 
+#逐条记录
 class Probs(models.Model):
     prob_range = models.CharField(max_length=100)
     prob_rule = models.CharField(max_length=100)
@@ -23,6 +25,7 @@ class Probs(models.Model):
     prob_lose = models.FloatField()
     prob_gain = models.FloatField()
 
+#汇总记录
 class ProbTotals(models.Model):
     probtotal_rule = models.CharField(max_length=100)
 
@@ -35,7 +38,7 @@ class ProbTotals(models.Model):
     probtotal_lose = models.FloatField()
     probtotal_gain = models.FloatField()
 
-
+# 月开奖号码
 class LotteryMonth(models.Model):
     lottery_month = models.CharField(max_length=100)
     lottery_date = models.CharField(max_length=100)
