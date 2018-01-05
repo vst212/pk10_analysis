@@ -110,6 +110,45 @@
 					<h5 align="center">
 						自动化访问
 					</h5>
+                    <table style="BORDER-COLLAPSE: collapse" cellSpacing=1 cellPadding=6 width="100%" height=273 class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th>
+									用户名
+								</th>
+								<th>
+									采集状态
+								</th>
+								<th>
+									操作
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+
+                            {% for user in prob_user_list %}
+                                <tr class="success">
+                                    <td>
+                                        {{ user.user_name }}
+                                    </td>
+                                    <td>
+                                        {% if user.user_status %}
+                                            <p>正在采集</p>
+                                        {% else %}
+                                            <p>待采集 </p>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        {% if user.user_status %}
+                                                <button type="button" class="btn btn-default btn-danger " onclick="stop_thread('{{ user.user_name }}')">停止</button>
+                                        {% else %}
+                                                <button type="button" class="btn btn-default btn-success" onclick="start_thread( '{{ user.user_name }}' )">启动</button>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            {% endfor %}
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
@@ -151,4 +190,40 @@ function judgeevaluation()
     }
 }
 
+
+function start_thread(user_name){
+    var confirmMsg = confirm("确定启动?");
+    if (confirmMsg) {
+        post_form("/control_probuser_thread/",{"user_name":user_name,"control":'start'});
+    } else {
+        return false;
+    }
+}
+
+function stop_thread(user_name){
+    var confirmMsg = confirm("确定停止?");
+    if (confirmMsg) {
+        post_form("/control_probuser_thread/",{"user_name":user_name,"control":'stop'});
+    } else {
+        return false;
+    }
+}
+
+function post_form(URL, PARAMS) {
+    console.log(PARAMS);
+    var temp = document.createElement("form");
+    temp.action = URL;
+    temp.method = "post";
+    temp.style.display = "none";
+    for (var x in PARAMS) {
+        var opt = document.createElement("input");
+        opt.name = x;
+        opt.value = PARAMS[x];
+        temp.appendChild(opt);
+    }
+    console.log(temp);
+    document.body.appendChild(temp);
+    temp.submit();
+    return temp;
+}
 </script>

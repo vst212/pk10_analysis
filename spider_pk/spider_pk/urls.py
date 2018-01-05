@@ -59,10 +59,13 @@ urlpatterns = [
 
     ########################################v1.0版本，自动化####################################
     url(r'^auto_main/$', auto_visit.main.auto_admin),
+    url(r'^control_probuser_thread/$', auto_visit.main.control_probuser_thread),
+    # url(r'^stop_probuser_thread/$', auto_visit.main.stop_probuser_thread),
     url(r'^auto_list/$', auto_visit.list.auto_list),
 
     url(r'^set_user_data/$', auto_visit.main.set_user_data),
     url(r'^get_user_data/$', auto_visit.main.get_user_data),
+    url(r'^get_prob_data/$', auto_visit.main.get_prob_data),
 
 
 ]

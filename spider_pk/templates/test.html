@@ -11,5 +11,18 @@
     <br>
 {% endfor %}
 
+
+{% for oo in prob_data%}
+{{ oo.lottery_month }}
+{{ oo.lottery_date }}
+{{ oo.lottery_time }}
+{{ oo.lottery_id }}
+    {{ oo.lottery_number }}
+    <br>
+{% endfor %}
+
+{{ prob_user.user_name }}
+{{ prob_user.user_status }}
+
 </body>
 </html>
