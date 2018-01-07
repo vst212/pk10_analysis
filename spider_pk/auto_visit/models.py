@@ -25,3 +25,5 @@ class PurchaseRecord(models.Model):
     purchase_record_money = models.IntegerField()
     #第几列
     purchase_record_column = models.IntegerField()
+    #购买的值
+    purchase_record_value = models.IntegerField()

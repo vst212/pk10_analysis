@@ -48,11 +48,49 @@ def get_rule(p_rule):
     rule_parity_list = []
     rule_value = int(p_rule)
     if(rule_value == 1):
-        rule_parity_list.append([1, 1, 1, 0])
+        rule_parity_list = [1, 1, 1, 0]
     if (rule_value == 2):
-        rule_parity_list.append([0, 0, 0, 1])
+        rule_parity_list = [0, 0, 0, 1]
     if (rule_value == 3):
-        rule_parity_list.append([1, 1, 1, 1])
+        rule_parity_list = [1, 1, 1, 1]
     if (rule_value == 4):
-        rule_parity_list.append([0, 0, 0, 0])
+        rule_parity_list = [0, 0, 0, 0]
     return rule_parity_list
+
+#基于target 和rule, 判断是否成立,成立则购买，否则跳过   ---规则为单双
+def check_single_match(target,rule):
+    rule_len = len(rule)
+    target_len = len(target)
+    print rule[0:rule_len - 1]
+    print target[1 - rule_len:]
+    if (rule[0:rule_len-1] == target[1-rule_len:]):
+        count = 0
+        while(target[-count-1] == target[-1]):
+            count = count + 1
+            if(count == len(target)):
+                break
+        if (count%rule_len == (rule_len -1)):
+            return rule[-1]
+        else:
+            return -1
+    else:
+        return -1
+
+#基于target 和rule, 判断是否成立,成立则购买，否则跳过  --规则为数字
+def check_double_match(target,rule_len):
+    target_len = len(target)
+    print target[1 - rule_len:]
+    print target[ - rule_len: -rule_len + 1]
+    if (target[-rule_len:-rule_len + 1] == target[1-rule_len:]):
+        count = 0
+        while(target[-count-1] == target[-1]):
+            count = count + 1
+            if(count == len(target)):
+                break
+        print count
+        if (count%(rule_len+1) == (rule_len)):
+            return target[-1]
+        else:
+            return -1
+    else:
+        return -1
