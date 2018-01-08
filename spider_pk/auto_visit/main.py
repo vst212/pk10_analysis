@@ -10,7 +10,8 @@ from auto_visit.thread import ThreadControl
 from auto_visit.spider import spider_current_date_data
 from prob.models import LotteryMonth
 from auto_visit.models import PurchaseRecord
-from auto_visit.pretreatment import get_rule, parase_lotterys
+from auto_visit.pretreatment import get_rule, parase_lotterys,check_double_match,check_single_match
+
 # Create your views here.
 import time
 
@@ -113,27 +114,84 @@ def set_user_data(request):
     obj_pro.save()
     return render_to_response('test.html',{"obj_pro":obj_pro})
 
-def get_user_data(request):
+# def get_user_data(request):
+#
+#     rule = 1
+#     money = 10
+#     upper_money = 30
+#     spider_current_date_data()
+#     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+#     lotterys = LotteryMonth.objects.filter(lottery_date=current_date)
+#     if(rule < 5):
+#         rule_parity_list = get_rule(rule)
+#         base_lottery_list,parity_lottery_list,larsma_lottery_list = parase_lotterys(lotterys)
+#     obj_pro = ProbUser.objects.all()
+#     print "obj_pro",obj_pro
+#     for pro in obj_pro:
+#         print pro.user_name
+#     return render_to_response('test.html',{"obj_pro":obj_pro})
+
+def get_prob_data(request):
     rule = 1
     money = 10
     upper_money = 30
-    spider_current_date_data()
-    current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+    # spider_current_date_data()
+    current_date = time.strftime('%Y-%m-%d', time.localtime(time.time()))
     lotterys = LotteryMonth.objects.filter(lottery_date=current_date)
-    if(rule < 5):
-        rule_parity_list = get_rule(rule)
-        base_lottery_list,parity_lottery_list,larsma_lottery_list = parase_lotterys(lotterys)
+    rule_parity_list = get_rule(rule)
+    #当天的开奖记录数
+    current_date_rows = LotteryMonth.objects.filter(lottery_date=current_date).order_by("-lottery_id")
+    print"len(current_date_rows)" , len(current_date_rows)
 
+    #需要匹配的数目
+    match_rule_num = len(rule_parity_list)-1
+    #记录小于规则数
+    if(len(current_date_rows) < match_rule_num):
+        pass
+    else:
+        lottery_max_num = current_date_rows[0].lottery_id
+        purchase_date_rows = PurchaseRecord.objects.filter(purchase_record_date=current_date).order_by("-purchase_record_id")
+        if(len(purchase_date_rows) == 0):
+            #直接匹配
+            pass
+        else:
+            purchase_max_num = purchase_date_rows[0].purchase_record_id
+            lottery_minus_purchase_len = lottery_max_num - purchase_max_num
+            if(lottery_minus_purchase_len >= match_rule_num):
+                #单双规则
+                if (rule < 5):
+                    base_lottery_list, parity_lottery_list, larsma_lottery_list = parase_lotterys(lotterys)
+                    column = 1
+                    purchase_record_column_list = []
+                    purchase_record_value_list = []
+                    #从第一名到第十名
+                    for parity_lottery in parity_lottery_list:
+                        target = parity_lottery[-lottery_minus_purchase_len:]
+                        #查看是否匹配
+                        result = check_single_match(target,rule_parity_list)
+                        if (result == -1):
+                            pass
+                        else:
+                            purchase_record_value = result
+                            purchase_record_value_list.append(purchase_record_value)
+                            purchase_record_column = column
+                            purchase_record_column_list.append(purchase_record_column)
+                        column = column + 1
+                    for i in range(len(purchase_record_column_list)):
+                        #构造path
+                        if(purchase_record_value_list[i] == 0):
+                            xpath = '//*[@id="itmStakeInput20'+ str(purchase_record_column_list[i]+ 1) + '302"]'
+                        else:
+                            xpath = '//*[@id="itmStakeInput20' + str(purchase_record_column_list[i] + 1) + '301"]'
+                        #输入值
+                        input = driver.find_element_by_xpath(xpath)
+                        input.send_keys(money)
+                    #提交
 
+                    #提交完成后保存至model
+            else:
+                pass
 
-    obj_pro = ProbUser.objects.all()
-    print "obj_pro",obj_pro
-    for pro in obj_pro:
-        print pro.user_name
-    return render_to_response('test.html',{"obj_pro":obj_pro})
-
-def get_prob_data(request):
-    current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
 
     prob_data = LotteryMonth.objects.filter(lottery_date=current_date)
     # prob_data = LotteryMonth.objects.all()
