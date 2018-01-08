@@ -114,22 +114,22 @@ def set_user_data(request):
     obj_pro.save()
     return render_to_response('test.html',{"obj_pro":obj_pro})
 
-# def get_user_data(request):
-#
-#     rule = 1
-#     money = 10
-#     upper_money = 30
-#     spider_current_date_data()
-#     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
-#     lotterys = LotteryMonth.objects.filter(lottery_date=current_date)
-#     if(rule < 5):
-#         rule_parity_list = get_rule(rule)
-#         base_lottery_list,parity_lottery_list,larsma_lottery_list = parase_lotterys(lotterys)
-#     obj_pro = ProbUser.objects.all()
-#     print "obj_pro",obj_pro
-#     for pro in obj_pro:
-#         print pro.user_name
-#     return render_to_response('test.html',{"obj_pro":obj_pro})
+def get_user_data(request):
+
+    rule = 1
+    money = 10
+    upper_money = 30
+    spider_current_date_data()
+    current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+    lotterys = LotteryMonth.objects.filter(lottery_date=current_date)
+    if(rule < 5):
+        rule_parity_list = get_rule(rule)
+        base_lottery_list,parity_lottery_list,larsma_lottery_list = parase_lotterys(lotterys)
+    obj_pro = ProbUser.objects.all()
+    print "obj_pro",obj_pro
+    for pro in obj_pro:
+        print pro.user_name
+    return render_to_response('test.html',{"obj_pro":obj_pro})
 
 def get_prob_data(request):
     rule = 1
