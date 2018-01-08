@@ -30,7 +30,9 @@ def parase_lotterys(lottery):
     # print base_lottery_list[1]
     # print tran_base_lottery_list[0]
     # print tran_base_lottery_list[1]
-    return base_lottery_list,parity_lottery_list,larsma_lottery_list
+    #行列转置
+    tran_parity_lottery_list = map(list, zip(*parity_lottery_list))
+    return base_lottery_list,tran_parity_lottery_list,larsma_lottery_list
 
     # for i in range(5):
     #     print base_lottery_list[i]
@@ -48,7 +50,7 @@ def get_rule(p_rule):
     rule_parity_list = []
     rule_value = int(p_rule)
     if(rule_value == 1):
-        rule_parity_list = [1, 1, 1, 0]
+        rule_parity_list = [1, 1, 0]
     if (rule_value == 2):
         rule_parity_list = [0, 0, 0, 1]
     if (rule_value == 3):

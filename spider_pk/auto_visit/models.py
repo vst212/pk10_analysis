@@ -12,7 +12,6 @@ class ProbUser(models.Model):
     user_password =  models.CharField(max_length=30)
     user_status = models.BooleanField()
 
-
 class PurchaseRecord(models.Model):
     purchase_record_month = models.CharField(max_length=100)
     purchase_record_date = models.CharField(max_length=100)

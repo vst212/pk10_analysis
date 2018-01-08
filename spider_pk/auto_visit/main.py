@@ -119,24 +119,26 @@ def get_user_data(request):
     rule = 1
     money = 10
     upper_money = 30
-    spider_current_date_data()
+    # spider_current_date_data()
     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
     lotterys = LotteryMonth.objects.filter(lottery_date=current_date)
-    if(rule < 5):
-        rule_parity_list = get_rule(rule)
-        base_lottery_list,parity_lottery_list,larsma_lottery_list = parase_lotterys(lotterys)
-    obj_pro = ProbUser.objects.all()
-    print "obj_pro",obj_pro
-    for pro in obj_pro:
-        print pro.user_name
-    return render_to_response('test.html',{"obj_pro":obj_pro})
+    # if(rule < 5):
+    #     rule_parity_list = get_rule(rule)
+    #     base_lottery_list,parity_lottery_list,larsma_lottery_list = parase_lotterys(lotterys)
+    # obj_pro = ProbUser.objects.all()
+    obj_pro_purchase = PurchaseRecord.objects.all()
+    print "obj_pro",obj_pro_purchase
+    # for pro in obj_pro:
+    #     print pro.user_name
+    return render_to_response('test.html',{"obj_pro_purchase":obj_pro_purchase})
 
 def get_prob_data(request):
     rule = 1
     money = 10
     upper_money = 30
-    # spider_current_date_data()
+    spider_current_date_data()
     current_date = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+    print current_date
     lotterys = LotteryMonth.objects.filter(lottery_date=current_date)
     rule_parity_list = get_rule(rule)
     #当天的开奖记录数
@@ -150,10 +152,29 @@ def get_prob_data(request):
         pass
     else:
         lottery_max_num = current_date_rows[0].lottery_id
+        lottery_max_date = current_date_rows[0].lottery_date
+        lottery_purchase_id = current_date_rows[0].lottery_id + 1
+
         purchase_date_rows = PurchaseRecord.objects.filter(purchase_record_date=current_date).order_by("-purchase_record_id")
         if(len(purchase_date_rows) == 0):
             #直接匹配
-            pass
+            print "purchase is 0"
+            if (len(current_date_rows) >= match_rule_num):
+                pass
+                lottery_minus_purchase_len = len(lotterys)
+                purchase_record_column_list, purchase_record_value_list = visit_set_prob(rule,rule_parity_list,lotterys,lottery_minus_purchase_len)
+                # for i in range(len(purchase_record_column_list)):
+                #         #构造path
+                #     if(purchase_record_value_list[i] == 0):
+                #         xpath = '//*[@id="itmStakeInput20'+ str(purchase_record_column_list[i]+ 1) + '302"]'
+                #     else:
+                #         xpath = '//*[@id="itmStakeInput20' + str(purchase_record_column_list[i] + 1) + '301"]'
+                for i in range(len(purchase_record_column_list)):
+                    obj_pro = PurchaseRecord(purchase_record_id=lottery_purchase_id, purchase_record_rule=rule, purchase_record_money=money,
+                                             purchase_record_column=purchase_record_column_list[i],purchase_record_value=purchase_record_value_list[i])
+                    obj_pro.save()
+            else:
+                pass
         else:
             purchase_max_num = purchase_date_rows[0].purchase_record_id
             lottery_minus_purchase_len = lottery_max_num - purchase_max_num
@@ -171,11 +192,13 @@ def get_prob_data(request):
                         result = check_single_match(target,rule_parity_list)
                         if (result == -1):
                             pass
+                            print "not match ",column
                         else:
                             purchase_record_value = result
                             purchase_record_value_list.append(purchase_record_value)
                             purchase_record_column = column
                             purchase_record_column_list.append(purchase_record_column)
+                            print "match ",result, " ", column
                         column = column + 1
                     for i in range(len(purchase_record_column_list)):
                         #构造path
@@ -184,8 +207,8 @@ def get_prob_data(request):
                         else:
                             xpath = '//*[@id="itmStakeInput20' + str(purchase_record_column_list[i] + 1) + '301"]'
                         #输入值
-                        input = driver.find_element_by_xpath(xpath)
-                        input.send_keys(money)
+                        # input = driver.find_element_by_xpath(xpath)
+                        # input.send_keys(money)
                     #提交
 
                     #提交完成后保存至model
@@ -196,3 +219,40 @@ def get_prob_data(request):
     prob_data = LotteryMonth.objects.filter(lottery_date=current_date)
     # prob_data = LotteryMonth.objects.all()
     return render_to_response('test.html',{"prob_data":prob_data})
+
+
+def visit_set_prob(rule,rule_parity_list,lotterys,lottery_minus_purchase_len):
+                if (rule < 5):
+                    base_lottery_list, parity_lottery_list, larsma_lottery_list = parase_lotterys(lotterys)
+                    column = 1
+                    purchase_record_column_list = []
+                    purchase_record_value_list = []
+                    #从第一名到第十名
+                    print lottery_minus_purchase_len
+                    for parity_lottery in parity_lottery_list:
+                        target = parity_lottery[-lottery_minus_purchase_len:]
+                        #查看是否匹配
+                        result = check_single_match(target,rule_parity_list)
+                        if (result == -1):
+                            pass
+                            print "not match ",column
+                        else:
+                            purchase_record_value = result
+                            purchase_record_value_list.append(purchase_record_value)
+                            purchase_record_column = column
+                            purchase_record_column_list.append(purchase_record_column)
+                            print "match ",result, " ", column
+                        column = column + 1
+                    for i in range(len(purchase_record_column_list)):
+                        #构造path
+                        if(purchase_record_value_list[i] == 0):
+                            xpath = '//*[@id="itmStakeInput20'+ str(purchase_record_column_list[i]+ 1) + '302"]'
+                        else:
+                            xpath = '//*[@id="itmStakeInput20' + str(purchase_record_column_list[i] + 1) + '301"]'
+                        #输入值
+                        # input = driver.find_element_by_xpath(xpath)
+                        # input.send_keys(money)
+                    #提交
+
+                    #提交完成后保存至model
+                return purchase_record_column_list, purchase_record_value_list
