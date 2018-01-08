@@ -123,7 +123,7 @@ def get_user_data(request):
     if(rule < 5):
         rule_parity_list = get_rule(rule)
         base_lottery_list,parity_lottery_list,larsma_lottery_list = parase_lotterys(lotterys)
-        
+
 
 
     obj_pro = ProbUser.objects.all()
