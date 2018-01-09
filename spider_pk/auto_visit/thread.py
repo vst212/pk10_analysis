@@ -3,13 +3,15 @@ __author__ = 'shifeixiang'
 import time
 import thread
 import threading
+from auto_visit.driver import get_driver
+import auto_visit.main
 
 
 class Spider(threading.Thread):
     # __metaclass__ = Singleton
     thread_stop = False
     thread_num = 0
-    interval = 0
+    interval = {}
     behavior = None
     def run(self):
         self.behavior(self,self.thread_num,self.interval)
@@ -46,10 +48,16 @@ def loaddata(c_thread,thread_num,interval):
     if 0 :
         return 0
     else:
+        count = 0
         while not c_thread.thread_stop:
-            current_date = time.strftime("%Y%m%d", time.localtime())
-            print current_date," ",time.localtime()
+            current_date = time.strftime("%Y%m%d %H:%m:%S", time.localtime())
+            print current_date," ",interval["money"], " ", interval["rule"]
+            auto_visit.main.auto_visit_commit(interval,count)
             time.sleep(3)
+            count = count + 1
+        interval["driver"].close()
+        interval["driver"].quit()
+        auto_visit.main.auto_visit_commit(interval,0)
 
         # driver.quit()
         #数据库状态更新,根据线程名称
