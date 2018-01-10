@@ -79,7 +79,7 @@ def get_driver3():
     options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
     driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
 
-
+    #driver.current_url
     # driver.get("http://pxiagme1.lot1068.net/member/Welcome.action?searchKeyword=99935")
     driver.get("http://pxiagme1.lot1068.net/member/fouvrh5q0rhl2edlk9m7jong3e/Welcome.action")
     #最大化

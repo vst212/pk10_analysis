@@ -12,10 +12,11 @@
 {% endfor %}
 
 {% for oo in obj_pro_purchase%}
+    {{ oo.purchase_record_rule }}
 {{ oo.purchase_record_id }}
 {{ oo.purchase_record_column }}
     {{ oo.purchase_record_value }}
-{{ oo.purchase_record_rule }}
+
     <br>
 {% endfor %}
 

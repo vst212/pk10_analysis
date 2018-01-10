@@ -32,7 +32,8 @@ def parase_lotterys(lottery):
     # print tran_base_lottery_list[1]
     #行列转置
     tran_parity_lottery_list = map(list, zip(*parity_lottery_list))
-    return base_lottery_list,tran_parity_lottery_list,larsma_lottery_list
+    tran_base_lottery_list = map(list, zip(*base_lottery_list))
+    return tran_base_lottery_list,tran_parity_lottery_list,larsma_lottery_list
 
     # for i in range(5):
     #     print base_lottery_list[i]
@@ -63,8 +64,8 @@ def get_rule(p_rule):
 def check_single_match(target,rule):
     rule_len = len(rule)
     target_len = len(target)
-    print rule[0:rule_len - 1]
-    print target[1 - rule_len:]
+    # print rule[0:rule_len - 1]
+    # print target[1 - rule_len:]
     if (rule[0:rule_len-1] == target[1-rule_len:]):
         count = 0
         while(target[-count-1] == target[-1]):

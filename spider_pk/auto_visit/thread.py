@@ -5,7 +5,7 @@ import thread
 import threading
 from auto_visit.driver import get_driver
 import auto_visit.main
-
+import datetime
 
 class Spider(threading.Thread):
     # __metaclass__ = Singleton
@@ -49,15 +49,35 @@ def loaddata(c_thread,thread_num,interval):
         return 0
     else:
         count = 0
+        #初次启动开始购买---可以通过购买记录来初始化last_minute
+        last_minute = -1
         while not c_thread.thread_stop:
-            current_date = time.strftime("%Y%m%d %H:%m:%S", time.localtime())
-            print current_date," ",interval["money"], " ", interval["rule"]
-            auto_visit.main.auto_visit_commit(interval,count)
-            time.sleep(3)
-            count = count + 1
-        interval["driver"].close()
-        interval["driver"].quit()
-        auto_visit.main.auto_visit_commit(interval,0)
+            current_minute = (datetime.datetime.now()).minute
+            print "current_minute ",current_minute
+            if current_minute<5 and last_minute> 0:
+                last_minute = last_minute - 60
+            if current_minute - last_minute > 3:
+                judge_num = (current_minute%5)
+                if judge_num>2 :
+                    current_date = time.strftime("%Y%m%d %H:%m:%S", time.localtime())
+                    print current_date," ",interval["money"], " ", interval["rule"]
+                    print "start purchase"
+                    auto_visit.main.auto_visit_commit(interval,count)
+                    # print "purchase finish"
+                    last_minute = current_minute
+                    # print "last_minute ",last_minute
+                    #time.sleep(3)
+                    count = count + 1
+                else:
+                    # print current_minute, " ", last_minute," wait open prob"
+                    time.sleep(10)
+            else:
+                # print current_minute, " ", last_minute," current prob already purchase"
+                time.sleep(10)
+
+        # interval["driver"].close()
+        # interval["driver"].quit()
+        # auto_visit.main.auto_visit_commit(interval,0)
 
         # driver.quit()
         #数据库状态更新,根据线程名称
