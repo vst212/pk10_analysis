@@ -62,7 +62,7 @@ def loaddata(c_thread,thread_num,interval):
                     current_date = time.strftime("%Y%m%d %H:%m:%S", time.localtime())
                     print current_date," ",interval["money"], " ", interval["rule"]
                     print "start purchase"
-                    auto_visit.main.auto_visit_commit(interval,count)
+                    auto_visit.main.auto_visit_commit(interval)
                     time.sleep(3)
                     # print "purchase finish"
                     last_minute = current_minute

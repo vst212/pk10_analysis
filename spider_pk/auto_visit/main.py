@@ -61,20 +61,21 @@ def control_probuser_thread(request):
     user_name = request.POST['user_name']
     password = ProbUser.objects.get(user_name=user_name).user_password;
     control = request.POST['control']
-
-
-
+    money = request.POST['auto_in_money']
+    rule = request.POST['auto_in_rule']
+    upper_money = request.POST['auto_in_upper_money']
 
     print "user_name is ",user_name, " pwd ",password
     info_dict = {}
     info_dict["user_name"] = user_name
-    info_dict["money"] = request.POST['auto_in_money']
-    info_dict["rule"] = request.POST['auto_in_rule']
-    info_dict["upper_money"] = request.POST['auto_in_upper_money']
+    info_dict["money"] = int(money)
+    info_dict["rule"] = int(rule)
+    info_dict["upper_money"] = int(upper_money)
 
-    print info_dict["money"],info_dict["rule"],info_dict["upper_money"]
-
-    return ('auto_main.html')
+    # print info_dict["money"],info_dict["rule"],info_dict["upper_money"]
+    # prob_user_list = ProbUser.objects.all()
+    # return render_to_response('auto_main.html', {"prob_user_list": prob_user_list})
+    # return ('auto_main.html')
     #显示活跃状态
     info_active = True
     prob_user = ProbUser.objects.get(user_name=user_name)
@@ -115,7 +116,7 @@ def control_probuser_thread(request):
         except:
             print "not thread alive"
     prob_user_list =  ProbUser.objects.all()
-    return render_to_response('auto_main.html',{"prob_user_list":prob_user_list})
+    return render_to_response('auto_main.html',{"prob_user_list":prob_user_list, "p_rule":rule, "p_monery":money, "p_upper_number":upper_money})
     # return render_to_response('qzone_info.html',{"thread_name":th_name, "control":control, "thread_list":thread_list,"info_active":info_active})
 
 #主页面
@@ -256,10 +257,10 @@ def get_prob_data(request):
 
 
 #正式
-def auto_visit_commit(interval,count):
+def auto_visit_commit(interval):
     rule = interval["rule"]
     money = interval["money"]
-    money = money + count
+    money = money
     upper_money = interval["upper_money"]
     driver = interval["driver"]
     #清空购买记录

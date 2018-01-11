@@ -22,9 +22,9 @@
 				<li class="active">
 					<a rel="nofollow" href="/auto_admin/">自动访问页面</a>
 				</li>
-				<li >
-					<a rel="nofollow" href="/auto_list/">统计页面</a>
-				</li>
+				<!--<li >-->
+					<!--<a rel="nofollow" href="/auto_list/">统计页面</a>-->
+				<!--</li>-->
 			</ul>
 <div class="container">
 	<div class="row clearfix">
@@ -82,13 +82,13 @@
                     </table>
                 </form>
 
-                <table class="table">
-                    <th>
-                        <td>
-                            <button onclick="judgeevaluation()"  name="ABC" value="start">开始评估</button>
-                        </td>
-                    </th>
-                </table>
+                <!--<table class="table">-->
+                    <!--<th>-->
+                        <!--<td>-->
+                            <!--<button onclick="judgeevaluation()"  name="ABC" value="start">开始评估</button>-->
+                        <!--</td>-->
+                    <!--</th>-->
+                <!--</table>-->
 				</div>
 				<div class="col-md-6 column">
 					<h5 align="center">
@@ -187,7 +187,7 @@ function start_thread(user_name){
             if(in_monery > 0){
                 if(in_rule>0 && in_rule<=6){
 {#                    document.getElementById('user_form').submit();#}
-                    post_form("/control_probuser_thread/",{"user_name":user_name,"control":'start', "auto_in_rule":in_rule, "auto_in_monery":in_monery, "auto_in_upper_money":in_upper_money });
+                    post_form("/control_probuser_thread/",{"user_name":user_name,"control":'start', "auto_in_rule":in_rule, "auto_in_money":in_monery, "auto_in_upper_money":in_upper_money });
                 }
                 else{
                     alert('规则选择为1-6！');
