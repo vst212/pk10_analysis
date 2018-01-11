@@ -53,7 +53,7 @@ def loaddata(c_thread,thread_num,interval):
         last_minute = -1
         while not c_thread.thread_stop:
             current_minute = (datetime.datetime.now()).minute
-            print "current_minute ",current_minute
+            # print "current_minute ",current_minute
             if current_minute<5 and last_minute> 0:
                 last_minute = last_minute - 60
             if current_minute - last_minute > 3:
@@ -63,6 +63,7 @@ def loaddata(c_thread,thread_num,interval):
                     print current_date," ",interval["money"], " ", interval["rule"]
                     print "start purchase"
                     auto_visit.main.auto_visit_commit(interval,count)
+                    time.sleep(3)
                     # print "purchase finish"
                     last_minute = current_minute
                     # print "last_minute ",last_minute

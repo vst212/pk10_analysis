@@ -38,12 +38,9 @@
                 <form action="/index/" method="post" id="user_form">
                 <table class="table ">
                     <tr>
-                        <td>
-                            指定评估日期：<br><input type="date" id="in_date_id" name="in_date" value="{{ p_date }}" />
-                        </td>
 
                         <td >
-                            起始位置(1-10)：<br><input type="number" id="in_number_id" name="in_number" value="{{ p_number }}" />
+                            每名限额：<br><input type="number" id="in_upper_money_id" name="in_upper_money" value="{{ p_upper_number }}" />
                         </td>
                     </tr>
                     <tr>
@@ -52,7 +49,7 @@
                         </td>
 
                         <td>
-                            规则器选择(1-8)：<input type="number" id="in_rule_id" name="in_rule" value="{{ p_rule }}">
+                            规则器选择(1-6)：<input type="number" id="in_rule_id" name="in_rule" value="{{ p_rule }}">
                         </td>
                     </tr>
 
@@ -60,39 +57,26 @@
                     <table class="table">
                         <tr>
                         <td>
-                            1双双单单<br>
-                            1单单双双
+                            1 单单单双
                         </td>
                         <td>
-                            2单双<br>
-                            2双单
+                            2 双双双单
                         </td>
                         <td>
-                            3单单单双双双<br>
-                            3双双双单单单
+                            3 单单单单
                         </td>
                         <td>
-                            4单单单双<br>
-                            4双双双单
+                            4 双双双双
                         </td>
                         </tr>
                     <tr>
                         <td>
-                            5大大小小<br>
-                            5小小大大
+                            5 对子
                         </td>
                         <td>
-                            6大小<br>
-                            6小大
+                            6 交叉
                         </td>
-                        <td>
-                            7大大大小<br>
-                            7小小小大
-                        </td>
-                        <td>
-                            8大大大小小小<br>
-                            8小小小大大大
-                        </td>
+
                     </tr>
 
                     </table>
@@ -162,19 +146,19 @@
 function judgeevaluation()
 {
 
-    in_date = document.getElementById('in_date_id').value;
-    in_number = document.getElementById('in_number_id').value;
+{#    in_date = document.getElementById('in_date_id').value;#}
+    in_upper_money = document.getElementById('in_upper_money_id').value;
     in_monery = document.getElementById('in_monery_id').value;
     in_rule = document.getElementById('in_rule_id').value;
 
-    if (in_date && in_number && in_monery && in_rule){
-        if(in_number>0 && in_number<11){
+    if (in_upper_money && in_monery && in_rule){
+        if(in_upper_money>=1){
             if(in_monery > 0){
-                if(in_rule>0 && in_rule<=8){
+                if(in_rule>0 && in_rule<=6){
                     document.getElementById('user_form').submit();
                 }
                 else{
-                    alert('规则选择为1-8！');
+                    alert('规则选择为1-6！');
                 }
 
             }else{
@@ -182,7 +166,7 @@ function judgeevaluation()
             }
         }
         else{
-            alert('开始位置为1-10的整数！');
+            alert('限额输入正数！');
         }
     }
     else{
@@ -190,11 +174,38 @@ function judgeevaluation()
     }
 }
 
-
 function start_thread(user_name){
     var confirmMsg = confirm("确定启动?");
     if (confirmMsg) {
-        post_form("/control_probuser_thread/",{"user_name":user_name,"control":'start'});
+
+    in_upper_money = document.getElementById('in_upper_money_id').value;
+    in_monery = document.getElementById('in_monery_id').value;
+    in_rule = document.getElementById('in_rule_id').value;
+
+    if (in_upper_money && in_monery && in_rule){
+        if(in_upper_money>=1){
+            if(in_monery > 0){
+                if(in_rule>0 && in_rule<=6){
+{#                    document.getElementById('user_form').submit();#}
+                    post_form("/control_probuser_thread/",{"user_name":user_name,"control":'start', "auto_in_rule":in_rule, "auto_in_monery":in_monery, "auto_in_upper_money":in_upper_money });
+                }
+                else{
+                    alert('规则选择为1-6！');
+                }
+
+            }else{
+                alert('下注本金为正数！');
+            }
+        }
+        else{
+            alert('限额输入正数！');
+        }
+    }
+    else{
+        alert('请输入完整信息！');
+    }
+
+
     } else {
         return false;
     }

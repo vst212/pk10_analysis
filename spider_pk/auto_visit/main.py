@@ -10,7 +10,7 @@ from auto_visit.thread import ThreadControl
 from auto_visit.spider import spider_current_date_data
 from prob.models import LotteryMonth
 from auto_visit.models import PurchaseRecord
-from auto_visit.pretreatment import get_rule, parase_lotterys,check_double_match,check_single_match
+from auto_visit.pretreatment import get_rule, parase_lotterys,check_double_match,check_single_match,parase_lotterys_cross, tran_croos_data_auto, change_r_l, check_cross_match
 from auto_visit.driver import get_driver
 
 # Create your views here.
@@ -61,14 +61,20 @@ def control_probuser_thread(request):
     user_name = request.POST['user_name']
     password = ProbUser.objects.get(user_name=user_name).user_password;
     control = request.POST['control']
+
+
+
+
     print "user_name is ",user_name, " pwd ",password
     info_dict = {}
     info_dict["user_name"] = user_name
-    info_dict["money"] = 12
-    info_dict["rule"] = 1
-    info_dict["upper_money"] = 30
+    info_dict["money"] = request.POST['auto_in_money']
+    info_dict["rule"] = request.POST['auto_in_rule']
+    info_dict["upper_money"] = request.POST['auto_in_upper_money']
 
+    print info_dict["money"],info_dict["rule"],info_dict["upper_money"]
 
+    return ('auto_main.html')
     #显示活跃状态
     info_active = True
     prob_user = ProbUser.objects.get(user_name=user_name)
@@ -156,7 +162,7 @@ def get_purchase_data(request):
     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
     lotterys = LotteryMonth.objects.filter(lottery_date=current_date)
     # obj_pro_purchase = PurchaseRecord.objects.all()
-    obj_pro_purchase = PurchaseRecord.objects.filter(purchase_record_rule="1" ,purchase_record_date=current_date).order_by("-purchase_record_id")
+    obj_pro_purchase = PurchaseRecord.objects.filter(purchase_record_rule=1 ,purchase_record_date=current_date).order_by("-purchase_record_id")
     print "obj_pro",obj_pro_purchase
     return render_to_response('test.html',{"obj_pro_purchase":obj_pro_purchase})
 
@@ -261,10 +267,12 @@ def auto_visit_commit(interval,count):
 
     #采集当天数据，需要考虑失败重新采集的情况
     spider_current_date_data()
-
     current_date = time.strftime('%Y-%m-%d', time.localtime(time.time()))
     print current_date
     lotterys = LotteryMonth.objects.filter(lottery_date=current_date)
+    if len(lotterys) == 0:
+        print "spider open pk10 faild"
+        return 0
     rule_parity_list = get_rule(rule)
     #当天的开奖记录数
     current_date_rows = LotteryMonth.objects.filter(lottery_date=current_date).order_by("-lottery_id")
@@ -290,7 +298,7 @@ def auto_visit_commit(interval,count):
             sum_money = 0
             lottery_minus_purchase_len = len(lotterys)
             if (len(current_date_rows) >= match_rule_num):
-                purchase_record_column_list, purchase_record_value_list, xpath_list = visit_set_prob(rule,rule_parity_list,lotterys,lottery_minus_purchase_len)
+                purchase_record_column_list, purchase_record_value_list, xpath_list = visit_set_prob(rule,rule_parity_list,lotterys)
                 print "xpath_list ",xpath_list
                 #购买并保存
                 confirm_submit_save(driver, xpath_list, money, upper_money, purchase_record_column_list, purchase_record_value_list, lottery_purchase_id, rule, purchase_date_rows_len, current_date)
@@ -303,20 +311,19 @@ def auto_visit_commit(interval,count):
             lottery_minus_purchase_len = lottery_max_num - purchase_max_num
             print "purchase is ",purchase_max_num, " lottery_max_num " ,lottery_max_num
 
-            if(lottery_minus_purchase_len >= match_rule_num):
-                purchase_record_column_list, purchase_record_value_list, xpath_list = visit_set_prob(rule,rule_parity_list,lotterys,lottery_minus_purchase_len)
+            if (len(current_date_rows) >= match_rule_num):
+                purchase_record_column_list, purchase_record_value_list, xpath_list = visit_set_prob(rule,rule_parity_list,lotterys)
                 print "xpath_list ",xpath_list
                 #购买并保存
                 confirm_submit_save(driver, xpath_list, money, upper_money, purchase_record_column_list, purchase_record_value_list, lottery_purchase_id, rule, purchase_date_rows_len, current_date)
-            else:
-                pass
 
-    prob_data = LotteryMonth.objects.filter(lottery_date=current_date)
+
+    # prob_data = LotteryMonth.objects.filter(lottery_date=current_date)
     # prob_data = LotteryMonth.objects.all()
-    return render_to_response('test.html',{"prob_data":prob_data})
+    # return render_to_response('test.html',{"prob_data":prob_data})
 
 # 返回满足的列和要购买的值，分别存入2个list
-def visit_set_prob(rule,rule_parity_list,lotterys,lottery_minus_purchase_len):
+def visit_set_prob(rule,rule_parity_list,lotterys):
     #单双规则
     if (rule < 5):
         base_lottery_list, parity_lottery_list, larsma_lottery_list = parase_lotterys(lotterys)
@@ -324,20 +331,21 @@ def visit_set_prob(rule,rule_parity_list,lotterys,lottery_minus_purchase_len):
         purchase_record_column_list = []
         purchase_record_value_list = []
         # 从第一名到第十名
-        print lottery_minus_purchase_len
         for parity_lottery in parity_lottery_list:
-            target = parity_lottery[-lottery_minus_purchase_len:]
+            #取差值过滤
+            # target = parity_lottery[-lottery_minus_purchase_len:]
+            target = parity_lottery
             #查看是否匹配
             result = check_single_match(target, rule_parity_list)
             if (result == -1):
                 pass
-                print "not match ", column
+                # print "not match ", column
             else:
                 purchase_record_value = result
                 purchase_record_value_list.append(purchase_record_value)
                 purchase_record_column = column
                 purchase_record_column_list.append(purchase_record_column)
-                print "match ", result, " ", column
+                # print "match ", result, " ", column
             column = column + 1
         xpath_list = []
         for i in range(len(purchase_record_column_list)):
@@ -357,9 +365,10 @@ def visit_set_prob(rule,rule_parity_list,lotterys,lottery_minus_purchase_len):
         purchase_record_column_list = []
         purchase_record_value_list = []
         # 从第一名到第十名
-        print lottery_minus_purchase_len
-        for parity_lottery in parity_lottery_list:
-            target = parity_lottery[-lottery_minus_purchase_len:]
+        for base_lottery in base_lottery_list:
+            #获取差值
+            # target = base_lottery[-lottery_minus_purchase_len:]
+            target = base_lottery
             #查看是否匹配,对子规则，[5,5,5]，规则长度为3，满足前两个相同，第三个购买
             result = check_double_match(target,3)
             # result = check_single_match(target, rule_parity_list)
@@ -379,41 +388,52 @@ def visit_set_prob(rule,rule_parity_list,lotterys,lottery_minus_purchase_len):
             #补全2位列
             column = str(purchase_record_column_list[i]).zfill(2)
             #补全2位值
-            value = str(purchase_record_column_list[i]).zfill(2)
+            value = str(purchase_record_value_list[i]).zfill(2)
             xpath = '//*[@id="itmStakeInput2' + column + '1' + value  +  '"]'
             xpath_list.append(xpath)
         return purchase_record_column_list, purchase_record_value_list, xpath_list
 
     #交叉规则
     if (rule == 6):
-        base_lottery_list, parity_lottery_list, larsma_lottery_list = parase_lotterys(lotterys)
+        # base_lottery_list, parity_lottery_list, larsma_lottery_list = parase_lotterys(lotterys)
+        order_lottery_list = parase_lotterys_cross(lotterys)
+        #定义计算的列和总列数
+        column_num = 10
+        calc_num = 2
+        #格式化交叉数据
+        order_lottery_list_cross_parase = tran_croos_data_auto(order_lottery_list,column_num, calc_num)
+        #左右交换
+        last_parity_lottery_list = change_r_l(order_lottery_list_cross_parase)
+
         column = 1
         purchase_record_column_list = []
         purchase_record_value_list = []
-        # 从第一名到第十名
-        print lottery_minus_purchase_len
-        for parity_lottery in parity_lottery_list:
-            target = parity_lottery[-lottery_minus_purchase_len:]
-            #查看是否匹配,对子规则，[5,5,5]，规则长度为3，满足前两个相同，第三个购买
-            result = check_double_match(target,3)
-            # result = check_single_match(target, rule_parity_list)
-            if (result == -1):
-                pass
-                print "not match ", column
+        # 从第一名到第十名，这里只获取前8行
+        for parity_lottery in last_parity_lottery_list:
+            if column > 8:
+                break
             else:
-                purchase_record_value = result
-                purchase_record_value_list.append(purchase_record_value)
-                purchase_record_column = column
-                purchase_record_column_list.append(purchase_record_column)
-                print "match ", result, " ", column
+                target = parity_lottery
+                #查看是否匹配,对子规则，[5,5,5]，规则长度为3，满足前两个相同，第三个购买
+                result = check_cross_match(target,3)
+                # result = check_single_match(target, rule_parity_list)
+                if (result == -1):
+                    pass
+                    print "not match ", column
+                else:
+                    purchase_record_value = result
+                    purchase_record_value_list.append(purchase_record_value)
+                    purchase_record_column = column + 2
+                    purchase_record_column_list.append(purchase_record_column)
+                    print "match ", result, " ", column
             column = column + 1
         xpath_list = []
         for i in range(len(purchase_record_column_list)):
             #构造path
-            #补全2位列
+            #补全2位列,后移2位
             column = str(purchase_record_column_list[i]).zfill(2)
             #补全2位值
-            value = str(purchase_record_column_list[i]).zfill(2)
+            value = str(purchase_record_value_list[i]).zfill(2)
             xpath = '//*[@id="itmStakeInput2' + column + '1' + value  +  '"]'
             xpath_list.append(xpath)
         return purchase_record_column_list, purchase_record_value_list, xpath_list
@@ -450,25 +470,37 @@ def confirm_submit_save(driver, xpath_list, money, upper_money, purchase_record_
                         input_1_big.send_keys(money)
                         time.sleep(2)
                 print "click confirm"
-                confirm = driver.find_element_by_xpath('//*[@id="memberMainContent"]/div[2]/table/tbody/tr/td[2]/a[1]')
-                #'//*[@id="memberMainContent"]/div[2]/table/tbody/tr/td[2]/a[1]'
-                confirm.click()
-                time.sleep(3)
-                #提交按钮
-                print "click submit"
-                submit = driver.find_element_by_xpath('//*[@id="betSlipDivContent"]/table/tbody/tr[2]/td/a[1]')
-                # '//*[@id="betSlipDivContent"]/table/tbody/tr[3]/td/a[1]'
-                # '//*[@id="betSlipDivContent"]/table/tbody/tr[2]/td/a[1]'
-                submit.click()
-                time.sleep(3)
-                continue_flag = False
-                print "current visit over"
-
+                try:
+                    confirm = driver.find_element_by_xpath('//*[@id="memberMainContent"]/div[2]/table/tbody/tr/td[2]/a[1]')
+                    #'//*[@id="memberMainContent"]/div[2]/table/tbody/tr/td[2]/a[1]'
+                    confirm.click()
+                    time.sleep(3)
+                    #提交按钮
+                    print "click submit"
+                    submit = driver.find_element_by_xpath('//*[@id="betSlipDivContent"]/table/tbody/tr[2]/td/a[1]')
+                    # '//*[@id="betSlipDivContent"]/table/tbody/tr[3]/td/a[1]'
+                    # '//*[@id="betSlipDivContent"]/table/tbody/tr[2]/td/a[1]'
+                    submit.click()
+                    time.sleep(3)
+                    continue_flag = False
+                    print "current visit over"
+                    #保存
+                    for i in range(len(purchase_record_column_list)):
+                        # print "purchase message:",lottery_purchase_id,"  ",rule,"  ", money, "  ", purchase_record_column_list[i], "  ", purchase_record_value_list[i]
+                        print "purchase message:","number:",lottery_purchase_id," rule: ",rule," money: ", money, " column ", purchase_record_column_list[i], " number ", purchase_record_value_list[i]
+                        obj_pro = PurchaseRecord(purchase_record_date = current_date, purchase_record_id=lottery_purchase_id, purchase_record_rule=str(rule),
+                                                     purchase_record_money=money,
+                                                     purchase_record_column=purchase_record_column_list[i],
+                                                     purchase_record_value=purchase_record_value_list[i])
+                        obj_pro.save()
+                    print "save purcahse record!"
+                except:
+                    print "no purchase"
             else:
-                print "无满足条件"
+                print "no any match"
                 continue_flag = False
         else:
-            print "封盘中...请稍后..."
+            print "close..wait..."
             # 重置'//*[@id="memberMainContent"]/div[2]/table/tbody/tr/td[2]/a[2]'
             driver.find_element_by_xpath('//*[@id="memberMainContent"]/div[2]/table/tbody/tr/td[2]/a[2]').click()
             print "wait 30s"
@@ -477,10 +509,3 @@ def confirm_submit_save(driver, xpath_list, money, upper_money, purchase_record_
         # 持续封盘 退出
         if (exit_flag > 8):
             continue_flag = False
-    for i in range(len(purchase_record_column_list)):
-        print "purchase message:",lottery_purchase_id,"  ",rule,"  ", money, "  ", purchase_record_column_list[i], "  ", purchase_record_value_list[i]
-        obj_pro = PurchaseRecord(purchase_record_id=lottery_purchase_id, purchase_record_rule=str(rule),
-                                 purchase_record_money=money,
-                                 purchase_record_column=purchase_record_column_list[i],
-                                 purchase_record_value=purchase_record_value_list[i])
-        obj_pro.save()
