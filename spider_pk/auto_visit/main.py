@@ -61,38 +61,54 @@ def control_probuser_thread(request):
     user_name = request.POST['user_name']
     password = ProbUser.objects.get(user_name=user_name).user_password;
     control = request.POST['control']
-    money = request.POST['auto_in_money']
-    rule = request.POST['auto_in_rule']
-    upper_money = request.POST['auto_in_upper_money']
 
-    print "user_name is ",user_name, " pwd ",password
-    info_dict = {}
-    info_dict["user_name"] = user_name
-    info_dict["money"] = int(money)
-    info_dict["rule"] = int(rule)
-    info_dict["upper_money"] = int(upper_money)
+    # for i in range(len(in_rule_list)):
+    #     print i,"  ",in_upper_money_list[i]
+    #     print i,"  ",in_lower_money_list[i]
+
+    # rule = request.POST['auto_in_rule']
+    # upper_money = request.POST['auto_in_upper_money']
+    # upper_money = 10
+
+    # print "user_name is ",user_name, " pwd ",password
 
     # print info_dict["money"],info_dict["rule"],info_dict["upper_money"]
     # prob_user_list = ProbUser.objects.all()
+    # return render_to_response('auto_main.html',{"prob_user_list":prob_user_list, "p_rule":rule, "p_monery":money, "p_upper_number":upper_money})
     # return render_to_response('auto_main.html', {"prob_user_list": prob_user_list})
     # return ('auto_main.html')
+
     #显示活跃状态
-    info_active = True
     prob_user = ProbUser.objects.get(user_name=user_name)
     if control == 'start':
+        money = request.POST['auto_in_money']
+
+        in_rule_list = request.POST['in_rule_list'].split(",")
+        in_upper_money_list = []
+        in_lower_money_list = []
+        for in_rule in in_rule_list:
+            print "in_rule:",in_rule
+            in_upper_money_list.append(request.POST['in_upper_monery_'+str(in_rule)])
+            in_lower_money_list.append(request.POST['in_lower_monery_'+str(in_rule)])
+        info_dict = {}
+        info_dict["user_name"] = user_name
+        info_dict["money"] = int(money)
+        info_dict["rule_list"] = in_rule_list
+        info_dict["upper_money_list"] = in_upper_money_list
+        info_dict["lower_money_list"] = in_lower_money_list
+
         #单例模式
-        try:
-            web_driver = SingleDriver()
-            driver = web_driver.get_driver()
-            info_dict["driver"] = driver
-        except:
-            web_driver = SingleDriver()
-            driver = get_driver(user_name,password)
-            web_driver.set_driver(driver)
-            info_dict["driver"] = driver
+        # try:
+        #     web_driver = SingleDriver()
+        #     driver = web_driver.get_driver()
+        #     info_dict["driver"] = driver
+        # except:
+        #     web_driver = SingleDriver()
+        #     driver = get_driver(user_name,password)
+        #     web_driver.set_driver(driver)
+        #     info_dict["driver"] = driver
         #状态信息
         c  = ThreadControl()
-        # status = 1
         #出现错误，则线程不存在，因此启动线程
         try:
             status = c.is_alive(user_name)
@@ -116,7 +132,7 @@ def control_probuser_thread(request):
         except:
             print "not thread alive"
     prob_user_list =  ProbUser.objects.all()
-    return render_to_response('auto_main.html',{"prob_user_list":prob_user_list, "p_rule":rule, "p_monery":money, "p_upper_number":upper_money})
+    return render_to_response('auto_main.html',{"prob_user_list":prob_user_list, "p_rule":str(in_rule_list), "p_monery":money})
     # return render_to_response('qzone_info.html',{"thread_name":th_name, "control":control, "thread_list":thread_list,"info_active":info_active})
 
 #主页面
@@ -255,6 +271,13 @@ def get_prob_data(request):
     # prob_data = LotteryMonth.objects.all()
     return render_to_response('test.html',{"prob_data":prob_data})
 
+
+
+def rule_upper_lower_trans(interval):
+    for i in range(len(interval["rule_list"])):
+        print "rule--------",interval["rule_list"][i]
+
+    return 0
 
 #正式
 def auto_visit_commit(interval):
@@ -455,6 +478,10 @@ def confirm_submit_save(driver, xpath_list, money, upper_money, purchase_record_
                         sum_money = 0
                     else:
                         #获取购买的总值,当前日期，当前规则，当前列即第几名的购买总值
+                        if len(purchase_record_column_list) == i:
+                            print "list index out of range",len(xpath_list),"  ",len(purchase_record_column_list)
+                            continue_flag = False
+                            break
                         purcahse_all = PurchaseRecord.objects.filter(purchase_record_date=current_date, purchase_record_rule=rule, purchase_record_column=purchase_record_column_list[i])
                         sum_money = 0
                         for purchase in purcahse_all:
@@ -462,7 +489,7 @@ def confirm_submit_save(driver, xpath_list, money, upper_money, purchase_record_
                         print "purchase all money ",sum_money
                     #超出预算
                     if (sum_money > upper_money):
-                        print i + 1, " column over the budget"
+                        print purchase_record_column_list[i], " column over the budget"
                         purchase_record_column_list.remove(purchase_record_column_list[i])
                         purchase_record_value_list.remove(purchase_record_value_list[i])
                         continue
@@ -497,6 +524,7 @@ def confirm_submit_save(driver, xpath_list, money, upper_money, purchase_record_
                     print "save purcahse record!"
                 except:
                     print "no purchase"
+                    continue_flag = False
             else:
                 print "no any match"
                 continue_flag = False

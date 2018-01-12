@@ -39,9 +39,9 @@
                 <table class="table ">
                     <tr>
 
-                        <td >
-                            每名限额：<br><input type="number" id="in_upper_money_id" name="in_upper_money" value="{{ p_upper_number }}" />
-                        </td>
+{#                        <td >#}
+{#                            每名限额：<br><input type="number" id="in_upper_money_id" name="in_upper_money" value="{{ p_upper_number }}" />#}
+{#                        </td>#}
                     </tr>
                     <tr>
                         <td>
@@ -49,7 +49,7 @@
                         </td>
 
                         <td>
-                            规则器选择(1-6)：<input type="number" id="in_rule_id" name="in_rule" value="{{ p_rule }}">
+                            规则器选择(1-6)：<input type="text" id="in_rule_id" name="in_rule" value="{{ p_rule }}">
                         </td>
                     </tr>
 
@@ -57,24 +57,41 @@
                     <table class="table">
                         <tr>
                         <td>
-                            1 单单单双
+                            1 单单单双<br>
+                            上限：<input type="number" id="in_upper_monery_id_1" name="in_upper_monery_1" value="{{ p_upper_monery_1 }}"><br>
+                            下限：<input type="number" id="in_lower_monery_id_1" name="in_lower_monery_1" value="{{ p_lower_monery_1 }}">
                         </td>
                         <td>
-                            2 双双双单
+                            2 双双双单<br>
+                            上限：<input type="number" id="in_upper_monery_id_2" name="in_upper_monery_2" value="{{ p_upper_monery_2 }}"><br>
+                            下限：<input type="number" id="in_lower_monery_id_2" name="in_lower_monery_2" value="{{ p_lower_monery_2 }}">
                         </td>
+                        </tr>
+                        <tr>
                         <td>
-                            3 单单单单
+                            3 单单单单<br>
+                            上限：<input type="number" id="in_upper_monery_id_3" name="in_upper_monery_3" value="{{ p_upper_monery_3 }}"><br>
+                            下限：<input type="number" id="in_lower_monery_id_3" name="in_lower_monery_3" value="{{ p_lower_monery_3 }}">
                         </td>
                         <td>
                             4 双双双双
+                            <br>
+                            上限：<input type="number" id="in_upper_monery_id_4" name="in_upper_monery_4" value="{{ p_upper_monery_4 }}"><br>
+                            下限：<input type="number" id="in_lower_monery_id_4" name="in_lower_monery_4" value="{{ p_lower_monery_4 }}">
                         </td>
                         </tr>
                     <tr>
                         <td>
                             5 对子
+                            <br>
+                            上限：<input type="number" id="in_upper_monery_id_5" name="in_upper_monery_5" value="{{ p_upper_monery_5 }}"><br>
+                            下限：<input type="number" id="in_lower_monery_id_5" name="in_lower_monery_5" value="{{ p_lower_monery_5 }}">
                         </td>
                         <td>
                             6 交叉
+                            <br>
+                            上限：<input type="number" id="in_upper_monery_id_6" name="in_upper_monery_6" value="{{ p_upper_monery_6 }}"><br>
+                            下限：<input type="number" id="in_lower_monery_id_6" name="in_lower_monery_6" value="{{ p_lower_monery_6 }}">
                         </td>
 
                     </tr>
@@ -178,16 +195,96 @@ function start_thread(user_name){
     var confirmMsg = confirm("确定启动?");
     if (confirmMsg) {
 
-    in_upper_money = document.getElementById('in_upper_money_id').value;
+    {#in_upper_money = document.getElementById('in_upper_money_id').value;#}
     in_monery = document.getElementById('in_monery_id').value;
-    in_rule = document.getElementById('in_rule_id').value;
+    in_rule_str = document.getElementById('in_rule_id').value;
 
-    if (in_upper_money && in_monery && in_rule){
-        if(in_upper_money>=1){
+    {% comment %}规则判断{% endcomment %}
+    in_rule_list = in_rule_str.split(",");
+    var commit_flag = true;
+    if (in_rule_list.length == 1){
+        if((in_rule_list[0]).length > 1){
+            commit_flag = false;
+        }
+    }else{
+        for (x in in_rule_list)
+        {
+            result = parseInt(in_rule_list[x]);
+            if (result){
+
+            }else{
+                commit_flag = false;
+            }
+        }
+    }
+
+    in_rule = 1;
+
+
+    in_upper_monery_1 = document.getElementById('in_upper_monery_id_1').value;
+    in_lower_monery_1 = document.getElementById('in_lower_monery_id_1').value;
+
+        in_upper_monery_2 = document.getElementById('in_upper_monery_id_2').value;
+    in_lower_monery_2 = document.getElementById('in_lower_monery_id_2').value;
+        in_upper_monery_3 = document.getElementById('in_upper_monery_id_3').value;
+    in_lower_monery_3 = document.getElementById('in_lower_monery_id_3').value;
+        in_upper_monery_4 = document.getElementById('in_upper_monery_id_4').value;
+    in_lower_monery_4 = document.getElementById('in_lower_monery_id_4').value;
+        in_upper_monery_5 = document.getElementById('in_upper_monery_id_5').value;
+    in_lower_monery_5 = document.getElementById('in_lower_monery_id_5').value;
+        in_upper_monery_6 = document.getElementById('in_upper_monery_id_6').value;
+    in_lower_monery_6 = document.getElementById('in_lower_monery_id_6').value;
+
+    if(!in_upper_monery_1){
+        in_upper_monery_1 = 0
+    }
+    if(!in_lower_monery_1){
+        in_lower_monery_1 = 0
+    }
+    if(!in_upper_monery_2){
+        in_upper_monery_2 = 0
+    }
+    if(!in_lower_monery_2){
+        in_lower_monery_2 = 0
+    }
+    if(!in_upper_monery_3){
+        in_upper_monery_3 = 0
+    }
+    if(!in_lower_monery_3){
+        in_lower_monery_3 = 0
+    }
+    if(!in_upper_monery_4){
+        in_upper_monery_4 = 0
+    }
+    if(!in_lower_monery_4){
+        in_lower_monery_4 = 0
+    }
+    if(!in_upper_monery_5){
+        in_upper_monery_5 = 0
+    }
+    if(!in_lower_monery_5){
+        in_lower_monery_5 = 0
+    }
+    if(!in_upper_monery_6){
+        in_upper_monery_6 = 0
+    }
+    if(!in_lower_monery_6){
+        in_lower_monery_6 = 0
+    }
+
+    if ( in_monery && in_rule){
+        if(commit_flag){
             if(in_monery > 0){
                 if(in_rule>0 && in_rule<=6){
 {#                    document.getElementById('user_form').submit();#}
-                    post_form("/control_probuser_thread/",{"user_name":user_name,"control":'start', "auto_in_rule":in_rule, "auto_in_money":in_monery, "auto_in_upper_money":in_upper_money });
+                    post_form("/control_probuser_thread/",{"user_name":user_name,"control":'start', "auto_in_rule":in_rule,
+                        "auto_in_money":in_monery, "in_rule_list":in_rule_list,
+                    "in_upper_monery_1":in_upper_monery_1, "in_lower_monery_1":in_lower_monery_1,
+                    "in_upper_monery_2":in_upper_monery_2, "in_lower_monery_2":in_lower_monery_2,
+                    "in_upper_monery_3":in_upper_monery_3, "in_lower_monery_3":in_lower_monery_3,
+                    "in_upper_monery_4":in_upper_monery_4, "in_lower_monery_4":in_lower_monery_4,
+                    "in_upper_monery_5":in_upper_monery_5, "in_lower_monery_5":in_lower_monery_5,
+                    "in_upper_monery_6":in_upper_monery_6, "in_lower_monery_6":in_lower_monery_6});
                 }
                 else{
                     alert('规则选择为1-6！');
@@ -198,7 +295,7 @@ function start_thread(user_name){
             }
         }
         else{
-            alert('限额输入正数！');
+            alert('规则输入格式有误！');
         }
     }
     else{

@@ -60,14 +60,12 @@ def loaddata(c_thread,thread_num,interval):
                 judge_num = (current_minute%5)
                 if judge_num>2 :
                     current_date = time.strftime("%Y%m%d %H:%m:%S", time.localtime())
-                    print current_date," ",interval["money"], " ", interval["rule"]
+                    # print current_date," ",interval["money"], " ", interval["rule"]
                     print "start purchase"
-                    auto_visit.main.auto_visit_commit(interval)
+                    auto_visit.main.rule_upper_lower_trans(interval)
+                    # auto_visit.main.auto_visit_commit(interval)
                     time.sleep(3)
-                    # print "purchase finish"
                     last_minute = current_minute
-                    # print "last_minute ",last_minute
-                    #time.sleep(3)
                     count = count + 1
                 else:
                     # print current_minute, " ", last_minute," wait open prob"
