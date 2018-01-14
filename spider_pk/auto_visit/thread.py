@@ -59,6 +59,7 @@ def loaddata(c_thread,thread_num,interval):
             if current_minute - last_minute > 3:
                 judge_num = (current_minute%5)
                 if judge_num>2 :
+                # if 1:
                     current_date = time.strftime("%Y%m%d %H:%m:%S", time.localtime())
                     # print current_date," ",interval["money"], " ", interval["rule"]
                     print "start purchase"

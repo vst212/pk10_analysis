@@ -310,8 +310,12 @@ function start_thread(user_name){
 
 function stop_thread(user_name){
     var confirmMsg = confirm("确定停止?");
+    in_rule_str = document.getElementById('in_rule_id').value;
+
+    {% comment %}规则判断{% endcomment %}
+    in_rule_list = in_rule_str.split(",");
     if (confirmMsg) {
-        post_form("/control_probuser_thread/",{"user_name":user_name,"control":'stop'});
+        post_form("/control_probuser_thread/",{"user_name":user_name,"control":'stop', "in_rule_list":in_rule_list});
     } else {
         return false;
     }

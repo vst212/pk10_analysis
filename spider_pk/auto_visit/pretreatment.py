@@ -117,13 +117,15 @@ def get_rule(p_rule):
     rule_parity_list = []
     rule_value = int(p_rule)
     if(rule_value == 1):
-        rule_parity_list = [1, 1, 1, 0]
-    if (rule_value == 2):
-        rule_parity_list = [0, 0, 0, 1]
-    if (rule_value == 3):
-        rule_parity_list = [1, 1, 1, 1]
-    if (rule_value == 4):
-        rule_parity_list = [0, 0, 0, 0]
+        rule_parity_list = [1, 1, 0]
+    elif (rule_value == 2):
+        rule_parity_list = [0, 0, 1]
+    elif (rule_value == 3):
+        rule_parity_list = [1, 1, 1]
+    elif (rule_value == 4):
+        rule_parity_list = [0, 0, 0]
+    else:
+        rule_parity_list = [2, 2, 2]
     return rule_parity_list
 
 #基于target 和rule, 判断是否成立,成立则购买，否则跳过   ---规则为单双

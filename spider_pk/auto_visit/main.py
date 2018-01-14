@@ -9,7 +9,7 @@ from auto_visit.thread import ThreadControl
 
 from auto_visit.spider import spider_current_date_data
 from prob.models import LotteryMonth
-from auto_visit.models import PurchaseRecord
+from auto_visit.models import PurchaseRecord, FianceRecord
 from auto_visit.pretreatment import get_rule, parase_lotterys,check_double_match,check_single_match,parase_lotterys_cross, tran_croos_data_auto, change_r_l, check_cross_match
 from auto_visit.driver import get_driver
 
@@ -98,15 +98,15 @@ def control_probuser_thread(request):
         info_dict["lower_money_list"] = in_lower_money_list
 
         #单例模式
-        # try:
-        #     web_driver = SingleDriver()
-        #     driver = web_driver.get_driver()
-        #     info_dict["driver"] = driver
-        # except:
-        #     web_driver = SingleDriver()
-        #     driver = get_driver(user_name,password)
-        #     web_driver.set_driver(driver)
-        #     info_dict["driver"] = driver
+        try:
+            web_driver = SingleDriver()
+            driver = web_driver.get_driver()
+            info_dict["driver"] = driver
+        except:
+            web_driver = SingleDriver()
+            driver = get_driver(user_name,password)
+            web_driver.set_driver(driver)
+            info_dict["driver"] = driver
         #状态信息
         c  = ThreadControl()
         #出现错误，则线程不存在，因此启动线程
@@ -132,7 +132,7 @@ def control_probuser_thread(request):
         except:
             print "not thread alive"
     prob_user_list =  ProbUser.objects.all()
-    return render_to_response('auto_main.html',{"prob_user_list":prob_user_list, "p_rule":str(in_rule_list), "p_monery":money})
+    return render_to_response('auto_main.html',{"prob_user_list":prob_user_list, "p_rule":request.POST['in_rule_list'], "p_monery":money})
     # return render_to_response('qzone_info.html',{"thread_name":th_name, "control":control, "thread_list":thread_list,"info_active":info_active})
 
 #主页面
@@ -182,6 +182,40 @@ def get_purchase_data(request):
     obj_pro_purchase = PurchaseRecord.objects.filter(purchase_record_rule=1 ,purchase_record_date=current_date).order_by("-purchase_record_id")
     print "obj_pro",obj_pro_purchase
     return render_to_response('test.html',{"obj_pro_purchase":obj_pro_purchase})
+
+def get_fiance_data(request):
+    current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+    # lotterys = FianceRecord.objects.filter(lottery_date=current_date)
+    # obj_pro_purchase = PurchaseRecord.objects.all()
+    obj_pro_fiance = FianceRecord.objects.all()
+    # current_date = '2018-01-13'
+    # lottery_id = 661535
+    # lottery_number = '02, 08, 03, 04, 07, 09, 06, 05, 10, 022'
+    # rule = 1
+    # fiance_record_rule = '单单单双'
+    # purchase_record_column = '第6名'
+    # fiance_record_value = '双'
+    # fiance_record_money = 5
+    # fiance_record_odds = 1.97
+    # fiance_record_profit = -5.0
+    # fiance_lose_win = 0
+    # obj_pro = FianceRecord(fiance_record_date=current_date, fiance_record_id=lottery_id,
+    #                        fiance_record_lottery_number=lottery_number,
+    #                        fiance_record_rule_id=rule,
+    #                        fiance_record_rule=fiance_record_rule,
+    #                        purchase_record_column=purchase_record_column,
+    #                        fiance_record_value=fiance_record_value,
+    #                        fiance_record_money=fiance_record_money,
+    #                        fiance_record_odds=fiance_record_odds,
+    #                        fiance_record_profit=fiance_record_profit,
+    #                        fiance_lose_win=fiance_lose_win)
+    # print current_date, "  ", lottery_id, "  ", lottery_number, "  ", rule, "  ", fiance_record_rule, "  ", purchase_record_column, "  ", \
+    #     fiance_record_value, "  ", fiance_record_money, "  ", fiance_record_odds, "  ", fiance_record_profit, "  ", \
+    #     fiance_lose_win
+    # obj_pro.save()
+
+    print "obj_pro",obj_pro_fiance
+    return render_to_response('test.html',{"obj_pro_fiance":obj_pro_fiance})
 
 
 # 测试
@@ -274,23 +308,42 @@ def get_prob_data(request):
 
 
 def rule_upper_lower_trans(interval):
-    for i in range(len(interval["rule_list"])):
-        print "rule--------",interval["rule_list"][i]
 
+    # 采集当天数据，需要考虑失败重新采集的情况
+    spider_current_date_data()
+    current_date = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+    print current_date
+    lotterys = LotteryMonth.objects.filter(lottery_date=current_date)
+    if len(lotterys) == 0:
+        print "spider open pk10 faild"
+        return 0
+    current_date_rows = LotteryMonth.objects.filter(lottery_date=current_date).order_by("-lottery_id")
+    lottery_max_num = current_date_rows[0].lottery_id
+    print "the lastest open number is :",lottery_max_num
+    for i in range(len(interval["rule_list"])):
+        prob_interval = {}
+        print "rule--------",interval["rule_list"][i]
+        prob_interval["rule"] = int(interval["rule_list"][i])
+        prob_interval["money"] = int(interval["money"])
+        prob_interval["driver"] = interval["driver"]
+        prob_interval["upper_money"] = int(interval["upper_money_list"][i])
+        prob_interval["lower_money"] = int(interval["lower_money_list"][i])
+        print current_date, current_date_rows[0], prob_interval["rule"]
+        save_fiance_record(current_date, current_date_rows[0], prob_interval["rule"])
+
+        auto_visit_commit(prob_interval)
     return 0
 
 #正式
-def auto_visit_commit(interval):
-    rule = interval["rule"]
-    money = interval["money"]
-    money = money
-    upper_money = interval["upper_money"]
-    driver = interval["driver"]
+def auto_visit_commit(prob_interval):
+    rule = prob_interval["rule"]
+    money = prob_interval["money"]
+    upper_money = prob_interval["upper_money"]
+    lower_money = prob_interval["lower_money"]
+    driver = prob_interval["driver"]
     #清空购买记录
     # PurchaseRecord.objects.all().delete()
 
-    #采集当天数据，需要考虑失败重新采集的情况
-    spider_current_date_data()
     current_date = time.strftime('%Y-%m-%d', time.localtime(time.time()))
     print current_date
     lotterys = LotteryMonth.objects.filter(lottery_date=current_date)
@@ -325,7 +378,7 @@ def auto_visit_commit(interval):
                 purchase_record_column_list, purchase_record_value_list, xpath_list = visit_set_prob(rule,rule_parity_list,lotterys)
                 print "xpath_list ",xpath_list
                 #购买并保存
-                confirm_submit_save(driver, xpath_list, money, upper_money, purchase_record_column_list, purchase_record_value_list, lottery_purchase_id, rule, purchase_date_rows_len, current_date)
+                confirm_submit_save(driver, xpath_list, money, upper_money, lower_money, purchase_record_column_list, purchase_record_value_list, lottery_purchase_id, rule, purchase_date_rows_len, current_date)
             else:
                 pass
         #有该买记录
@@ -339,7 +392,7 @@ def auto_visit_commit(interval):
                 purchase_record_column_list, purchase_record_value_list, xpath_list = visit_set_prob(rule,rule_parity_list,lotterys)
                 print "xpath_list ",xpath_list
                 #购买并保存
-                confirm_submit_save(driver, xpath_list, money, upper_money, purchase_record_column_list, purchase_record_value_list, lottery_purchase_id, rule, purchase_date_rows_len, current_date)
+                confirm_submit_save(driver, xpath_list, money, upper_money, lower_money, purchase_record_column_list, purchase_record_value_list, lottery_purchase_id, rule, purchase_date_rows_len, current_date)
 
 
     # prob_data = LotteryMonth.objects.filter(lottery_date=current_date)
@@ -375,10 +428,10 @@ def visit_set_prob(rule,rule_parity_list,lotterys):
         for i in range(len(purchase_record_column_list)):
             #构造path
             if (purchase_record_value_list[i] == 0):
-                xpath = '//*[@id="itmStakeInput20' + str(purchase_record_column_list[i]) + '302"]'
+                xpath = '//*[@id="itmStakeInput2' + str(purchase_record_column_list[i]).zfill(2) + '302"]'
                 xpath_list.append(xpath)
             else:
-                xpath = '//*[@id="itmStakeInput20' + str(purchase_record_column_list[i]) + '301"]'
+                xpath = '//*[@id="itmStakeInput2' + str(purchase_record_column_list[i]).zfill(2) + '301"]'
                 xpath_list.append(xpath)
         return purchase_record_column_list, purchase_record_value_list, xpath_list
 
@@ -395,7 +448,6 @@ def visit_set_prob(rule,rule_parity_list,lotterys):
             target = base_lottery
             #查看是否匹配,对子规则，[5,5,5]，规则长度为3，满足前两个相同，第三个购买
             result = check_double_match(target,3)
-            # result = check_single_match(target, rule_parity_list)
             if (result == -1):
                 pass
                 print "not match ", column
@@ -440,7 +492,6 @@ def visit_set_prob(rule,rule_parity_list,lotterys):
                 target = parity_lottery
                 #查看是否匹配,对子规则，[5,5,5]，规则长度为3，满足前两个相同，第三个购买
                 result = check_cross_match(target,3)
-                # result = check_single_match(target, rule_parity_list)
                 if (result == -1):
                     pass
                     print "not match ", column
@@ -463,7 +514,7 @@ def visit_set_prob(rule,rule_parity_list,lotterys):
         return purchase_record_column_list, purchase_record_value_list, xpath_list
 
 #提交结果并保存
-def confirm_submit_save(driver, xpath_list, money, upper_money, purchase_record_column_list, purchase_record_value_list, lottery_purchase_id, rule, purchase_date_rows_len, current_date):
+def confirm_submit_save(driver, xpath_list, money, upper_money, lower_money, purchase_record_column_list, purchase_record_value_list, lottery_purchase_id, rule, purchase_date_rows_len, current_date):
     continue_flag = True
     exit_flag = 0
     while (continue_flag):
@@ -482,13 +533,18 @@ def confirm_submit_save(driver, xpath_list, money, upper_money, purchase_record_
                             print "list index out of range",len(xpath_list),"  ",len(purchase_record_column_list)
                             continue_flag = False
                             break
-                        purcahse_all = PurchaseRecord.objects.filter(purchase_record_date=current_date, purchase_record_rule=rule, purchase_record_column=purchase_record_column_list[i])
+                        #获取当天的当前规则的当前的名次的盈利情况
+
+                        purcahse_all = FianceRecord.objects.filter(fiance_record_date=current_date,
+                                                                   fiance_record_rule_id=rule,
+                                                                   purchase_record_column=purchase_record_column_list[i])
                         sum_money = 0
                         for purchase in purcahse_all:
-                            sum_money = sum_money + purchase.purchase_record_money
-                        print "purchase all money ",sum_money
+                            sum_money = sum_money + purchase.fiance_record_profit
+                        print "purchase all money ", sum_money
+
                     #超出预算
-                    if (sum_money > upper_money):
+                    if ((sum_money > upper_money) or (sum_money < lower_money)):
                         print purchase_record_column_list[i], " column over the budget"
                         purchase_record_column_list.remove(purchase_record_column_list[i])
                         purchase_record_value_list.remove(purchase_record_value_list[i])
@@ -538,3 +594,306 @@ def confirm_submit_save(driver, xpath_list, money, upper_money, purchase_record_
         # 持续封盘 退出
         if (exit_flag > 8):
             continue_flag = False
+
+
+def save_fiance_record(current_date, lastest_lottery_record, rule):
+    if (rule == 1):
+        print "rule 1 1 1 1 1 "
+        lottery_id = lastest_lottery_record.lottery_id
+        purchase_record_rows = PurchaseRecord.objects.filter(purchase_record_date=current_date, purchase_record_rule=str(rule), purchase_record_id=lottery_id)
+
+        lottery_number = lastest_lottery_record.lottery_number
+        lottery_number_list = lottery_number.split(",")
+        #财务规则
+        fiance_record_rule = '单单单双'
+        print "purchase_record_rows ",purchase_record_rows
+        for purchase_record in purchase_record_rows:
+            print "purchase_record ", purchase_record
+            column = purchase_record.purchase_record_column
+            value = purchase_record.purchase_record_value
+            if(int(lottery_number_list[column-1])%2 == value):
+                lose_win = 1
+            else:
+                lose_win = 0
+            #第几名
+            purchase_record_column = '第' + str(column) + '名'
+            # 购买号码
+            fiance_record_value = value
+            #购买号码描述
+            fiance_record_value_desc = '双'
+            # 下注金额
+            fiance_record_money = purchase_record.purchase_record_money
+            # 赔率
+            odds = 1.97
+            fiance_record_odds = odds
+            #计算盈利
+            fiance_record_profit = purchase_record.purchase_record_money * lose_win * odds - purchase_record.purchase_record_money
+            # 输赢
+            fiance_lose_win = lose_win
+
+            obj_pro = FianceRecord(fiance_record_date=current_date, fiance_record_id=lottery_id,
+                                   fiance_record_lottery_number=lottery_number,
+                                   fiance_record_rule_id=rule,
+                                   fiance_record_rule=fiance_record_rule,
+                                   purchase_record_column=purchase_record_column,
+                                   fiance_record_value=fiance_record_value,
+                                   fiance_record_value_desc = fiance_record_value_desc,
+                                   fiance_record_money=fiance_record_money,
+                                   fiance_record_odds=fiance_record_odds,
+                                   fiance_record_profit=fiance_record_profit,
+                                   fiance_lose_win=fiance_lose_win)
+            print current_date,"  ",lottery_id,"  ",lottery_number,"  ",rule,"  ",fiance_record_rule,"  ",purchase_record_column,"  ",\
+                fiance_record_value,"  ",fiance_record_money,"  ",fiance_record_odds,"  ",fiance_record_profit,"  ",\
+                fiance_lose_win
+            obj_pro.save()
+
+    if (rule == 2):
+        print "rule 2 2 2 2  2  "
+        lottery_id = lastest_lottery_record.lottery_id
+        purchase_record_rows = PurchaseRecord.objects.filter(purchase_record_date=current_date, purchase_record_rule=str(rule), purchase_record_id=lottery_id)
+
+        lottery_number = lastest_lottery_record.lottery_number
+        lottery_number_list = lottery_number.split(",")
+        #财务规则
+        fiance_record_rule = '双双双单'
+        print "purchase_record_rows ",purchase_record_rows
+        for purchase_record in purchase_record_rows:
+            print "purchase_record ", purchase_record
+            column = purchase_record.purchase_record_column
+            value = int(purchase_record.purchase_record_value)
+            if(int(lottery_number_list[column-1])%2 == value):
+                lose_win = 1
+            else:
+                lose_win = 0
+            #第几名
+            purchase_record_column = '第' + str(column) + '名'
+            # 购买号码
+            fiance_record_value = value
+            # 购买号码描述
+            fiance_record_value_desc = '单'
+            # 下注金额
+            fiance_record_money = purchase_record.purchase_record_money
+            # 赔率
+            odds = 1.97
+            fiance_record_odds = odds
+            #计算盈利
+            fiance_record_profit = purchase_record.purchase_record_money * lose_win * odds - purchase_record.purchase_record_money
+            # 输赢
+            fiance_lose_win = lose_win
+
+            obj_pro = FianceRecord(fiance_record_date=current_date, fiance_record_id=lottery_id,
+                                   fiance_record_lottery_number=lottery_number,
+                                   fiance_record_rule_id=rule,
+                                   fiance_record_rule=fiance_record_rule,
+                                   purchase_record_column=purchase_record_column,
+                                   fiance_record_value=fiance_record_value,
+                                   fiance_record_value_desc = fiance_record_value_desc,
+                                   fiance_record_money=fiance_record_money,
+                                   fiance_record_odds=fiance_record_odds,
+                                   fiance_record_profit=fiance_record_profit,
+                                   fiance_lose_win=fiance_lose_win)
+            print current_date,"  ",lottery_id,"  ",lottery_number,"  ",rule,"  ",fiance_record_rule,"  ",purchase_record_column,"  ",\
+                fiance_record_value,"  ",fiance_record_money,"  ",fiance_record_odds,"  ",fiance_record_profit,"  ",fiance_lose_win
+            obj_pro.save()
+    if (rule == 3):
+        print "rule 3,3,3,3  "
+        lottery_id = lastest_lottery_record.lottery_id
+        purchase_record_rows = PurchaseRecord.objects.filter(purchase_record_date=current_date, purchase_record_rule=str(rule), purchase_record_id=lottery_id)
+
+        lottery_number = lastest_lottery_record.lottery_number
+        lottery_number_list = lottery_number.split(",")
+        #财务规则
+        fiance_record_rule = '单单单单'
+        print "purchase_record_rows ",purchase_record_rows
+        for purchase_record in purchase_record_rows:
+            print "purchase_record ", purchase_record
+            column = purchase_record.purchase_record_column
+            value = int(purchase_record.purchase_record_value)
+            if(int(lottery_number_list[column-1])%2 == value):
+                lose_win = 1
+            else:
+                lose_win = 0
+            #第几名
+            purchase_record_column = '第' + str(column) + '名'
+            # 购买号码
+            fiance_record_value = value
+            # 购买号码描述
+            fiance_record_value_desc = '单'
+            # 下注金额
+            fiance_record_money = purchase_record.purchase_record_money
+            # 赔率
+            odds = 1.97
+            fiance_record_odds = odds
+            #计算盈利
+            fiance_record_profit = purchase_record.purchase_record_money * lose_win * odds - purchase_record.purchase_record_money
+            # 输赢
+            fiance_lose_win = lose_win
+
+            obj_pro = FianceRecord(fiance_record_date=current_date, fiance_record_id=lottery_id,
+                                   fiance_record_lottery_number=lottery_number,
+                                   fiance_record_rule_id=rule,
+                                   fiance_record_rule=fiance_record_rule,
+                                   purchase_record_column=purchase_record_column,
+                                   fiance_record_value=fiance_record_value,
+                                   fiance_record_value_desc = fiance_record_value_desc,
+                                   fiance_record_money=fiance_record_money,
+                                   fiance_record_odds=fiance_record_odds,
+                                   fiance_record_profit=fiance_record_profit,
+                                   fiance_lose_win=fiance_lose_win)
+            print current_date,"  ",lottery_id,"  ",lottery_number,"  ",rule,"  ",fiance_record_rule,"  ",purchase_record_column,"  ",\
+                fiance_record_value,"  ",fiance_record_money,"  ",fiance_record_odds,"  ",fiance_record_profit,"  ",fiance_lose_win
+            obj_pro.save()
+
+    if (rule == 4):
+        print "rule 4,4,4,4  "
+        lottery_id = lastest_lottery_record.lottery_id
+        purchase_record_rows = PurchaseRecord.objects.filter(purchase_record_date=current_date, purchase_record_rule=str(rule), purchase_record_id=lottery_id)
+
+        lottery_number = lastest_lottery_record.lottery_number
+        lottery_number_list = lottery_number.split(",")
+        #财务规则
+        fiance_record_rule = '双双双双'
+        print "purchase_record_rows ",purchase_record_rows
+        for purchase_record in purchase_record_rows:
+            print "purchase_record ", purchase_record
+            column = purchase_record.purchase_record_column
+            value = int(purchase_record.purchase_record_value)
+            if(int(lottery_number_list[column-1])%2 == value):
+                lose_win = 1
+            else:
+                lose_win = 0
+            #第几名
+            purchase_record_column = '第' + str(column) + '名'
+            # 购买号码
+            fiance_record_value = value
+            # 购买号码描述
+            fiance_record_value_desc = '双'
+            # 下注金额
+            fiance_record_money = purchase_record.purchase_record_money
+            # 赔率
+            odds = 1.97
+            fiance_record_odds = odds
+            #计算盈利
+            fiance_record_profit = purchase_record.purchase_record_money * lose_win * odds - purchase_record.purchase_record_money
+            # 输赢
+            fiance_lose_win = lose_win
+
+            obj_pro = FianceRecord(fiance_record_date=current_date, fiance_record_id=lottery_id,
+                                   fiance_record_lottery_number=lottery_number,
+                                   fiance_record_rule_id=rule,
+                                   fiance_record_rule=fiance_record_rule,
+                                   purchase_record_column=purchase_record_column,
+                                   fiance_record_value=fiance_record_value,
+                                   fiance_record_value_desc = fiance_record_value_desc,
+                                   fiance_record_money=fiance_record_money,
+                                   fiance_record_odds=fiance_record_odds,
+                                   fiance_record_profit=fiance_record_profit,
+                                   fiance_lose_win=fiance_lose_win)
+            print current_date,"  ",lottery_id,"  ",lottery_number,"  ",rule,"  ",fiance_record_rule,"  ",purchase_record_column,"  ",\
+                fiance_record_value,"  ",fiance_record_money,"  ",fiance_record_odds,"  ",fiance_record_profit,"  ",fiance_lose_win
+            obj_pro.save()
+
+    if (rule == 5):
+        print "rule 5 5"
+        lottery_id = lastest_lottery_record.lottery_id
+        purchase_record_rows = PurchaseRecord.objects.filter(purchase_record_date=current_date,
+                                                             purchase_record_rule=str(rule), purchase_record_id=lottery_id)
+
+        lottery_number = lastest_lottery_record.lottery_number
+        lottery_number_list = lottery_number.split(",")
+        # 财务规则
+        fiance_record_rule = '对子'
+        print "purchase_record_rows ", purchase_record_rows
+        for purchase_record in purchase_record_rows:
+            print "purchase_record ", purchase_record
+            column = purchase_record.purchase_record_column
+            value = purchase_record.purchase_record_value
+            if (int(lottery_number_list[column - 1]) == value):
+                lose_win = 1
+            else:
+                lose_win = 0
+            # 第几名
+            purchase_record_column = '第' + str(column) + '名'
+            # 购买号码
+            fiance_record_value = value
+            # 购买号码描述
+            fiance_record_value_desc = str(fiance_record_value)
+            # 下注金额
+            fiance_record_money = purchase_record.purchase_record_money
+            # 赔率
+            odds = 9.7
+            fiance_record_odds = odds
+            # 计算盈利
+            fiance_record_profit = purchase_record.purchase_record_money * lose_win * odds - purchase_record.purchase_record_money
+            # 输赢
+            fiance_lose_win = lose_win
+
+            obj_pro = FianceRecord(fiance_record_date=current_date, fiance_record_id=lottery_id,
+                                   fiance_record_lottery_number=lottery_number,
+                                   fiance_record_rule_id=rule,
+                                   fiance_record_rule=fiance_record_rule,
+                                   purchase_record_column=purchase_record_column,
+                                   fiance_record_value=fiance_record_value,
+                                   fiance_record_value_desc = fiance_record_value_desc,
+                                   fiance_record_money=fiance_record_money,
+                                   fiance_record_odds=fiance_record_odds,
+                                   fiance_record_profit=fiance_record_profit,
+                                   fiance_lose_win=fiance_lose_win)
+            print current_date, "  ", lottery_id, "  ", lottery_number, "  ", rule, "  ", fiance_record_rule, "  ", purchase_record_column, "  ", \
+                fiance_record_value, "  ", fiance_record_money, "  ", fiance_record_odds, "  ", fiance_record_profit, "  ", \
+                fiance_lose_win
+            obj_pro.save()
+    if (rule == 6):
+        print "rule 6 6"
+        lottery_id = lastest_lottery_record.lottery_id
+        purchase_record_rows = PurchaseRecord.objects.filter(purchase_record_date=current_date,
+                                                             purchase_record_rule=str(rule), purchase_record_id=lottery_id)
+
+        lottery_number = lastest_lottery_record.lottery_number
+        lottery_number_list = lottery_number.split(",")
+        # 财务规则
+        fiance_record_rule = '交叉'
+        print "purchase_record_rows ", purchase_record_rows
+        for purchase_record in purchase_record_rows:
+            print "purchase_record ", purchase_record
+            column = purchase_record.purchase_record_column
+            value = purchase_record.purchase_record_value
+            if (int(lottery_number_list[column - 1]) == value):
+                lose_win = 1
+            else:
+                lose_win = 0
+            # 第几名
+            purchase_record_column = '第' + str(column) + '名'
+            # 购买号码
+            fiance_record_value = value
+            # 购买号码描述
+            fiance_record_value_desc = str(fiance_record_value)
+            # 下注金额
+            fiance_record_money = purchase_record.purchase_record_money
+            # 赔率
+            odds = 9.7
+            fiance_record_odds = odds
+            # 计算盈利
+            fiance_record_profit = purchase_record.purchase_record_money * lose_win * odds - purchase_record.purchase_record_money
+            # 输赢
+            fiance_lose_win = lose_win
+
+            obj_pro = FianceRecord(fiance_record_date=current_date, fiance_record_id=lottery_id,
+                                   fiance_record_lottery_number=lottery_number,
+                                   fiance_record_rule_id=rule,
+                                   fiance_record_rule=fiance_record_rule,
+                                   purchase_record_column=purchase_record_column,
+                                   fiance_record_value=fiance_record_value,
+                                   fiance_record_value_desc = fiance_record_value_desc,
+                                   fiance_record_money=fiance_record_money,
+                                   fiance_record_odds=fiance_record_odds,
+                                   fiance_record_profit=fiance_record_profit,
+                                   fiance_lose_win=fiance_lose_win)
+            print current_date, "  ", lottery_id, "  ", lottery_number, "  ", rule, "  ", fiance_record_rule, "  ", purchase_record_column, "  ", \
+                fiance_record_value, "  ", fiance_record_money, "  ", fiance_record_odds, "  ", fiance_record_profit, "  ", \
+                fiance_lose_win
+            obj_pro.save()
+
+
+
+

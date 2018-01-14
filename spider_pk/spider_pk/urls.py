@@ -67,6 +67,7 @@ urlpatterns = [
     url(r'^get_user_data/$', auto_visit.main.get_user_data),
     url(r'^get_prob_data/$', auto_visit.main.get_prob_data),
     url(r'^get_purchase_data/$', auto_visit.main.get_purchase_data),
+    url(r'^get_fiance_data/$', auto_visit.main.get_fiance_data),
 
 
 

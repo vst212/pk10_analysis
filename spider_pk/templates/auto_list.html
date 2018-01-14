@@ -25,12 +25,7 @@
 				<li class="active">
 					<a rel="nofollow" href="/auto_list/">统计页面</a>
 				</li>
-                <!--<li>-->
-					<!--<a rel="nofollow" href="/admin_times/">按日统计新增重复次数</a>-->
-				<!--</li>-->
-				<!--<li >-->
-					<!--<a rel="nofollow" href="/admin_month_times/">按月统计新增重复次数</a>-->
-				<!--</li>-->
+
 			</ul>
 <div class="container">
 	<div class="row clearfix">
@@ -47,28 +42,22 @@
 						<thead>
 								<tr>
 									<th>
+										开奖期数
+									</th>
+									<th>
+										规则
+									</th>
+									<th>
 										排名
 									</th>
 									<th>
-										统计规则
+										下注号码
 									</th>
 									<th>
-										命中
+										下注本金
 									</th>
 									<th>
-										挂子
-									</th>
-									<th>
-										下注
-									</th>
-									<th>
-										本金
-									</th>
-									<th>
-										赢数
-									</th>
-									<th>
-										输数
+										赔率
 									</th>
 									<th>
 										盈利
@@ -80,66 +69,30 @@
 					<div style="overflow-x: auto; overflow-y: auto; height: 250px; width:550px;">
 						<!--<table class="table table-hover table-bordered table-striped">-->
 						<table  class="table table-bordered scrolltable">
-							<!--<thead >-->
-								<!--<tr>-->
-									<!--<th>-->
-										<!--排名-->
-									<!--</th>-->
-									<!--<th>-->
-										<!--统计规则-->
-									<!--</th>-->
-									<!--<th>-->
-										<!--命中-->
-									<!--</th>-->
-									<!--<th>-->
-										<!--挂子-->
-									<!--</th>-->
-									<!--<th>-->
-										<!--下注-->
-									<!--</th>-->
-									<!--<th>-->
-										<!--本金-->
-									<!--</th>-->
-									<!--<th>-->
-										<!--赢数-->
-									<!--</th>-->
-									<!--<th>-->
-										<!--输数-->
-									<!--</th>-->
-									<!--<th>-->
-										<!--盈数-->
-									<!--</th>-->
-								<!--</tr>-->
-							<!--</thead>-->
+
 							<tbody>
 							{% for prob in probs %}
 								<tr class="success">
 									<td>
-										{{prob.prob_range}}
+										{{prob.fiance_record_id}}
 									</td>
 									<td>
-										{{prob.prob_rule}}
+										{{prob.fiance_record_rule}}
 									</td>
 									<td>
-										{{prob.prob_match}}
+										{{prob.purchase_record_column}}
 									</td>
 									<td>
-										{{prob.prob_nomatch}}
+										{{prob.fiance_record_value_desc}}
 									</td>
 									<td>
-										{{prob.prob_bet}}
+										{{prob.fiance_record_money}}
 									</td>
 									<td>
-										{{prob.prob_amount}}
+										{{prob.fiance_record_odds}}
 									</td>
 									<td>
-										{{prob.prob_win}}
-									</td>
-									<td>
-										{{prob.prob_lose}}
-									</td>
-									<td>
-										{{prob.prob_gain}}
+										{{prob.fiance_record_profit}}
 									</td>
 								</tr>
 							{% endfor %}
