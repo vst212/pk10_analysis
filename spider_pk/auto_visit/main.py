@@ -62,6 +62,8 @@ def control_probuser_thread(request):
     password = ProbUser.objects.get(user_name=user_name).user_password;
     control = request.POST['control']
 
+    money = request.POST['auto_in_money']
+
     # for i in range(len(in_rule_list)):
     #     print i,"  ",in_upper_money_list[i]
     #     print i,"  ",in_lower_money_list[i]
@@ -81,7 +83,7 @@ def control_probuser_thread(request):
     #显示活跃状态
     prob_user = ProbUser.objects.get(user_name=user_name)
     if control == 'start':
-        money = request.POST['auto_in_money']
+
 
         in_rule_list = request.POST['in_rule_list'].split(",")
         in_upper_money_list = []
@@ -132,7 +134,7 @@ def control_probuser_thread(request):
         except:
             print "not thread alive"
     prob_user_list =  ProbUser.objects.all()
-    return render_to_response('auto_main.html',{"prob_user_list":prob_user_list, "p_rule":request.POST['in_rule_list'], "p_monery":money})
+    return render_to_response('auto_main.html',{"prob_user_list":prob_user_list, "p_rule":request.POST['in_rule_list'], "p_monery":money })
     # return render_to_response('qzone_info.html',{"thread_name":th_name, "control":control, "thread_list":thread_list,"info_active":info_active})
 
 #主页面
@@ -188,31 +190,6 @@ def get_fiance_data(request):
     # lotterys = FianceRecord.objects.filter(lottery_date=current_date)
     # obj_pro_purchase = PurchaseRecord.objects.all()
     obj_pro_fiance = FianceRecord.objects.all()
-    # current_date = '2018-01-13'
-    # lottery_id = 661535
-    # lottery_number = '02, 08, 03, 04, 07, 09, 06, 05, 10, 022'
-    # rule = 1
-    # fiance_record_rule = '单单单双'
-    # purchase_record_column = '第6名'
-    # fiance_record_value = '双'
-    # fiance_record_money = 5
-    # fiance_record_odds = 1.97
-    # fiance_record_profit = -5.0
-    # fiance_lose_win = 0
-    # obj_pro = FianceRecord(fiance_record_date=current_date, fiance_record_id=lottery_id,
-    #                        fiance_record_lottery_number=lottery_number,
-    #                        fiance_record_rule_id=rule,
-    #                        fiance_record_rule=fiance_record_rule,
-    #                        purchase_record_column=purchase_record_column,
-    #                        fiance_record_value=fiance_record_value,
-    #                        fiance_record_money=fiance_record_money,
-    #                        fiance_record_odds=fiance_record_odds,
-    #                        fiance_record_profit=fiance_record_profit,
-    #                        fiance_lose_win=fiance_lose_win)
-    # print current_date, "  ", lottery_id, "  ", lottery_number, "  ", rule, "  ", fiance_record_rule, "  ", purchase_record_column, "  ", \
-    #     fiance_record_value, "  ", fiance_record_money, "  ", fiance_record_odds, "  ", fiance_record_profit, "  ", \
-    #     fiance_lose_win
-    # obj_pro.save()
 
     print "obj_pro",obj_pro_fiance
     return render_to_response('test.html',{"obj_pro_fiance":obj_pro_fiance})

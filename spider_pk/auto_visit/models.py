@@ -54,3 +54,30 @@ class FianceRecord(models.Model):
     fiance_lose_win = models.IntegerField()
 
 
+class FianceRecordTotal(models.Model):
+    fiance_record_month = models.CharField(max_length=100)
+    fiance_record_date = models.CharField(max_length=100)
+    fiance_record_time = models.CharField(max_length=100)
+    fiance_record_id =  models.IntegerField()
+    #开奖号码
+    fiance_record_lottery_number = models.CharField(max_length=500)
+    # 规则
+    fiance_record_rule_id = models.CharField(max_length=100)
+    #规则
+    fiance_record_rule = models.CharField(max_length=100)
+    #第几名
+    fiance_record_column = models.CharField(max_length=100)
+    #购买号码
+    fiance_record_value = models.IntegerField()
+    # 购买号码描述
+    fiance_record_value_desc = models.CharField(max_length=100)
+    #下注金额
+    fiance_record_money = models.FloatField()
+    #赔率
+    fiance_record_odds = models.FloatField()
+    #盈利
+    fiance_record_profit_all = models.FloatField()
+    #输赢
+    fiance_lose_win = models.IntegerField()
+
+

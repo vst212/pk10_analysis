@@ -48,7 +48,8 @@ def spider_current_date_data():
     history_data = LotteryMonth.objects.all()
     #当天时间
     print "current_date:",current_date
-    print "url:",url
+    print "spider...."
+    # print "spider....",url
     LotteryMonth.objects.filter(lottery_date=current_date).delete()
     result_flag = spider_today(url)
     if(result_flag):

@@ -19,11 +19,11 @@
     <!--</table>-->
 <!--{% endfor %}-->
 <ul class="nav nav-tabs">
-				<li >
-					<a rel="nofollow" href="/auto_main/">自动访问页面</a>
-				</li>
+{#				<li >#}
+{#					<a rel="nofollow" href="/auto_main/">自动访问页面</a>#}
+{#				</li>#}
 				<li class="active">
-					<a rel="nofollow" href="/auto_list/">统计页面</a>
+					<a rel="nofollow" href="/auto_list/">财务统计页面</a>
 				</li>
 
 			</ul>
@@ -36,13 +36,16 @@
 			<div class="row clearfix">
 				<div class="col-md-6 column">
 					<h5 align="center" color="red">
-						统计结果
+						财务报表
 					</h5>
 					<table class="table" width=50%>
 						<thead>
 								<tr>
+                                    <th>
+										日期
+									</th>
 									<th>
-										开奖期数
+										期数
 									</th>
 									<th>
 										规则
@@ -51,10 +54,10 @@
 										排名
 									</th>
 									<th>
-										下注号码
+										号码
 									</th>
 									<th>
-										下注本金
+										本金
 									</th>
 									<th>
 										赔率
@@ -73,6 +76,9 @@
 							<tbody>
 							{% for prob in probs %}
 								<tr class="success">
+                                    <td>
+										{{prob.fiance_record_date}}
+									</td>
 									<td>
 										{{prob.fiance_record_id}}
 									</td>
@@ -104,25 +110,13 @@
 						<thead>
 								<tr>
 									<th>
-										规则
+										日期
 									</th>
-                                    <th>
-										总命中
-									</th>
-                                    <th>
-										总挂子
-									</th>
-                                    <th>
-										总下注
-									</th>
+{#									<th>#}
+{#										规则#}
+{#									</th>#}
 									<th>
-										总本金
-									</th>
-									<th>
-										总计赢
-									</th>
-									<th>
-										总计输
+										排名
 									</th>
 									<th>
 										总盈利
@@ -136,114 +130,29 @@
 						<table  class="table table-bordered scrolltable">
 
 							<tbody>
-							{% for prob_total in prob_totals %}
+							{% for prob_total in obj_pro_fiance_total %}
 								<tr class="success">
-
-									<td>
-										{{prob_total.probtotal_rule}}
-									</td>
                                     <td>
-										{{prob_total.probtotal_match}}
+										{{prob_total.fiance_record_date}}
 									</td>
+{#									<td>#}
+{#										{{prob_total.fiance_record_rule}}#}
+{#									</td>#}
                                     <td>
-										{{prob_total.probtotal_nomatch}}
-									</td>
-                                    <td>
-										{{prob_total.probtotal_bet}}
+										{{prob_total.fiance_record_column}}
 									</td>
 									<td>
-										{{prob_total.probtotal_amount}}
+										{{prob_total.fiance_record_profit_all}}
 									</td>
-                                    <td>
-										{{prob_total.probtotal_win}}
-									</td>
-                                    <td>
-										{{prob_total.probtotal_lose}}
-									</td>
-                                    <td>
-										{{prob_total.probtotal_gain}}
-									</td>
-
 								</tr>
 							{% endfor %}
 							</tbody>
 						</table>
 					</div>
-
-                <form action="/index/" method="post" id="user_form">
-                <table class="table ">
-                    <tr>
-                        <td>
-                            指定评估日期：<br><input type="date" id="in_date_id" name="in_date" value="{{ p_date }}" />
-                        </td>
-
-                        <td >
-                            起始位置(1-10)：<br><input type="number" id="in_number_id" name="in_number" value="{{ p_number }}" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            下注本金(正数)：<input type="number" id="in_monery_id" name="in_monery" value="{{ p_monery }}">
-                        </td>
-
-                        <td>
-                            规则器选择(1-8)：<input type="number" id="in_rule_id" name="in_rule" value="{{ p_rule }}">
-                        </td>
-                    </tr>
-
-                </table>
-                    <table class="table">
-                        <tr>
-                        <td>
-                            1双双单单<br>
-                            1单单双双
-                        </td>
-                        <td>
-                            2单双<br>
-                            2双单
-                        </td>
-                        <td>
-                            3单单单双双双<br>
-                            3双双双单单单
-                        </td>
-                        <td>
-                            4单单单双<br>
-                            4双双双单
-                        </td>
-                        </tr>
-                    <tr>
-                        <td>
-                            5大大小小<br>
-                            5小小大大
-                        </td>
-                        <td>
-                            6大小<br>
-                            6小大
-                        </td>
-                        <td>
-                            7大大大小<br>
-                            7小小小大
-                        </td>
-                        <td>
-                            8大大大小小小<br>
-                            8小小小大大大
-                        </td>
-                    </tr>
-
-                    </table>
-                </form>
-
-                <table class="table">
-                    <th>
-                        <td>
-                            <button onclick="judgeevaluation()"  name="ABC" value="start">开始评估</button>
-                        </td>
-                    </th>
-                </table>
 				</div>
 				<div class="col-md-6 column">
 					<h5 align="center">
-						开奖结果
+						财务报表参数
 					</h5>
                     <table  class="table">
 						<thead>
@@ -253,10 +162,7 @@
 									时间
 								</th>
 								<th width="200px">
-									期号
-								</th>
-								<th width="150px">
-									号码
+									规则
 								</th>
 							</tr>
 						</thead>
@@ -280,39 +186,67 @@
 							</tr>
                         {% endfor %}
 
+                            <form action="/auto_list_refresh/" method="post" id="user_form">
+                <table class="table ">
+                    <tr>
+                        <td>
+                            财务日期：<input type="date" id="in_date_id" name="in_date" value="{{ p_date }}" />
+                        </td>
 
+{#                        <td >#}
+{#                            起始位置(1-10)：<br><input type="number" id="in_number_id" name="in_number" value="{{ p_number }}" />#}
+{#                        </td>#}
+{#                    </tr>#}
+{#                    <tr>#}
+{#                        <td>#}
+{#                            下注本金(正数)：<input type="number" id="in_monery_id" name="in_monery" value="{{ p_monery }}">#}
+{#                        </td>#}
+
+                        <td>
+                            规则器选择(1-6)：<input type="number" id="in_rule_id" name="in_rule" value="{{ p_rule }}">
+                        </td>
+                    </tr>
+
+                </table>
+                    <table class="table">
+                        <tr>
+                        <td>
+                            1 单单单双
+                        </td>
+                        <td>
+                            2 双双双单
+                        </td>
+                        <td>
+                            3 单单单单
+                        </td>
+
+                        </tr>
+                    <tr>
+                        <td>
+                            4 双双双双
+                        </td>
+                        <td>
+                            5 对子
+                        </td>
+                        <td>
+                            6 交叉
+                        </td>
+                    </tr>
+
+                    </table>
+
+                    <table class="table">
+                    <th>
+                        <td>
+                            <button onclick="judgeevaluation()"  name="ABC" value="start">查询</button>
+                        </td>
+                    </th>
+                </table>
+                </form>
 						</tbody>
 					</table>
-                    {%   if result_flag  %}
-                    <table>
-                        <tr>
-                            <td>
-
-                            </td>
-                        </tr>
-                    </table>
-                    {% else %}
-                        <table>
-                        <tr>
-                            <td>
-                                网络异常
-                            </td>
-                        </tr>
-                    </table>
-                    {% endif %}
                     </div>
-                <!--<table class="table">-->
-                    <!--<tr>-->
-                        <!--<form action="/admin_month/" method="post" id="user_form">-->
-                            <!--<td>-->
 
-                            <!--</td>-->
-                            <!--<td>-->
-                                <!--<button style="background-color: olivedrab">跳转到按月统计</button>-->
-                            <!--</td>-->
-                        <!--</form>-->
-                    <!--</tr>-->
-                <!--</table>-->
 				</div>
 			</div>
 		</div>
@@ -327,28 +261,19 @@ function judgeevaluation()
 {
 
     in_date = document.getElementById('in_date_id').value;
-    in_number = document.getElementById('in_number_id').value;
-    in_monery = document.getElementById('in_monery_id').value;
+{#    in_number = document.getElementById('in_number_id').value;#}
+{#    in_monery = document.getElementById('in_monery_id').value;#}
     in_rule = document.getElementById('in_rule_id').value;
 
     if (in_date && in_number && in_monery && in_rule){
-        if(in_number>0 && in_number<11){
-            if(in_monery > 0){
-                if(in_rule>0 && in_rule<=8){
+
+                if(in_rule>0 && in_rule<=6){
                     document.getElementById('user_form').submit();
                 }
                 else{
-                    alert('规则选择为1-8！');
+                    alert('规则选择为1-6！');
                 }
-
-            }else{
-                alert('下注本金为正数！');
             }
-        }
-        else{
-            alert('开始位置为1-10的整数！');
-        }
-    }
     else{
         alert('请输入完整信息！');
     }
