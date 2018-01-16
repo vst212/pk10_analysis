@@ -117,13 +117,13 @@ def get_rule(p_rule):
     rule_parity_list = []
     rule_value = int(p_rule)
     if(rule_value == 1):
-        rule_parity_list = [1, 1, 0]
+        rule_parity_list = [1, 1, 1, 0]
     elif (rule_value == 2):
-        rule_parity_list = [0, 0, 1]
+        rule_parity_list = [0, 0, 0, 1]
     elif (rule_value == 3):
-        rule_parity_list = [1, 1, 1]
+        rule_parity_list = [1, 1, 1, 1]
     elif (rule_value == 4):
-        rule_parity_list = [0, 0, 0]
+        rule_parity_list = [0, 0, 0, 0]
     else:
         rule_parity_list = [2, 2, 2]
     return rule_parity_list
@@ -150,15 +150,15 @@ def check_single_match(target,rule):
 #基于target 和rule, 判断是否成立,成立则购买，否则跳过  --规则为数字,rule_len=规则的长度，比如对子[5,5,5]，则长度为3
 def check_double_match(target,rule_len):
     target_len = len(target)
-    print target[-1]
-    print target[-2]
+    # print target[-1]
+    # print target[-2]
     if (target[-1] == target[-2]):
         count = 0
         while(target[-count-1] == target[-1]):
             count = count + 1
             if(count == len(target)):
                 break
-        print "count:",count
+        # print "count:",count
         if (count%(rule_len) == (rule_len-1)):
             return target[-1]
         else:
@@ -178,17 +178,17 @@ def check_cross_match(target_arr,rule_len):
             target.pop()
         if len(target) < 2:
             return -1
-        print target
+        # print target
         target_len = len(target)
-        print target[-1]
-        print target[-2]
+        # print target[-1]
+        # print target[-2]
         if (target[-1] == target[-2]):
             count = 0
             while(target[-count-1] == target[-1]):
                 count = count + 1
                 if(count == len(target)):
                     break
-            print "count:",count
+            # print "count:",count
             if (count%(rule_len) == (rule_len-1)):
                 return target[-1]
             else:

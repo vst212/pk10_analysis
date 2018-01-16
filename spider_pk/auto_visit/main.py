@@ -63,42 +63,23 @@ def control_probuser_thread(request):
     control = request.POST['control']
 
     money = request.POST['auto_in_money']
-
-    # for i in range(len(in_rule_list)):
-    #     print i,"  ",in_upper_money_list[i]
-    #     print i,"  ",in_lower_money_list[i]
-
-    # rule = request.POST['auto_in_rule']
-    # upper_money = request.POST['auto_in_upper_money']
-    # upper_money = 10
-
-    # print "user_name is ",user_name, " pwd ",password
-
-    # print info_dict["money"],info_dict["rule"],info_dict["upper_money"]
-    # prob_user_list = ProbUser.objects.all()
-    # return render_to_response('auto_main.html',{"prob_user_list":prob_user_list, "p_rule":rule, "p_monery":money, "p_upper_number":upper_money})
-    # return render_to_response('auto_main.html', {"prob_user_list": prob_user_list})
-    # return ('auto_main.html')
+    in_rule_list = request.POST['in_rule_list'].split(",")
+    in_upper_money_list = []
+    in_lower_money_list = []
+    for in_rule in in_rule_list:
+        print "in_rule:",in_rule
+        in_upper_money_list.append(request.POST['in_upper_monery_'+str(in_rule)])
+        in_lower_money_list.append(request.POST['in_lower_monery_'+str(in_rule)])
+    info_dict = {}
+    info_dict["user_name"] = user_name
+    info_dict["money"] = int(money)
+    info_dict["rule_list"] = in_rule_list
+    info_dict["upper_money_list"] = in_upper_money_list
+    info_dict["lower_money_list"] = in_lower_money_list
 
     #显示活跃状态
     prob_user = ProbUser.objects.get(user_name=user_name)
     if control == 'start':
-
-
-        in_rule_list = request.POST['in_rule_list'].split(",")
-        in_upper_money_list = []
-        in_lower_money_list = []
-        for in_rule in in_rule_list:
-            print "in_rule:",in_rule
-            in_upper_money_list.append(request.POST['in_upper_monery_'+str(in_rule)])
-            in_lower_money_list.append(request.POST['in_lower_monery_'+str(in_rule)])
-        info_dict = {}
-        info_dict["user_name"] = user_name
-        info_dict["money"] = int(money)
-        info_dict["rule_list"] = in_rule_list
-        info_dict["upper_money_list"] = in_upper_money_list
-        info_dict["lower_money_list"] = in_lower_money_list
-
         #单例模式
         try:
             web_driver = SingleDriver()
@@ -134,7 +115,13 @@ def control_probuser_thread(request):
         except:
             print "not thread alive"
     prob_user_list =  ProbUser.objects.all()
-    return render_to_response('auto_main.html',{"prob_user_list":prob_user_list, "p_rule":request.POST['in_rule_list'], "p_monery":money })
+    return render_to_response('auto_main.html',{"prob_user_list":prob_user_list, "p_rule":request.POST['in_rule_list'], "p_monery":money,
+                                                "p_upper_monery_1":request.POST['in_upper_monery_1'], "p_lower_monery_1":request.POST['in_lower_monery_1'],
+                                                "p_upper_monery_2":request.POST['in_upper_monery_2'], "p_lower_monery_2":request.POST['in_lower_monery_2'],
+                                                "p_upper_monery_3":request.POST['in_upper_monery_3'], "p_lower_monery_3":request.POST['in_lower_monery_3'],
+                                                "p_upper_monery_4":request.POST['in_upper_monery_4'], "p_lower_monery_4":request.POST['in_lower_monery_4'],
+                                                "p_upper_monery_5":request.POST['in_upper_monery_5'], "p_lower_monery_5":request.POST['in_lower_monery_5'],
+                                                "p_upper_monery_6":request.POST['in_upper_monery_6'], "p_lower_monery_6":request.POST['in_lower_monery_6']})
     # return render_to_response('qzone_info.html',{"thread_name":th_name, "control":control, "thread_list":thread_list,"info_active":info_active})
 
 #主页面
@@ -172,10 +159,6 @@ def set_user_data(request):
     obj_pro.save()
     return render_to_response('test.html')
 
-def get_user_data(request):
-    #写入对象
-    obj_pro = ProbUser.objects.all()
-    return render_to_response('test.html',{"obj_pro":obj_pro})
 
 def get_purchase_data(request):
     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
@@ -190,97 +173,14 @@ def get_fiance_data(request):
     # lotterys = FianceRecord.objects.filter(lottery_date=current_date)
     # obj_pro_purchase = PurchaseRecord.objects.all()
     obj_pro_fiance = FianceRecord.objects.all()
-
+    # purcahse_all = FianceRecord.objects.filter(fiance_record_date=current_date,
+    #                                                                fiance_record_rule_id=rule,
+    #                                                                purchase_record_column=purchase_record_column_list[i])
+    # obj_pro_fiance = FianceRecord.objects.filter(fiance_record_date=current_date,
+    #                                                                fiance_record_rule_id=5,
+    #                                                                purchase_record_column='第'+str(8) + '名')
     print "obj_pro",obj_pro_fiance
     return render_to_response('test.html',{"obj_pro_fiance":obj_pro_fiance})
-
-
-# 测试
-def get_prob_data(request):
-    rule = 1
-    money = 10
-    upper_money = 30
-    PurchaseRecord.objects.all().delete()
-    spider_current_date_data()
-    current_date = time.strftime('%Y-%m-%d', time.localtime(time.time()))
-    print current_date
-    lotterys = LotteryMonth.objects.filter(lottery_date=current_date)
-    rule_parity_list = get_rule(rule)
-    #当天的开奖记录数
-    current_date_rows = LotteryMonth.objects.filter(lottery_date=current_date).order_by("-lottery_id")
-    print"len(current_date_rows)" , len(current_date_rows)
-
-    #需要匹配的数目
-    match_rule_num = len(rule_parity_list)-1
-    #记录小于规则数
-    if(len(current_date_rows) < match_rule_num):
-        pass
-    else:
-        lottery_max_num = current_date_rows[0].lottery_id
-        lottery_max_date = current_date_rows[0].lottery_date
-        lottery_purchase_id = current_date_rows[0].lottery_id + 1
-
-        purchase_date_rows = PurchaseRecord.objects.filter(purchase_record_date=current_date).order_by("-purchase_record_id")
-        #没有购买记录
-        if(len(purchase_date_rows) == 0):
-            #直接匹配
-            print "purchase is 0"
-            lottery_minus_purchase_len = len(lotterys)
-            if (len(current_date_rows) >= match_rule_num):
-                purchase_record_column_list, purchase_record_value_list, xpath_list = visit_set_prob(rule,rule_parity_list,lotterys,lottery_minus_purchase_len)
-                print "xpath_list ",xpath_list
-                driver = get_driver()
-                continue_flag = True
-                while(continue_flag):
-                    try :
-                        if (len(xpath_list) > 0):
-                            for i in range(len(xpath_list)):
-                                input_1_big = driver.find_element_by_xpath(xpath_list[i])
-                                input_1_big.send_keys(money)
-                                time.sleep(1)
-                            confirm = driver.find_element_by_xpath('//*[@id="memberMainContent"]/div[2]/table/tbody/tr/td[2]/a[1]')
-                            confirm.click()
-                            time.sleep(2)
-                            #提交按钮
-                            submit = driver.find_element_by_xpath('//*[@id="betSlipDivContent"]/table/tbody/tr[2]/td/a[1]')
-                                                              # '//*[@id="betSlipDivContent"]/table/tbody/tr[3]/td/a[1]'
-                                                              # '//*[@id="betSlipDivContent"]/table/tbody/tr[2]/td/a[1]'
-                            submit.click()
-                            time.sleep(2)
-                            continue_flag = False
-                            print "current visit over"
-                        else:
-                            print "无满足条件"
-                            continue_flag = False
-                    except:
-                        print "封盘中...请稍后..."
-                        time.sleep(10)
-                        continue_flag = True
-                for i in range(len(purchase_record_column_list)):
-                    obj_pro = PurchaseRecord(purchase_record_id=lottery_purchase_id, purchase_record_rule=rule, purchase_record_money=money,
-                                             purchase_record_column=purchase_record_column_list[i],purchase_record_value=purchase_record_value_list[i])
-                    obj_pro.save()
-            else:
-                pass
-        #有该买记录
-        else:
-            purchase_max_num = purchase_date_rows[0].purchase_record_id
-            lottery_minus_purchase_len = lottery_max_num - purchase_max_num
-            print "purchase is ",purchase_max_num, " lottery_max_num " ,lottery_max_num
-            if(lottery_minus_purchase_len >= match_rule_num):
-                purchase_record_column_list, purchase_record_value_list, xpath_list = visit_set_prob(rule,rule_parity_list,lotterys,lottery_minus_purchase_len)
-                print "xpath_list ",xpath_list
-                for i in range(len(purchase_record_column_list)):
-                    obj_pro = PurchaseRecord(purchase_record_id=lottery_purchase_id, purchase_record_rule=rule, purchase_record_money=money,
-                                             purchase_record_column=purchase_record_column_list[i],purchase_record_value=purchase_record_value_list[i])
-                    obj_pro.save()
-            else:
-                pass
-
-
-    prob_data = LotteryMonth.objects.filter(lottery_date=current_date)
-    # prob_data = LotteryMonth.objects.all()
-    return render_to_response('test.html',{"prob_data":prob_data})
 
 
 
@@ -511,10 +411,13 @@ def confirm_submit_save(driver, xpath_list, money, upper_money, lower_money, pur
                             continue_flag = False
                             break
                         #获取当天的当前规则的当前的名次的盈利情况
-
+                        column_name = '第' + str(purchase_record_column_list[i]) + '名'
                         purcahse_all = FianceRecord.objects.filter(fiance_record_date=current_date,
                                                                    fiance_record_rule_id=rule,
-                                                                   purchase_record_column=purchase_record_column_list[i])
+                                                                   purchase_record_column=column_name)
+                        print "purcahse_all:",purcahse_all
+                        print "purchase_record_column_list[i]:",purchase_record_column_list[i]
+                        print "rule:",rule
                         sum_money = 0
                         for purchase in purcahse_all:
                             sum_money = sum_money + purchase.fiance_record_profit
@@ -575,7 +478,7 @@ def confirm_submit_save(driver, xpath_list, money, upper_money, lower_money, pur
 
 def save_fiance_record(current_date, lastest_lottery_record, rule):
     if (rule == 1):
-        print "rule 1 1 1 1 1 "
+        print "rule 1"
         lottery_id = lastest_lottery_record.lottery_id
         purchase_record_rows = PurchaseRecord.objects.filter(purchase_record_date=current_date, purchase_record_rule=str(rule), purchase_record_id=lottery_id)
 
@@ -601,7 +504,7 @@ def save_fiance_record(current_date, lastest_lottery_record, rule):
             # 下注金额
             fiance_record_money = purchase_record.purchase_record_money
             # 赔率
-            odds = 1.97
+            odds = 1.945
             fiance_record_odds = odds
             #计算盈利
             fiance_record_profit = purchase_record.purchase_record_money * lose_win * odds - purchase_record.purchase_record_money
@@ -625,7 +528,7 @@ def save_fiance_record(current_date, lastest_lottery_record, rule):
             obj_pro.save()
 
     if (rule == 2):
-        print "rule 2 2 2 2  2  "
+        print "rule 2"
         lottery_id = lastest_lottery_record.lottery_id
         purchase_record_rows = PurchaseRecord.objects.filter(purchase_record_date=current_date, purchase_record_rule=str(rule), purchase_record_id=lottery_id)
 
@@ -651,7 +554,7 @@ def save_fiance_record(current_date, lastest_lottery_record, rule):
             # 下注金额
             fiance_record_money = purchase_record.purchase_record_money
             # 赔率
-            odds = 1.97
+            odds = 1.945
             fiance_record_odds = odds
             #计算盈利
             fiance_record_profit = purchase_record.purchase_record_money * lose_win * odds - purchase_record.purchase_record_money
@@ -673,7 +576,7 @@ def save_fiance_record(current_date, lastest_lottery_record, rule):
                 fiance_record_value,"  ",fiance_record_money,"  ",fiance_record_odds,"  ",fiance_record_profit,"  ",fiance_lose_win
             obj_pro.save()
     if (rule == 3):
-        print "rule 3,3,3,3  "
+        print "rule 3"
         lottery_id = lastest_lottery_record.lottery_id
         purchase_record_rows = PurchaseRecord.objects.filter(purchase_record_date=current_date, purchase_record_rule=str(rule), purchase_record_id=lottery_id)
 
@@ -699,7 +602,7 @@ def save_fiance_record(current_date, lastest_lottery_record, rule):
             # 下注金额
             fiance_record_money = purchase_record.purchase_record_money
             # 赔率
-            odds = 1.97
+            odds = 1.945
             fiance_record_odds = odds
             #计算盈利
             fiance_record_profit = purchase_record.purchase_record_money * lose_win * odds - purchase_record.purchase_record_money
@@ -722,7 +625,7 @@ def save_fiance_record(current_date, lastest_lottery_record, rule):
             obj_pro.save()
 
     if (rule == 4):
-        print "rule 4,4,4,4  "
+        print "rule 4"
         lottery_id = lastest_lottery_record.lottery_id
         purchase_record_rows = PurchaseRecord.objects.filter(purchase_record_date=current_date, purchase_record_rule=str(rule), purchase_record_id=lottery_id)
 
@@ -748,7 +651,7 @@ def save_fiance_record(current_date, lastest_lottery_record, rule):
             # 下注金额
             fiance_record_money = purchase_record.purchase_record_money
             # 赔率
-            odds = 1.97
+            odds = 1.945
             fiance_record_odds = odds
             #计算盈利
             fiance_record_profit = purchase_record.purchase_record_money * lose_win * odds - purchase_record.purchase_record_money
@@ -771,7 +674,7 @@ def save_fiance_record(current_date, lastest_lottery_record, rule):
             obj_pro.save()
 
     if (rule == 5):
-        print "rule 5 5"
+        print "rule 5"
         lottery_id = lastest_lottery_record.lottery_id
         purchase_record_rows = PurchaseRecord.objects.filter(purchase_record_date=current_date,
                                                              purchase_record_rule=str(rule), purchase_record_id=lottery_id)
@@ -798,7 +701,7 @@ def save_fiance_record(current_date, lastest_lottery_record, rule):
             # 下注金额
             fiance_record_money = purchase_record.purchase_record_money
             # 赔率
-            odds = 9.7
+            odds = 9.718
             fiance_record_odds = odds
             # 计算盈利
             fiance_record_profit = purchase_record.purchase_record_money * lose_win * odds - purchase_record.purchase_record_money
@@ -821,7 +724,7 @@ def save_fiance_record(current_date, lastest_lottery_record, rule):
                 fiance_lose_win
             obj_pro.save()
     if (rule == 6):
-        print "rule 6 6"
+        print "rule 6"
         lottery_id = lastest_lottery_record.lottery_id
         purchase_record_rows = PurchaseRecord.objects.filter(purchase_record_date=current_date,
                                                              purchase_record_rule=str(rule), purchase_record_id=lottery_id)
@@ -848,7 +751,7 @@ def save_fiance_record(current_date, lastest_lottery_record, rule):
             # 下注金额
             fiance_record_money = purchase_record.purchase_record_money
             # 赔率
-            odds = 9.7
+            odds = 9.718
             fiance_record_odds = odds
             # 计算盈利
             fiance_record_profit = purchase_record.purchase_record_money * lose_win * odds - purchase_record.purchase_record_money

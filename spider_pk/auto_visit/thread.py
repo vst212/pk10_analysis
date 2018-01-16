@@ -65,8 +65,11 @@ def loaddata(c_thread,thread_num,interval):
                     print "start purchase"
                     auto_visit.main.rule_upper_lower_trans(interval)
                     # auto_visit.main.auto_visit_commit(interval)
-                    time.sleep(3)
                     last_minute = current_minute
+                    if current_minute < 5:
+                        time.sleep(120)
+                    else:
+                        time.sleep(3)
                     count = count + 1
                 else:
                     # print current_minute, " ", last_minute," wait open prob"

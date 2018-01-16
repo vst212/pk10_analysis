@@ -64,9 +64,8 @@ urlpatterns = [
     url(r'^auto_list/$', auto_visit.list.auto_list),
     url(r'^auto_list_refresh/$', auto_visit.list.auto_list_refresh),
 
-    url(r'^set_user_data/$', auto_visit.main.set_user_data),
-    url(r'^get_user_data/$', auto_visit.main.get_user_data),
-    url(r'^get_prob_data/$', auto_visit.main.get_prob_data),
+    url(r'^set_user/$', auto_visit.list.set_user),
+    # url(r'^get_prob_data/$', auto_visit.main.get_prob_data),
     url(r'^get_purchase_data/$', auto_visit.main.get_purchase_data),
     url(r'^get_fiance_data/$', auto_visit.main.get_fiance_data),
 
