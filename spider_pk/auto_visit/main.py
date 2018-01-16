@@ -187,13 +187,20 @@ def get_fiance_data(request):
 def rule_upper_lower_trans(interval):
 
     # 采集当天数据，需要考虑失败重新采集的情况
-    spider_current_date_data()
-    current_date = time.strftime('%Y-%m-%d', time.localtime(time.time()))
-    print current_date
-    lotterys = LotteryMonth.objects.filter(lottery_date=current_date)
-    if len(lotterys) == 0:
-        print "spider open pk10 faild"
-        return 0
+    spider_flag = True
+    count = 0
+    while(spider_flag):
+        spider_current_date_data()
+        current_date = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+        print current_date
+        lotterys = LotteryMonth.objects.filter(lottery_date=current_date)
+        if len(lotterys) == 0:
+            print "spider open pk10 faild"
+            if count > 1 :
+                return 0
+        else:
+            spider_flag = False
+        count = count + 1
     current_date_rows = LotteryMonth.objects.filter(lottery_date=current_date).order_by("-lottery_id")
     lottery_max_num = current_date_rows[0].lottery_id
     print "the lastest open number is :",lottery_max_num
