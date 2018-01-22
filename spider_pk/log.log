@@ -1,0 +1,49 @@
+Performing system checks...
+
+January 17, 2018 - 10:10:52
+Django version 1.11.7, using settings 'spider_pk.settings'
+Starting development server at http://0.0.0.0:8006/
+Quit the server with CTRL-BREAK.
+abab2233  not start
+abab2233  not start
+in_rule: 1
+please input code!
+top frameset1
+switch mainFrame
+http://pxiagme1.lot1068.net/member/mp5r7k1pcatkkvrqc9bpeqrdu2/Home/Index.action
+thread is not alive start!!!
+abab2233
+start purchase
+current_date: 2018-01-17
+spider....
+today spider success
+today count is  14
+2018-01-17
+the lastest open number is : 662101
+rule-------- 1
+2018-01-17 LotteryMonth object 1
+rule 1
+purchase_record_rows  <QuerySet []>
+2018-01-17
+len(current_date_rows) 14
+purchase is 0
+xpath_list  [u'//*[@id="itmStakeInput206302"]']
+set element data  //*[@id="itmStakeInput206302"]    1
+click confirm
+click submit
+current visit over
+purchase message: number: 662102  rule:  1  money:  1  column  6  number  0
+save purcahse record!
+start purchase
+current_date: 2018-01-17
+spider....
+today spider success
+today count is  15
+2018-01-17
+the lastest open number is : 662102
+rule-------- 1
+2018-01-17 LotteryMonth object 1
+rule 1
+purchase_record_rows  <QuerySet [<PurchaseRecord: PurchaseRecord object>]>
+purchase_record  PurchaseRecord object
+2018-01-17    662102    08,10,09,02,05,04,06,03,01,07    1    

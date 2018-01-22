@@ -203,7 +203,7 @@
 {#                        </td>#}
 
                         <td>
-                            规则器选择(1-6)：<input type="number" id="in_rule_id" name="in_rule" value="{{ p_rule }}">
+                            规则器选择(1-7)：<input type="number" id="in_rule_id" name="in_rule" value="{{ p_rule }}">
                         </td>
                     </tr>
 
@@ -229,7 +229,10 @@
                             5 对子
                         </td>
                         <td>
-                            6 交叉
+                            6 交叉左到右
+                        </td>
+                        <td>
+                            7 交叉右到左
                         </td>
                     </tr>
 
@@ -267,11 +270,11 @@ function judgeevaluation()
 
     if (in_date && in_number && in_monery && in_rule){
 
-                if(in_rule>0 && in_rule<=6){
+                if(in_rule>0 && in_rule<=7){
                     document.getElementById('user_form').submit();
                 }
                 else{
-                    alert('规则选择为1-6！');
+                    alert('规则选择为1-7！');
                 }
             }
     else{

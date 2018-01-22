@@ -88,16 +88,24 @@
                             下限：<input type="number" id="in_lower_monery_id_5" name="in_lower_monery_5" value="{{ p_lower_monery_5 }}">
                         </td>
                         <td>
-                            6 交叉
+                            6 交叉左到右
                             <br>
                             上限：<input type="number" id="in_upper_monery_id_6" name="in_upper_monery_6" value="{{ p_upper_monery_6 }}"><br>
                             下限：<input type="number" id="in_lower_monery_id_6" name="in_lower_monery_6" value="{{ p_lower_monery_6 }}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            7 交叉右到左
+                            <br>
+                            上限：<input type="number" id="in_upper_monery_id_7" name="in_upper_monery_7" value="{{ p_upper_monery_7 }}"><br>
+                            下限：<input type="number" id="in_lower_monery_id_7" name="in_lower_monery_7" value="{{ p_lower_monery_7 }}">
                         </td>
 
                     </tr>
                         <tr style="color: red">
                             <td>
-                                注：规则选择器为1-6，使用多个规则用逗号分隔开，例如(1,2,3,5)，逗号一定使用英文
+                                注：规则选择器为1-7，使用多个规则用逗号分隔开，例如(1,2,3,5)，逗号一定使用英文
                             </td>
                             <td>
                                 上下限位每个规则对应的封顶和最低值，上限为正数，下限为负数，上下限同时为0表示购买该规则
@@ -243,6 +251,8 @@ function start_thread(user_name){
     in_lower_monery_5 = document.getElementById('in_lower_monery_id_5').value;
         in_upper_monery_6 = document.getElementById('in_upper_monery_id_6').value;
     in_lower_monery_6 = document.getElementById('in_lower_monery_id_6').value;
+        in_upper_monery_7 = document.getElementById('in_upper_monery_id_7').value;
+    in_lower_monery_7 = document.getElementById('in_lower_monery_id_7').value;
 
     if(!in_upper_monery_1){
         in_upper_monery_1 = 0
@@ -281,6 +291,13 @@ function start_thread(user_name){
         in_lower_monery_6 = 0
     }
 
+    if(!in_upper_monery_7){
+        in_upper_monery_7 = 0
+    }
+    if(!in_lower_monery_7){
+        in_lower_monery_7 = 0
+    }
+
     if ( in_monery && in_rule_str){
         if(commit_flag){
             if(in_monery > 0){
@@ -293,7 +310,8 @@ function start_thread(user_name){
                     "in_upper_monery_3":in_upper_monery_3, "in_lower_monery_3":in_lower_monery_3,
                     "in_upper_monery_4":in_upper_monery_4, "in_lower_monery_4":in_lower_monery_4,
                     "in_upper_monery_5":in_upper_monery_5, "in_lower_monery_5":in_lower_monery_5,
-                    "in_upper_monery_6":in_upper_monery_6, "in_lower_monery_6":in_lower_monery_6});
+                    "in_upper_monery_6":in_upper_monery_6, "in_lower_monery_6":in_lower_monery_6,
+                    "in_upper_monery_7":in_upper_monery_7, "in_lower_monery_7":in_lower_monery_7});
                 }
                 else{
                     alert('规则选择为1-6！');
@@ -361,6 +379,8 @@ function stop_thread(user_name){
     in_lower_monery_5 = document.getElementById('in_lower_monery_id_5').value;
         in_upper_monery_6 = document.getElementById('in_upper_monery_id_6').value;
     in_lower_monery_6 = document.getElementById('in_lower_monery_id_6').value;
+        in_upper_monery_7 = document.getElementById('in_upper_monery_id_7').value;
+    in_lower_monery_7 = document.getElementById('in_lower_monery_id_7').value;
 
     if(!in_upper_monery_1){
         in_upper_monery_1 = 0
@@ -398,6 +418,12 @@ function stop_thread(user_name){
     if(!in_lower_monery_6){
         in_lower_monery_6 = 0
     }
+    if(!in_upper_monery_7){
+        in_upper_monery_7 = 0
+    }
+    if(!in_lower_monery_7){
+        in_lower_monery_7 = 0
+    }
 
     if ( in_monery && in_rule_str){
         if(commit_flag){
@@ -413,7 +439,8 @@ function stop_thread(user_name){
                         "in_upper_monery_3":in_upper_monery_3, "in_lower_monery_3":in_lower_monery_3,
                         "in_upper_monery_4":in_upper_monery_4, "in_lower_monery_4":in_lower_monery_4,
                         "in_upper_monery_5":in_upper_monery_5, "in_lower_monery_5":in_lower_monery_5,
-                        "in_upper_monery_6":in_upper_monery_6, "in_lower_monery_6":in_lower_monery_6});
+                        "in_upper_monery_6":in_upper_monery_6, "in_lower_monery_6":in_lower_monery_6,
+                        "in_upper_monery_7":in_upper_monery_7, "in_lower_monery_7":in_lower_monery_7});
                     } else {
                         return false;
                     }

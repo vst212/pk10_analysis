@@ -73,7 +73,7 @@ def parase_lotterys_cross(lottery):
     #base_lottery_list首行和末行已转换，已转换成正式查询数组;  base_lottery_list_left_right_change  首行和末行转换后再左右转换，便于逆向查询
     return order_lottery_list
 
-#补全后数组右上角向左下角开始
+#补全后数组右上角向左下角算法
 def tran_croos_data_auto(base_data,column_num, calc_num):
 
     for i in range(int(column_num-calc_num)):
@@ -88,6 +88,25 @@ def tran_croos_data_auto(base_data,column_num, calc_num):
     while(row_num<max):
         for cloumn_num in range(len(base_data[row_num])):
             cross_data_list[row_num][cloumn_num] = base_data[row_num+cloumn_num][len(base_data[row_num]) - cloumn_num -1]
+        row_num = row_num + 1
+    return cross_data_list
+
+
+#逆序处理，#基于base_data从左上角到右下角算法
+def tran_croos_data_auto2(base_data,column_num, calc_num):
+
+    for i in range(int(column_num-calc_num)):
+        base_data.append([0]*column_num)
+        base_data.insert(0,[0]*column_num)
+
+    #定义最终的数组list
+    cross_data_list = [[0 for i in range(column_num)] for i in range(len(base_data) - (column_num-calc_num) - (calc_num - 1))]
+
+    row_num = 0
+    max = len(base_data) - (column_num-calc_num) - (calc_num - 1)
+    while(row_num<max):
+        for cloumn_num in range(len(base_data[row_num])):
+            cross_data_list[row_num][cloumn_num] = base_data[row_num+cloumn_num][cloumn_num]
         row_num = row_num + 1
     return cross_data_list
 

@@ -3,7 +3,7 @@ __author__ = 'shifeixiang'
 import time
 import thread
 import threading
-from auto_visit.driver import get_driver
+from auto_visit.driver import get_driver,reload_pk10_url
 import auto_visit.main
 import datetime
 
@@ -62,8 +62,11 @@ def loaddata(c_thread,thread_num,interval):
                 # if 1:
                     current_date = time.strftime("%Y%m%d %H:%m:%S", time.localtime())
                     # print current_date," ",interval["money"], " ", interval["rule"]
+                    print "reload....."
+                    interval["driver"] = reload_pk10_url(interval["driver"])
                     print "start purchase"
                     auto_visit.main.rule_upper_lower_trans(interval)
+
                     # auto_visit.main.auto_visit_commit(interval)
                     last_minute = current_minute
                     if current_minute < 5:
