@@ -32,16 +32,6 @@ def admin(request):
 
 
 def spider_current_date_data():
-    # p_date = request.POST['in_date']
-    # p_number = request.POST['in_number']
-    # p_monery = request.POST['in_monery']
-    # p_rule = request.POST['in_rule']
-
-    # print 'p_date is ',p_date,' p_number is ',p_number, ' p_monery is ',p_monery
-    # # in_date = '2017-11-02'
-    # in_date = p_date
-
-    # print url
 
     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
     url = "http://api.api68.com/pks/getPksHistoryList.do?date=" + current_date + "&lotCode=10001"
@@ -58,17 +48,28 @@ def spider_current_date_data():
         print 'today spider faild'
     lotterys = LotteryMonth.objects.filter(lottery_date=current_date)
     print "today count is ",len(lotterys)
-    #历史时间
 
-    #格式转换，评估
-    # base_lottery_list,parity_lottery_list,larsma_lottery_list = parase_lotterys(lotterys)
-    #获取规则
-    # rule_parity_list,rule_larsma_list = get_rule(p_rule)
+def spider_current_date_data_pay(spider_times):
 
-    # probs = Probs.objects.all()
-    # prob_totals = ProbTotals.objects.all()
-    # return render_to_response('index.html',{'lottery':lotterys,'probs':probs,'prob_totals':prob_totals,
-    #                                         'p_date':p_date, 'p_number':p_number, 'p_monery':p_monery,'p_rule':p_rule, 'result_flag':result_flag})
+    current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+    if spider_times<4:
+        url = "http://e.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=" + current_date
+    else:
+        url = "http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=" + current_date
+    # url = "http://api.api68.com/pks/getPksHistoryList.do?date=" + current_date + "&lotCode=10001"
+    history_data = LotteryMonth.objects.all()
+    #当天时间
+    print "current_date:",current_date
+    # print "spider...."
+    print "spider....",url
+    LotteryMonth.objects.filter(lottery_date=current_date).delete()
+    result_flag = spider_today_pay(url)
+    if(result_flag):
+        print 'today spider success'
+    else:
+        print 'today spider faild'
+    lotterys = LotteryMonth.objects.filter(lottery_date=current_date)
+    print "today count is ",len(lotterys)
 
 def get_html(url):
     req = urllib2.Request(url = url, headers = headers)
@@ -77,7 +78,7 @@ def get_html(url):
     html = page.read()
     return html
 
-#当天采集更新
+#当天采集更新--原始接口
 def spider_today(url):
     try:
         html = get_html(url)
@@ -89,6 +90,26 @@ def spider_today(url):
             lottery_time = html_json['result']['data'][i]['preDrawTime']
             lottery_id = html_json['result']['data'][i]['preDrawIssue']
             lottery_number = html_json['result']['data'][i]['preDrawCode']
+
+            p = LotteryMonth(lottery_month=lottery_month, lottery_date =lottery_date, lottery_time = lottery_time, lottery_id = lottery_id, lottery_number = lottery_number)
+            p.save()
+    except:
+        print "network is error"
+        return False
+    return True
+
+#当天采集--付费接口
+def spider_today_pay(url):
+    try:
+        html = get_html(url)
+        html_json = simplejson.loads(html)
+        # print html_json
+        for i in range(len(html_json['data'])):
+            lottery_month = html_json['data'][i]['opentime'][0:7]
+            lottery_date = html_json['data'][i]['opentime'][0:10]
+            lottery_time = html_json['data'][i]['opentime']
+            lottery_id = html_json['data'][i]['expect']
+            lottery_number = html_json['data'][i]['opencode']
 
             p = LotteryMonth(lottery_month=lottery_month, lottery_date =lottery_date, lottery_time = lottery_time, lottery_id = lottery_id, lottery_number = lottery_number)
             p.save()

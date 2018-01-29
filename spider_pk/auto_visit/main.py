@@ -7,7 +7,7 @@ from django.shortcuts import render_to_response
 from auto_visit.models import ProbUser
 from auto_visit.thread import ThreadControl
 
-from auto_visit.spider import spider_current_date_data
+from auto_visit.spider import spider_current_date_data_pay
 from prob.models import LotteryMonth
 from auto_visit.models import PurchaseRecord, FianceRecord
 from auto_visit.pretreatment import get_rule, parase_lotterys,check_double_match,check_single_match,parase_lotterys_cross, tran_croos_data_auto,tran_croos_data_auto2, change_r_l, check_cross_match
@@ -188,15 +188,15 @@ def rule_upper_lower_trans(interval):
 
     # 采集当天数据，需要考虑失败重新采集的情况
     spider_flag = True
-    count = 0
+    count = 1
     while(spider_flag):
-        spider_current_date_data()
+        spider_current_date_data_pay(count)
         current_date = time.strftime('%Y-%m-%d', time.localtime(time.time()))
         print current_date
         lotterys = LotteryMonth.objects.filter(lottery_date=current_date)
         if len(lotterys) == 0:
             print "spider open pk10 faild"
-            if count > 1 :
+            if count > 4 :
                 return 0
         else:
             spider_flag = False
@@ -342,11 +342,13 @@ def visit_set_prob(rule,rule_parity_list,lotterys):
             target = base_lottery
             #查看是否匹配,对子规则，[5,5,5]，规则长度为3，满足前两个相同，第三个购买
             result = check_double_match(target,3)
+
             if (result == -1):
                 pass
                 print "not match ", column
             else:
-                if column == 1 or column == 10:
+                if result == 1 or result == 10:
+                    #print "rule 5 filter result:", result
                     pass
                 else:
                     purchase_record_value = result
@@ -386,15 +388,17 @@ def visit_set_prob(rule,rule_parity_list,lotterys):
         purchase_record_value_list = []
         # 从第一名到第十名，这里只获取前8行
         for parity_lottery in last_parity_lottery_list:
-            if column > 7:
+            if column > 8:
                 break
             else:
                 target = parity_lottery
                 #查看是否匹配,对子规则，[5,5,5]，规则长度为3，满足前两个相同，第三个购买
                 result = check_cross_match(target,3)
                 if (result == -1):
-                    pass
                     print "not match ", column
+                elif(result == 1 or result == 10):
+                    pass
+                    #print "rule 6 filter result:",result
                 else:
                     purchase_record_value = result
                     purchase_record_value_list.append(purchase_record_value)
@@ -434,7 +438,7 @@ def visit_set_prob(rule,rule_parity_list,lotterys):
         purchase_record_value_list = []
         # 从第一名到第十名，这里只获取前8行
         for parity_lottery in last_parity_lottery_list:
-            if column > 7:
+            if column > 8:
                 break
             else:
                 target = parity_lottery
@@ -443,6 +447,9 @@ def visit_set_prob(rule,rule_parity_list,lotterys):
                 if (result == -1):
                     pass
                     print "not match ", column
+                elif (result == 1 or result == 10):
+                    pass
+                    #print "rule 7 filter result:", result
                 else:
                     purchase_record_value = result
                     purchase_record_value_list.append(purchase_record_value)
