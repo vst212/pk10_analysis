@@ -172,22 +172,13 @@ def set_user_data(request):
 def get_purchase_data(request):
     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
     lotterys = LotteryMonth.objects.filter(lottery_date=current_date)
-    # obj_pro_purchase = PurchaseRecord.objects.all()
     obj_pro_purchase = PurchaseRecord.objects.filter(purchase_record_date=current_date).order_by("-purchase_record_id")
     print "obj_pro",obj_pro_purchase
     return render_to_response('test.html',{"obj_pro_purchase":obj_pro_purchase})
 
 def get_fiance_data(request):
     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
-    # lotterys = FianceRecord.objects.filter(lottery_date=current_date)
-    # obj_pro_purchase = PurchaseRecord.objects.all()
     obj_pro_fiance = FianceRecord.objects.all()
-    # purcahse_all = FianceRecord.objects.filter(fiance_record_date=current_date,
-    #                                                                fiance_record_rule_id=rule,
-    #                                                                purchase_record_column=purchase_record_column_list[i])
-    # obj_pro_fiance = FianceRecord.objects.filter(fiance_record_date=current_date,
-    #                                                                fiance_record_rule_id=5,
-    #                                                                purchase_record_column='第'+str(8) + '名')
     print "obj_pro",obj_pro_fiance
     return render_to_response('test.html',{"obj_pro_fiance":obj_pro_fiance})
 
