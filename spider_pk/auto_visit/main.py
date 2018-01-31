@@ -289,10 +289,6 @@ def auto_visit_commit(prob_interval):
                 confirm_submit_save(driver, xpath_list, money, upper_money, lower_money, purchase_record_column_list, purchase_record_value_list, lottery_purchase_id, rule, purchase_date_rows_len, current_date)
 
 
-    # prob_data = LotteryMonth.objects.filter(lottery_date=current_date)
-    # prob_data = LotteryMonth.objects.all()
-    # return render_to_response('test.html',{"prob_data":prob_data})
-
 # 返回满足的列和要购买的值，分别存入2个list
 def visit_set_prob(rule,rule_parity_list,lotterys):
     #单双规则
