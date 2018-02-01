@@ -10,6 +10,13 @@ class KillPredict(models.Model):
     lottery_id =  models.IntegerField()
     kill_predict_number = models.CharField(max_length=200)
     lottery_number = models.CharField(max_length=200)
-    predict_total = models.IntegerField()
-    target_total = models.IntegerField()
-    predict_accuracy = models.FloatField()
+    predict_total = models.IntegerField(null=True, blank=True)
+    target_total = models.IntegerField(null=True, blank=True)
+    predict_accuracy = models.FloatField(null=True, blank=True)
+
+class PredictLottery(models.Model):
+    lottery_month = models.CharField(max_length=100)
+    lottery_date = models.CharField(max_length=100)
+    lottery_time = models.CharField(max_length=100)
+    lottery_id =  models.IntegerField()
+    lottery_number = models.CharField(max_length=500)

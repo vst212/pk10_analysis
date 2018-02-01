@@ -22,6 +22,8 @@ from prob.views_month import admin_month,index_month,index_month_evaluation
 import prob.views_times
 import prob.views_month_times
 
+import predict.main
+
 ######################
 import cross.cross_day
 import cross.cross_month
@@ -29,6 +31,7 @@ import cross.cross_month
 ########################
 import auto_visit.main
 import auto_visit.list
+
 
 
 
@@ -68,6 +71,13 @@ urlpatterns = [
     # url(r'^get_prob_data/$', auto_visit.main.get_prob_data),
     url(r'^get_purchase_data/$', auto_visit.main.get_purchase_data),
     url(r'^get_fiance_data/$', auto_visit.main.get_fiance_data),
+
+    #######################################v1.1  ,预测###########################################
+    url(r'^predict_main/$', predict.main.predict_main),
+    url(r'^control_predict_thread/$', predict.main.control_predict_thread),
+    #测试
+    url(r'^set_predict/$', predict.main.set_predict),
+    url(r'^get_predict/$', predict.main.get_predict),
 
 
 

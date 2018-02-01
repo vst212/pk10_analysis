@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <title></title>
+</head>
+<body>
+<!--{% for loty in evaluations %}-->
+    <!--<table>-->
+        <!--<tr>-->
+            <!--<td>{{ loty.prob_range }}</td>-->
+            <!--<td>{{ loty.prob_rule }}</td>-->
+            <!--<td>{{ loty.prob_match }}</td>-->
+            <!--<td>{{ loty.prob_nomatch }}</td>-->
+        <!--</tr>-->
+    <!--</table>-->
+<!--{% endfor %}-->
+<ul class="nav nav-tabs">
+{#				<li >#}
+{#					<a rel="nofollow" href="/auto_main/">自动访问页面</a>#}
+{#				</li>#}
+				<li class="active">
+					<a rel="nofollow" href="/auto_list/">财务统计页面</a>
+				</li>
+
+			</ul>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<h4 align="center">
+				北京PK10
+			</h4>
+			<div class="row clearfix">
+				<div class="col-md-6 column">
+					<h5 align="center" color="red">
+						财务报表
+					</h5>
+					<table class="table" width=50%>
+						<thead>
+								<tr>
+                                    <th>
+										日期
+									</th>
+									<th>
+										期数
+									</th>
+									<th>
+										规则
+									</th>
+									<th>
+										排名
+									</th>
+									<th>
+										号码
+									</th>
+									<th>
+										本金
+									</th>
+									<th>
+										赔率
+									</th>
+									<th>
+										盈利
+									</th>
+								</tr>
+						</thead>
+
+					</table>
+					<div style="overflow-x: auto; overflow-y: auto; height: 250px; width:550px;">
+						<!--<table class="table table-hover table-bordered table-striped">-->
+						<table  class="table table-bordered scrolltable">
+
+							<tbody>
+							{% for prob in probs %}
+								<tr class="success">
+                                    <td>
+										{{prob.fiance_record_date}}
+									</td>
+									<td>
+										{{prob.fiance_record_id}}
+									</td>
+									<td>
+										{{prob.fiance_record_rule}}
+									</td>
+									<td>
+										{{prob.purchase_record_column}}
+									</td>
+									<td>
+										{{prob.fiance_record_value_desc}}
+									</td>
+									<td>
+										{{prob.fiance_record_money}}
+									</td>
+									<td>
+										{{prob.fiance_record_odds}}
+									</td>
+									<td>
+										{{prob.fiance_record_profit}}
+									</td>
+								</tr>
+							{% endfor %}
+							</tbody>
+						</table>
+					</div>
+
+                    <table class="table" width=50%>
+						<thead>
+								<tr>
+									<th>
+										日期
+									</th>
+{#									<th>#}
+{#										规则#}
+{#									</th>#}
+									<th>
+										排名
+									</th>
+									<th>
+										总盈利
+									</th>
+								</tr>
+						</thead>
+
+					</table>
+                    <div style="overflow-x: auto; overflow-y: auto; height: 100px; width:550px;">
+						<!--<table class="table table-hover table-bordered table-striped">-->
+						<table  class="table table-bordered scrolltable">
+
+							<tbody>
+							{% for prob_total in obj_pro_fiance_total %}
+								<tr class="success">
+                                    <td>
+										{{prob_total.fiance_record_date}}
+									</td>
+{#									<td>#}
+{#										{{prob_total.fiance_record_rule}}#}
+{#									</td>#}
+                                    <td>
+										{{prob_total.fiance_record_column}}
+									</td>
+									<td>
+										{{prob_total.fiance_record_profit_all}}
+									</td>
+								</tr>
+							{% endfor %}
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="col-md-6 column">
+					<h5 align="center">
+						财务报表参数
+					</h5>
+                    <table  class="table">
+						<thead>
+							<tr >
+
+								<th width="100px">
+									时间
+								</th>
+								<th width="200px">
+									规则
+								</th>
+							</tr>
+						</thead>
+                    </table>
+                    <div style="overflow-x: auto; overflow-y: auto; height: 500px; width:550px;">
+					    <table  class="table">
+
+						<tbody>
+                        {% for loty in lottery %}
+
+							<tr class="active">
+								<td width="150px">
+									{{ loty.lottery_time }}
+								</td>
+								<td width="50px">
+									{{ loty.lottery_id }}
+								</td>
+								<td width="150px">
+									{{ loty.lottery_number }}
+								</td>
+							</tr>
+                        {% endfor %}
+
+                            <form action="/auto_list_refresh/" method="post" id="user_form">
+                <table class="table ">
+                    <tr>
+                        <td>
+                            财务日期：<input type="date" id="in_date_id" name="in_date" value="{{ p_date }}" />
+                        </td>
+
+{#                        <td >#}
+{#                            起始位置(1-10)：<br><input type="number" id="in_number_id" name="in_number" value="{{ p_number }}" />#}
+{#                        </td>#}
+{#                    </tr>#}
+{#                    <tr>#}
+{#                        <td>#}
+{#                            下注本金(正数)：<input type="number" id="in_monery_id" name="in_monery" value="{{ p_monery }}">#}
+{#                        </td>#}
+
+                        <td>
+                            规则器选择(1-7)：<input type="number" id="in_rule_id" name="in_rule" value="{{ p_rule }}">
+                        </td>
+                    </tr>
+
+                </table>
+                    <table class="table">
+                        <tr>
+                        <td>
+                            1 单单单双
+                        </td>
+                        <td>
+                            2 双双双单
+                        </td>
+                        <td>
+                            3 单单单单
+                        </td>
+
+                        </tr>
+                    <tr>
+                        <td>
+                            4 双双双双
+                        </td>
+                        <td>
+                            5 对子
+                        </td>
+                        <td>
+                            6 交叉左到右
+                        </td>
+                        <td>
+                            7 交叉右到左
+                        </td>
+                    </tr>
+
+                    </table>
+
+                    <table class="table">
+                    <th>
+                        <td>
+                            <button onclick="judgeevaluation()"  name="ABC" value="start">查询</button>
+                        </td>
+                    </th>
+                </table>
+                </form>
+						</tbody>
+					</table>
+                    </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
+<script>
+function judgeevaluation()
+{
+
+    in_date = document.getElementById('in_date_id').value;
+{#    in_number = document.getElementById('in_number_id').value;#}
+{#    in_monery = document.getElementById('in_monery_id').value;#}
+    in_rule = document.getElementById('in_rule_id').value;
+
+    if (in_date && in_number && in_monery && in_rule){
+
+                if(in_rule>0 && in_rule<=7){
+                    document.getElementById('user_form').submit();
+                }
+                else{
+                    alert('规则选择为1-7！');
+                }
+            }
+    else{
+        alert('请输入完整信息！');
+    }
+
+{#    //获得 单选选按钮name集合#}
+{#    var s_radio_flag = document.getElementById('s_radio_id').checked;#}
+{#    var e_radio_flag = document.getElementById('e_radio_id').checked;#}
+{#    if (s_radio_flag || e_radio_flag) {#}
+{#        if (e_radio_flag){#}
+{#            time = document.getElementById('set_time_id').value#}
+{#            if (time>0){#}
+{#                document.getElementById('auto_reply_via_url_content').submit();#}
+{#            }#}
+{#            else{#}
+{#                alert('请确认时间是大于0的整数！')#}
+{#            }#}
+{##}
+{#        }#}
+{#        if (s_radio_flag){#}
+{#            var url_radios = document.getElementsByName("url_radio");#}
+{#            var reply_radios = document.getElementsByName("reply_radio");#}
+{#            var url_flag = 0#}
+{#            var reply_flag = 0#}
+{#            //根据 name集合长度 遍历name集合#}
+{#            for(var i=0;i<url_radios.length;i++)#}
+{#            {#}
+{#                //判断那个单选按钮为选中状态#}
+{#                if(url_radios[i].checked) {#}
+{#                    //弹出选中单选按钮的值#}
+{#                    url_flag = 1#}
+{#                }#}
+{#            }#}
+{#            for(var i=0;i<reply_radios.length;i++)#}
+{#            {#}
+{#                //判断那个单选按钮为选中状态#}
+{#                if(reply_radios[i].checked) {#}
+{#                    //弹出选中单选按钮的值#}
+{#                    reply_flag = 1#}
+{#                }#}
+{#            }#}
+{##}
+{#            if (url_flag && reply_flag) {#}
+{#                time = document.getElementById('set_time_id').value#}
+                {#        count = document.getElementById('set_count_id').value#}
+{#                if (time > 0) {#}
+{#                    document.getElementById('auto_reply_via_url_content').submit();#}
+{#                    alert('点击确定开始回帖！')#}
+{#                }#}
+{#                else {#}
+{#                    alert("请输入正确的时间！")#}
+{#                }#}
+{#            }#}
+{#            else {#}
+{#                alert("请选择url地址和要回复的内容！");#}
+{#            }#}
+{#        }#}
+{#    }#}
+{#    else{#}
+{#        alert('请选择开始或者结束回帖！')#}
+{#    }#}
+}
+
+</script>

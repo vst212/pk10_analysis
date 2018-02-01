@@ -11,27 +11,36 @@
     <br>
 {% endfor %}
 
-{% for oo in obj_pro_purchase%}
-    {{ oo.purchase_record_rule }}
-{{ oo.purchase_record_id }}
-{{ oo.purchase_record_column }}
-    {{ oo.purchase_record_value }}
+{#{% for oo in obj_pro_purchase%}#}
+{#    {{ oo.purchase_record_rule }}#}
+{#{{ oo.purchase_record_id }}#}
+{#{{ oo.purchase_record_column }}#}
+{#    {{ oo.purchase_record_value }}#}
+{##}
+{#    <br>#}
+{#{% endfor %}#}
 
+
+{% for oo in obj_pro_predict%}
+    {{ oo.lottery_id }}
+{{ oo.kill_predict_number }}
+    {{ oo.predict_total }}
+{{ oo.target_total }}
     <br>
 {% endfor %}
 
 
-{% for oo in obj_pro_fiance%}
-    {{ oo.fiance_record_id }}
-{{ oo.fiance_record_lottery_number }}
-{{ oo.fiance_record_rule }}
-    {{ oo.purchase_record_column }}
-{{ oo.fiance_record_value }}
-{{ oo.fiance_record_money }}
-{{ oo.fiance_record_profit }}
-    {{ oo.fiance_lose_win }}
-    <br>
-{% endfor %}
+{#{% for oo in obj_pro_fiance%}#}
+{#    {{ oo.fiance_record_id }}#}
+{#{{ oo.fiance_record_lottery_number }}#}
+{#{{ oo.fiance_record_rule }}#}
+{#    {{ oo.purchase_record_column }}#}
+{#{{ oo.fiance_record_value }}#}
+{#{{ oo.fiance_record_money }}#}
+{#{{ oo.fiance_record_profit }}#}
+{#    {{ oo.fiance_lose_win }}#}
+{#    <br>#}
+{#{% endfor %}#}
 
 
 {% for oo in prob_data%}
