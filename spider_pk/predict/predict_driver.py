@@ -23,14 +23,27 @@ def spider_predict_selenium():
 #获取10个名次的soup 列表
 def get_soup_list(driver):
     soup_list = []
-    driver.get("https://www.1399p.com/pk10/shdd")
-    time.sleep(2)
-    for i in range(10):
-        driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div/div[2]/div[2]/span[' + str(i+1) + ']/span').click()
-        time.sleep(3)
-        soup = BeautifulSoup(driver.page_source)
-        soup_list.append(soup)
-    return soup_list
+    count = 0
+    flag = True
+    while(flag):
+        try:
+            driver.get("https://www.1399p.com/pk10/shdd")
+            time.sleep(2)
+            for i in range(10):
+                driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div/div[2]/div[2]/span[' + str(i+1) + ']/span').click()
+                time.sleep(3)
+                soup = BeautifulSoup(driver.page_source)
+                soup_list.append(soup)
+            return soup_list
+        except:
+            print "spider predict faild!"
+            time.sleep(3)
+            driver = spider_predict_selenium()
+            if count > 2:
+                flag = False
+        count = count + 1
+
+    return []
 
 #基于一个名次soup 获取预测号码列表 ，杀号率列表，期号
 def get_kill_purchase_list(soup):

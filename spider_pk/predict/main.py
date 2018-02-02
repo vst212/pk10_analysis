@@ -68,15 +68,18 @@ def control_predict_thread(request):
     prob_user = ProbUser.objects.get(user_name=user_name)
     if control == 'start':
         #单例模式
-        try:
-            web_driver = SingleDriver()
-            driver = web_driver.get_driver()
-            info_dict["driver"] = driver
-        except:
-            web_driver = SingleDriver()
-            driver = spider_predict_selenium()
-            web_driver.set_driver(driver)
-            info_dict["driver"] = driver
+        # try:
+        #     web_driver = SingleDriver()
+        #     driver = web_driver.get_driver()
+        #     info_dict["driver"] = driver
+        # except:
+        #     web_driver = SingleDriver()
+        #     driver = spider_predict_selenium()
+        #     web_driver.set_driver(driver)
+        #     info_dict["driver"] = driver
+
+        driver = spider_predict_selenium()
+        info_dict["driver"] = driver
         #状态信息
         c  = ThreadControl()
         #出现错误，则线程不存在，因此启动线程
@@ -109,28 +112,29 @@ def control_predict_thread(request):
 def spider_save_predict(interval):
     #爬取当天结果,存入objects
     html_json = get_html_result()
-    load_lottery_predict(html_json)
-
-    #获取models predict最新值
-    lottery_id,kill_predict_number = get_predict_model_value()
-    if lottery_id == 0:
-        print "no predict record in history"
+    if html_json == '':
+        pass
     else:
-        #获取该期的开奖号码
-        lottery_num = get_lottery_id_number(lottery_id)
-        #计算命中率并更新models
-        calculate_percisoin(lottery_id, lottery_num, kill_predict_number)
+        load_lottery_predict(html_json)
 
-    #爬取下一期predict
-    driver = interval["driver"]
-    predict_lottery_id,purchase_number_list = get_purchase_list(driver)
-    #更新models
-    print "save:",predict_lottery_id,'  ',purchase_number_list
-    current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
-    p = KillPredict(kill_predict_date=current_date, lottery_id = int(predict_lottery_id), kill_predict_number = purchase_number_list, predict_total=0, target_total=0, predict_accuracy=0)
-    p.save()
-    # p = KillPredict(kill_predict_date =current_date, lottery_id = int(predict_lottery_id), kill_predict_number = purchase_number_list)
-    # p.save()
+        #获取models predict最新值
+        lottery_id,kill_predict_number = get_predict_model_value()
+        if lottery_id == 0:
+            print "no predict record in history"
+        else:
+            #获取该期的开奖号码
+            lottery_num = get_lottery_id_number(lottery_id)
+            #计算命中率并更新models
+            calculate_percisoin(lottery_id, lottery_num, kill_predict_number)
+
+        #爬取下一期predict
+        driver = interval["driver"]
+        predict_lottery_id,purchase_number_list = get_purchase_list(driver)
+        #更新models
+        print "save:",predict_lottery_id,'  ',purchase_number_list
+        current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+        p = KillPredict(kill_predict_date=current_date, lottery_id = int(predict_lottery_id), kill_predict_number = purchase_number_list, predict_total=0, target_total=0, predict_accuracy=0)
+        p.save()
 
 
 def get_predict_model_value():

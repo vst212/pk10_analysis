@@ -19,16 +19,27 @@ def get_html_result():
     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
     #就接口
     # url = "http://api.api68.com/pks/getPksHistoryList.do?date=" + current_date + "&lotCode=10001"
-    url = "http://e.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=" + current_date
-    print url
-    req = urllib2.Request(url = url, headers = headers)
-    page = urllib2.urlopen(req)
-        # page = urllib2.urlopen(url)
-    html = page.read()
-    # print html
+    flag = True
+    count = 0
+    while(flag):
+        try:
+            url = "http://e.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=" + current_date
+            print url
+            req = urllib2.Request(url = url, headers = headers)
+            page = urllib2.urlopen(req)
+                # page = urllib2.urlopen(url)
+            html = page.read()
+            # print html
 
-    html_json = simplejson.loads(html)
-    return html_json
+            html_json = simplejson.loads(html)
+            return html_json
+        except:
+            if count > 2:
+                flag = False
+            print 'spider pay interface faild!'
+            time.sleep(5)
+        count = count + 1
+    return ''
 
 
 def load_lottery_predict(html_json):

@@ -51,7 +51,7 @@ def loaddata(c_thread,thread_num,interval):
             judge_num = (current_minute%5)
             if judge_num>2 :
                 # if 1:
-                current_date = time.strftime("%Y%m%d %H:%m:%S", time.localtime())
+                current_date = time.strftime("%Y%m%d %H:%M:%S", time.localtime())
                 print current_date
                 print "start purchase"
                 predict.main.spider_save_predict(interval)
@@ -68,4 +68,6 @@ def loaddata(c_thread,thread_num,interval):
         else:
             # print current_minute, " ", last_minute," current prob already purchase"
             time.sleep(10)
-
+    print "exit!"
+    time.sleep(10)
+    interval['driver'].quit()
