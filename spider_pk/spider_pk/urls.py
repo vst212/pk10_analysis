@@ -83,6 +83,4 @@ urlpatterns = [
     url(r'^set_predict/$', predict.main.set_predict),
     url(r'^get_predict/$', predict.main.get_predict),
 
-
-
 ]

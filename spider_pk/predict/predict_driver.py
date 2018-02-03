@@ -118,6 +118,7 @@ def get_purchase_list(driver):
 
     soup_list = get_soup_list(driver)
     purchase_number_list = ''
+    purchase_number_list_desc = ''
     count = 0
     for soup in soup_list:
         protty_id, percent_list,number_list = get_kill_purchase_list(soup)
@@ -126,13 +127,16 @@ def get_purchase_list(driver):
         purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list)
         if count == len(soup_list) - 1:
             purchase_number_list = purchase_number_list + str(purchase_number)
+            purchase_number_list_desc = purchase_number_list_desc +  '[' + str(purchase_number) + ']'
         else:
             purchase_number_list = purchase_number_list + str(purchase_number) + ','
+            purchase_number_list_desc = purchase_number_list_desc + '[' + str(purchase_number) + '],'
         count = count + 1
 
     print "protty_id:",protty_id
     print "purchase_number_list",purchase_number_list
-    return protty_id,purchase_number_list
+    print "purchase_number_list_desc:",purchase_number_list_desc
+    return protty_id, purchase_number_list, purchase_number_list_desc
 
 if __name__ == '__main__':
     driver = spider_predict_selenium()

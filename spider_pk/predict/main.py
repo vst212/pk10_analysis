@@ -129,11 +129,11 @@ def spider_save_predict(interval):
 
         #爬取下一期predict
         driver = interval["driver"]
-        predict_lottery_id,purchase_number_list = get_purchase_list(driver)
+        predict_lottery_id,purchase_number_list,purchase_number_list_desc = get_purchase_list(driver)
         #更新models
         print "save:",predict_lottery_id,'  ',purchase_number_list
         current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
-        p = KillPredict(kill_predict_date=current_date, lottery_id = int(predict_lottery_id), kill_predict_number = purchase_number_list, predict_total=0, target_total=0, predict_accuracy=0)
+        p = KillPredict(kill_predict_date=current_date, lottery_id = int(predict_lottery_id), kill_predict_number = purchase_number_list, kill_predict_number_desc=purchase_number_list_desc, predict_total=0, target_total=0, predict_accuracy=0)
         p.save()
 
 
