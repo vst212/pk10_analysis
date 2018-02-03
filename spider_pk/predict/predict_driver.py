@@ -36,6 +36,7 @@ def get_soup_list(driver):
                 soup_list.append(soup)
             return soup_list
         except:
+            driver.quit()
             print "spider predict faild!"
             time.sleep(3)
             driver = spider_predict_selenium()
@@ -119,6 +120,7 @@ def get_purchase_list(driver):
     soup_list = get_soup_list(driver)
     purchase_number_list = ''
     purchase_number_list_desc = ''
+    protty_id = 0
     count = 0
     for soup in soup_list:
         protty_id, percent_list,number_list = get_kill_purchase_list(soup)
@@ -133,9 +135,9 @@ def get_purchase_list(driver):
             purchase_number_list_desc = purchase_number_list_desc + '[' + str(purchase_number) + '],'
         count = count + 1
 
-    print "protty_id:",protty_id
-    print "purchase_number_list",purchase_number_list
-    print "purchase_number_list_desc:",purchase_number_list_desc
+    # print "protty_id:",protty_id
+    # print "purchase_number_list",purchase_number_list
+    # print "purchase_number_list_desc:",purchase_number_list_desc
     return protty_id, purchase_number_list, purchase_number_list_desc
 
 if __name__ == '__main__':
