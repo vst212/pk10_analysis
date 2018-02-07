@@ -4,7 +4,8 @@ __author__ = 'shifeixiang'
 from django.views.decorators.csrf import csrf_exempt    #用于处理post请求出现的错误
 from django.shortcuts import render_to_response
 import time
-from predict.models import KillPredict,KillPredictTotal
+from predict.models import KillPredictTotal
+from predict.models import KillPredict
 
 def predict_report(request):
     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))

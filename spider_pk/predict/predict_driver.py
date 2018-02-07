@@ -9,6 +9,7 @@ import time
 import simplejson
 from selenium import webdriver
 from bs4 import BeautifulSoup
+from predict.models import KillPredict
 
 #获取predict driver
 def spider_predict_selenium():
@@ -51,6 +52,7 @@ def get_kill_purchase_list(soup):
     count = 1
     percent_list = []
     number_list = []
+    number_str_all_list = []
     for tr in soup.find(class_='lotteryPublic_tableBlock').find_all('tr'):
         if count == 1:
             # print count,'---------------'
@@ -71,10 +73,11 @@ def get_kill_purchase_list(soup):
                     # print int(td.string)
                     value = int(td.string)
                     number_list.append(value)
+                    number_str_all_list.append(str(value))
                 p_number = p_number + 1
         count = count + 1
 
-    return protty_id,percent_list,number_list
+    return protty_id,percent_list,number_list,number_str_all_list
 
 
 #号码处理，排名前5的号码过滤，排名最小的3个提取。 并排除在前5个号码中存在的
@@ -120,13 +123,19 @@ def get_purchase_list(driver):
     soup_list = get_soup_list(driver)
     purchase_number_list = ''
     purchase_number_list_desc = ''
+    predict_number_all_list = []
     protty_id = 0
     count = 0
     for soup in soup_list:
-        protty_id, percent_list,number_list = get_kill_purchase_list(soup)
+        protty_id, percent_list,number_list,number_str_all_list = get_kill_purchase_list(soup)
+        current_number_all = "|".join(number_str_all_list)
+        predict_number_all_list.append(current_number_all)
         kill_list = []
         purchase_list = []
-        purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list)
+        if (get_last_number_predict_kill_result(protty_id,count)):
+            purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list)
+        else:
+            purchase_number = '0'
         if count == len(soup_list) - 1:
             purchase_number_list = purchase_number_list + str(purchase_number)
             purchase_number_list_desc = purchase_number_list_desc +  '[' + str(purchase_number) + ']'
@@ -134,11 +143,31 @@ def get_purchase_list(driver):
             purchase_number_list = purchase_number_list + str(purchase_number) + ','
             purchase_number_list_desc = purchase_number_list_desc + '[' + str(purchase_number) + '],'
         count = count + 1
+    predict_number_all_list_str = ",".join(predict_number_all_list)
 
     # print "protty_id:",protty_id
     # print "purchase_number_list",purchase_number_list
     # print "purchase_number_list_desc:",purchase_number_list_desc
-    return protty_id, purchase_number_list, purchase_number_list_desc
+    return protty_id, purchase_number_list, purchase_number_list_desc, predict_number_all_list_str
+
+def get_last_number_predict_kill_result(protty_id,index):
+    last_protty_id = int(protty_id) - 1
+    try:
+        p = KillPredict.objects.get(lottery_id=last_protty_id)
+        number_all_list = p.predict_number_all.split(',')[index]
+        number_hit = str(int(p.lottery_number.split(',')[index]))
+        print "number_hit,number_all_list ",number_hit,number_all_list
+        if number_hit in number_all_list:
+            print "no kill all"
+            return False
+        else:
+            print "kill all"
+            return True
+    except:
+        print "kill error"
+        return False
+
+
 
 if __name__ == '__main__':
     driver = spider_predict_selenium()

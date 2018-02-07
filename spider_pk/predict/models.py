@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.db import models
 
 # Create your models here.
+
 class KillPredict(models.Model):
     kill_predict_date = models.CharField(max_length=100)
     kill_predict_time = models.CharField(max_length=100)
@@ -14,6 +15,7 @@ class KillPredict(models.Model):
     predict_total = models.IntegerField(null=True, blank=True)
     target_total = models.IntegerField(null=True, blank=True)
     predict_accuracy = models.FloatField(null=True, blank=True)
+    predict_number_all = models.CharField(max_length=500,null=True, blank=True)
 
 class PredictLottery(models.Model):
     lottery_month = models.CharField(max_length=100)
