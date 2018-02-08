@@ -173,8 +173,11 @@ def calculate_percisoin(lottery_id, lottery_num, kill_predict_number):
                     target_count = target_count +  1
                 all_count = all_count + len(purchase_number_list[i])
         print "all_count,target_count:", all_count,target_count
-        predict_accuracy = float(float(target_count)/float(all_count))
-        print float(float(target_count)/float(all_count))
+        if all_count == 0:
+            predict_accuracy = 0
+        else:
+            predict_accuracy = float(float(target_count)/float(all_count))
+            print float(float(target_count)/float(all_count))
         try:
             p = KillPredict.objects.get(lottery_id=lottery_id)
             p.lottery_number = lottery_num

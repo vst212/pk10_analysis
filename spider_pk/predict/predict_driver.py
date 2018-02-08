@@ -53,6 +53,8 @@ def get_kill_purchase_list(soup):
     percent_list = []
     number_list = []
     number_str_all_list = []
+    prev_number_list = []
+    hit_number = 0
     for tr in soup.find(class_='lotteryPublic_tableBlock').find_all('tr'):
         if count == 1:
             # print count,'---------------'
@@ -75,9 +77,29 @@ def get_kill_purchase_list(soup):
                     number_list.append(value)
                     number_str_all_list.append(str(value))
                 p_number = p_number + 1
+        #前一期
+        if count == 6:
+            # print count,'---------------'
+            p_number = 0
+            for td in tr.find_all('td'):
+                if p_number == 0:
+                    protty_id = td.string
+                if p_number == 1:
+                    hit_number = td.string
+                if p_number > 1 and p_number < 12:
+                    # print int(td.string)
+                    value = int(td.string)
+                    # prev_number_list.append(value)
+                    prev_number_list.append(str(value))
+                p_number = p_number + 1
         count = count + 1
-
-    return protty_id,percent_list,number_list,number_str_all_list
+    # print "hit number, prev_number_list ", hit_number, prev_number_list
+    kill_flag = False
+    if hit_number in prev_number_list:
+        pass
+    else:
+        kill_flag = True
+    return protty_id,percent_list,number_list,number_str_all_list,kill_flag
 
 
 #号码处理，排名前5的号码过滤，排名最小的3个提取。 并排除在前5个号码中存在的
@@ -127,14 +149,16 @@ def get_purchase_list(driver):
     protty_id = 0
     count = 0
     for soup in soup_list:
-        protty_id, percent_list,number_list,number_str_all_list = get_kill_purchase_list(soup)
+        protty_id, percent_list,number_list,number_str_all_list,kill_flag = get_kill_purchase_list(soup)
         current_number_all = "|".join(number_str_all_list)
         predict_number_all_list.append(current_number_all)
         kill_list = []
         purchase_list = []
-        if (get_last_number_predict_kill_result(protty_id,count)):
+        if (kill_flag):
+            print "all kill hit"
             purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list)
         else:
+            print "not all kill"
             purchase_number = '0'
         if count == len(soup_list) - 1:
             purchase_number_list = purchase_number_list + str(purchase_number)
