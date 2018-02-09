@@ -83,7 +83,7 @@ def get_kill_purchase_list(soup):
             p_number = 0
             for td in tr.find_all('td'):
                 if p_number == 0:
-                    protty_id = td.string
+                    pre_protty_id = td.string
                 if p_number == 1:
                     hit_number = td.string
                 if p_number > 1 and p_number < 12:
@@ -155,10 +155,10 @@ def get_purchase_list(driver):
         kill_list = []
         purchase_list = []
         if (kill_flag):
-            print "all kill hit"
+            # print "all kill hit"
             purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list)
         else:
-            print "not all kill"
+            # print "not all kill"
             purchase_number = '0'
         if count == len(soup_list) - 1:
             purchase_number_list = purchase_number_list + str(purchase_number)
@@ -182,10 +182,10 @@ def get_last_number_predict_kill_result(protty_id,index):
         number_hit = str(int(p.lottery_number.split(',')[index]))
         print "number_hit,number_all_list ",number_hit,number_all_list
         if number_hit in number_all_list:
-            print "no kill all"
+            # print "no kill all"
             return False
         else:
-            print "kill all"
+            # print "kill all"
             return True
     except:
         print "kill error"
