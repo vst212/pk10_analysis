@@ -6,7 +6,7 @@ from django.shortcuts import render_to_response
 from auto_visit.models import ProbUser
 from predict.models import KillPredict
 from predict.thread import ThreadControl
-from predict.predict_driver import spider_predict_selenium,get_purchase_list
+from predict.predict_driver_extent_purchase_number import spider_predict_selenium,get_purchase_list
 from predict.spider_pk10 import get_html_result,get_lottery_id_number,load_lottery_predict
 import time
 
@@ -67,17 +67,6 @@ def control_predict_thread(request):
     #显示活跃状态
     prob_user = ProbUser.objects.get(user_name=user_name)
     if control == 'start':
-        #单例模式
-        # try:
-        #     web_driver = SingleDriver()
-        #     driver = web_driver.get_driver()
-        #     info_dict["driver"] = driver
-        # except:
-        #     web_driver = SingleDriver()
-        #     driver = spider_predict_selenium()
-        #     web_driver.set_driver(driver)
-        #     info_dict["driver"] = driver
-
         driver = spider_predict_selenium()
         info_dict["driver"] = driver
         #状态信息
@@ -119,13 +108,20 @@ def spider_save_predict(interval):
 
         #获取models predict最新值
         lottery_id,kill_predict_number = get_predict_model_value()
+        print "lottery_id",lottery_id
         if lottery_id == 0:
             print "no predict record in history"
         else:
             #获取该期的开奖号码
             lottery_num = get_lottery_id_number(lottery_id)
-            #计算命中率并更新models
-            calculate_percisoin(lottery_id, lottery_num, kill_predict_number)
+            print "lottery_num:",lottery_num
+            if (lottery_num):
+                #计算命中率并更新models
+                #print "save lottery_number"
+                calculate_percisoin(lottery_id, lottery_num, kill_predict_number)
+            else:
+                print "pay interface lottery id request faild"
+
 
         #爬取下一期predict
         driver = interval["driver"]

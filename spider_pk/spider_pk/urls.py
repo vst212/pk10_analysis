@@ -81,6 +81,6 @@ urlpatterns = [
     url(r'^control_predict_report/$', predict.report.control_predict_report),
     #测试
     url(r'^set_predict/$', predict.main.set_predict),
-    # url(r'^get_predict/$', predict.main.get_predict),
+    url(r'^get_lottery/$', predict.report.get_lottery_msg),
 
 ]

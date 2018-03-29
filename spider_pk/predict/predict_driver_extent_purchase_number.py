@@ -93,19 +93,24 @@ def get_kill_purchase_list(soup):
                     prev_number_list.append(str(value))
                 p_number = p_number + 1
         count = count + 1
-    # print "hit number, prev_number_list ", hit_number, prev_number_list
+
+    #无论是否全部杀号正确，都计算
+    #kill_flag = True
+    #用于判断是否通过全中过滤
     kill_flag = False
+    #未全部杀中
     if hit_number in prev_number_list:
-        pass
-    else:
         kill_flag = True
+    #全部杀中
+    else:
+        kill_flag = False
     return protty_id,percent_list,number_list,number_str_all_list,kill_flag
 
 
-#号码处理，排名前5的号码过滤，排名最小的3个提取。 并排除在前5个号码中存在的
+#号码处理，排名前6的号码过滤，剩余的号码购买
 def max_min_deal(percent_list,number_list, kill_list, purchase_list):
-    #杀掉号码
-    for i in range(5):
+    #杀掉号码，取前6名作为杀号码
+    for i in range(6):
         max_percent = max(percent_list)
         index = percent_list.index(max_percent)
         percent_list.remove(max_percent)
@@ -115,17 +120,13 @@ def max_min_deal(percent_list,number_list, kill_list, purchase_list):
         kill_list.append(number_value)
         # print number_value
     #预留号码
-    for i  in range(3):
-        min_percent = min(percent_list)
-        index = percent_list.index(min_percent)
-        percent_list.remove(min_percent)
-        # print min_percent
-        # print index
-        number_value = number_list.pop(index)
-        purchase_list.append(number_value)
-        # print number_value
+    for i  in range(10):
+        # min_percent = min(percent_list)
+        # index = percent_list.index(min_percent)
+        # percent_list.remove(min_percent)
+        # number_value = number_list.pop(index)
+        purchase_list.append(int(i+1))
     last_number = list(set(purchase_list) - set(kill_list))
-    # print last_number
     number_str = ''
     if len(last_number)>0:
         count = 0
