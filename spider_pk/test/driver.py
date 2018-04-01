@@ -228,10 +228,16 @@ def get_driver(username,password):
     # print "top frameset1"
     # time.sleep(1)
 
-    #点击广告
-    driver.find_element_by_xpath('//*[@id="notice_button1"]/a').click()
-    time.sleep(1)
+    #点击广告 '//*[@id="notClose2"]'
+    ad = driver.find_element_by_xpath('//*[@id="notice_button1"]/a')
+    ad.click()
+    ad = driver.find_element_by_xpath('//*[@id="notice_button2"]/a')
+    ad.click()
+    #'//*[@id="notice_button1"]/a'
+    # driver.find_element_by_xpath('//*[@id="notice_button1"]/a').click()
 
+    print "---------"
+    time.sleep(2)
     #pk10
     pk10 = driver.find_element_by_xpath('//*[@id="l_BJPK10"]/span')
     pk10.click()
