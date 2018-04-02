@@ -34,6 +34,10 @@ import cross.cross_month
 import auto_visit.main
 import auto_visit.list
 
+########################
+# from auto_purchase.purchase_main import auto_admin,control_probuser_thread,set_user_data
+import auto_purchase.purchase_main
+
 
 
 
@@ -82,5 +86,12 @@ urlpatterns = [
     #测试
     url(r'^set_predict/$', predict.main.set_predict),
     url(r'^get_lottery/$', predict.report.get_lottery_msg),
+
+    ###################################基于杀号自动化购买######################################
+    url(r'^auto_purchase/$', auto_purchase.purchase_main.auto_admin),
+    url(r'^auto_purchase_control/$', auto_purchase.purchase_main.control_probuser_thread),
+    #
+    #设置用户set_user_data
+    url(r'^set_user_data_v2/$', auto_purchase.purchase_main.set_user_data),
 
 ]

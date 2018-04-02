@@ -342,5 +342,42 @@ def reload_pk10_url(driver):
     print driver.current_url
     return driver
 
+
+def get_xiazhu_message(purchase_number_str):
+    buy_element_list = []
+    purchase_number_str = '0,9|2|4|7,9|2|10|6,3|4|5|6|7|9,8|1|2|10,1|2|5|7|8|9,1|3|6|8|9|10'
+    purchase_number_list = purchase_number_str.split(',')
+    for index in range(len(purchase_number_list)):
+        if purchase_number_list[index] == '0':
+            pass
+        else:
+            purchase_numbers = purchase_number_list[index].split('|')
+            for purchase_number in purchase_numbers:
+                buy_element_list.append('//*[@id="a_B' + str(index+1) + '_' + str(purchase_number) + '"]/input')
+    print buy_element_list
+
+
+def get_xiazhu_message_trans(purchase_number_str):
+    buy_element_list = []
+    purchase_number_str = '0,9|2|4|7,9|2|10|6,3|4|5|6|7|9,8|1|2|10,1|2|5|7|8|9,1|3|6|8|9|10'
+    base_set = set(['1','2','3','4','5','6','7','8','9','10'])
+    # print base_set
+    purchase_number_list = purchase_number_str.split(',')
+    for index in range(len(purchase_number_list)):
+        if purchase_number_list[index] == '0':
+            pass
+        else:
+            purchase_numbers = purchase_number_list[index].split('|')
+            purchase_numbers_set = set(purchase_numbers)
+            # print "base",base_set
+            # print "purchase",purchase_numbers_set
+            trans_purchase_numbers =  list(base_set - purchase_numbers_set)
+            for purchase_number in trans_purchase_numbers:
+                buy_element_list.append('//*[@id="a_B' + str(index+1) + '_' + str(purchase_number) + '"]/input')
+    print buy_element_list
+    return buy_element_list
+
 if __name__ == '__main__':
-    get_driver('yup98','aaa123')
+    # get_driver('yup98','aaa123')
+    # get_xiazhu_message()
+    get_xiazhu_message_trans()

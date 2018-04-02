@@ -1,5 +1,8 @@
 #coding=utf-8
 __author__ = 'shifeixiang'
+
+# from __future__ import unicode_literals
+
 import os
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -7,7 +10,7 @@ import time
 
 
 def get_driver(username,password):
-    chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver28.exe"
+    chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver36.exe"
     options = webdriver.ChromeOptions()
     options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
     driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
@@ -30,10 +33,9 @@ def get_driver(username,password):
     code_flag = True
     while(code_flag):
         try:
-
             # elem.send_keys(Keys.RETURN)
             #密码输入完毕后提供5s时间输入验证码
-            time.sleep(5)
+            time.sleep(10)
             #提交按钮
             button = driver.find_element_by_xpath('/html/body/div[2]/div/div/form/div[4]/input')
             button.click()

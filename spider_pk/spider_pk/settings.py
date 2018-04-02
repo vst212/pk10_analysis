@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'prob',
     'auto_visit',
     'predict',
+    'auto_purchase',
 ]
 
 MIDDLEWARE = [

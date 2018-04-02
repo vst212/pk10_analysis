@@ -169,5 +169,18 @@ def reload_pk10_url(driver):
     print driver.current_url
     return driver
 
+
+def get_xiazhu_message():
+    buy_element_list = []
+    purchase_number_list = '0,9|2|4|7,9|2|10|6,3|4|5|6|7|9,8|1|2|10,1|2|5|7|8|9,1|3|6|8|9|10'
+    for index in range(len(purchase_number_list)):
+        if purchase_number_list[index] == '0':
+            pass
+        else:
+            purchase_numbers = purchase_number_list[index].split('|')
+            for purchase_number in purchase_numbers:
+                buy_element_list.append('//*[@id="a_B' + str(index+1) + '_' + str(purchase_number) + '"]/input')
+    print buy_element_list
 if __name__ == '__main__':
-    get_driver('yup98','aaa123')
+    # get_driver('yup98','aaa123')
+    get_xiazhu_message()

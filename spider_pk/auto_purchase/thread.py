@@ -1,9 +1,14 @@
 #coding=utf-8
+
 __author__ = 'shifeixiang'
 import time
 import threading
 import datetime
-from auto_purchase.purchase_main import spider_save_predict
+
+# from auto_purchase.purchase_main import spider_save_predict_purchase
+import auto_purchase.purchase_main
+# from auto_purchase.purchase_main import spider_save_predict_purchase
+
 
 class Spider(threading.Thread):
     # __metaclass__ = Singleton
@@ -54,7 +59,7 @@ def loaddata(c_thread,thread_num,interval):
                 current_date = time.strftime("%Y%m%d %H:%M:%S", time.localtime())
                 print current_date
                 print "start purchase"
-                spider_save_predict(interval)
+                auto_purchase.purchase_main.spider_save_predict_purchase(interval)
                 # auto_visit.main.auto_visit_commit(interval)
                 last_minute = current_minute
                 if current_minute < 5:
