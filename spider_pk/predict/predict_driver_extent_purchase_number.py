@@ -27,21 +27,23 @@ def get_soup_list(driver):
     count = 0
     flag = True
     while(flag):
-        try:
+        if 1:
             driver.get("https://www.1399p.com/pk10/shdd")
             time.sleep(1)
-            # driver.maximize_window();
-            # time.sleep(1)
-            # js = "var q=document.documentElement.scrollTop=200"
-            # driver.execute_script(js)
+            driver.maximize_window();
+            # driver.manage().window().maximize();
+            time.sleep(1)
+            js = "var q=document.documentElement.scrollTop=300"
+            driver.execute_script(js)
             print "scroll finish!"
             for i in range(10):
-                driver.find_element_by_xpath('/html/body/div[4]/div[2]/div/div/div[2]/div[2]/span[' + str(i+1) + ']/span').click()
-                time.sleep(1)
+                '/html/body/div[3]/div[2]/div/div/div[2]/div[2]/span[1]/span'
+                driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div/div[2]/div[2]/span[' + str(i+1) + ']/span').click()
+                time.sleep(5)
                 soup = BeautifulSoup(driver.page_source)
                 soup_list.append(soup)
             return soup_list
-        except:
+        else:
             #driver.quit()
             print "spider predict faild!"
             time.sleep(3)

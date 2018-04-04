@@ -181,6 +181,21 @@ def get_xiazhu_message():
             for purchase_number in purchase_numbers:
                 buy_element_list.append('//*[@id="a_B' + str(index+1) + '_' + str(purchase_number) + '"]/input')
     print buy_element_list
+
+def test_scoller():
+    chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver28.exe"
+    options = webdriver.ChromeOptions()
+    options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
+    driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
+
+
+    driver.get("https://www.baidu.com")
+    # driver.get("http://pxiagme1.lot1068.net/member/fouvrh5q0rhl2edlk9m7jong3e/Welcome.action")
+    driver.maximize_window();
+    time.sleep(5)
+
+
 if __name__ == '__main__':
     # get_driver('yup98','aaa123')
-    get_xiazhu_message()
+    # get_xiazhu_message()
+    test_scoller()

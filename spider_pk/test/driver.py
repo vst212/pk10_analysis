@@ -377,7 +377,30 @@ def get_xiazhu_message_trans(purchase_number_str):
     print buy_element_list
     return buy_element_list
 
+
+def test_scoller():
+    chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver36.exe"
+    # options = webdriver.ChromeOptions()
+    # options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
+    # driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
+    driver = webdriver.Chrome(executable_path=chromedriver)
+
+
+    driver.get("https://blog.csdn.net/u011541946/article/details/69681153")
+    driver.maximize_window()
+
+    js = "var q=document.documentElement.scrollTop=200"
+    driver.execute_script(js)
+
+    # print (driver.get_window_size())
+
+    # driver.set_window_size(1280,800)
+    # driver.get("http://pxiagme1.lot1068.net/member/fouvrh5q0rhl2edlk9m7jong3e/Welcome.action")
+    # driver.maximize_window();
+    time.sleep(5)
+
 if __name__ == '__main__':
     # get_driver('yup98','aaa123')
     # get_xiazhu_message()
-    get_xiazhu_message_trans()
+    # get_xiazhu_message_trans()
+    test_scoller()
