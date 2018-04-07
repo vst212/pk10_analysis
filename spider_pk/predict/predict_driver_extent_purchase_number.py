@@ -22,15 +22,16 @@ def spider_predict_selenium():
     return driver
 
 #获取10个名次的soup 列表
-def get_soup_list(driver):
+def get_soup_list(interval):
     soup_list = []
     count = 0
     flag = True
+    driver = interval["driver"]
     while(flag):
-        if 1:
+        try:
             driver.get("https://www.1399p.com/pk10/shdd")
             time.sleep(1)
-            driver.maximize_window();
+            # driver.maximize_window();
             # driver.manage().window().maximize();
             time.sleep(1)
             js = "var q=document.documentElement.scrollTop=300"
@@ -39,15 +40,15 @@ def get_soup_list(driver):
             for i in range(10):
                 '/html/body/div[3]/div[2]/div/div/div[2]/div[2]/span[1]/span'
                 driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div/div[2]/div[2]/span[' + str(i+1) + ']/span').click()
-                time.sleep(5)
+                time.sleep(10)
                 soup = BeautifulSoup(driver.page_source)
                 soup_list.append(soup)
             return soup_list
-        else:
-            #driver.quit()
+        except:
+            driver.quit()
             print "spider predict faild!"
             time.sleep(3)
-            #driver = spider_predict_selenium()
+            interval["driver"] = spider_predict_selenium()
             if count > 2:
                 flag = False
         count = count + 1
@@ -148,9 +149,9 @@ def max_min_deal(percent_list,number_list, kill_list, purchase_list):
         return '0'
 
 #获取需要购买的号码列表，每一名次为一个小列表
-def get_purchase_list(driver):
+def get_purchase_list(interval):
 
-    soup_list = get_soup_list(driver)
+    soup_list = get_soup_list(interval)
     purchase_number_list = ''
     purchase_number_list_desc = ''
     predict_number_all_list = []

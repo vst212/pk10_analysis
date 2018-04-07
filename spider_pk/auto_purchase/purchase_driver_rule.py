@@ -24,10 +24,11 @@ def spider_predict_selenium():
     return driver
 
 #获取10个名次的soup 列表
-def get_soup_list(driver):
+def get_soup_list(interval):
     soup_list = []
     count = 0
     flag = True
+    driver = interval["driver"]
     while(flag):
         try:
             driver.get("https://www.1399p.com/pk10/shdd")
@@ -45,7 +46,7 @@ def get_soup_list(driver):
             driver.quit()
             print "spider predict faild!"
             time.sleep(3)
-            driver = spider_predict_selenium()
+            interval["driver"] = spider_predict_selenium()
             if count > 2:
                 flag = False
         count = count + 1
@@ -146,9 +147,9 @@ def max_min_deal(percent_list,number_list, kill_list, purchase_list):
         return '0'
 
 #获取需要购买的号码列表，每一名次为一个小列表
-def get_purchase_list(driver):
+def get_purchase_list(interval):
 
-    soup_list = get_soup_list(driver)
+    soup_list = get_soup_list(interval)
     purchase_number_list = ''
     purchase_number_list_desc = ''
     predict_number_all_list = []

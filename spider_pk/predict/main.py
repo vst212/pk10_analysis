@@ -127,7 +127,7 @@ def spider_save_predict(interval):
 def get_predict_kill_and_save(interval):
     #爬取下一期predict
     driver = interval["driver"]
-    predict_lottery_id,purchase_number_list,purchase_number_list_desc,predict_number_all_list_str = get_purchase_list(driver)
+    predict_lottery_id,purchase_number_list,purchase_number_list_desc,predict_number_all_list_str = get_purchase_list(interval)
     if predict_lottery_id != 0:
         #更新models
         print "save:",predict_lottery_id,'  ',purchase_number_list

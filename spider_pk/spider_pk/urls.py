@@ -88,10 +88,10 @@ urlpatterns = [
     url(r'^get_lottery/$', predict.report.get_lottery_msg),
 
     ###################################基于杀号自动化购买######################################
-    #url(r'^auto_purchase/$', auto_purchase.purchase_main.auto_admin),
-    #url(r'^auto_purchase_control/$', auto_purchase.purchase_main.control_probuser_thread),
+    url(r'^auto_purchase/$', auto_purchase.purchase_main.auto_admin),
+    url(r'^auto_purchase_control/$', auto_purchase.purchase_main.control_probuser_thread),
 
     #设置用户set_user_data
-    #url(r'^set_user_data_v2/$', auto_purchase.purchase_main.set_user_data),
+    url(r'^set_user_data_v2/$', auto_purchase.purchase_main.set_user_data),
 
 ]

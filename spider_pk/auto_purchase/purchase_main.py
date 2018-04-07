@@ -42,10 +42,12 @@ def control_probuser_thread(request):
     control = request.POST['control']
 
     money = request.POST['auto_in_money']
+    rule_id = request.POST['in_rule']
 
     info_dict = {}
     info_dict["user_name"] = user_name
     info_dict["money"] = int(money)
+    info_dict["rule_id"] = rule_id
 
     info_dict["upper_money"] = int(request.POST['in_upper_monery_1'])
     info_dict["lower_money"] = int(request.POST['in_lower_monery_1'])
@@ -155,27 +157,30 @@ def spider_save_predict_purchase(interval):
                 calculate_percisoin(lottery_id, lottery_num, kill_predict_number, interval)
             else:
                 print "pay interface lottery id request faild"
-
-
-        #爬取下一期predict
-        driver = interval["driver"]
-        predict_lottery_id,purchase_number_list,purchase_number_list_desc,predict_number_all_list_str = get_purchase_list(driver)
-
-        print "start purchase"
-        #购买
-        start_purchase(purchase_number_list, interval)
-
-        #成功后存入库
-        if predict_lottery_id != 0:
-            #更新models
-            print "save:",predict_lottery_id,'  ',purchase_number_list
-            print "predict_number_all_list_str:",predict_number_all_list_str
-            current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
-            p = KillPredict(kill_predict_date=current_date, lottery_id = int(predict_lottery_id), kill_predict_number = purchase_number_list,
-                            kill_predict_number_desc=purchase_number_list_desc, predict_total=0, target_total=0, predict_accuracy=0,
-                            predict_number_all=predict_number_all_list_str)
-            p.save()
+    get_predict_kill_and_save(interval)
     return 0
+
+def get_predict_kill_and_save(interval):
+    # 爬取下一期predict
+    driver = interval["driver"]
+    predict_lottery_id, purchase_number_list, purchase_number_list_desc, predict_number_all_list_str = get_purchase_list(interval)
+
+    print "start purchase"
+    # 购买
+    start_purchase(purchase_number_list, interval)
+
+    # 成功后存入库
+    if predict_lottery_id != 0:
+        # 更新models
+        print "save:", predict_lottery_id, '  ', purchase_number_list
+        print "predict_number_all_list_str:", predict_number_all_list_str
+        current_date = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+        p = KillPredict(kill_predict_date=current_date, lottery_id=int(predict_lottery_id),
+                        kill_predict_number=purchase_number_list,
+                        kill_predict_number_desc=purchase_number_list_desc, predict_total=0, target_total=0,
+                        predict_accuracy=0,
+                        predict_number_all=predict_number_all_list_str)
+        p.save()
 
 #计算命中率，盈利
 def calculate_percisoin(lottery_id, lottery_num, kill_predict_number, interval):
