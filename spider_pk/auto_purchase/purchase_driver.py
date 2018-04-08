@@ -10,7 +10,7 @@ import time
 
 
 def get_driver(username,password):
-    chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver36.exe"
+    chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
     options = webdriver.ChromeOptions()
     options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
     driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
@@ -19,7 +19,7 @@ def get_driver(username,password):
     driver.get("https://7989674523-bdgj.qq168.ws/login")
     # driver.get("http://pxiagme1.lot1068.net/member/fouvrh5q0rhl2edlk9m7jong3e/Welcome.action")
     driver.maximize_window();
-    time.sleep(5)
+    time.sleep(2)
 
 
     user_elem = driver.find_element_by_name("account")
@@ -46,8 +46,23 @@ def get_driver(username,password):
             time.sleep(1)
             code_flag = False
         except:
+            driver.quit()
             print "please input code!"
             time.sleep(5)
+            chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
+            options = webdriver.ChromeOptions()
+            options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
+            driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
+            driver.get("https://7989674523-bdgj.qq168.ws/login")
+            # driver.get("http://pxiagme1.lot1068.net/member/fouvrh5q0rhl2edlk9m7jong3e/Welcome.action")
+            driver.maximize_window();
+            time.sleep(2)
+
+            user_elem = driver.find_element_by_name("account")
+            user_elem.send_keys(username)
+
+            pwd_elem = driver.find_element_by_name("password")
+            pwd_elem.send_keys(password)
             code_flag = True
     # driver.get("http://pxiagme1.lot1068.net/member/pvn70lug1fsv2r3vng7cn049en/Home/Index.action")
     time.sleep(1)
@@ -61,6 +76,9 @@ def get_driver(username,password):
     time.sleep(1)
 
     driver.find_element_by_xpath('//*[@id="notice_button2"]/a').click()
+    time.sleep(1)
+
+    driver.find_element_by_xpath('//*[@id="notice_button3"]/a').click()
     time.sleep(1)
 
     #pk10

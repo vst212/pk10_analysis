@@ -47,7 +47,7 @@ def control_probuser_thread(request):
     info_dict = {}
     info_dict["user_name"] = user_name
     info_dict["money"] = int(money)
-    info_dict["rule_id"] = rule_id
+    info_dict["rule_id"] = int(rule_id)
 
     info_dict["upper_money"] = int(request.POST['in_upper_monery_1'])
     info_dict["lower_money"] = int(request.POST['in_lower_monery_1'])
@@ -162,25 +162,29 @@ def spider_save_predict_purchase(interval):
 
 def get_predict_kill_and_save(interval):
     # 爬取下一期predict
-    driver = interval["driver"]
+    #driver = interval["driver"]
     predict_lottery_id, purchase_number_list, purchase_number_list_desc, predict_number_all_list_str = get_purchase_list(interval)
 
     print "start purchase"
     # 购买
-    start_purchase(purchase_number_list, interval)
-
-    # 成功后存入库
-    if predict_lottery_id != 0:
-        # 更新models
-        print "save:", predict_lottery_id, '  ', purchase_number_list
-        print "predict_number_all_list_str:", predict_number_all_list_str
-        current_date = time.strftime('%Y-%m-%d', time.localtime(time.time()))
-        p = KillPredict(kill_predict_date=current_date, lottery_id=int(predict_lottery_id),
-                        kill_predict_number=purchase_number_list,
-                        kill_predict_number_desc=purchase_number_list_desc, predict_total=0, target_total=0,
-                        predict_accuracy=0,
-                        predict_number_all=predict_number_all_list_str)
-        p.save()
+    purchase_result = start_purchase(purchase_number_list, interval)
+    if purchase_result:
+        # 成功后存入库
+        if predict_lottery_id != 0:
+            # 更新models
+            print "save:", predict_lottery_id, '  ', purchase_number_list
+            print "predict_number_all_list_str:", predict_number_all_list_str
+            current_date = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+            p = KillPredict(kill_predict_date=current_date, lottery_id=int(predict_lottery_id),
+                            kill_predict_number=purchase_number_list,
+                            kill_predict_number_desc=purchase_number_list_desc, predict_total=0, target_total=0,
+                            predict_accuracy=0,
+                            predict_number_all=predict_number_all_list_str)
+            p.save()
+        else:
+            print "faild get_purchase_list !!!!"
+    else:
+        print "faild purchase!!!!"
 
 #计算命中率，盈利
 def calculate_percisoin(lottery_id, lottery_num, kill_predict_number, interval):
@@ -239,40 +243,52 @@ def start_purchase(purchase_number_list, interval):
     print gain_all_money
     print interval['upper_money'],interval['lower_money']
     #开始购买
-    if gain_all_money < interval['upper_money'] and gain_all_money > interval['lower_money']:
-        # purchase_driver = interval['purchase_driver']
-        # purchase_driver = reload_pk10_driver(interval,purchase_driver)
+    try:
+        if gain_all_money <= interval['upper_money'] and gain_all_money >= interval['lower_money']:
+            # purchase_driver = interval['purchase_driver']
+            # purchase_driver = reload_pk10_driver(interval,purchase_driver)
 
-        interval['purchase_driver'] = reload_pk10_driver(interval['purchase_driver'])
+            interval['purchase_driver'] = reload_pk10_driver(interval['purchase_driver'])
 
-        purchase_driver = interval['purchase_driver']
-        #切换到子框架
-        print "exchange frame!"
-        purchase_driver.switch_to_frame("frame")
-        time.sleep(2)
+            purchase_driver = interval['purchase_driver']
+            #切换到子框架
+            print "exchange frame!"
+            purchase_driver.switch_to_frame("frame")
+            time.sleep(2)
 
-        #遍历填充值
-        print "start fill"
+            #遍历填充值
+            print "start fill"
+            if interval['rule_id'] == 1:
+                print "interval['rule_id'] is 1"
+                purchase_element_list = get_xiazhu_message(purchase_number_list)
+            if interval['rule_id'] == 2:
+                print "interval['rule_id'] is 2"
+                purchase_element_list = get_xiazhu_message_trans(purchase_number_list)
 
-        purchase_element_list = get_xiazhu_message(purchase_number_list)
-        for purchase_element in purchase_element_list:
-            print "purchase_element:",purchase_element
-            sub_element = purchase_driver.find_element_by_xpath(purchase_element)
-            sub_element.send_keys(interval['money'])
-            #time.sleep(1)
-        confirm_button = purchase_driver.find_element_by_xpath('//*[@id="header"]/div[2]/div/input[1]')
-        confirm_button.click()
-        time.sleep(1)
+            for purchase_element in purchase_element_list:
+                print "purchase_element:",purchase_element
+                sub_element = purchase_driver.find_element_by_xpath(purchase_element)
+                sub_element.send_keys(interval['money'])
+                #time.sleep(1)
+            confirm_button = purchase_driver.find_element_by_xpath('//*[@id="header"]/div[2]/div/input[1]')
+            confirm_button.click()
+            time.sleep(1)
 
-        #返回原始框架
-        print "return back"
-        purchase_driver.switch_to_default_content()
-        time.sleep(1)
+            #返回原始框架
+            print "return back"
+            purchase_driver.switch_to_default_content()
+            time.sleep(1)
 
-        submit_button = purchase_driver.find_element_by_xpath('/html/body/div[6]/div[3]/div/button[1]/span')
-        submit_button.click()
+            submit_button = purchase_driver.find_element_by_xpath('/html/body/div[6]/div[3]/div/button[1]/span')
+            submit_button.click()
 
-    return 0
+            return True
+        else:
+            print "money over predict!!!"
+            return False
+    except:
+        return False
+
 
 #根据预测list转换成要购买的元素
 def get_xiazhu_message(purchase_number_str):
@@ -321,6 +337,9 @@ def reload_pk10_driver(purchase_driver):
     time.sleep(1)
 
     purchase_driver.find_element_by_xpath('//*[@id="notice_button2"]/a').click()
+    time.sleep(1)
+
+    purchase_driver.find_element_by_xpath('//*[@id="notice_button3"]/a').click()
     time.sleep(1)
 
 

@@ -14,7 +14,7 @@ from predict.models import KillPredict
 #获取predict driver
 def spider_predict_selenium():
 
-    chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver28.exe"
+    chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
     options = webdriver.ChromeOptions()
     options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
     driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
@@ -31,7 +31,7 @@ def get_soup_list(interval):
         try:
             driver.get("https://www.1399p.com/pk10/shdd")
             time.sleep(1)
-            # driver.maximize_window();
+            driver.maximize_window();
             # driver.manage().window().maximize();
             time.sleep(1)
             js = "var q=document.documentElement.scrollTop=300"
@@ -40,7 +40,7 @@ def get_soup_list(interval):
             for i in range(10):
                 '/html/body/div[3]/div[2]/div/div/div[2]/div[2]/span[1]/span'
                 driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div/div[2]/div[2]/span[' + str(i+1) + ']/span').click()
-                time.sleep(10)
+                time.sleep(6)
                 soup = BeautifulSoup(driver.page_source)
                 soup_list.append(soup)
             return soup_list

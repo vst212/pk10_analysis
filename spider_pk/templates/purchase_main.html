@@ -246,7 +246,6 @@ function stop_thread(user_name){
 
 
     if ( in_monery && in_rule){
-        if(commit_flag){
             if(in_monery > 0){
                 if(in_rule>0 && in_rule<=2){
 
@@ -260,16 +259,12 @@ function stop_thread(user_name){
                     }
                 }
                 else{
-                    alert('规则选择为1-6！');
+                    alert('规则选择为1-2！');
                 }
 
             }else{
                 alert('下注本金为正数！');
             }
-        }
-        else{
-            alert('规则输入格式有误！');
-        }
     }
     else{
         alert('请输入完整信息！');
