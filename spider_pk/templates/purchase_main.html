@@ -195,7 +195,7 @@ function start_thread(user_name){
             if(in_monery > 0){
                 if(in_rule>0 && in_rule<=2){
 {#                    document.getElementById('user_form').submit();#}
-                    post_form("/auto_purchase_control/",{"user_name":user_name,"control":'start',
+                    post_form("/auto_purchase_client_control/",{"user_name":user_name,"control":'start',
                         "auto_in_money":in_monery, "in_rule":in_rule,
                     "in_upper_monery_1":in_upper_monery_1, "in_lower_monery_1":in_lower_monery_1});
                 }
@@ -251,7 +251,7 @@ function stop_thread(user_name){
 
                     if (confirmMsg) {
 {#                        post_form("/control_probuser_thread/",{"user_name":user_name,"control":'stop', "in_rule_list":in_rule_list,"auto_in_money":in_monery });#}
-                        post_form("/auto_purchase_control/",{"user_name":user_name,"control":'stop',
+                        post_form("/auto_purchase_client_control/",{"user_name":user_name,"control":'stop',
                             "auto_in_money":in_monery, "in_rule":in_rule,
                         "in_upper_monery_1":in_upper_monery_1, "in_lower_monery_1":in_lower_monery_1});
                     } else {

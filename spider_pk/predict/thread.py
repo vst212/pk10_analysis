@@ -43,31 +43,35 @@ def loaddata(c_thread,thread_num,interval):
     #初次启动开始购买---可以通过购买记录来初始化last_minute
     last_minute = -1
     while not c_thread.thread_stop:
-        current_minute = (datetime.datetime.now()).minute
-        # print "current_minute ",current_minute
-        if current_minute<5 and last_minute> 0:
-            last_minute = last_minute - 60
-        if current_minute - last_minute > 3:
-            judge_num = (current_minute%5)
-            if judge_num>2 :
-                # if 1:
-                current_date = time.strftime("%Y%m%d %H:%M:%S", time.localtime())
-                print current_date
-                print "start purchase"
-                predict.main.spider_save_predict(interval)
-                # auto_visit.main.auto_visit_commit(interval)
-                last_minute = current_minute
-                if current_minute < 5:
-                    time.sleep(120)
+        flag_date = time.strftime("%H:%M:%S", time.localtime())
+        if flag_date > '09:00:00' or flag_date < "23:59:59":
+            current_minute = (datetime.datetime.now()).minute
+            # print "current_minute ",current_minute
+            if current_minute<5 and last_minute> 0:
+                last_minute = last_minute - 60
+            if current_minute - last_minute > 3:
+                judge_num = (current_minute%5)
+                if judge_num>2 :
+                    # if 1:
+                    current_date = time.strftime("%Y%m%d %H:%M:%S", time.localtime())
+                    print current_date
+                    print "start purchase"
+                    predict.main.spider_save_predict(interval)
+                    # auto_visit.main.auto_visit_commit(interval)
+                    last_minute = current_minute
+                    if current_minute < 5:
+                        time.sleep(120)
+                    else:
+                        time.sleep(3)
+                    count = count + 1
                 else:
-                    time.sleep(3)
-                count = count + 1
+                    # print current_minute, " ", last_minute," wait open prob"
+                    time.sleep(10)
             else:
-                # print current_minute, " ", last_minute," wait open prob"
+                # print current_minute, " ", last_minute," current prob already purchase"
                 time.sleep(10)
         else:
-            # print current_minute, " ", last_minute," current prob already purchase"
-            time.sleep(10)
+            time.sleep(60)
     print "exit!"
     time.sleep(10)
     interval['driver'].quit()

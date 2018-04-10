@@ -59,7 +59,10 @@ from predict.spider_pk10 import get_html_result,get_lottery_id_number,load_lotte
 from predict.main import calculate_percisoin
 #更新，处理lottery_number为空的情况
 def control_predict_report(request):
-    in_date= request.POST['in_date']
+    try:
+        in_date= request.POST['in_date']
+    except:
+        in_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
 
     KillPredictTotal.objects.all().delete()
     obj_pro_predict = KillPredict.objects.filter(kill_predict_date=in_date)

@@ -24,9 +24,17 @@
 {% for oo in obj_pro_predict%}
     {{ oo.lottery_id }}
 {{ oo.lottery_number }}
-{{ oo.gain_money }}
+{{ oo.kill_predict_number }}
+    {{ oo.gain_money }}
     <br>
 {% endfor %}
+
+
+
+{% comment %}    {{ obj_pro_predict.lottery_id }}
+{{ obj_pro_predict.lottery_number }}
+{{ obj_pro_predict.kill_predict_number }}{% endcomment %}
+
 
 {#{% for oo in obj_pro_predict%}#}
 {#    {{ oo.lottery_id }}#}

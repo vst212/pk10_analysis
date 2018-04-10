@@ -81,6 +81,9 @@ def get_driver(username,password):
     driver.find_element_by_xpath('//*[@id="notice_button3"]/a').click()
     time.sleep(1)
 
+    driver.find_element_by_xpath('//*[@id="notice_button4"]/a').click()
+    time.sleep(1)
+
     #pk10
     pk10 = driver.find_element_by_xpath('//*[@id="l_BJPK10"]/span')
     pk10.click()

@@ -37,6 +37,7 @@ import auto_visit.list
 ########################
 # from auto_purchase.purchase_main import auto_admin,control_probuser_thread,set_user_data
 import auto_purchase.purchase_main
+import auto_purchase.purchase_client_main
 
 
 
@@ -90,8 +91,17 @@ urlpatterns = [
     ###################################基于杀号自动化购买######################################
     url(r'^auto_purchase/$', auto_purchase.purchase_main.auto_admin),
     url(r'^auto_purchase_control/$', auto_purchase.purchase_main.control_probuser_thread),
+    ########客户端
+    url(r'^auto_purchase_client/$', auto_purchase.purchase_client_main.auto_admin),
+    url(r'^auto_purchase_client_control/$', auto_purchase.purchase_client_main.control_probuser_thread),
 
     #设置用户set_user_data
     url(r'^set_user_data_v2/$', auto_purchase.purchase_main.set_user_data),
+    ########测试
+    url(r'^get_kill_predict_lottery_msg/$', auto_purchase.purchase_client_main.get_lottery_msg),
+
+
+    ###################################获取杀号预测数据接口#############################################
+    url(r'^get_predict_data/$', predict.main.get_predict),
 
 ]

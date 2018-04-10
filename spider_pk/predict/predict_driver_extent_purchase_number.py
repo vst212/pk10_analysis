@@ -14,24 +14,29 @@ from predict.models import KillPredict
 #获取predict driver
 def spider_predict_selenium():
 
-    chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
-    options = webdriver.ChromeOptions()
-    options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
-    driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
+    # chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
+    # options = webdriver.ChromeOptions()
+    # options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
+    # driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
+
+    driver = webdriver.Firefox(executable_path = 'E:\\python\\webdriver\\firefox\\geckodriver.exe')
+
     driver.get("https://www.1399p.com/pk10/shdd")
     return driver
 
 #获取10个名次的soup 列表
 def get_soup_list(interval):
-    soup_list = []
+
     count = 0
     flag = True
-    driver = interval["driver"]
+
     while(flag):
         try:
+            soup_list = []
+            driver = interval["driver"]
             driver.get("https://www.1399p.com/pk10/shdd")
             time.sleep(1)
-            driver.maximize_window();
+            #driver.maximize_window();
             # driver.manage().window().maximize();
             time.sleep(1)
             js = "var q=document.documentElement.scrollTop=300"
@@ -106,6 +111,7 @@ def get_kill_purchase_list(soup):
     #kill_flag = True
     #用于判断是否通过全中过滤
     kill_flag = False
+    print "last hit_number is:",hit_number,'  ',prev_number_list
     #未全部杀中
     if hit_number in prev_number_list:
         kill_flag = True
@@ -174,7 +180,7 @@ def get_purchase_list(interval):
             purchase_number_list_desc = purchase_number_list_desc +  '[' + str(purchase_number) + ']'
         else:
             purchase_number_list = purchase_number_list + str(purchase_number) + ','
-            purchase_number_list_desc = purchase_number_list_desc + '[' + str(purchase_number) + '],'
+            purchase_number_list_desc = purchase_number_list_desc + '[' + str(purchase_number) + ']---,'
         count = count + 1
     predict_number_all_list_str = ",".join(predict_number_all_list)
 

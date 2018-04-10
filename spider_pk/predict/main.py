@@ -4,12 +4,12 @@ __author__ = 'shifeixiang'
 from django.views.decorators.csrf import csrf_exempt    #用于处理post请求出现的错误
 from django.shortcuts import render_to_response
 from auto_visit.models import ProbUser
-from predict.models import KillPredict
+from predict.models import KillPredict,PredictLottery
 from predict.thread import ThreadControl
 from predict.predict_driver_extent_purchase_number import spider_predict_selenium,get_purchase_list
 from predict.spider_pk10 import get_html_result,get_lottery_id_number,load_lottery_predict
 import time
-
+import datetime
 class Singleton(object):
     def __new__(cls, *args, **kw):
         if not hasattr(cls, '_instance'):
@@ -131,7 +131,15 @@ def get_predict_kill_and_save(interval):
     if predict_lottery_id != 0:
         #更新models
         print "save:",predict_lottery_id,'  ',purchase_number_list
-        current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+        #current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+
+        #根据时间判断日期是否加一天
+        jump_flag_date = time.strftime("%H:%M:%S", time.localtime())
+        if jump_flag_date > '23:57:59' or jump_flag_date <= '00:03:00':
+            current_date = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime("%Y-%m-%d")
+        else:
+            current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+
         p = KillPredict(kill_predict_date=current_date, lottery_id = int(predict_lottery_id), kill_predict_number = purchase_number_list,
                             kill_predict_number_desc=purchase_number_list_desc, predict_total=0, target_total=0, predict_accuracy=0,
                             predict_number_all=predict_number_all_list_str)
@@ -200,9 +208,40 @@ def set_predict(request):
     p.save()
     obj_pro_predict = KillPredict.objects.filter(kill_predict_date=current_date)
     return render_to_response('test.html',{"obj_pro_predict":obj_pro_predict})
+
+
+import json
+from django.http import HttpResponse
+#获取杀号预测数据接口
 def get_predict(request):
     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+    result_info = {}
     # lotterys = KillPredict.objects.filter(lottery_date=current_date)
-    obj_pro_predict = KillPredict.objects.filter(kill_predict_date=current_date)
+    #获取预测的lottery id 和预测的号码
+    obj_pro_predict = KillPredict.objects.filter(kill_predict_date=current_date).order_by("-lottery_id")
+    if len(obj_pro_predict) == 0:
+        pass
+    else:
+        result_info['predict_lottery_id'] = int(obj_pro_predict[0].lottery_id)
+        result_info['predict_number_list'] = obj_pro_predict[0].kill_predict_number
+        result_info['predict_number_list_desc'] = obj_pro_predict[0].kill_predict_number_desc
+        print obj_pro_predict[0].lottery_id
+        print obj_pro_predict[0].kill_predict_number
+
+    #获取目前最新的开奖lottery id
+    # html_json = get_html_result()
+    # if html_json == '':
+    #     result_info['last_lottery_id'] = 999999
+    #     #pass
+    # else:
+    #     load_lottery_predict(html_json)
+    obj_pro_lottery = PredictLottery.objects.filter(lottery_date=current_date).order_by("-lottery_id")
+    if len(obj_pro_lottery) == 0:
+        result_info['last_lottery_id'] = 0
+        pass
+    else:
+        result_info['last_lottery_id'] = int(obj_pro_lottery[0].lottery_id)
+        result_info['lottery_number'] = obj_pro_lottery[0].lottery_number
+        print obj_pro_lottery[0].lottery_id
     print "obj_pro",obj_pro_predict
-    return render_to_response('test.html',{"obj_pro_predict":obj_pro_predict})
+    return HttpResponse(json.dumps(result_info), content_type="application/json")
