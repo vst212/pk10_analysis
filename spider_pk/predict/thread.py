@@ -44,11 +44,16 @@ def loaddata(c_thread,thread_num,interval):
     last_minute = -1
     while not c_thread.thread_stop:
         flag_date = time.strftime("%H:%M:%S", time.localtime())
-        if flag_date > '09:00:00' or flag_date < "23:59:59":
+        print "flag_date:",flag_date
+        if flag_date > '09:05:00' and flag_date < "23:59:59":
             current_minute = (datetime.datetime.now()).minute
+            current_hour = (datetime.datetime.now()).hour
             # print "current_minute ",current_minute
+            if current_hour == 9 and current_minute < 10 and last_minute> 0:
+                last_minute = -2
             if current_minute<5 and last_minute> 0:
-                last_minute = last_minute - 60
+                last_minute = -2
+
             if current_minute - last_minute > 3:
                 judge_num = (current_minute%5)
                 if judge_num>2 :

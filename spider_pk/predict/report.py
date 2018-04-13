@@ -136,3 +136,10 @@ def get_lottery_msg(request):
     obj_pro_predict = PredictLottery.objects.filter(lottery_date=current_date)
     print "obj_pro",obj_pro_predict
     return render_to_response('test.html',{"obj_pro_predict":obj_pro_predict})
+
+
+def get_kill_predict_msg(request):
+    current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+    obj_pro_kill_predict = KillPredict.objects.filter(kill_predict_date=current_date)
+    print "obj_pro_kill_predict",obj_pro_kill_predict
+    return render_to_response('test.html',{"obj_pro_kill_predict":obj_pro_kill_predict})

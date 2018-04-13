@@ -38,6 +38,7 @@ import auto_visit.list
 # from auto_purchase.purchase_main import auto_admin,control_probuser_thread,set_user_data
 import auto_purchase.purchase_main
 import auto_purchase.purchase_client_main
+import auto_purchase.user
 
 
 
@@ -85,8 +86,9 @@ urlpatterns = [
     url(r'^predict_report/$', predict.report.predict_report),
     url(r'^control_predict_report/$', predict.report.control_predict_report),
     #测试
-    url(r'^set_predict/$', predict.main.set_predict),
+    url(r'^delete_kill_predict_current_date/$', predict.main.delete_kill_predict_current_date),
     url(r'^get_lottery/$', predict.report.get_lottery_msg),
+    url(r'^get_kill_predict_msg/$', predict.report.get_kill_predict_msg),
 
     ###################################基于杀号自动化购买######################################
     url(r'^auto_purchase/$', auto_purchase.purchase_main.auto_admin),
@@ -97,6 +99,7 @@ urlpatterns = [
 
     #设置用户set_user_data
     url(r'^set_user_data_v2/$', auto_purchase.purchase_main.set_user_data),
+    url(r'^set_auto_purchase_user/$', auto_purchase.user.set_user),
     ########测试
     url(r'^get_kill_predict_lottery_msg/$', auto_purchase.purchase_client_main.get_lottery_msg),
 

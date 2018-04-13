@@ -23,10 +23,13 @@ def get_html_result():
     count = 0
     while(flag):
         try:
-            url = "http://e.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=" + current_date
+            if count%2 == 1:
+                url = "http://e.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=" + current_date
+            else:
+                url = "http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=" + current_date
             print url
             req = urllib2.Request(url = url, headers = headers)
-            page = urllib2.urlopen(req)
+            page = urllib2.urlopen(req, timeout=15)
                 # page = urllib2.urlopen(url)
             html = page.read()
             # print html

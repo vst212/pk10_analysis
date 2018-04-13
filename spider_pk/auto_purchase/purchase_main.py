@@ -369,7 +369,6 @@ def set_user_data(request):
 
 
 def set_user(request):
-
     try:
         user_name = request.POST['in_user']
         user_password = request.POST['in_pwd']

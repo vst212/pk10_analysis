@@ -177,8 +177,8 @@ def get_predict_kill_and_save(interval):
             if result_info:
                 last_id = int(result_info['last_lottery_id'])
                 predict_id = int(result_info['predict_lottery_id'])
-                result_info['lottery_number'] = '02,07,03,08,01,04,06,05,09,10'
-                result_info['predict_number_list_desc'] = '[8|4|6|7]---,[1|4|6|7|8|10]---,[1|10|4|6|7]---,[0]---,[1|2|4|10|9]---,[1|10|3|9|7]---,[8|1|4|6|7]---,[0]---,[8|1|4|5|9]---,[0]'
+                #result_info['lottery_number'] = '02,07,03,08,01,04,06,05,09,10'
+                #result_info['predict_number_list_desc'] = '[8|4|6|7]---,[1|4|6|7|8|10]---,[1|10|4|6|7]---,[0]---,[1|2|4|10|9]---,[1|10|3|9|7]---,[8|1|4|6|7]---,[0]---,[8|1|4|5|9]---,[0]'
                 if last_id == predict_id:
                     calculate_percisoin(last_id, result_info['lottery_number'], result_info['predict_number_list'], result_info['predict_number_list_desc'], interval)
                     save_gain_flag_confirm = False
@@ -259,7 +259,7 @@ def calculate_percisoin(lottery_id, lottery_num, kill_predict_number, purchase_n
             target_total = target_count
             predict_accuracy = predict_accuracy
             xiazhu_money = interval['money']
-            gain_money = target_count * 9.7 - all_count
+            gain_money = (target_count * 9.7 - all_count) * int(xiazhu_money)
 
             p = KillPredict(kill_predict_date=current_date, lottery_id = lottery_id, lottery_number = lottery_number, kill_predict_number = kill_predict_number,
                             kill_predict_number_desc=purchase_number_list_desc, predict_total=predict_total, target_total=target_total, predict_accuracy=predict_accuracy,
@@ -376,17 +376,30 @@ def reload_pk10_driver(purchase_driver):
     purchase_driver.get(purchase_driver.current_url)
     time.sleep(2)
     #点击广告
-    purchase_driver.find_element_by_xpath('//*[@id="notice_button1"]/a').click()
-    time.sleep(1)
+    #点击广告
+    try:
+        purchase_driver.find_element_by_xpath('//*[@id="notice_button1"]/a').click()
+        time.sleep(1)
+    except:
+        print "unfound button1"
 
-    purchase_driver.find_element_by_xpath('//*[@id="notice_button2"]/a').click()
-    time.sleep(1)
+    try:
+        purchase_driver.find_element_by_xpath('//*[@id="notice_button2"]/a').click()
+        time.sleep(1)
+    except:
+        print "unfound button2"
 
-    purchase_driver.find_element_by_xpath('//*[@id="notice_button3"]/a').click()
-    time.sleep(1)
+    try:
+        purchase_driver.find_element_by_xpath('//*[@id="notice_button3"]/a').click()
+        time.sleep(1)
+    except:
+        print "unfound button3"
 
-    purchase_driver.find_element_by_xpath('//*[@id="notice_button4"]/a').click()
-    time.sleep(1)
+    # try:
+    #     purchase_driver.find_element_by_xpath('//*[@id="notice_button4"]/a').click()
+    #     time.sleep(1)
+    # except:
+    #     print "unfound button4"
 
 
 
