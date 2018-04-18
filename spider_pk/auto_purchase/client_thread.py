@@ -74,4 +74,3 @@ def loaddata(c_thread,thread_num,interval):
             # print current_minute, " ", last_minute," current prob already purchase"
             time.sleep(10)
     print "exit!"
-    time.sleep(5)

@@ -49,7 +49,7 @@ def loaddata(c_thread,thread_num,interval):
             current_minute = (datetime.datetime.now()).minute
             current_hour = (datetime.datetime.now()).hour
             # print "current_minute ",current_minute
-            if current_hour == 9 and current_minute < 10 and last_minute> 0:
+            if current_hour == 9 and current_minute < 9 and last_minute> 0:
                 last_minute = -2
             if current_minute<5 and last_minute> 0:
                 last_minute = -2

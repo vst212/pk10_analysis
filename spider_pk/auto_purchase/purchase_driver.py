@@ -90,11 +90,11 @@ def get_driver(username,password):
     except:
         print "unfound button3"
 
-    # try:
-    #     driver.find_element_by_xpath('//*[@id="notice_button4"]/a').click()
-    #     time.sleep(1)
-    # except:
-    #     print "unfound button4"
+    try:
+        driver.find_element_by_xpath('//*[@id="notice_button4"]/a').click()
+        time.sleep(1)
+    except:
+        print "unfound button4"
 
     #pk10
     pk10 = driver.find_element_by_xpath('//*[@id="l_BJPK10"]/span')

@@ -61,9 +61,9 @@ def load_lottery_predict(html_json):
 def get_lottery_id_number(lottery_id):
     try:
         lottery = PredictLottery.objects.get(lottery_id=lottery_id)
-        return lottery.lottery_number
+        return lottery.lottery_number, lottery.lottery_time
     except:
-        return 0
+        return 0,'0'
 
 
 def get_date_lottery(lottery_date):

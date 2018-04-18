@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.db import models
 
 # Create your models here.
-
+#杀号记录，预测号码，计算结果
 class KillPredict(models.Model):
     kill_predict_date = models.CharField(max_length=100)
     kill_predict_time = models.CharField(max_length=100)
@@ -26,6 +26,7 @@ class PredictLottery(models.Model):
     lottery_id =  models.IntegerField()
     lottery_number = models.CharField(max_length=500)
 
+#汇总记录
 class KillPredictTotal(models.Model):
     kill_predict_date = models.CharField(max_length=100)
     kill_predict_time = models.CharField(max_length=100)

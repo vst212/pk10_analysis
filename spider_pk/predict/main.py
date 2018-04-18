@@ -6,7 +6,10 @@ from django.shortcuts import render_to_response
 from auto_visit.models import ProbUser
 from predict.models import KillPredict,PredictLottery
 from predict.thread import ThreadControl
-from predict.predict_driver_extent_purchase_number import spider_predict_selenium,get_purchase_list
+#第二次优化
+#from predict.predict_driver_extent_purchase_number import spider_predict_selenium,get_purchase_list
+#第三次优化
+from predict.predict_driver_replace_purchase_number_20 import spider_predict_selenium, get_purchase_list
 from predict.spider_pk10 import get_html_result,get_lottery_id_number,load_lottery_predict
 import time
 import datetime
@@ -113,12 +116,12 @@ def spider_save_predict(interval):
             print "no predict record in history"
         else:
             #获取该期的开奖号码
-            lottery_num = get_lottery_id_number(lottery_id)
+            lottery_num,lottery_time = get_lottery_id_number(lottery_id)
             print "lottery_num:",lottery_num
             if (lottery_num):
                 #计算命中率并更新models
                 #print "save lottery_number"
-                calculate_percisoin(lottery_id, lottery_num, kill_predict_number)
+                calculate_percisoin(lottery_id, lottery_num, kill_predict_number, lottery_time)
             else:
                 print "pay interface lottery id request faild"
 
@@ -156,7 +159,7 @@ def get_predict_model_value():
         kill_predict_number = predicts[0].kill_predict_number
     return lottery_id,kill_predict_number
 
-def calculate_percisoin(lottery_id, lottery_num, kill_predict_number):
+def calculate_percisoin(lottery_id, lottery_num, kill_predict_number, lottery_time):
     #lottery_num 转数组，kill_predict_number 转二位数组
     result_data = lottery_num.split(',')
 
@@ -184,6 +187,7 @@ def calculate_percisoin(lottery_id, lottery_num, kill_predict_number):
             print float(float(target_count)/float(all_count))
         try:
             p = KillPredict.objects.get(lottery_id=lottery_id)
+            p.kill_predict_time = lottery_time
             p.lottery_number = lottery_num
             p.predict_total = all_count
             p.target_total = target_count
