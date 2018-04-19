@@ -145,9 +145,10 @@ def control_predict_report(request):
                         print "current_kill_predict_time:",current_kill_predict_time
                         print "every_hour_all_total:",every_hour_all_total
                         print "every_hour_target_total:",every_hour_target_total
-                        p = KillPredictTotal(kill_predict_date=in_date, predict_total=every_hour_all_total, target_total=every_hour_target_total,
-                                             predict_accuracy=float(float(every_hour_target_total)/float(every_hour_all_total)), predict_column_desc=int(current_hour)-1)
-                        p.save()
+                        if every_hour_all_total>0:
+                            p = KillPredictTotal(kill_predict_date=in_date, predict_total=every_hour_all_total, target_total=every_hour_target_total,
+                                                 predict_accuracy=float(float(every_hour_target_total)/float(every_hour_all_total)), predict_column_desc=int(current_hour)-1)
+                            p.save()
 
                         every_hour_all_total = 0
                         every_hour_target_total = 0
@@ -159,10 +160,10 @@ def control_predict_report(request):
                         if str(int(lottery_num_list[i])) in predict_num_list[i]:
                             every_hour_target_total = every_hour_target_total + 1
                         every_hour_all_total = every_hour_all_total + len(predict_num_list[i])
-
-    p = KillPredictTotal(kill_predict_date=in_date, predict_total=every_hour_all_total, target_total=every_hour_target_total,
-                                             predict_accuracy=float(float(every_hour_target_total)/float(every_hour_all_total)), predict_column_desc=int(base_hour)+1)
-    p.save()
+    if every_hour_all_total>0:
+        p = KillPredictTotal(kill_predict_date=in_date, predict_total=every_hour_all_total, target_total=every_hour_target_total,
+                                                 predict_accuracy=float(float(every_hour_target_total)/float(every_hour_all_total)), predict_column_desc=int(base_hour)+1)
+        p.save()
     print "current_kill_predict_time:",current_kill_predict_time
     print "every_hour_all_total:",every_hour_all_total
     print "every_hour_target_total:",every_hour_target_total
