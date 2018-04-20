@@ -115,7 +115,7 @@ def control_predict_report(request):
             predict_num_list.append(tmp_list)
 
         lottery_num_list = sub_predict.lottery_number.split(',')
-        print "lottery_num_list:",lottery_num_list
+        # print "lottery_num_list:",lottery_num_list
 
         #最后一行不做统计
         if len(predict_num_list) == len(lottery_num_list):
@@ -142,9 +142,9 @@ def control_predict_report(request):
                     all_count = all_count + len(predict_num_list[i])
 
                     if (current_hour-base_hour) > 1:
-                        print "current_kill_predict_time:",current_kill_predict_time
-                        print "every_hour_all_total:",every_hour_all_total
-                        print "every_hour_target_total:",every_hour_target_total
+                        # print "current_kill_predict_time:",current_kill_predict_time
+                        # print "every_hour_all_total:",every_hour_all_total
+                        # print "every_hour_target_total:",every_hour_target_total
                         if every_hour_all_total>0:
                             p = KillPredictTotal(kill_predict_date=in_date, predict_total=every_hour_all_total, target_total=every_hour_target_total,
                                                  predict_accuracy=float(float(every_hour_target_total)/float(every_hour_all_total)), predict_column_desc=int(current_hour)-1)
@@ -164,9 +164,9 @@ def control_predict_report(request):
         p = KillPredictTotal(kill_predict_date=in_date, predict_total=every_hour_all_total, target_total=every_hour_target_total,
                                                  predict_accuracy=float(float(every_hour_target_total)/float(every_hour_all_total)), predict_column_desc=int(base_hour)+1)
         p.save()
-    print "current_kill_predict_time:",current_kill_predict_time
-    print "every_hour_all_total:",every_hour_all_total
-    print "every_hour_target_total:",every_hour_target_total
+    # print "current_kill_predict_time:",current_kill_predict_time
+    # print "every_hour_all_total:",every_hour_all_total
+    # print "every_hour_target_total:",every_hour_target_total
 
                     # print "all_count,target_count:", all_count,target_count
         # count_count = count_count + 1

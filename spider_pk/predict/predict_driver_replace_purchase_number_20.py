@@ -147,9 +147,9 @@ def get_kill_purchase_list(soup):
 #号码处理，排名前5的号码过滤，剩余的号码购买
 def max_min_deal(percent_list,number_list, kill_list, purchase_list):
     #杀掉号码，取前5名作为杀号码
-    print "percent_list:",percent_list
-    print "number_list:",number_list
-    for i in range(7):
+    # print "percent_list:",percent_list
+    # print "number_list:",number_list
+    for i in range(4):
         max_percent = max(percent_list)
         index = percent_list.index(max_percent)
         percent_list.remove(max_percent)
@@ -166,9 +166,9 @@ def max_min_deal(percent_list,number_list, kill_list, purchase_list):
         # number_value = number_list.pop(index)
         purchase_list.append(int(i+1))
     #last_number = list(set(number_list) - set(kill_list))
-    last_number = list(set(purchase_list) - set(kill_list))
+    last_number = list(set(purchase_list) - (set(purchase_list) - set(kill_list)))
 
-    print "number_list:",last_number
+    # print "number_list:",last_number
     number_str = ''
     if len(last_number)>0:
         count = 0
