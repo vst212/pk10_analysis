@@ -24,3 +24,4 @@ def set_user(request):
         return render_to_response('set_auto_purchase_user.html', {"obj_pro":obj_pro})
 
     return render_to_response('set_auto_purchase_user.html', {"obj_pro":obj_pro})
+

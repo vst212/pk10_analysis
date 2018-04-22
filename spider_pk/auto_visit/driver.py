@@ -184,13 +184,15 @@ def get_driver3():
     driver.quit()
 
 def get_driver(username,password):
-    chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver28.exe"
+    chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
     options = webdriver.ChromeOptions()
     options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
     driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
 
 
     driver.get("http://pxiagme1.lot1068.net/member/Welcome.action?searchKeyword=99935")
+    # driver.get('http://pxsagme1.lot1068.net:8082/member/Welcome.action?searchKeyword=99935')
+    #driver.get('http://pxiagme1.lot1068.net/member/b56f0ov1vhtqptofg9530s939a/Welcome.action')
     # driver.get("http://pxiagme1.lot1068.net/member/fouvrh5q0rhl2edlk9m7jong3e/Welcome.action")
     driver.maximize_window();
     user_elem = driver.find_element_by_name("userCode")
@@ -206,7 +208,13 @@ def get_driver(username,password):
             #密码输入完毕后提供5s时间输入验证码
             time.sleep(10)
             #提交按钮
-            button = driver.find_element_by_xpath('//*[@id="loginForm"]/div[2]/table/tbody/tr[5]/td[2]/input')
+
+            js = "var q=document.documentElement.scrollTop=500"
+            driver.execute_script(js)
+            time.sleep(2)
+
+            button = driver.find_element_by_xpath('//*[@id="loginForm"]/button')
+            #button = driver.find_element_by_xpath('//*[@id="loginForm"]/div[2]/table/tbody/tr[5]/td[2]/input')
             button.click()
             time.sleep(2)
 
