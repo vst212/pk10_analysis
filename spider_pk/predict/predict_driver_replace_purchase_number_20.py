@@ -166,7 +166,7 @@ def max_min_deal(percent_list,number_list, kill_list, purchase_list):
         # number_value = number_list.pop(index)
         purchase_list.append(int(i+1))
     #last_number = list(set(number_list) - set(kill_list))
-    last_number = list(set(purchase_list) - (set(purchase_list) - set(kill_list)))
+    last_number = list(set(purchase_list) - set(kill_list))
 
     # print "number_list:",last_number
     number_str = ''

@@ -22,6 +22,7 @@ from prob.views_month import admin_month,index_month,index_month_evaluation
 import prob.views_times
 import prob.views_month_times
 
+
 ######################
 import predict.main
 import predict.report
@@ -39,6 +40,10 @@ import auto_visit.list
 import auto_purchase.purchase_main
 import auto_purchase.purchase_client_main
 import auto_purchase.user
+
+########################
+import auto_pxiagme1_purchase.purchase_client_main
+import auto_pxiagme1_purchase.user
 
 
 
@@ -106,5 +111,13 @@ urlpatterns = [
 
     ###################################获取杀号预测数据接口#############################################
     url(r'^get_predict_data/$', predict.main.get_predict),
+
+    ############################第一版自动化重构，基于概率规则#####################33333
+    url(r'^auto_purchase_pxiagme1_client_main/$', auto_pxiagme1_purchase.purchase_client_main.auto_admin),
+    url(r'^auto_purchase_pxiagme1_client_control/$', auto_pxiagme1_purchase.purchase_client_main.control_probuser_thread),
+
+    #设置用户set_user_data
+    url(r'^set_pxiagme1_auto_purchase_user/$', auto_pxiagme1_purchase.user.set_user),
+
 
 ]

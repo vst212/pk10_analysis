@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'auto_visit',
     'predict',
     'auto_purchase',
+    'auto_pxiagme1_purchase',
 ]
 
 MIDDLEWARE = [
