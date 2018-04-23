@@ -1,107 +1,107 @@
-1524213672392	geckodriver	INFO	geckodriver 0.20.1
-1524213672399	geckodriver	INFO	Listening on 127.0.0.1:59663
-1524213675310	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\SHIFEI~1\\AppData\\Local\\Temp\\rust_mozprofile.zVHo7UdQ5PQj"
-1524213676058	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/omni.ja!/components/addonManager.js:65
-1524213676905	Marionette	INFO	Enabled via --marionette
-1524213681477	Marionette	INFO	Listening on port 59679
-[Child 9700] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Child 9700] WARNING: pipe error: 109: file1524213681529	Marionette	WARN	TLS certificate errors will be ignored for this session
-1524213681570	Marionette	DEBUG	Register listener.js for window 4294967297
-1524213681584	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
-1524213687574	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
-1524213687575	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
-1524213690768	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.1393p.com/pk10/shdd"
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-1524213693205	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.1393p.com/pk10/shdd"
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-1524213792179	Marionette	DEBUG	Received DOM event "beforeunload" for "https://www.1393p.com/pk10/shdd"
-1524213792699	Marionette	DEBUG	Received DOM event "pagehide" for "https://www.1393p.com/pk10/shdd"
-1524213792700	Marionette	DEBUG	Received DOM event "unload" for "https://www.1393p.com/pk10/shdd"
-1524213793133	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.1393p.com/pk10/shdd"
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-1524213793683	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.1393p.com/pk10/shdd"
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-1524213795960	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524213802258	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524213808540	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524213814829	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524213821117	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524213827394	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524213833681	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524213839965	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524213846252	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524213852573	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214090772	Marionette	DEBUG	Received DOM event "beforeunload" for "https://www.1393p.com/pk10/shdd"
-1524214100082	Marionette	DEBUG	Received DOM event "pagehide" for "https://www.1393p.com/pk10/shdd"
-1524214100086	Marionette	DEBUG	Received DOM event "unload" for "https://www.1393p.com/pk10/shdd"
-1524214100489	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.1393p.com/pk10/shdd"
+1524449268251	geckodriver	INFO	geckodriver 0.20.1
+1524449268310	geckodriver	INFO	Listening on 127.0.0.1:59865
+1524449271394	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\SHIFEI~1\\AppData\\Local\\Temp\\rust_mozprofile.71imISQ5jie4"
+1524449273006	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/omni.ja!/components/addonManager.js:65
+1524449274666	Marionette	INFO	Enabled via --marionette
+[Child 12060] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 12060] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1524449289345	Marionette	INFO	Listening on port 59880
+1524449290003	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524449290325	Marionette	DEBUG	Register listener.js for window 6442450945
+1524449290682	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1524449295208	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1524449295209	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1524449296666	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.1393p.com/pk10/shdd"
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-1524214106273	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.1393p.com/pk10/shdd"
-1524214108539	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214114827	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214121113	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214127407	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214133690	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214139978	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214146262	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214152667	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214158950	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214165233	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214393496	Marionette	DEBUG	Received DOM event "beforeunload" for "https://www.1393p.com/pk10/shdd"
-1524214394006	Marionette	DEBUG	Received DOM event "pagehide" for "https://www.1393p.com/pk10/shdd"
-1524214394007	Marionette	DEBUG	Received DOM event "unload" for "https://www.1393p.com/pk10/shdd"
-1524214394633	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.1393p.com/pk10/shdd"
+JavaScript error: jar:file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/browser/omni.ja!/components/nsBrowserGlue.js, line 994: TypeError: win is null
+1524449322073	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.1393p.com/pk10/shdd"
+1524449343556	Marionette	DEBUG	Received DOM event "beforeunload" for "https://www.1393p.com/pk10/shdd"
+1524449344172	Marionette	DEBUG	Received DOM event "pagehide" for "https://www.1393p.com/pk10/shdd"
+1524449344174	Marionette	DEBUG	Received DOM event "unload" for "https://www.1393p.com/pk10/shdd"
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
+1524449344686	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.1393p.com/pk10/shdd"
+1524449345219	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.1393p.com/pk10/shdd"
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
+1524449347650	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449354145	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449360439	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449366731	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449373020	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449379309	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449385591	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449391891	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449398179	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449404505	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449585236	Marionette	DEBUG	Received DOM event "beforeunload" for "https://www.1393p.com/pk10/shdd"
+1524449585490	Marionette	DEBUG	Received DOM event "pagehide" for "https://www.1393p.com/pk10/shdd"
+1524449585493	Marionette	DEBUG	Received DOM event "unload" for "https://www.1393p.com/pk10/shdd"
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
+1524449586026	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.1393p.com/pk10/shdd"
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
+1524449634072	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.1393p.com/pk10/shdd"
+1524449636334	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449642629	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449648930	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449655230	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449661547	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449667828	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449674149	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449680437	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449686824	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449693115	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449883936	Marionette	DEBUG	Received DOM event "beforeunload" for "https://www.1393p.com/pk10/shdd"
+1524449885858	Marionette	DEBUG	Received DOM event "pagehide" for "https://www.1393p.com/pk10/shdd"
+1524449885860	Marionette	DEBUG	Received DOM event "unload" for "https://www.1393p.com/pk10/shdd"
+1524449886333	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.1393p.com/pk10/shdd"
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-1524214458169	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.1393p.com/pk10/shdd"
-1524214460429	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214466718	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214473002	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214479289	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214485583	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214491866	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214498215	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214504496	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214510790	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214517073	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214698261	Marionette	DEBUG	Received DOM event "beforeunload" for "https://www.1393p.com/pk10/shdd"
-1524214698784	Marionette	DEBUG	Received DOM event "pagehide" for "https://www.1393p.com/pk10/shdd"
-1524214698786	Marionette	DEBUG	Received DOM event "unload" for "https://www.1393p.com/pk10/shdd"
-1524214699191	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.1393p.com/pk10/shdd"
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-1524214700187	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.1393p.com/pk10/shdd"
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-1524214702449	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214708739	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214715028	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214721347	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214727706	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214734006	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214740304	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214746610	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214752908	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214759201	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524214997626	Marionette	DEBUG	Received DOM event "beforeunload" for "https://www.1393p.com/pk10/shdd"
-1524215000196	Marionette	DEBUG	Received DOM event "pagehide" for "https://www.1393p.com/pk10/shdd"
-1524215000198	Marionette	DEBUG	Received DOM event "unload" for "https://www.1393p.com/pk10/shdd"
-1524215000605	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.1393p.com/pk10/shdd"
+1524449896121	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.1393p.com/pk10/shdd"
+1524449898384	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449904668	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449910951	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449917236	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449923516	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449929803	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449936146	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449942488	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449948820	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524449955115	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450206050	Marionette	DEBUG	Received DOM event "beforeunload" for "https://www.1393p.com/pk10/shdd"
+1524450206598	Marionette	DEBUG	Received DOM event "pagehide" for "https://www.1393p.com/pk10/shdd"
+1524450206600	Marionette	DEBUG	Received DOM event "unload" for "https://www.1393p.com/pk10/shdd"
+1524450207005	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.1393p.com/pk10/shdd"
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-1524215048377	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.1393p.com/pk10/shdd"
-1524215050652	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524215056945	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524215063339	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524215069630	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524215075919	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524215082207	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524215088493	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524215094781	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524215101076	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524215107358	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524215293640	Marionette	DEBUG	Received DOM event "beforeunload" for "https://www.1393p.com/pk10/shdd"
-1524215294163	Marionette	DEBUG	Received DOM event "pagehide" for "https://www.1393p.com/pk10/shdd"
-1524215294164	Marionette	DEBUG	Received DOM event "unload" for "https://www.1393p.com/pk10/shdd"
+1524450228748	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.1393p.com/pk10/shdd"
+1524450231006	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450237321	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450243605	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450249935	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450256284	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450262589	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450268886	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450275201	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450281493	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450287831	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450488876	Marionette	DEBUG	Received DOM event "beforeunload" for "https://www.1393p.com/pk10/shdd"
+1524450489070	Marionette	DEBUG	Received DOM event "pagehide" for "https://www.1393p.com/pk10/shdd"
+1524450489072	Marionette	DEBUG	Received DOM event "unload" for "https://www.1393p.com/pk10/shdd"
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
+1524450489542	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.1393p.com/pk10/shdd"
+1524450490020	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.1393p.com/pk10/shdd"
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
+1524450492281	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450498569	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450504858	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450511211	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450517503	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450523789	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450530082	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450536381	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450542682	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524450548970	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+eived DOM event "unload" for "https://www.1393p.com/pk10/shdd"
 1524215303597	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.1393p.com/pk10/shdd"
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
@@ -112,13 +112,14 @@ JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, 
 1524215349517	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
 1524215355810	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
 1524215362102	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524215368398	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524215374691	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524215380997	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524215387349	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524215596803	Marionette	DEBUG	Received DOM event "beforeunload" for "https://www.1393p.com/pk10/shdd"
-1524215597564	Marionette	DEBUG	Received DOM event "pagehide" for "https://www.1393p.com/pk10/shdd"
-1524215597566	Marionette	DEBUG	Received DOM event "unload" for "https://www.1393p.com/pk10/shdd"
+1524215368398	Marionette	DEBUG	Canceled page load li[Parent 8016] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 8016] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 17076] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 17076] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+ved DOM event "unload" for "https://www.1393p.com/pk10/shdd"
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
 1524215598032	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.1393p.com/pk10/shdd"
 1524215598769	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.1393p.com/pk10/shdd"
@@ -235,29 +236,31 @@ JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, 
 1524217443535	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
 1524217449821	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
 1524217456113	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-ionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524198791810	Marionette	DEBUG	Received DOM event "beforeunload" for "https://www.1393p.com/pk10/shdd"
-1524198792334	Marionette	DEBUG	Received DOM event "pagehide" for "https://www.1393p.com/pk10/shdd"
-1524198792336	Marionette	DEBUG	Received DOM event "unload" for "https://www.1393p.com/pk10/shdd"
+1524217698401	Marionette	DEBUG	Received DOM event "beforeunload" for "https://www.1393p.com/pk10/shdd"
+1524217698905	Marionette	DEBUG	Received DOM event "pagehide" for "https://www.1393p.com/pk10/shdd"
+1524217698907	Marionette	DEBUG	Received DOM event "unload" for "https://www.1393p.com/pk10/shdd"
+1524217699341	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.1393p.com/pk10/shdd"
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-1524198792800	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.1393p.com/pk10/shdd"
-1524198793277	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.1393p.com/pk10/shdd"
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-1524198795535	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524198801819	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524198808132	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524198814420	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524198820747	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524198827026	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524198833402	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524198839681	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524198845961	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524198852244	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1524199085323	Marionette	DEBUG	Received DOM event "beforeunload" for "https://www.1393p.com/pk10/shdd"
-1524199085848	Marionette	DEBUG	Received DOM event "pagehide" for "https://www.1393p.com/pk10/shdd"
-1524199085850	Marionette	DEBUG	Received DOM event "unload" for "https://www.1393p.com/pk10/shdd"
-1524199086252	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.1393p.com/pk10/shdd"
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
+1524217709015	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.1393p.com/pk10/shdd"
+1524217711283	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524217717569	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524217723863	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524217730153	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524217736439	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524217742792	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524217749072	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524217755357	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524217761663	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1524217767960	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+[Parent 668] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 668] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4356] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[GPU 19420] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+nreachable code after return statement
 1524199086944	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.1393p.com/pk10/shdd"
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
 1524199089200	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
