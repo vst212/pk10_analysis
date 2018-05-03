@@ -21,6 +21,8 @@ def set_user(request):
         obj_pro = ProbUser.objects.all()
     except:
         obj_pro = ProbUser.objects.all()
+        print obj_pro[0].user_password
+
         return render_to_response('set_auto_purchase_pxiagme1_user.html', {"obj_pro":obj_pro})
 
     return render_to_response('set_auto_purchase_pxiagme1_user.html', {"obj_pro":obj_pro})

@@ -287,17 +287,30 @@ def start_purchase(purchase_number_list, interval):
     print interval['upper_money'],interval['lower_money']
     #开始购买
     try:
-        if gain_all_money <= interval['upper_money'] and gain_all_money >= interval['lower_money']:
+
+        interval['purchase_driver'] = reload_pk10_driver(interval['purchase_driver'])
+
+        purchase_driver = interval['purchase_driver']
+
             # purchase_driver = interval['purchase_driver']
             # purchase_driver = reload_pk10_driver(interval,purchase_driver)
 
-            interval['purchase_driver'] = reload_pk10_driver(interval['purchase_driver'])
+        print "exchange frame!"
+        purchase_driver.switch_to_frame("frame")
+        time.sleep(2)
+        try:
+            #gain_all_money = int((unicode(purchase_driver.find_element_by_id('matchWinLossVal').text).encode('utf-8')).replace(',',''))
+            gain_all_money = int(purchase_driver.find_element_by_class_name('lottery_info_left').find_element_by_id('bresult').text.replace(',',''))
+        except:
+            print "get gain_all_money error!"
+            gain_all_money = 0
+        print "gain_all_money:", gain_all_money
 
-            purchase_driver = interval['purchase_driver']
+        if gain_all_money <= interval['upper_money'] and gain_all_money >= interval['lower_money']:
             #切换到子框架
-            print "exchange frame!"
-            purchase_driver.switch_to_frame("frame")
-            time.sleep(2)
+            # print "exchange frame!"
+            # purchase_driver.switch_to_frame("frame")
+            # time.sleep(2)
 
             #遍历填充值
             print "start fill"
@@ -454,13 +467,13 @@ def get_server_request_info():
     headers = {
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
     }
-    url = 'http://47.75.174.160:2088/get_predict_data/'
+    url = 'http://47.75.174.160:6088/get_predict_data/'
     request_flag = True
     count = 0
     while(request_flag):
         try:
             req = urllib2.Request(url = url, headers = headers)
-            page = urllib2.urlopen(req)
+            page = urllib2.urlopen(req, timeout=10)
             html = page.read()
             result_info = html
             info_dict = json.loads(result_info)

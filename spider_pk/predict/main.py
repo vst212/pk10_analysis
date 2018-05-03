@@ -9,7 +9,11 @@ from predict.thread import ThreadControl
 #第二次优化
 #from predict.predict_driver_extent_purchase_number import spider_predict_selenium,get_purchase_list
 #第三次优化
-from predict.predict_driver_replace_purchase_number_20 import spider_predict_selenium, get_purchase_list
+# from predict.predict_driver_replace_purchase_number_rule3_20 import spider_predict_selenium, get_purchase_list
+#第四次优化
+from predict.predict_driver_extent_purchase_number_rule2_100 import spider_predict_selenium,get_purchase_list
+
+
 from predict.spider_pk10 import get_html_result,get_lottery_id_number,load_lottery_predict
 import time
 import datetime

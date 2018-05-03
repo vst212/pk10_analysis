@@ -17,6 +17,7 @@ def get_driver(username,password):
 
 
     driver.get("https://7989674523-bdgj.qq168.ws/login")
+    # driver.find_element_by_class_name()
     # driver.get("http://pxiagme1.lot1068.net/member/fouvrh5q0rhl2edlk9m7jong3e/Welcome.action")
     driver.maximize_window();
     time.sleep(2)
@@ -37,7 +38,7 @@ def get_driver(username,password):
             #密码输入完毕后提供5s时间输入验证码
             time.sleep(10)
             #提交按钮
-            button = driver.find_element_by_xpath('/html/body/div[2]/div/div/form/div[4]/input')
+            button = driver.find_element_by_xpath('/html/body/div[2]/div/div/form/div[6]/input')
             button.click()
             time.sleep(2)
 

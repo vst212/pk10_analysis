@@ -30,6 +30,12 @@ def get_soup_list(driver):
         try:
             driver.get("https://www.1399p.com/pk10/shdd")
             time.sleep(2)
+            # print 'click select'
+            # driver.find_element_by_class_name('colorWorld_selectJtou').click()
+            # time.sleep(1)
+            # print 'click 100'
+            # driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div/div[1]/div/div/div/div/span[4]').click()
+            # time.sleep(2)
             for i in range(10):
                 driver.find_element_by_xpath('/html/body/div[4]/div[2]/div/div/div[2]/div[2]/span[' + str(i+1) + ']/span').click()
                 time.sleep(3)

@@ -12,8 +12,10 @@ def get_driver(username,password):
     options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
     driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
 
+    #driver  = webdriver.PhantomJS('E:\\python\\webdriver\\phantomjs\\phantomjs')
 
-    driver.get("http://pxiagme1.lot1068.net/member/Welcome.action?searchKeyword=99935")
+    # driver.get("http://pxiagme1.lot1068.net/member/Welcome.action?searchKeyword=99935")
+    driver.get('http://pxkagme1.lot1068.net:8082/member/Welcome.action?searchKeyword=99935')
     # driver.get('http://pxsagme1.lot1068.net:8082/member/Welcome.action?searchKeyword=99935')
     #driver.get('http://pxiagme1.lot1068.net/member/b56f0ov1vhtqptofg9530s939a/Welcome.action')
     # driver.get("http://pxiagme1.lot1068.net/member/fouvrh5q0rhl2edlk9m7jong3e/Welcome.action")

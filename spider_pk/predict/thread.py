@@ -5,6 +5,8 @@ import threading
 import datetime
 # from predict.main import spider_save_predict
 import predict.main
+
+
 class Spider(threading.Thread):
     # __metaclass__ = Singleton
     thread_stop = False

@@ -287,13 +287,19 @@ def start_purchase(purchase_number_list, interval):
     print interval['upper_money'],interval['lower_money']
     #开始购买
     try:
-        if gain_all_money <= interval['upper_money'] and gain_all_money >= interval['lower_money']:
             # purchase_driver = interval['purchase_driver']
             # purchase_driver = reload_pk10_driver(interval,purchase_driver)
+        interval['purchase_driver'] = reload_pxiagme1_pk10_driver(interval['purchase_driver'])
+        purchase_driver = interval['purchase_driver']
+        try:
+            #gain_all_money = int((unicode(purchase_driver.find_element_by_id('matchWinLossVal').text).encode('utf-8')).replace(',',''))
+            gain_all_money = int(purchase_driver.find_element_by_id('matchWinLossVal').text.replace(',',''))
+        except:
+            print "get gain_all_money error!"
+            gain_all_money = 0
+        print "gain_all_money:", gain_all_money
+        if gain_all_money <= interval['upper_money'] and gain_all_money >= interval['lower_money']:
 
-            interval['purchase_driver'] = reload_pxiagme1_pk10_driver(interval['purchase_driver'])
-
-            purchase_driver = interval['purchase_driver']
             #切换到子框架
             print "chongzhi!"
             #purchase_driver.switch_to_frame("frame")
@@ -308,7 +314,7 @@ def start_purchase(purchase_number_list, interval):
 
             if interval['rule_id'] == 2:
                 print "interval['rule_id'] is 2"
-                purchase_element_list = get_pxiagme1_xiazhu_message(purchase_number_list)
+                purchase_element_list = get_pxiagme1_xiazhu_message_trans(purchase_number_list)
 
             for purchase_element in purchase_element_list:
                 print "purchase_element:",purchase_element
@@ -391,12 +397,23 @@ def get_pxiagme1_xiazhu_message_trans(purchase_number_str):
             pass
         else:
             purchase_numbers = purchase_number_list[index].split('|')
+
             purchase_numbers_set = set(purchase_numbers)
-            # print "base",base_set
-            # print "purchase",purchase_numbers_set
             trans_purchase_numbers =  list(base_set - purchase_numbers_set)
+
             for purchase_number in trans_purchase_numbers:
-                buy_element_list.append('//*[@id="a_B' + str(index+1) + '_' + str(purchase_number) + '"]/input')
+                #buy_element_list.append('//*[@id="a_B' + str(index+1) + '_' + str(purchase_number) + '"]/input')
+                # 构造path
+                # 补全2位列,后移2位
+                column = str(index+1).zfill(2)
+                # 补全2位值
+                value = str(purchase_number).zfill(2)
+                xpath = '//*[@id="itmStakeInput2' + column + '1' + value + '"]'
+                print "xpath:",xpath
+                buy_element_list.append(xpath)
+
+            # for purchase_number in trans_purchase_numbers:
+            #     buy_element_list.append('//*[@id="a_B' + str(index+1) + '_' + str(purchase_number) + '"]/input')
     print buy_element_list
     return buy_element_list
 
@@ -519,13 +536,14 @@ def get_server_request_info():
     headers = {
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
     }
-    url = 'http://47.75.174.160:2088/get_predict_data/'
+    url = 'http://47.75.174.160:6088/get_predict_data/'
+    # url = 'http://127.0.0.1:8000/get_predict_data/'
     request_flag = True
     count = 0
     while(request_flag):
         try:
             req = urllib2.Request(url = url, headers = headers)
-            page = urllib2.urlopen(req)
+            page = urllib2.urlopen(req, timeout=10)
             html = page.read()
             result_info = html
             info_dict = json.loads(result_info)
