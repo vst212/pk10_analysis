@@ -116,7 +116,7 @@ def get_kill_purchase_list(soup):
                 if p_percent == 10:
                     current_percent_all = float(str(td.string).strip().replace("%",""))
                 p_percent = p_percent + 1
-            print "current_percent_all:",current_percent_all
+            # print "current_percent_all:",current_percent_all
         if count == 5:
             # print count,'---------------'
             p_number = 0
@@ -150,7 +150,8 @@ def get_kill_purchase_list(soup):
     #kill_flag = True
     #用于判断是否通过全中过滤
     kill_flag = False
-    print "last hit_number is:",hit_number,'  ',prev_number_list
+    print "number_list:",number_list
+    # print "last hit_number is:",hit_number,'  ',prev_number_list
     #未全部杀中
     if hit_number in prev_number_list:
         kill_flag = True
@@ -164,7 +165,7 @@ def get_kill_purchase_list(soup):
 def max_min_deal(percent_list,number_list, kill_list, purchase_list, current_percent_all):
     if current_percent_all<30:
         last_number = list(set(number_list))
-        print "last_number <30%:",last_number
+        # print "last_number <30%:",last_number
     else:
         #杀掉号码，取前6名作为杀号码
         for i in range(6):
@@ -184,7 +185,7 @@ def max_min_deal(percent_list,number_list, kill_list, purchase_list, current_per
             # number_value = number_list.pop(index)
             purchase_list.append(int(i+1))
         last_number = list(set(purchase_list) - set(kill_list))
-        print "last_number >=30%:",last_number
+        # print "last_number >=30%:",last_number
     number_str = ''
     if len(last_number)>0:
         count = 0
@@ -207,22 +208,24 @@ def get_purchase_list(interval):
     predict_number_all_list = []
     protty_id = 0
     count = 0
+    page_count_index = 0
     for soup in soup_list:
         protty_id, percent_list,number_list,number_str_all_list,kill_flag,current_percent_all = get_kill_purchase_list(soup)
         current_number_all = "|".join(number_str_all_list)
         predict_number_all_list.append(current_number_all)
         kill_list = []
         purchase_list = []
-
-        #规则正常处理
-        if (kill_flag):
-            # print "all kill hit"
-            purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
-        #小于30全部购买
-        elif current_percent_all<30:
+        # print "page_count_index:::::::::::::::::",page_count_index
+        if current_percent_all<30:
             purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
         else:
-            purchase_number = '0'
+            #规则正常处理
+            if (kill_flag):
+                # print "all kill hit"
+                purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
+            else:
+                print "no match:0"
+                purchase_number = '0'
 
         if count == len(soup_list) - 1:
             purchase_number_list = purchase_number_list + str(purchase_number)
@@ -231,6 +234,7 @@ def get_purchase_list(interval):
             purchase_number_list = purchase_number_list + str(purchase_number) + ','
             purchase_number_list_desc = purchase_number_list_desc + '[' + str(purchase_number) + ']---,'
         count = count + 1
+        page_count_index = page_count_index + 1
     predict_number_all_list_str = ",".join(predict_number_all_list)
 
     # print "protty_id:",protty_id

@@ -206,15 +206,9 @@ def calculate_percisoin(lottery_id, lottery_num, kill_predict_number, lottery_ti
 def delete_kill_predict_current_date(request):
 
     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
-    current_date = '2018-04-19'
 
     KillPredict.objects.filter(kill_predict_date=current_date).delete()
-    predict_lottery_id = 664880
-    purchase_number_list = '2,2|3,8|9,6,0,8|10,2|4,10,8|10,8|2|3'
-    # p = KillPredict(kill_predict_date=current_date, lottery_id = int(predict_lottery_id),
-    #                 kill_predict_number = purchase_number_list, predict_total=0, target_total=0, predict_accuracy=0,
-    #                 xiazhu_money=10, gain_money=9.7)
-    # p.save()
+
     obj_pro_predict = KillPredict.objects.filter(kill_predict_date=current_date)
     return render_to_response('test.html',{"obj_pro_predict":obj_pro_predict})
 
