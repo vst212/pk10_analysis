@@ -7,7 +7,7 @@ from auto_visit.models import ProbUser
 from predict.models import KillPredict,PredictLottery
 from predict.thread import ThreadControl
 #第二次优化
-#from predict.predict_driver_extent_purchase_number import spider_predict_selenium,get_purchase_list
+# from predict.predict_driver_extent_purchase_number_rule2_20 import spider_predict_selenium,get_purchase_list
 #第三次优化
 # from predict.predict_driver_replace_purchase_number_rule3_20 import spider_predict_selenium, get_purchase_list
 #第四次优化

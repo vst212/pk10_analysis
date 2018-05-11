@@ -57,6 +57,17 @@ def get_soup_list(interval):
                 js = "var q=document.documentElement.scrollTop=300"
                 driver.execute_script(js)
                 print "scroll finish!"
+
+                #处理10期
+                print 'click select'
+                driver.find_element_by_class_name('colorWorld_selectJtou').click()
+                time.sleep(1)
+                #print 'click 10'
+                #driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div/div[1]/div/div/div/div/span[1]').click()
+                print 'click 10'
+                driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div/div[1]/div/div/div/div/span[1]').click()
+                time.sleep(2)
+
                 for i in range(10):
                     '/html/body/div[3]/div[2]/div/div/div[2]/div[2]/span[1]/span'
                     driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div/div[2]/div[2]/span[' + str(i+1) + ']/span').click()
@@ -197,7 +208,8 @@ def get_purchase_list(interval):
             purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list)
         else:
             # print "not all kill"
-            purchase_number = '0'
+            purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list)
+            #purchase_number = '0'
         if count == len(soup_list) - 1:
             purchase_number_list = purchase_number_list + str(purchase_number)
             purchase_number_list_desc = purchase_number_list_desc +  '[' + str(purchase_number) + ']'

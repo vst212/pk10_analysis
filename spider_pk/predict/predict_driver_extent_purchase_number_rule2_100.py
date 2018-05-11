@@ -63,6 +63,8 @@ def get_soup_list(interval):
                 print 'click select'
                 driver.find_element_by_class_name('colorWorld_selectJtou').click()
                 time.sleep(1)
+                #print 'click 10'
+                #driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div/div[1]/div/div/div/div/span[1]').click()
                 print 'click 100'
                 driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div/div[1]/div/div/div/div/span[4]').click()
                 time.sleep(2)
@@ -116,7 +118,7 @@ def get_kill_purchase_list(soup):
                 if p_percent == 10:
                     current_percent_all = float(str(td.string).strip().replace("%",""))
                 p_percent = p_percent + 1
-            # print "current_percent_all:",current_percent_all
+            print "current_percent_all:",current_percent_all
         if count == 5:
             # print count,'---------------'
             p_number = 0
@@ -149,26 +151,26 @@ def get_kill_purchase_list(soup):
     #无论是否全部杀号正确，都计算
     #kill_flag = True
     #用于判断是否通过全中过滤
-    kill_flag = False
+    kill_all_flag = False
     print "number_list:",number_list
-    # print "last hit_number is:",hit_number,'  ',prev_number_list
+    print "last hit_number is:",hit_number,'  ',prev_number_list
     #未全部杀中
     if hit_number in prev_number_list:
-        kill_flag = True
+        kill_all_flag = False
     #全部杀中
     else:
-        kill_flag = False
-    return protty_id,percent_list,number_list,number_str_all_list,kill_flag,current_percent_all
+        kill_all_flag = True
+    return protty_id,percent_list,number_list,number_str_all_list,kill_all_flag,current_percent_all
 
 
 #号码处理，排名前6的号码过滤，剩余的号码购买
 def max_min_deal(percent_list,number_list, kill_list, purchase_list, current_percent_all):
-    if current_percent_all<30:
+    if current_percent_all < 28:
         last_number = list(set(number_list))
         # print "last_number <30%:",last_number
-    else:
+    elif current_percent_all>= 40:
         #杀掉号码，取前6名作为杀号码
-        for i in range(6):
+        for i in range(10):
             max_percent = max(percent_list)
             index = percent_list.index(max_percent)
             percent_list.remove(max_percent)
@@ -186,6 +188,9 @@ def max_min_deal(percent_list,number_list, kill_list, purchase_list, current_per
             purchase_list.append(int(i+1))
         last_number = list(set(purchase_list) - set(kill_list))
         # print "last_number >=30%:",last_number
+    else:
+        last_number = []
+
     number_str = ''
     if len(last_number)>0:
         count = 0
@@ -210,22 +215,23 @@ def get_purchase_list(interval):
     count = 0
     page_count_index = 0
     for soup in soup_list:
-        protty_id, percent_list,number_list,number_str_all_list,kill_flag,current_percent_all = get_kill_purchase_list(soup)
+        protty_id, percent_list,number_list,number_str_all_list,kill_all_flag,current_percent_all = get_kill_purchase_list(soup)
         current_number_all = "|".join(number_str_all_list)
         predict_number_all_list.append(current_number_all)
         kill_list = []
         purchase_list = []
         # print "page_count_index:::::::::::::::::",page_count_index
-        if current_percent_all<30:
+        if current_percent_all<28:
+            print "rule1"
             purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
+        # elif current_percent_all>=40:
+        #     print "rule2"
+        #     purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
+        #     print "purchase_number:",purchase_number
         else:
-            #规则正常处理
-            if (kill_flag):
-                # print "all kill hit"
-                purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
-            else:
-                print "no match:0"
-                purchase_number = '0'
+            print "no match:0"
+            purchase_number = '0'
+
 
         if count == len(soup_list) - 1:
             purchase_number_list = purchase_number_list + str(purchase_number)
