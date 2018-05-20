@@ -1,37 +1,58 @@
-1526448415035	geckodriver	INFO	geckodriver 0.20.1
-1526448415043	geckodriver	INFO	Listening on 127.0.0.1:53935
-1526448418041	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\SHIFEI~1\\AppData\\Local\\Temp\\rust_mozprofile.gaHkhcw6GcjP"
-Unable to read VR Path Registry from C:\Users\shifeixiang\AppData\Local\openvr\openvrpaths.vrpath
-1526448428572	Marionette	INFO	Enabled via --marionette
-Unable to read VR Path Registry from C:\Users\shifeixiang\AppData\Local\openvr\openvrpaths.vrpath
-Unable to read VR Path Registry from C:\Users\shifeixiang\AppData\Local\openvr\openvrpaths.vrpath
-Unable to read VR Path Registry from C:\Users\shifeixiang\AppData\Local\openvr\openvrpaths.vrpath
-Unable to read VR Path Registry from C:\Users\shifeixiang\AppData\Local\openvr\openvrpaths.vrpath
-1526448431988	Marionette	INFO	Listening on port 53947
-1526448432506	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-[Child 24092, MediaPlayback #3] WARNING: 1f634d73700 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 358
-[Child 24092, MediaPlayback #3] WARNING: Decoder=1f62fc97000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3755
-[Child 24092, MediaPlayback #3] WARNING: Decoder=1f62fc97000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3453
-[Child 24092, MediaPlayback #3] WARNING: 1f6359b6940 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 358
-[Child 24092, MediaPlayback #3] WARNING: Decoder=1f62fc97000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3755
-[Child 24092, MediaPlayback #3] WARNING: Decoder=1f62fc97000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3453
-[Child 24092, MediaPlayback #2] WARNING: 1f6359b6940 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 358
-[Child 24092, MediaPlayback #2] WARNING: Decoder=1f62fc97000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3755
-[Child 24092, MediaPlayback #2] WARNING: Decoder=1f62fc97000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3453
-[Child 24092, MediaPlayback #3] WARNING: 1f6359b6940 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 358
-[Child 24092, MediaPlayback #3] WARNING: Decoder=1f62fc97000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3755
-[Child 24092, MediaPlayback #3] WARNING: Decoder=1f62fc97000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3453
-[Child 24092, MediaPlayback #3] WARNING: 1f6359b6940 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 358
-[Child 24092, MediaPlayback #3] WARNING: Decoder=1f62fc97000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3755
-[Child 24092, MediaPlayback #3] WARNING: Decoder=1f62fc97000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3453
-[Child 24092, MediaPlayback #2] WARNING: 1f6359b6940 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 358
-[Child 24092, MediaPlayback #2] WARNING: Decoder=1f62fc97000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3755
-[Child 24092, MediaPlayback #2] WARNING: Decoder=1f62fc97000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3453
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
+1526824766230	geckodriver	INFO	geckodriver 0.20.1 (685f18325cea0a282c736e65972f95aa6db7ca48 2018-04-03)
+1526824766241	geckodriver	INFO	Listening on 127.0.0.1:59858
+1526824768237	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1.ZX-\\AppData\\Local\\Temp\\rust_mozprofile.eiNzQ1SMpIBO"
+1526824793289	Marionette	INFO	Listening on port 59864
+1526824795920	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/SnippetsFeed.jsm :: uninit :: line 185"  data: no] Stack trace: uninit()@resource://activity-stream/lib/SnippetsFeed.jsm:185
+onAction()@resource://activity-stream/lib/SnippetsFeed.jsm:201
+_middleware/</<()@resource://activity-stream/lib/Store.jsm:49
+Store/this[method]()@resource://activity-stream/lib/Store.jsm:28
+uninit()@resource://activity-stream/lib/Store.jsm:151
+uninit()@resource://activity-stream/lib/ActivityStream.jsm:300
+uninit()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///C:/Program%20Files/Mozilla%20Firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:73
+shutdown()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///C:/Program%20Files/Mozilla%20Firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:169
+callBootstrapMethod()@resource://gre/modules/addons/XPIProvider.jsm:4436
+observe()@resource://gre/modules/addons/XPIProvider.jsm:2287
+[Parent 5148, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4940, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4940, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x15008C,name=PBrowser::Msg_UpdateNativeWindowHandle) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x15007F,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+[Child 6396, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 6396, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x54002E,name=PNecko::Msg_GetExtensionFD) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x54002E,name=PNecko::Msg_GetExtensionFD) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x6E0001,name=PScriptCache::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+[Child 5000, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5000, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x150001,name=PBrowser::Msg_AsyncMessage) Closed channel: cannot send/recv
+
+JavaScript error: chrome://global/content/browser-child.js, line 117: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIMessageSender.sendAsyncMessage]
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+[GPU 6088, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+hromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x150001,name=PBrowser::Msg_AsyncMessage) Closed channel: cannot send/recv
+
+JavaScript error: chrome://global/content/browser-child.js, line 117: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIMessageSender.sendAsyncMessage]
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
 [Child 24092, MediaPlayback #7] WARNING: 1f623c8ee80 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 358
 [Child 24092, MediaPlayback #7] WARNING: Decoder=1f6363b3800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3755

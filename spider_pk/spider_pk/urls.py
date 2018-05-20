@@ -45,8 +45,10 @@ import auto_purchase.user
 import auto_pxiagme1_purchase.purchase_client_main
 import auto_pxiagme1_purchase.user
 
-
-
+#######################追加方式自动化
+import append_predict.main
+import append_predict.user
+import append_predict.report
 
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
@@ -119,5 +121,15 @@ urlpatterns = [
     #设置用户set_user_data
     url(r'^set_pxiagme1_auto_purchase_user/$', auto_pxiagme1_purchase.user.set_user),
 
+
+
+
+    #######!!!++++++++++++++++++++++++++++++++基于追加方式的新一期优化   自动化购买类似于predict++++++++++++++++++######################
+    url(r'^append_predict_main/$', append_predict.main.predict_main),
+    url(r'^append_control_predict_thread/$', append_predict.main.control_predict_thread),
+    url(r'^append_predict_report/$', append_predict.report.predict_report),
+    url(r'^append_control_predict_report/$', append_predict.report.control_predict_report),
+    #设置用户set_user_data
+    url(r'^set_append_auto_purchase_user/$', append_predict.user.set_user),
 
 ]
