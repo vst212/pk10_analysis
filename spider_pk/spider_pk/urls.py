@@ -49,6 +49,7 @@ import auto_pxiagme1_purchase.user
 import append_predict.main
 import append_predict.user
 import append_predict.report
+import append_purchase.purchase_client_main
 
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
@@ -129,7 +130,15 @@ urlpatterns = [
     url(r'^append_control_predict_thread/$', append_predict.main.control_predict_thread),
     url(r'^append_predict_report/$', append_predict.report.predict_report),
     url(r'^append_control_predict_report/$', append_predict.report.control_predict_report),
+    ###获取预测数据
+    url(r'^get_append_predict_data/$', append_predict.main.get_predict),
     #设置用户set_user_data
     url(r'^set_append_auto_purchase_user/$', append_predict.user.set_user),
+
+    url(r'^delete_append_kill_predict_current_date/$', append_predict.main.delete_kill_predict_current_date),
+
+    ######基于杀号自动化购买####
+    url(r'^append_purchase/$', append_purchase.purchase_client_main.auto_admin),
+    url(r'^append_purchase_control/$', append_purchase.purchase_client_main.control_probuser_thread),
 
 ]

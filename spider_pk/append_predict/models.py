@@ -30,6 +30,8 @@ class KillPredict(models.Model):
     is_xiazhu = models.IntegerField(null=True, blank=True)
     #下注个数
     xiazhu_nums = models.IntegerField(null=True, blank=True)
+    #总投入
+    input_money = models.FloatField(null=True, blank=True)
 
 #汇总记录
 class KillPredictTotal(models.Model):

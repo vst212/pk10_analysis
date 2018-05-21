@@ -6,7 +6,7 @@ from django.shortcuts import render_to_response
 from append_predict.models import ProbUser
 from append_predict.models import KillPredict,PredictLottery
 from append_predict.thread import ThreadControl
-
+import math
 #追加方式规则
 from append_predict.predict_append_rule_100 import spider_predict_selenium,get_purchase_list
 
@@ -149,7 +149,7 @@ def get_predict_kill_and_save(interval):
         #保存
         p = KillPredict(kill_predict_date=current_date, lottery_id = int(predict_lottery_id), kill_predict_number = purchase_number_list,
                             kill_predict_number_desc=purchase_number_list_desc, predict_total=0, target_total=0, predict_accuracy=0,
-                            predict_number_all=predict_number_all_list_str, xiazhu_money=xiazhu_money)
+                            predict_number_all=predict_number_all_list_str, xiazhu_money=xiazhu_money, gain_money=0, is_xiazhu=0, input_money=0)
         p.save()
 
 #基于历史购买记录计算本期的下注金额基数
@@ -161,9 +161,10 @@ def get_xiazhu_money_base_on_history_purchase_record(purchase_number_list, curre
         if (xiazhu_predict.is_xiazhu == 1 and xiazhu_predict.gain_money > 0):
             break
         if (xiazhu_predict.is_xiazhu == 1 and xiazhu_predict.gain_money < 0):
-            print "gain_money_total:",gain_money_total
+            print "gain_money_total sub:",gain_money_total
             gain_money_total = gain_money_total + xiazhu_predict.gain_money
-    current_purchase_length = 1
+    print "gain_money_total total:",gain_money_total
+    current_purchase_length = 0
     for purchase_number in purchase_number_list.split(','):
         if purchase_number == '0':
             continue
@@ -171,11 +172,14 @@ def get_xiazhu_money_base_on_history_purchase_record(purchase_number_list, curre
             current_purchase_length = len(purchase_number.split('|'))
             break
     print "current_purchase_length:",current_purchase_length
-    if gain_money_total < 0:
-        xiahu_money_result = gain_money_total/(9.9 - current_purchase_length)
+    if current_purchase_length == 0:
+        xiahu_money_result = 0
     else:
-        xiahu_money_result = 1
-    print "xiahu_money_result:",xiahu_money_result
+        if gain_money_total < 0:
+            xiahu_money_result = math.fabs(gain_money_total/(9.9 - current_purchase_length))
+        else:
+            xiahu_money_result = 1
+        print "xiahu_money_result:",xiahu_money_result
     return xiahu_money_result
 
 #获取最新一期的预测值得相关信息
@@ -184,13 +188,14 @@ def get_predict_model_value():
     predicts = KillPredict.objects.filter(kill_predict_date=current_date).order_by("-lottery_id")
     lottery_id = 0
     kill_predict_number = 0
+    xiazhu_money = 0
     if len(predicts) == 0:
         print "predicts is null"
     else:
         lottery_id = predicts[0].lottery_id
         kill_predict_number = predicts[0].kill_predict_number
         xiazhu_money = predicts[0].xiazhu_money
-    return lottery_id,kill_predict_number,xiazhu_money
+    return lottery_id, kill_predict_number, xiazhu_money
 
 
 def calculate_percisoin(lottery_id, lottery_num, kill_predict_number, lottery_time, xiazhu_money):
@@ -229,6 +234,7 @@ def calculate_percisoin(lottery_id, lottery_num, kill_predict_number, lottery_ti
             p.target_total = target_count
             p.predict_accuracy = predict_accuracy
             p.gain_money = gain_money
+            p.input_money = all_count * xiazhu_money
             p.is_xiazhu = 1
             p.save()
         except:
@@ -272,6 +278,50 @@ def get_predict(request):
     #     #pass
     # else:
     #     load_lottery_predict(html_json)
+    obj_pro_lottery = PredictLottery.objects.filter(lottery_date=current_date).order_by("-lottery_id")
+    if len(obj_pro_lottery) == 0:
+        result_info['last_lottery_id'] = 0
+        pass
+    else:
+        result_info['last_lottery_id'] = int(obj_pro_lottery[0].lottery_id)
+        result_info['lottery_number'] = obj_pro_lottery[0].lottery_number
+        print obj_pro_lottery[0].lottery_id
+    print "obj_pro",obj_pro_predict
+    return HttpResponse(json.dumps(result_info), content_type="application/json")
+
+
+#删除当天的信息
+def delete_kill_predict_current_date(request):
+
+    current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+
+    KillPredict.objects.filter(kill_predict_date=current_date).delete()
+
+    obj_pro_predict = KillPredict.objects.filter(kill_predict_date=current_date)
+    return render_to_response('test.html',{"obj_pro_predict":obj_pro_predict})
+
+
+
+
+import json
+from django.http import HttpResponse
+#获取杀号预测数据接口
+def get_predict(request):
+    current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+    result_info = {}
+    # lotterys = KillPredict.objects.filter(lottery_date=current_date)
+    #获取预测的lottery id 和预测的号码
+    obj_pro_predict = KillPredict.objects.filter(kill_predict_date=current_date).order_by("-lottery_id")
+    if len(obj_pro_predict) == 0:
+        pass
+    else:
+        result_info['predict_lottery_id'] = int(obj_pro_predict[0].lottery_id)
+        result_info['predict_number_list'] = obj_pro_predict[0].kill_predict_number
+        result_info['predict_number_list_desc'] = obj_pro_predict[0].kill_predict_number_desc
+        result_info['xiazhu_money'] = obj_pro_predict[0].xiazhu_money
+        print obj_pro_predict[0].lottery_id
+        print obj_pro_predict[0].kill_predict_number
+
     obj_pro_lottery = PredictLottery.objects.filter(lottery_date=current_date).order_by("-lottery_id")
     if len(obj_pro_lottery) == 0:
         result_info['last_lottery_id'] = 0

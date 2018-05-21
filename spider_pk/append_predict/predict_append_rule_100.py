@@ -20,11 +20,11 @@ def spider_predict_selenium():
     # driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
     driver_flag = True
     while(driver_flag):
-        # driver = webdriver.Firefox(executable_path = 'E:\\python\\webdriver\\firefox\\geckodriver.exe')
-        chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
-        options = webdriver.ChromeOptions()
-        options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
-        driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
+        driver = webdriver.Firefox(executable_path = 'E:\\python\\webdriver\\firefox\\geckodriver.exe')
+        # chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
+        # options = webdriver.ChromeOptions()
+        # options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
+        # driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
 
         driver.get("https://www.1399p.com/pk10/shdd")
         try:
@@ -49,10 +49,10 @@ def get_soup_list(interval):
             driver = interval["driver"]
             driver.get("https://www.1399p.com/pk10/shdd")
 
-            if 1:
+            try:
                 element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME , "lotteryNumber")))
                 time.sleep(1)
-                driver.maximize_window();
+                #driver.maximize_window();
                 # driver.manage().window().maximize();
                 time.sleep(1)
                 js = "var q=document.documentElement.scrollTop=300"
@@ -77,7 +77,7 @@ def get_soup_list(interval):
                     soup = BeautifulSoup(driver.page_source)
                     soup_list.append(soup)
                 return soup_list
-            else:
+            except:
                 print "get sub driver time out"
                 driver.quit()
                 print "spider predict faild!"
@@ -182,7 +182,7 @@ def get_min_current_percent_all(soup):
 
 #号码处理，排名前6的号码过滤，剩余的号码购买
 def max_min_deal(percent_list,number_list, kill_list, purchase_list, current_percent_all):
-    if current_percent_all < 28:
+    if current_percent_all < 40:
         last_number = list(set(number_list))
         # print "last_number <30%:",last_number
     elif current_percent_all>= 40:
@@ -250,6 +250,7 @@ def get_purchase_list(interval):
         if current_percent_all == current_percent_all_min:
             print "rule1"
             purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
+            current_percent_all_min = 0
         else:
             print "no match:0"
             purchase_number = '0'

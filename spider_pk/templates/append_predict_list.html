@@ -66,6 +66,10 @@
 									</th>
 
 									<th>
+										每注金额
+									</th>
+
+                                    <th>
 										下注金额
 									</th>
                                     <th>
@@ -110,13 +114,17 @@
 										{{prob.predict_accuracy}}
 									</td>
 									<td>
-										{{prob_total.xiazhu_money}}
+										{{prob.xiazhu_money}}
+									</td>
+
+                                    <td>
+										{{prob.input_money}}
 									</td>
 									<td>
-										{{prob_total.gain_money}}
+										{{prob.gain_money}}
 									</td>
 									<td>
-										{{prob_total.is_xiazhu}}
+										{{prob.is_xiazhu}}
 									</td>
 								</tr>
 							{% endfor %}
@@ -181,6 +189,8 @@
 									<td>
 										{{prob_total.xiazhu_all_money}}
 									</td>
+
+
 									<td>
 										{{prob_total.gain_all_money}}
 									</td>

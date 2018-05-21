@@ -28,6 +28,8 @@ def control_predict_report(request):
     obj_pro_predict = KillPredict.objects.filter(kill_predict_date=in_date)
     target_count = 0
     all_count = 0
+    gain_all_money = 0
+    xiazhu_all_money = 0
     #检查是否有lottery_num为空的情况
     all_record_count = len(obj_pro_predict)
     record_index = 0
@@ -35,6 +37,7 @@ def control_predict_report(request):
         lottery_id = sub_predict.lottery_id
         lottery_number = sub_predict.lottery_number
         kill_predict_number = sub_predict.kill_predict_number
+        xiazhu_money = sub_predict.xiazhu_money
         # print "lottery_number:",type(sub_predict.lottery_number)
         if lottery_number == '' and record_index < (all_record_count-1):
             print "no lottery_num"
@@ -52,7 +55,7 @@ def control_predict_report(request):
                     print "lottery_num:",lottery_num
                     if (lottery_num):
                         #计算命中率并更新models
-                        calculate_percisoin(lottery_id, lottery_num, kill_predict_number, lottery_time)
+                        calculate_percisoin(lottery_id, lottery_num, kill_predict_number, lottery_time, xiazhu_money)
                     else:
                         print "pay interface lottery id request faild"
 
@@ -63,8 +66,11 @@ def control_predict_report(request):
     base_hour = 8
     every_hour_all_total = 0
     every_hour_target_total = 0
+    every_hour_gain_all_money = 0
+    every_hour_xiazhu_all_money = 0
     for sub_predict in obj_pro_predict:
-
+        gain_all_money = gain_all_money + sub_predict.gain_money
+        xiazhu_all_money = xiazhu_all_money + sub_predict.input_money
 
         predict_num_list_all = sub_predict.kill_predict_number.split(',')
         predict_num_list = []
@@ -98,29 +104,38 @@ def control_predict_report(request):
                     if str(int(lottery_num_list[i])) in predict_num_list[i]:
                         target_count = target_count +  1
                     all_count = all_count + len(predict_num_list[i])
-
+                    #设置间隔时间，1表示每小时统计一次
                     if (current_hour-base_hour) > 1:
                         # print "current_kill_predict_time:",current_kill_predict_time
                         # print "every_hour_all_total:",every_hour_all_total
                         # print "every_hour_target_total:",every_hour_target_total
                         if every_hour_all_total>0:
                             p = KillPredictTotal(kill_predict_date=in_date, predict_total=every_hour_all_total, target_total=every_hour_target_total,
-                                                 predict_accuracy=float(float(every_hour_target_total)/float(every_hour_all_total)), predict_column_desc=int(current_hour)-1)
+                                                 predict_accuracy=float(float(every_hour_target_total)/float(every_hour_all_total)), predict_column_desc=int(current_hour)-1,
+                                                 gain_all_money=every_hour_gain_all_money, xiazhu_all_money=every_hour_xiazhu_all_money)
                             p.save()
 
                         every_hour_all_total = 0
                         every_hour_target_total = 0
+                        every_hour_gain_all_money = 0
+                        every_hour_xiazhu_all_money = 0
+
                         base_hour = current_hour - 1
                         if str(int(lottery_num_list[i])) in predict_num_list[i]:
                             every_hour_target_total = every_hour_target_total + 1
                         every_hour_all_total = every_hour_all_total + len(predict_num_list[i])
+                        every_hour_gain_all_money = every_hour_gain_all_money + sub_predict.gain_money
+                        every_hour_xiazhu_all_money = every_hour_xiazhu_all_money + sub_predict.input_money
                     else:
                         if str(int(lottery_num_list[i])) in predict_num_list[i]:
                             every_hour_target_total = every_hour_target_total + 1
                         every_hour_all_total = every_hour_all_total + len(predict_num_list[i])
+                        every_hour_gain_all_money = every_hour_gain_all_money + sub_predict.gain_money
+                        every_hour_xiazhu_all_money = every_hour_xiazhu_all_money + sub_predict.input_money
     if every_hour_all_total>0:
         p = KillPredictTotal(kill_predict_date=in_date, predict_total=every_hour_all_total, target_total=every_hour_target_total,
-                                                 predict_accuracy=float(float(every_hour_target_total)/float(every_hour_all_total)), predict_column_desc=int(base_hour)+1)
+                                                 predict_accuracy=float(float(every_hour_target_total)/float(every_hour_all_total)), predict_column_desc=int(base_hour)+1,
+                                                 gain_all_money=every_hour_gain_all_money, xiazhu_all_money=every_hour_xiazhu_all_money)
         p.save()
     # print "current_kill_predict_time:",current_kill_predict_time
     # print "every_hour_all_total:",every_hour_all_total
@@ -131,7 +146,8 @@ def control_predict_report(request):
         # if count_count == 2:
         #     break
     if all_count > 0:
-        p = KillPredictTotal(kill_predict_date=in_date, predict_total=all_count, target_total=target_count, predict_accuracy=float(float(target_count)/float(all_count)), predict_column_desc='总数')
+        p = KillPredictTotal(kill_predict_date=in_date, predict_total=all_count, target_total=target_count, predict_accuracy=float(float(target_count)/float(all_count)), predict_column_desc='总数',
+                             gain_all_money=gain_all_money, xiazhu_all_money=xiazhu_all_money )
         p.save()
     obj_pro_predict_total = KillPredictTotal.objects.all()
 
