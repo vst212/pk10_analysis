@@ -16,6 +16,7 @@ class ProbUser(models.Model):
 class KillPredict(models.Model):
     kill_predict_date = models.CharField(max_length=100)
     kill_predict_time = models.CharField(max_length=100)
+    save_predict_time = models.CharField(max_length=100,null=True)
     lottery_id =  models.IntegerField()
     kill_predict_number = models.CharField(max_length=200)
     kill_predict_number_desc = models.CharField(null=True, blank=True, max_length=300)
@@ -25,7 +26,7 @@ class KillPredict(models.Model):
     predict_accuracy = models.FloatField(null=True, blank=True)
     predict_number_all = models.CharField(max_length=500,null=True, blank=True)
     xiazhu_money = models.FloatField(null=True, blank=True)
-    gain_money = models.FloatField(null=True, blank=True)
+    gain_money = models.IntegerField(null=True, blank=True)
     #是否下注
     is_xiazhu = models.IntegerField(null=True, blank=True)
     #下注个数

@@ -31,7 +31,7 @@ def get_driver(username,password):
 
     code_flag = True
     while(code_flag):
-        if 1:
+        try:
             # elem.send_keys(Keys.RETURN)
             #密码输入完毕后提供5s时间输入验证码
             time.sleep(10)
@@ -45,7 +45,7 @@ def get_driver(username,password):
             agree.click()
             time.sleep(1)
             code_flag = False
-        else:
+        except:
             driver.quit()
             print "please input code!"
             time.sleep(5)

@@ -15,6 +15,7 @@ from append_predict.spider_pk10 import get_html_result,load_lottery_predict, get
 from append_predict.main import get_predict_model_value
 
 from append_predict.models import KillPredict
+import datetime
 
 class Singleton(object):
     def __new__(cls, *args, **kw):
@@ -160,11 +161,8 @@ def spider_save_predict_purchase(interval):
     return 0
 
 def get_predict_kill_and_save(interval):
-    # 爬取下一期predict
-    #driver = interval["driver"]
-    #predict_lottery_id, purchase_number_list, purchase_number_list_desc, predict_number_all_list_str = get_purchase_list(interval)
-    # current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
-    # current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+
+    #计算统计流程
     save_gain_flag_confirm = True
     while(save_gain_flag_confirm):
         purchase_flag_minute = int(time.strftime("%M", time.localtime())) % 10
@@ -193,6 +191,7 @@ def get_predict_kill_and_save(interval):
         if (purchase_flag_minute == 4 and purchase_flag_second >= 30) or (purchase_flag_minute == 9 and purchase_flag_second >= 30):
             save_gain_flag_confirm = False
 
+    #购买流程
     purchase_flag_confirm = True
     while(purchase_flag_confirm):
         purchase_flag_minute = int(time.strftime("%M", time.localtime())) % 10
@@ -201,27 +200,40 @@ def get_predict_kill_and_save(interval):
         if (purchase_flag_minute > 3 and purchase_flag_minute < 5) or (purchase_flag_minute == 5 and purchase_flag_second < 30) or (purchase_flag_minute > 8) or (purchase_flag_minute == 0 and purchase_flag_second < 30):
             print "request server interface!"
             result_info = get_server_request_info()
-
-            #判断是否获取接口数据正确
-            if result_info:
-                last_id = int(result_info['last_lottery_id'])
-                predict_id = int(result_info['predict_lottery_id'])
-                if predict_id > last_id:
-                    purchase_number_list = result_info['predict_number_list']
-                    interval['money'] = result_info['xiazhu_money']
-                    print "start purchase"
-                    # 购买
-                    purchase_result = start_purchase(purchase_number_list, interval)
-                    if purchase_result:
-                        print "purchase sucess!"
+            if 1:
+                #判断是否获取接口数据正确
+                if result_info:
+                    last_id = int(result_info['last_lottery_id'])
+                    predict_id = int(result_info['predict_lottery_id'])
+                    #判断是否成功拿到predict
+                    if predict_id > last_id:
+                        #判断是否是最新一期
+                        save_predict_time = datetime.datetime.strptime(result_info['save_predict_time'],'%Y-%m-%d %H:%M:%S')
+                        current_time = datetime.datetime.now()
+                        if (current_time - save_predict_time).seconds > 180:
+                            print "unfounded new predict"
+                            print "purchase faild!"
+                            purchase_flag_confirm = False
+                        else:
+                            purchase_number_list = result_info['predict_number_list']
+                            interval['money'] = result_info['xiazhu_money']
+                            print "start purchase"
+                            # 购买
+                            purchase_result = start_purchase(purchase_number_list, interval)
+                            if purchase_result:
+                                print "purchase sucess!"
+                                p = KillPredict.objects.get(lottery_id=predict_id)
+                                p.is_xiazhu = 1
+                                p.save()
+                                print "save xiazhu sucess!"
+                            else:
+                                print "purchase faild!"
+                        purchase_flag_confirm = False
                     else:
-                        print "purchase faild!"
-                    purchase_flag_confirm = False
+                        print "wait time until save ok"
                 else:
-                    print "wait time until save ok"
-            else:
-                print "get server interface error!"
-            time.sleep(5)
+                    print "get server interface error!"
+                time.sleep(5)
         else:
             time.sleep(15)
             print "purchase time is no region!"
@@ -287,7 +299,7 @@ def start_purchase(purchase_number_list, interval):
     print gain_all_money
     print interval['upper_money'],interval['lower_money']
     #开始购买
-    try:
+    if 1:
 
         interval['purchase_driver'] = reload_pk10_driver(interval['purchase_driver'])
 
@@ -300,7 +312,6 @@ def start_purchase(purchase_number_list, interval):
         purchase_driver.switch_to_frame("frame")
         time.sleep(2)
         try:
-            #gain_all_money = int((unicode(purchase_driver.find_element_by_id('matchWinLossVal').text).encode('utf-8')).replace(',',''))
             gain_all_money = int(purchase_driver.find_element_by_class_name('lottery_info_left').find_element_by_id('bresult').text.replace(',',''))
         except:
             print "get gain_all_money error!"
@@ -323,11 +334,12 @@ def start_purchase(purchase_number_list, interval):
             # if interval['rule_id'] == 2:
             #     print "interval['rule_id'] is 2"
             #     purchase_element_list = get_xiazhu_message_trans(purchase_number_list)
-
+            #'//*[@id="a_B10_3"]/input'
             for purchase_element in purchase_element_list:
                 print "purchase_element:",purchase_element
+                print "interval['money']",int(interval['money'])
                 sub_element = purchase_driver.find_element_by_xpath(purchase_element)
-                sub_element.send_keys(interval['money'])
+                sub_element.send_keys(str(int(interval['money'])))
                 #time.sleep(1)
             confirm_button = purchase_driver.find_element_by_xpath('//*[@id="header"]/div[2]/div/input[1]')
             confirm_button.click()
@@ -345,7 +357,7 @@ def start_purchase(purchase_number_list, interval):
         else:
             print "money over predict!!!"
             return False
-    except:
+    else:
         return False
 
 
@@ -426,42 +438,12 @@ def reload_pk10_driver(purchase_driver):
     # 1-10
     element_1_10 = purchase_driver.find_element_by_xpath('//*[@id="sub_BJPK10"]/a[2]')
     element_1_10.click()
-    time.sleep(1)
+    time.sleep(2)
+    element_1_10 = purchase_driver.find_element_by_xpath('//*[@id="sub_BJPK10"]/a[2]')
+    element_1_10.click()
+    time.sleep(6)
 
     return purchase_driver
-
-
-def set_user_data(request):
-    #写入对象
-    ProbUser.objects.all().delete()
-    user_id = 1
-    user_name = "yup98"
-    user_password = "aaa123"
-    user_status = False
-    obj_pro = ProbUser(user_id=user_id, user_name=user_name, user_password=user_password, user_status=user_status)
-    obj_pro.save()
-    return render_to_response('test.html')
-
-
-def set_user(request):
-
-    try:
-        user_name = request.POST['in_user']
-        user_password = request.POST['in_pwd']
-        control = request.POST['control']
-        user_id = len(ProbUser.objects.all()) + 1
-        user_status = False
-        if(control == 'add'):
-            obj_pro = ProbUser(user_id=user_id, user_name=user_name, user_password=user_password, user_status=user_status)
-            obj_pro.save()
-        if(control == 'delete'):
-            ProbUser.objects.filter(user_name=user_name).delete()
-        obj_pro = ProbUser.objects.all()
-    except:
-        obj_pro = ProbUser.objects.all()
-        return render_to_response('set_user.html', {"obj_pro":obj_pro})
-
-    return render_to_response('set_user.html', {"obj_pro":obj_pro})
 
 import json
 from django.http import HttpResponse
@@ -471,7 +453,7 @@ def get_server_request_info():
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
     }
     # url = 'http://47.75.174.160:6088/get_predict_data/'
-    url = 'http://127.0.0.1:6088/get_append_predict_data/'
+    url = 'http://127.0.0.1:8000/get_append_predict_data/'
     request_flag = True
     count = 0
     while(request_flag):

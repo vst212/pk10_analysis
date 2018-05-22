@@ -467,7 +467,7 @@ def get_server_request_info():
     headers = {
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
     }
-    url = 'http://47.75.174.160:6088/get_predict_data/'
+    url = 'http://127.0.0.1:8000/get_predict_data/'
     request_flag = True
     count = 0
     while(request_flag):

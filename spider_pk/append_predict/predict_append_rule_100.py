@@ -14,17 +14,9 @@ from selenium.webdriver.support import expected_conditions as EC
 #获取predict driver
 def spider_predict_selenium():
 
-    # chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
-    # options = webdriver.ChromeOptions()
-    # options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
-    # driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
     driver_flag = True
     while(driver_flag):
         driver = webdriver.Firefox(executable_path = 'E:\\python\\webdriver\\firefox\\geckodriver.exe')
-        # chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
-        # options = webdriver.ChromeOptions()
-        # options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
-        # driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
 
         driver.get("https://www.1399p.com/pk10/shdd")
         try:
@@ -36,6 +28,22 @@ def spider_predict_selenium():
             driver.quit()
             time.sleep(10)
 
+# def spider_predict_selenium():
+#
+#     driver_flag = True
+#     while(driver_flag):
+#         driver = webdriver.Firefox(executable_path = 'E:\\python\\webdriver\\firefox\\geckodriver.exe')
+#
+#         driver.get("https://www.1399p.com/pk10/shdd")
+#         try:
+#             element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME , "lotteryNumber")))
+#             driver_flag = False
+#             return driver
+#         except:
+#             print "get driver time out"
+#             driver.quit()
+#             time.sleep(10)
+
 
 #获取10个名次的soup 列表
 def get_soup_list(interval):
@@ -44,12 +52,12 @@ def get_soup_list(interval):
     flag = True
 
     while(flag):
-        try:
+        if 1:
             soup_list = []
             driver = interval["driver"]
             driver.get("https://www.1399p.com/pk10/shdd")
 
-            try:
+            if 1:
                 element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME , "lotteryNumber")))
                 time.sleep(1)
                 #driver.maximize_window();
@@ -73,11 +81,11 @@ def get_soup_list(interval):
                 for i in range(10):
                     '/html/body/div[3]/div[2]/div/div/div[2]/div[2]/span[1]/span'
                     driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div/div[2]/div[2]/span[' + str(i+1) + ']/span').click()
-                    time.sleep(6)
+                    time.sleep(4)
                     soup = BeautifulSoup(driver.page_source)
                     soup_list.append(soup)
                 return soup_list
-            except:
+            else:
                 print "get sub driver time out"
                 driver.quit()
                 print "spider predict faild!"
@@ -85,7 +93,7 @@ def get_soup_list(interval):
                 interval["driver"] = spider_predict_selenium()
                 if count > 2:
                     flag = False
-        except:
+        else:
             driver.quit()
             print "spider predict faild!"
             time.sleep(3)

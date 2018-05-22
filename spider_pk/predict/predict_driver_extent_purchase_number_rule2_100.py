@@ -17,7 +17,6 @@ from selenium.webdriver.support import expected_conditions as EC
 
 #获取predict driver
 def spider_predict_selenium():
-
     # chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
     # options = webdriver.ChromeOptions()
     # options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])

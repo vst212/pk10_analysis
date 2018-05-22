@@ -142,12 +142,12 @@ def get_predict_kill_and_save(interval):
             current_date = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime("%Y-%m-%d")
         else:
             current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
-
+        save_predict_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         #基于前面开奖结果计算下注金额基础(1为基准值)
         xiazhu_money = get_xiazhu_money_base_on_history_purchase_record(purchase_number_list, current_date)
 
         #保存
-        p = KillPredict(kill_predict_date=current_date, lottery_id = int(predict_lottery_id), kill_predict_number = purchase_number_list,
+        p = KillPredict(kill_predict_date=current_date, save_predict_time=save_predict_time, lottery_id = int(predict_lottery_id), kill_predict_number = purchase_number_list,
                             kill_predict_number_desc=purchase_number_list_desc, predict_total=0, target_total=0, predict_accuracy=0,
                             predict_number_all=predict_number_all_list_str, xiazhu_money=xiazhu_money, gain_money=0, is_xiazhu=0, input_money=0)
         p.save()
@@ -180,6 +180,9 @@ def get_xiazhu_money_base_on_history_purchase_record(purchase_number_list, curre
         else:
             xiahu_money_result = 1
         print "xiahu_money_result:",xiahu_money_result
+    print "base xiazhu:",xiahu_money_result
+    xiahu_money_result = int(round(xiahu_money_result))
+    print "result xiazhu:",xiahu_money_result
     return xiahu_money_result
 
 #获取最新一期的预测值得相关信息
@@ -235,7 +238,7 @@ def calculate_percisoin(lottery_id, lottery_num, kill_predict_number, lottery_ti
             p.predict_accuracy = predict_accuracy
             p.gain_money = gain_money
             p.input_money = all_count * xiazhu_money
-            p.is_xiazhu = 1
+            #p.is_xiazhu = 1
             p.save()
         except:
             print "the ",lottery_id," is repeat!!!"
@@ -319,6 +322,7 @@ def get_predict(request):
         result_info['predict_number_list'] = obj_pro_predict[0].kill_predict_number
         result_info['predict_number_list_desc'] = obj_pro_predict[0].kill_predict_number_desc
         result_info['xiazhu_money'] = obj_pro_predict[0].xiazhu_money
+        result_info['save_predict_time'] = obj_pro_predict[0].save_predict_time
         print obj_pro_predict[0].lottery_id
         print obj_pro_predict[0].kill_predict_number
 

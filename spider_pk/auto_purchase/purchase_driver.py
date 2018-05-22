@@ -38,7 +38,8 @@ def get_driver(username,password):
             #密码输入完毕后提供5s时间输入验证码
             time.sleep(10)
             #提交按钮
-            button = driver.find_element_by_xpath('/html/body/div[2]/div/div/form/div[6]/input')
+            button = driver.find_element_by_class_name("control")
+            #button = driver.find_element_by_xpath('/html/body/div[2]/div/div/form/div[6]/input')
             button.click()
             time.sleep(2)
 
