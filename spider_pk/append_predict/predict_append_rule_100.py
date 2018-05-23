@@ -126,7 +126,7 @@ def get_kill_purchase_list(soup):
                 if p_percent == 10:
                     current_percent_all = float(str(td.string).strip().replace("%",""))
                 p_percent = p_percent + 1
-            print "current_percent_all:",current_percent_all
+            #print "current_percent_all:",current_percent_all
         if count == 5:
             # print count,'---------------'
             p_number = 0
@@ -161,7 +161,7 @@ def get_kill_purchase_list(soup):
     #用于判断是否通过全中过滤
     kill_all_flag = False
     print "number_list:",number_list
-    print "last hit_number is:",hit_number,'  ',prev_number_list
+    #print "last hit_number is:",hit_number,'  ',prev_number_list
     #未全部杀中
     if hit_number in prev_number_list:
         kill_all_flag = False
@@ -244,7 +244,7 @@ def get_purchase_list(interval):
     current_percent_all_min = 50
     for soup in soup_list:
         current_percent_all = get_min_current_percent_all(soup)
-        print "current_percent_all:",current_percent_all
+        #print "current_percent_all:",current_percent_all
         if current_percent_all_min > current_percent_all:
             current_percent_all_min = current_percent_all
     print "current_percent_all_min:",current_percent_all_min

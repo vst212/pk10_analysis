@@ -218,16 +218,25 @@ def get_predict_kill_and_save(interval):
                             purchase_number_list = result_info['predict_number_list']
                             interval['money'] = result_info['xiazhu_money']
                             print "start purchase"
-                            # 购买
-                            purchase_result = start_purchase(purchase_number_list, interval)
-                            if purchase_result:
-                                print "purchase sucess!"
-                                p = KillPredict.objects.get(lottery_id=predict_id)
-                                p.is_xiazhu = 1
-                                p.save()
-                                print "save xiazhu sucess!"
+
+                            #获取购买元素列表个数
+                            purchase_element_list = get_xiazhu_message(purchase_number_list)
+                            if len(purchase_element_list) > 0:
+                                # 购买
+                                purchase_result = start_purchase(purchase_element_list, interval)
+                                input_money = len(purchase_element_list) * interval['money']
+                                if purchase_result:
+                                    print "purchase sucess!"
+                                    print "input_money:",input_money
+                                    p = KillPredict.objects.get(lottery_id=predict_id)
+                                    p.is_xiazhu = 1
+                                    p.input_money = input_money
+                                    p.save()
+                                    print "save xiazhu sucess!"
+                                else:
+                                    print "purchase faild!"
                             else:
-                                print "purchase faild!"
+                                print 'no element in purchase_element_list '
                         purchase_flag_confirm = False
                     else:
                         print "wait time until save ok"
@@ -285,7 +294,7 @@ def calculate_percisoin(lottery_id, lottery_num, kill_predict_number, purchase_n
 
 
 #购买
-def start_purchase(purchase_number_list, interval):
+def start_purchase(purchase_element_list, interval):
     #计算历史总盈利
     gain_all_money = 0
     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
@@ -295,19 +304,13 @@ def start_purchase(purchase_number_list, interval):
             gain_all_money = gain_all_money + gain.gain_money
         else:
             print "gain_money  is null"
-            pass
     print gain_all_money
     print interval['upper_money'],interval['lower_money']
     #开始购买
-    if 1:
+    try:
 
         interval['purchase_driver'] = reload_pk10_driver(interval['purchase_driver'])
-
         purchase_driver = interval['purchase_driver']
-
-            # purchase_driver = interval['purchase_driver']
-            # purchase_driver = reload_pk10_driver(interval,purchase_driver)
-
         print "exchange frame!"
         purchase_driver.switch_to_frame("frame")
         time.sleep(2)
@@ -323,18 +326,8 @@ def start_purchase(purchase_number_list, interval):
             # print "exchange frame!"
             # purchase_driver.switch_to_frame("frame")
             # time.sleep(2)
-
-            #遍历填充值
-        if 1:
+        try:
             print "start fill"
-            purchase_element_list = get_xiazhu_message(purchase_number_list)
-            # if interval['rule_id'] == 1:
-            #     print "interval['rule_id'] is 1"
-            #     purchase_element_list = get_xiazhu_message(purchase_number_list)
-            # if interval['rule_id'] == 2:
-            #     print "interval['rule_id'] is 2"
-            #     purchase_element_list = get_xiazhu_message_trans(purchase_number_list)
-            #'//*[@id="a_B10_3"]/input'
             for purchase_element in purchase_element_list:
                 print "purchase_element:",purchase_element
                 print "interval['money']",int(interval['money'])
@@ -354,10 +347,10 @@ def start_purchase(purchase_number_list, interval):
             submit_button.click()
 
             return True
-        else:
-            print "money over predict!!!"
+        except:
+            print "purchase driver error element not found !!!"
             return False
-    else:
+    except:
         return False
 
 
@@ -411,23 +404,23 @@ def reload_pk10_driver(purchase_driver):
     except:
         print "unfound button1"
 
-    try:
-        purchase_driver.find_element_by_xpath('//*[@id="notice_button2"]/a').click()
-        time.sleep(1)
-    except:
-        print "unfound button2"
-
-    try:
-        purchase_driver.find_element_by_xpath('//*[@id="notice_button3"]/a').click()
-        time.sleep(1)
-    except:
-        print "unfound button3"
-
-    try:
-        purchase_driver.find_element_by_xpath('//*[@id="notice_button4"]/a').click()
-        time.sleep(1)
-    except:
-        print "unfound button4"
+    # try:
+    #     purchase_driver.find_element_by_xpath('//*[@id="notice_button2"]/a').click()
+    #     time.sleep(1)
+    # except:
+    #     print "unfound button2"
+    #
+    # try:
+    #     purchase_driver.find_element_by_xpath('//*[@id="notice_button3"]/a').click()
+    #     time.sleep(1)
+    # except:
+    #     print "unfound button3"
+    #
+    # try:
+    #     purchase_driver.find_element_by_xpath('//*[@id="notice_button4"]/a').click()
+    #     time.sleep(1)
+    # except:
+    #     print "unfound button4"
 
 
 

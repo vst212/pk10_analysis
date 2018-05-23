@@ -25,14 +25,17 @@ class KillPredict(models.Model):
     target_total = models.IntegerField(null=True, blank=True)
     predict_accuracy = models.FloatField(null=True, blank=True)
     predict_number_all = models.CharField(max_length=500,null=True, blank=True)
-    xiazhu_money = models.FloatField(null=True, blank=True)
-    gain_money = models.IntegerField(null=True, blank=True)
+
+    #下注金额
+    xiazhu_money = models.IntegerField(null=True, blank=True)
+    #盈利数额
+    gain_money = models.FloatField(null=True, blank=True)
     #是否下注
     is_xiazhu = models.IntegerField(null=True, blank=True)
     #下注个数
     xiazhu_nums = models.IntegerField(null=True, blank=True)
     #总投入
-    input_money = models.FloatField(null=True, blank=True)
+    input_money = models.IntegerField(null=True, blank=True)
 
 #汇总记录
 class KillPredictTotal(models.Model):

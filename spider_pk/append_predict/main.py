@@ -161,8 +161,8 @@ def get_xiazhu_money_base_on_history_purchase_record(purchase_number_list, curre
         if (xiazhu_predict.is_xiazhu == 1 and xiazhu_predict.gain_money > 0):
             break
         if (xiazhu_predict.is_xiazhu == 1 and xiazhu_predict.gain_money < 0):
-            print "gain_money_total sub:",gain_money_total
             gain_money_total = gain_money_total + xiazhu_predict.gain_money
+            print "gain_money_total sub:",gain_money_total
     print "gain_money_total total:",gain_money_total
     current_purchase_length = 0
     for purchase_number in purchase_number_list.split(','):
@@ -236,8 +236,9 @@ def calculate_percisoin(lottery_id, lottery_num, kill_predict_number, lottery_ti
             p.predict_total = all_count
             p.target_total = target_count
             p.predict_accuracy = predict_accuracy
-            p.gain_money = gain_money
-            p.input_money = all_count * xiazhu_money
+            if p.is_xiazhu == 1:
+                p.gain_money = gain_money
+            #p.input_money = all_count * xiazhu_money
             #p.is_xiazhu = 1
             p.save()
         except:
