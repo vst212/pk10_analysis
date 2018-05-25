@@ -55,6 +55,10 @@
 									<th>
 										预测号码
 									</th>
+                                    <th>
+										每个名次
+									</th>
+
 									<th>
 										总购买
 									</th>
@@ -82,7 +86,7 @@
 						</thead>
 
 					</table>
-					<div style="overflow-x: auto; overflow-y: auto; height: 400px; width:900px;">
+					<div style="overflow-x: auto; overflow-y: auto; height: 400px; width:950px;">
 						<!--<table class="table table-hover table-bordered table-striped">-->
 						<table  class="table table-bordered scrolltable">
 
@@ -104,6 +108,11 @@
 									<td>
 										{{prob.kill_predict_number_desc}}
 									</td>
+
+                                    <td>
+										{{prob.percent_all_list_desc}}
+									</td>
+
 									<td>
 										{{prob.predict_total}}
 									</td>
@@ -163,7 +172,7 @@
 						</thead>
 
 					</table>
-                    <div style="overflow-x: auto; overflow-y: auto; height: 300px; width:900px;">
+                    <div style="overflow-x: auto; overflow-y: auto; height: 300px; width:950px;">
 						<!--<table class="table table-hover table-bordered table-striped">-->
 						<table  class="table table-bordered scrolltable">
 
@@ -205,7 +214,7 @@
 					<h5 align="center">
 						报表日期
 					</h5>
-                    <div style="overflow-x: auto; overflow-y: auto; height: 300px; width:900px;">
+                    <div style="overflow-x: auto; overflow-y: auto; height: 300px; width:200px;">
 					    <table  class="table">
 
 						<tbody>

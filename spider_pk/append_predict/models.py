@@ -20,6 +20,7 @@ class KillPredict(models.Model):
     lottery_id =  models.IntegerField()
     kill_predict_number = models.CharField(max_length=200)
     kill_predict_number_desc = models.CharField(null=True, blank=True, max_length=300)
+    percent_all_list_desc = models.CharField(null=True, blank=True, max_length=400)
     lottery_number = models.CharField(max_length=200)
     predict_total = models.IntegerField(null=True, blank=True)
     target_total = models.IntegerField(null=True, blank=True)

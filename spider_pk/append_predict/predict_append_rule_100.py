@@ -28,21 +28,6 @@ def spider_predict_selenium():
             driver.quit()
             time.sleep(10)
 
-# def spider_predict_selenium():
-#
-#     driver_flag = True
-#     while(driver_flag):
-#         driver = webdriver.Firefox(executable_path = 'E:\\python\\webdriver\\firefox\\geckodriver.exe')
-#
-#         driver.get("https://www.1399p.com/pk10/shdd")
-#         try:
-#             element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME , "lotteryNumber")))
-#             driver_flag = False
-#             return driver
-#         except:
-#             print "get driver time out"
-#             driver.quit()
-#             time.sleep(10)
 
 
 #获取10个名次的soup 列表
@@ -52,12 +37,12 @@ def get_soup_list(interval):
     flag = True
 
     while(flag):
-        if 1:
+        try:
             soup_list = []
             driver = interval["driver"]
             driver.get("https://www.1399p.com/pk10/shdd")
 
-            if 1:
+            try:
                 element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME , "lotteryNumber")))
                 time.sleep(1)
                 #driver.maximize_window();
@@ -85,7 +70,7 @@ def get_soup_list(interval):
                     soup = BeautifulSoup(driver.page_source)
                     soup_list.append(soup)
                 return soup_list
-            else:
+            except:
                 print "get sub driver time out"
                 driver.quit()
                 print "spider predict faild!"
@@ -93,7 +78,7 @@ def get_soup_list(interval):
                 interval["driver"] = spider_predict_selenium()
                 if count > 2:
                     flag = False
-        else:
+        except:
             driver.quit()
             print "spider predict faild!"
             time.sleep(3)
@@ -190,29 +175,20 @@ def get_min_current_percent_all(soup):
 
 #号码处理，排名前6的号码过滤，剩余的号码购买
 def max_min_deal(percent_list,number_list, kill_list, purchase_list, current_percent_all):
-    if current_percent_all < 40:
+    if current_percent_all < 31:
         last_number = list(set(number_list))
-        # print "last_number <30%:",last_number
-    elif current_percent_all>= 40:
-        #杀掉号码，取前6名作为杀号码
-        for i in range(10):
-            max_percent = max(percent_list)
-            index = percent_list.index(max_percent)
-            percent_list.remove(max_percent)
-            # print max_percent
-            # print index
-            number_value = number_list.pop(index)
-            kill_list.append(number_value)
-            # print number_value
-        #预留号码
-        for i  in range(10):
-            # min_percent = min(percent_list)
-            # index = percent_list.index(min_percent)
-            # percent_list.remove(min_percent)
-            # number_value = number_list.pop(index)
-            purchase_list.append(int(i+1))
-        last_number = list(set(purchase_list) - set(kill_list))
-        # print "last_number >=30%:",last_number
+    # elif current_percent_all>= 40:
+    #     #杀掉号码，取前6名作为杀号码
+    #     for i in range(10):
+    #         max_percent = max(percent_list)
+    #         index = percent_list.index(max_percent)
+    #         percent_list.remove(max_percent)
+    #         number_value = number_list.pop(index)
+    #         kill_list.append(number_value)
+    #     #预留号码
+    #     for i  in range(10):
+    #         purchase_list.append(int(i+1))
+    #     last_number = list(set(purchase_list) - set(kill_list))
     else:
         last_number = []
 
@@ -242,11 +218,14 @@ def get_purchase_list(interval):
 
     #获取最小的总百分比
     current_percent_all_min = 50
+    current_percent_all_list = []
     for soup in soup_list:
         current_percent_all = get_min_current_percent_all(soup)
-        #print "current_percent_all:",current_percent_all
+        current_percent_all_list.append(current_percent_all)
+        print "current_percent_all:",current_percent_all
         if current_percent_all_min > current_percent_all:
             current_percent_all_min = current_percent_all
+    current_percent_all_list_str = str(current_percent_all_list)
     print "current_percent_all_min:",current_percent_all_min
     #循环遍历，满足条件的提取出来
     for soup in soup_list:
@@ -260,7 +239,6 @@ def get_purchase_list(interval):
             purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
             current_percent_all_min = 0
         else:
-            print "no match:0"
             purchase_number = '0'
 
         if count == len(soup_list) - 1:
@@ -273,10 +251,7 @@ def get_purchase_list(interval):
         page_count_index = page_count_index + 1
     predict_number_all_list_str = ",".join(predict_number_all_list)
 
-    # print "protty_id:",protty_id
-    # print "purchase_number_list",purchase_number_list
-    # print "purchase_number_list_desc:",purchase_number_list_desc
-    return protty_id, purchase_number_list, purchase_number_list_desc, predict_number_all_list_str
+    return protty_id, purchase_number_list, purchase_number_list_desc, predict_number_all_list_str, current_percent_all_list_str
 
 def get_last_number_predict_kill_result(protty_id,index):
     last_protty_id = int(protty_id) - 1
@@ -295,8 +270,3 @@ def get_last_number_predict_kill_result(protty_id,index):
         print "kill error"
         return False
 
-
-
-if __name__ == '__main__':
-    driver = spider_predict_selenium()
-    get_purchase_list(driver)

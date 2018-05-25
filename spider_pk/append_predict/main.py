@@ -129,8 +129,7 @@ def spider_save_predict(interval):
 
 def get_predict_kill_and_save(interval):
     #爬取下一期predict
-    driver = interval["driver"]
-    predict_lottery_id,purchase_number_list,purchase_number_list_desc,predict_number_all_list_str = get_purchase_list(interval)
+    predict_lottery_id,purchase_number_list,purchase_number_list_desc,predict_number_all_list_str, current_percent_all_list_str = get_purchase_list(interval)
     if predict_lottery_id != 0:
         #更新models
         print "save:",predict_lottery_id,'  ',purchase_number_list
@@ -148,7 +147,8 @@ def get_predict_kill_and_save(interval):
 
         #保存
         p = KillPredict(kill_predict_date=current_date, save_predict_time=save_predict_time, lottery_id = int(predict_lottery_id), kill_predict_number = purchase_number_list,
-                            kill_predict_number_desc=purchase_number_list_desc, predict_total=0, target_total=0, predict_accuracy=0,
+                            kill_predict_number_desc=purchase_number_list_desc, percent_all_list_desc=current_percent_all_list_str,
+                            predict_total=0, target_total=0, predict_accuracy=0,
                             predict_number_all=predict_number_all_list_str, xiazhu_money=xiazhu_money, gain_money=0, is_xiazhu=0, input_money=0)
         p.save()
 
@@ -181,7 +181,7 @@ def get_xiazhu_money_base_on_history_purchase_record(purchase_number_list, curre
             xiahu_money_result = 1
         print "xiahu_money_result:",xiahu_money_result
     print "base xiazhu:",xiahu_money_result
-    xiahu_money_result = int(round(xiahu_money_result))
+    xiahu_money_result = int(xiahu_money_result)
     print "result xiazhu:",xiahu_money_result
     return xiahu_money_result
 
@@ -324,8 +324,8 @@ def get_predict(request):
         result_info['predict_number_list_desc'] = obj_pro_predict[0].kill_predict_number_desc
         result_info['xiazhu_money'] = obj_pro_predict[0].xiazhu_money
         result_info['save_predict_time'] = obj_pro_predict[0].save_predict_time
-        print obj_pro_predict[0].lottery_id
-        print obj_pro_predict[0].kill_predict_number
+        print "predict lottery_id:",obj_pro_predict[0].lottery_id
+        print "kill_predict_number:",obj_pro_predict[0].kill_predict_number
 
     obj_pro_lottery = PredictLottery.objects.filter(lottery_date=current_date).order_by("-lottery_id")
     if len(obj_pro_lottery) == 0:
@@ -334,6 +334,5 @@ def get_predict(request):
     else:
         result_info['last_lottery_id'] = int(obj_pro_lottery[0].lottery_id)
         result_info['lottery_number'] = obj_pro_lottery[0].lottery_number
-        print obj_pro_lottery[0].lottery_id
-    print "obj_pro",obj_pro_predict
+        print "last lottery_id:",obj_pro_lottery[0].lottery_id
     return HttpResponse(json.dumps(result_info), content_type="application/json")

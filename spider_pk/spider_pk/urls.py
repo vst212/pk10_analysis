@@ -134,7 +134,7 @@ urlpatterns = [
     url(r'^get_append_predict_data/$', append_predict.main.get_predict),
     #设置用户set_user_data
     url(r'^set_append_auto_purchase_user/$', append_predict.user.set_user),
-
+    #删除当天数据
     url(r'^delete_append_kill_predict_current_date/$', append_predict.main.delete_kill_predict_current_date),
 
     ######基于杀号自动化购买####

@@ -302,10 +302,7 @@ def start_purchase(purchase_element_list, interval):
     for gain in sum_objects_predict:
         if (gain.gain_money):
             gain_all_money = gain_all_money + gain.gain_money
-        else:
-            print "gain_money  is null"
-    print gain_all_money
-    print interval['upper_money'],interval['lower_money']
+    print "gain_all_money:",gain_all_money
     #开始购买
     try:
 
@@ -321,18 +318,16 @@ def start_purchase(purchase_element_list, interval):
             gain_all_money = 0
         print "gain_all_money:", gain_all_money
 
-        # if gain_all_money <= interval['upper_money'] and gain_all_money >= interval['lower_money']:
-            #切换到子框架
-            # print "exchange frame!"
-            # purchase_driver.switch_to_frame("frame")
-            # time.sleep(2)
         try:
             print "start fill"
             for purchase_element in purchase_element_list:
                 print "purchase_element:",purchase_element
                 print "interval['money']",int(interval['money'])
                 sub_element = purchase_driver.find_element_by_xpath(purchase_element)
+                #追加下注
                 sub_element.send_keys(str(int(interval['money'])))
+                #下注一元
+                #sub_element.send_keys(str(1))
                 #time.sleep(1)
             confirm_button = purchase_driver.find_element_by_xpath('//*[@id="header"]/div[2]/div/input[1]')
             confirm_button.click()
@@ -345,7 +340,16 @@ def start_purchase(purchase_element_list, interval):
 
             submit_button = purchase_driver.find_element_by_xpath('/html/body/div[6]/div[3]/div/button[1]/span')
             submit_button.click()
+            time.sleep(1)
+            print "ok"
+            try:
+                purchase_driver.switch_to.alert.accept();
+                print "yu e buzu"
+            except:
+                print "yu e chongzu!"
 
+            time.sleep(1)
+            print "current url:",purchase_driver.current_url
             return True
         except:
             print "purchase driver error element not found !!!"
@@ -393,36 +397,35 @@ def get_xiazhu_message_trans(purchase_number_str):
 
 def reload_pk10_driver(purchase_driver):
     #purchase_driver = interval['purchase_driver']
-    print "purchase_driver.current_url:",purchase_driver.current_url
-    purchase_driver.get(purchase_driver.current_url)
+    purchase_url = purchase_driver.current_url
+    print "purchase_url:",purchase_url
+    purchase_driver.get(purchase_url)
+
     time.sleep(2)
-    #点击广告
     #点击广告
     try:
         purchase_driver.find_element_by_xpath('//*[@id="notice_button1"]/a').click()
         time.sleep(1)
     except:
-        print "unfound button1"
+        pass
 
-    # try:
-    #     purchase_driver.find_element_by_xpath('//*[@id="notice_button2"]/a').click()
-    #     time.sleep(1)
-    # except:
-    #     print "unfound button2"
-    #
-    # try:
-    #     purchase_driver.find_element_by_xpath('//*[@id="notice_button3"]/a').click()
-    #     time.sleep(1)
-    # except:
-    #     print "unfound button3"
-    #
-    # try:
-    #     purchase_driver.find_element_by_xpath('//*[@id="notice_button4"]/a').click()
-    #     time.sleep(1)
-    # except:
-    #     print "unfound button4"
+    try:
+        purchase_driver.find_element_by_xpath('//*[@id="notice_button2"]/a').click()
+        time.sleep(1)
+    except:
+        pass
 
+    try:
+        purchase_driver.find_element_by_xpath('//*[@id="notice_button3"]/a').click()
+        time.sleep(1)
+    except:
+        pass
 
+    try:
+        purchase_driver.find_element_by_xpath('//*[@id="notice_button4"]/a').click()
+        time.sleep(1)
+    except:
+        pass
 
     pk10 = purchase_driver.find_element_by_xpath('//*[@id="l_BJPK10"]/span')
     pk10.click()
@@ -431,10 +434,7 @@ def reload_pk10_driver(purchase_driver):
     # 1-10
     element_1_10 = purchase_driver.find_element_by_xpath('//*[@id="sub_BJPK10"]/a[2]')
     element_1_10.click()
-    time.sleep(2)
-    element_1_10 = purchase_driver.find_element_by_xpath('//*[@id="sub_BJPK10"]/a[2]')
-    element_1_10.click()
-    time.sleep(6)
+    time.sleep(3)
 
     return purchase_driver
 
