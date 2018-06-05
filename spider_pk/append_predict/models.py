@@ -33,7 +33,7 @@ class KillPredict(models.Model):
     gain_money = models.FloatField(null=True, blank=True)
     #是否下注
     is_xiazhu = models.IntegerField(null=True, blank=True)
-    #下注个数
+    #下注名词序号
     xiazhu_nums = models.IntegerField(null=True, blank=True)
     #总投入
     input_money = models.IntegerField(null=True, blank=True)

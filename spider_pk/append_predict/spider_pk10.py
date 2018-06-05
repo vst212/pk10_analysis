@@ -31,10 +31,10 @@ def get_html_result():
             html_json = simplejson.loads(html)
             return html_json
         except:
-            if count > 2:
-                flag = False
-            print 'spider pay interface faild!'
-            time.sleep(5)
+            #if count > 2:
+                #flag = False
+            print 'spider pay interface faild! please exit process......  over purchase!!!'
+            time.sleep(15)
         count = count + 1
     return ''
 

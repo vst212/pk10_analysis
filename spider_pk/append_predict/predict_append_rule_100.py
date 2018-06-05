@@ -175,7 +175,7 @@ def get_min_current_percent_all(soup):
 
 #号码处理，排名前6的号码过滤，剩余的号码购买
 def max_min_deal(percent_list,number_list, kill_list, purchase_list, current_percent_all):
-    if current_percent_all < 31:
+    if current_percent_all < 35:
         last_number = list(set(number_list))
     # elif current_percent_all>= 40:
     #     #杀掉号码，取前6名作为杀号码
@@ -206,7 +206,7 @@ def max_min_deal(percent_list,number_list, kill_list, purchase_list, current_per
         return '0'
 
 #获取需要购买的号码列表，每一名次为一个小列表
-def get_purchase_list(interval):
+def get_purchase_list(interval, last_purchase_hit, xiazhu_nums):
 
     soup_list = get_soup_list(interval)
     purchase_number_list = ''
@@ -214,7 +214,8 @@ def get_purchase_list(interval):
     predict_number_all_list = []
     protty_id = 0
     count = 0
-    page_count_index = 0
+    page_count_index = 1
+    purchase_mingci_number = 1
 
     #获取最小的总百分比
     current_percent_all_min = 50
@@ -234,12 +235,25 @@ def get_purchase_list(interval):
         predict_number_all_list.append(current_number_all)
         kill_list = []
         purchase_list = []
-        if current_percent_all == current_percent_all_min:
-            print "rule1"
-            purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
-            current_percent_all_min = 0
+
+        #上期命中情况
+        if (last_purchase_hit):
+            if current_percent_all == current_percent_all_min:
+                print "last hit"
+                purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
+                purchase_mingci_number = page_count_index
+                current_percent_all_min = 0
+            else:
+                purchase_number = '0'
+        #上期未命中情况
         else:
-            purchase_number = '0'
+            if xiazhu_nums == page_count_index:
+                print "last not hit"
+                purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
+                purchase_mingci_number = page_count_index
+                current_percent_all_min = 0
+            else:
+                purchase_number = '0'
 
         if count == len(soup_list) - 1:
             purchase_number_list = purchase_number_list + str(purchase_number)
@@ -251,7 +265,7 @@ def get_purchase_list(interval):
         page_count_index = page_count_index + 1
     predict_number_all_list_str = ",".join(predict_number_all_list)
 
-    return protty_id, purchase_number_list, purchase_number_list_desc, predict_number_all_list_str, current_percent_all_list_str
+    return protty_id, purchase_number_list, purchase_number_list_desc, predict_number_all_list_str, current_percent_all_list_str, purchase_mingci_number
 
 def get_last_number_predict_kill_result(protty_id,index):
     last_protty_id = int(protty_id) - 1

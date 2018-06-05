@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
 import time
@@ -59,7 +59,8 @@ def control_probuser_thread(request):
     info_dict["upper_money"] = int(request.POST['in_upper_monery_1'])
     info_dict["lower_money"] = int(request.POST['in_lower_monery_1'])
 
-    print "info_dict:",info_dict
+    print "info_dict:",info_dict,
+    print "money:",info_dict["money"]
     #显示活跃状态
     prob_user = ProbUser.objects.get(user_name=user_name)
     if control == 'start':
@@ -174,7 +175,10 @@ def get_predict_kill_and_save(interval):
             if result_info:
                 last_id = int(result_info['last_lottery_id'])
                 predict_id = int(result_info['predict_lottery_id'])
-                interval['money'] = result_info['xiazhu_money']
+                #interval['money'] = result_info['xiazhu_money'] * interval['money']
+                print "calc money is:",interval['money']
+                money = result_info['xiazhu_money'] * interval['money']
+                print "calc money is:", money
                 #result_info['lottery_number'] = '02,07,03,08,01,04,06,05,09,10'
                 #result_info['predict_number_list_desc'] = '[8|4|6|7]---,[1|4|6|7|8|10]---,[1|10|4|6|7]---,[0]---,[1|2|4|10|9]---,[1|10|3|9|7]---,[8|1|4|6|7]---,[0]---,[8|1|4|5|9]---,[0]'
                 if last_id == predict_id:
@@ -197,7 +201,7 @@ def get_predict_kill_and_save(interval):
         purchase_flag_minute = int(time.strftime("%M", time.localtime())) % 10
         purchase_flag_second = int(time.strftime("%S", time.localtime()))
         print "minute:",purchase_flag_minute, "second:",purchase_flag_second
-        if (purchase_flag_minute > 3 and purchase_flag_minute < 5) or (purchase_flag_minute == 5 and purchase_flag_second < 30) or (purchase_flag_minute > 8) or (purchase_flag_minute == 0 and purchase_flag_second < 30):
+        if (purchase_flag_minute > 3 and purchase_flag_minute < 5) or (purchase_flag_minute == 5 and purchase_flag_second < 40) or (purchase_flag_minute > 8) or (purchase_flag_minute == 0 and purchase_flag_second < 40):
             print "request server interface!"
             result_info = get_server_request_info()
             if 1:
@@ -216,21 +220,23 @@ def get_predict_kill_and_save(interval):
                             purchase_flag_confirm = False
                         else:
                             purchase_number_list = result_info['predict_number_list']
-                            interval['money'] = result_info['xiazhu_money']
+                            money = result_info['xiazhu_money'] * interval['money']
                             print "start purchase"
+                            print "xiazhu money:",money
 
                             #获取购买元素列表个数
                             purchase_element_list = get_xiazhu_message(purchase_number_list)
                             if len(purchase_element_list) > 0:
                                 # 购买
-                                purchase_result = start_purchase(purchase_element_list, interval)
-                                input_money = len(purchase_element_list) * interval['money']
+                                purchase_result = start_purchase(purchase_element_list, interval, money)
+                                input_money = len(purchase_element_list) * money
                                 if purchase_result:
                                     print "purchase sucess!"
                                     print "input_money:",input_money
                                     p = KillPredict.objects.get(lottery_id=predict_id)
                                     p.is_xiazhu = 1
                                     p.input_money = input_money
+                                    p.xiazhu_money = money
                                     p.save()
                                     print "save xiazhu sucess!"
                                 else:
@@ -294,7 +300,7 @@ def calculate_percisoin(lottery_id, lottery_num, kill_predict_number, purchase_n
 
 
 #购买
-def start_purchase(purchase_element_list, interval):
+def start_purchase(purchase_element_list, interval, money):
     #计算历史总盈利
     gain_all_money = 0
     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
@@ -322,10 +328,10 @@ def start_purchase(purchase_element_list, interval):
             print "start fill"
             for purchase_element in purchase_element_list:
                 print "purchase_element:",purchase_element
-                print "interval['money']",int(interval['money'])
+                print "current xaizhu money",int(money)
                 sub_element = purchase_driver.find_element_by_xpath(purchase_element)
                 #追加下注
-                sub_element.send_keys(str(int(interval['money'])))
+                sub_element.send_keys(str(int(money)))
                 #下注一元
                 #sub_element.send_keys(str(1))
                 #time.sleep(1)
@@ -445,8 +451,7 @@ def get_server_request_info():
     headers = {
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
     }
-    # url = 'http://47.75.174.160:6088/get_predict_data/'
-    url = 'http://127.0.0.1:8000/get_append_predict_data/'
+    url = 'http://127.0.0.1:8006/get_append_predict_data/'
     request_flag = True
     count = 0
     while(request_flag):

@@ -102,6 +102,7 @@ def control_predict_thread(request):
 
 
 def spider_save_predict(interval):
+    time.sleep(10)
     #爬取当天结果,存入objects
     html_json = get_html_result()
     if html_json == '':
@@ -114,6 +115,9 @@ def spider_save_predict(interval):
         print "lottery_id",lottery_id
         if lottery_id == 0:
             print "no predict record in history"
+            last_purchase_hit = True
+            xiazhu_nums = 1
+            get_predict_kill_and_save(interval, last_purchase_hit, xiazhu_nums)
         else:
             #获取该期的开奖号码
             lottery_num,lottery_time = get_lottery_id_number(lottery_id)
@@ -121,15 +125,19 @@ def spider_save_predict(interval):
             if (lottery_num):
                 #计算命中率并更新models
                 #print "save lottery_number"
-                calculate_percisoin(lottery_id, lottery_num, kill_predict_number, lottery_time, xiazhu_money)
+                last_purchase_hit,xiazhu_nums = calculate_percisoin(lottery_id, lottery_num, kill_predict_number, lottery_time, xiazhu_money)
+                print "last_purchase_hit", last_purchase_hit , "xiazhu_nums" , xiazhu_nums
+                get_predict_kill_and_save(interval, last_purchase_hit, xiazhu_nums)
             else:
-                print "pay interface lottery id request faild"
+                print "pay interface lottery id request faild. continue...."
+                time.sleep(10)
+                spider_save_predict(interval)
+                
+    #get_predict_kill_and_save(interval)
 
-    get_predict_kill_and_save(interval)
-
-def get_predict_kill_and_save(interval):
+def get_predict_kill_and_save(interval, last_purchase_hit, xiazhu_nums):
     #爬取下一期predict
-    predict_lottery_id,purchase_number_list,purchase_number_list_desc,predict_number_all_list_str, current_percent_all_list_str = get_purchase_list(interval)
+    predict_lottery_id,purchase_number_list,purchase_number_list_desc,predict_number_all_list_str, current_percent_all_list_str, purchase_mingci_number = get_purchase_list(interval, last_purchase_hit, xiazhu_nums)
     if predict_lottery_id != 0:
         #更新models
         print "save:",predict_lottery_id,'  ',purchase_number_list
@@ -149,7 +157,7 @@ def get_predict_kill_and_save(interval):
         p = KillPredict(kill_predict_date=current_date, save_predict_time=save_predict_time, lottery_id = int(predict_lottery_id), kill_predict_number = purchase_number_list,
                             kill_predict_number_desc=purchase_number_list_desc, percent_all_list_desc=current_percent_all_list_str,
                             predict_total=0, target_total=0, predict_accuracy=0,
-                            predict_number_all=predict_number_all_list_str, xiazhu_money=xiazhu_money, gain_money=0, is_xiazhu=0, input_money=0)
+                            predict_number_all=predict_number_all_list_str, xiazhu_money=xiazhu_money, gain_money=0, is_xiazhu=0, input_money=0, xiazhu_nums=purchase_mingci_number)
         p.save()
 
 #基于历史购买记录计算本期的下注金额基数
@@ -157,11 +165,13 @@ def get_xiazhu_money_base_on_history_purchase_record(purchase_number_list, curre
     xiazhu_predicts = KillPredict.objects.filter(kill_predict_date=current_date).order_by("-lottery_id")
     xiahu_money_result = 1
     gain_money_total = 0
+    lose_times = 0
     for xiazhu_predict in xiazhu_predicts:
         if (xiazhu_predict.is_xiazhu == 1 and xiazhu_predict.gain_money > 0):
             break
         if (xiazhu_predict.is_xiazhu == 1 and xiazhu_predict.gain_money < 0):
             gain_money_total = gain_money_total + xiazhu_predict.gain_money
+            lose_times = lose_times + 1
             print "gain_money_total sub:",gain_money_total
     print "gain_money_total total:",gain_money_total
     current_purchase_length = 0
@@ -181,7 +191,14 @@ def get_xiazhu_money_base_on_history_purchase_record(purchase_number_list, curre
             xiahu_money_result = 1
         print "xiahu_money_result:",xiahu_money_result
     print "base xiazhu:",xiahu_money_result
-    xiahu_money_result = int(xiahu_money_result)
+    
+    xiahu_money_result = round(xiahu_money_result)
+    lose_times_money = pow(2, (lose_times + 1))
+    print "lose_times_money:",lose_times_money
+    if lose_times > 3:
+    	print "lose_times:",lose_times
+        xiahu_money_result = int((lose_times_money + xiahu_money_result)/2)
+    #xiahu_money_result = min(xiahu_money_result,lose_times_money)
     print "result xiazhu:",xiahu_money_result
     return xiahu_money_result
 
@@ -227,10 +244,11 @@ def calculate_percisoin(lottery_id, lottery_num, kill_predict_number, lottery_ti
             gain_money = 0
         else:
             predict_accuracy = float(float(target_count)/float(all_count))
-            gain_money = (target_count * 9.985 - all_count) * xiazhu_money
+            gain_money = (target_count * 9.9 - all_count) * xiazhu_money
             print float(float(target_count)/float(all_count))
         try:
             p = KillPredict.objects.get(lottery_id=lottery_id)
+            xiazhu_nums = p.xiazhu_nums
             p.kill_predict_time = lottery_time
             p.lottery_number = lottery_num
             p.predict_total = all_count
@@ -241,10 +259,17 @@ def calculate_percisoin(lottery_id, lottery_num, kill_predict_number, lottery_ti
             #p.input_money = all_count * xiazhu_money
             #p.is_xiazhu = 1
             p.save()
+            #判断上一期是否盈利，未盈利，则记录该名词，以后每期购买该名次，知道买中
+            if gain_money<0:
+                return False, xiazhu_nums
+            else:
+                return True, xiazhu_nums
         except:
             print "the ",lottery_id," is repeat!!!"
+            return True,1
     else:
         print 'length error'
+        return True,1
 
 #删除当天的信息
 def delete_kill_predict_current_date(request):
