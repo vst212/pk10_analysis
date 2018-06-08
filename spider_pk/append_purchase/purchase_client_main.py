@@ -236,7 +236,6 @@ def get_predict_kill_and_save(interval):
                                     p = KillPredict.objects.get(lottery_id=predict_id)
                                     p.is_xiazhu = 1
                                     p.input_money = input_money
-                                    p.xiazhu_money = money
                                     p.save()
                                     print "save xiazhu sucess!"
                                 else:

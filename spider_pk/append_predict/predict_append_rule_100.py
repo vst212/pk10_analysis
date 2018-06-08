@@ -175,7 +175,7 @@ def get_min_current_percent_all(soup):
 
 #号码处理，排名前6的号码过滤，剩余的号码购买
 def max_min_deal(percent_list,number_list, kill_list, purchase_list, current_percent_all):
-    if current_percent_all < 35:
+    if current_percent_all < 40:
         last_number = list(set(number_list))
     # elif current_percent_all>= 40:
     #     #杀掉号码，取前6名作为杀号码
@@ -247,7 +247,10 @@ def get_purchase_list(interval, last_purchase_hit, xiazhu_nums):
                 purchase_number = '0'
         #上期未命中情况
         else:
-            if xiazhu_nums == page_count_index:
+            #使用同一未中名次
+            #if xiazhu_nums == page_count_index:
+            #按照排名最小的取值
+            if current_percent_all == current_percent_all_min:
                 print "last not hit"
                 purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
                 purchase_mingci_number = page_count_index

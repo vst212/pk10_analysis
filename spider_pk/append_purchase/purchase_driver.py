@@ -8,11 +8,11 @@ import time
 
 
 def get_driver(username,password):
-    chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
-    options = webdriver.ChromeOptions()
-    options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
-    driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
-    # driver = webdriver.Firefox(executable_path = 'E:\\python\\webdriver\\firefox\\geckodriver.exe')
+    # chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
+    # options = webdriver.ChromeOptions()
+    # options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
+    # driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
+    driver = webdriver.Firefox(executable_path = 'E:\\python\\webdriver\\firefox\\geckodriver.exe')
 
 
     driver.get("https://7989674523-bdgj.qq168.ws/login")
@@ -50,12 +50,12 @@ def get_driver(username,password):
             driver.quit()
             print "please input code!"
             time.sleep(5)
-            chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
-            options = webdriver.ChromeOptions()
-            options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
-            driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
+            # chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
+            # options = webdriver.ChromeOptions()
+            # options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
+            # driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
 
-            # driver = webdriver.Firefox(executable_path = 'E:\\python\\webdriver\\firefox\\geckodriver.exe')
+            driver = webdriver.Firefox(executable_path = 'E:\\python\\webdriver\\firefox\\geckodriver.exe')
             driver.get("https://7989674523-bdgj.qq168.ws/login")
             driver.maximize_window();
             time.sleep(2)
