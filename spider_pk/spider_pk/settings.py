@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'auto_pxiagme1_purchase',
     'append_predict',
     'append_purchase',
+    'append_purchase_dianyou',
+    'append_purchase_jinsha',
 ]
 
 MIDDLEWARE = [
