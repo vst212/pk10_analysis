@@ -1,284 +1,309 @@
-1529058170121	geckodriver	INFO	geckodriver 0.20.1
-1529058170130	geckodriver	INFO	Listening on 127.0.0.1:53510
-1529058173149	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\SHIFEI~1\\AppData\\Local\\Temp\\rust_mozprofile.5ZW2V43ptwfb"
+1529401719688	geckodriver	INFO	geckodriver 0.20.1
+1529401719699	geckodriver	INFO	Listening on 127.0.0.1:52414
+1529401722704	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\SHIFEI~1\\AppData\\Local\\Temp\\rust_mozprofile.skniBq3JrWMp"
 Unable to read VR Path Registry from C:\Users\shifeixiang\AppData\Local\openvr\openvrpaths.vrpath
 Unable to read VR Path Registry from C:\Users\shifeixiang\AppData\Local\openvr\openvrpaths.vrpath
 Unable to read VR Path Registry from C:\Users\shifeixiang\AppData\Local\openvr\openvrpaths.vrpath
+1529401730420	Marionette	INFO	Listening on port 52451
+1529401730521	Marionette	WARN	TLS certificate errors will be ignored for this session
 Unable to read VR Path Registry from C:\Users\shifeixiang\AppData\Local\openvr\openvrpaths.vrpath
 Unable to read VR Path Registry from C:\Users\shifeixiang\AppData\Local\openvr\openvrpaths.vrpath
-1529058177232	Marionette	INFO	Listening on port 53542
-1529058177273	Marionette	WARN	TLS certificate errors will be ignored for this session
+1529401915494	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+[Child 16352, MediaPlayback #2] WARNING: 2d4bfa04280 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 16352, MediaPlayback #2] WARNING: Decoder=2d4c1986c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 16352, MediaPlayback #2] WARNING: Decoder=2d4c1986c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 1732, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1732, Chrom[Parent 10956, Gecko_IOThread] WARNING: file z:/build/build/src/ipc/chromium/src/base/process_util_win.cc, line 188
+[Parent 10956, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 16352, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x15008C,name=PBrowser::Msg_UpdateNativeWindowHandle) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x15007F,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x150001,name=PBrowser::Msg_AsyncMessage) Closed channel: cannot send/recv
+
+JavaScript error: chrome://browser/content/tab-content.js, line 281: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIMessageSender.sendAsyncMessage]
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x150001,name=PBrowser::Msg_AsyncMessage) Closed channel: cannot send/recv
+
+JavaScript error: chrome://browser/content/content.js, line 705: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIMessageSender.sendAsyncMessage]
+[Parent 10956, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 24464, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 24464, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+1529401915430	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+[Child 4840, MediaPlayback #3] WARNING: 2b471e9dc40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #5] WARNING: Decoder=2b4753ba800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #5] WARNING: Decoder=2b4753ba800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #4] WARNING: 2b471e9dc40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #5] WARNING: Decoder=2b4753ba800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #5] WARNING: Decoder=2b4753ba800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
+[Child 4840, MediaPlayback #11] WARNING: 2b46bde4c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #11] WARNING: Decoder=2b478145000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #11] WARNING: Decoder=2b478145000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #10] WARNING: 2b46bde4c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #10] WARNING: Decoder=2b478145000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #10] WARNING: Decoder=2b478145000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #11] WARNING: 2b46bde4c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #10] WARNING: Decoder=2b478145000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #10] WARNING: Decoder=2b478145000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #11] WARNING: 2b46bde4c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #11] WARNING: Decoder=2b478145000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #11] WARNING: Decoder=2b478145000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #11] WARNING: 2b46bde4c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #11] WARNING: Decoder=2b478145000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #11] WARNING: Decoder=2b478145000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #11] WARNING: 2b46bde4c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #11] WARNING: Decoder=2b478145000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #11] WARNING: Decoder=2b478145000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-[Child 27064, MediaPlayback #4] WARNING: 2844613d1c0 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 27064, MediaPlayback #4] WARNING: Decoder=2844f877400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 27064, MediaPlayback #4] WARNING: Decoder=2844f877400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 27064, MediaPlayback #3] WARNING: 284462deac0 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 27064, MediaPlayback #3] WARNING: Decoder=2844f877400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 27064, MediaPlayback #3] WARNING: Decoder=2844f877400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 27064, MediaPlayback #3] WARNING: 284462deac0 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 27064, MediaPlayback #4] WARNING: Decoder=2844f877400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 27064, MediaPlayback #4] WARNING: Decoder=2844f877400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 27064, MediaPlayback #4] WARNING: 284462deac0 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 27064, MediaPlayback #3] WARNING: Decoder=2844f877400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 27064, MediaPlayback #3] WARNING: Decoder=2844f877400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 27064, MediaPlayback #4] WARNING: 284462deac0 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 27064, MediaPlayback #4] WARNING: Decoder=2844f877400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 27064, MediaPlayback #4] WARNING: Decoder=2844f877400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 27064, MediaPlayback #3] WARNING: 284462deac0 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 27064, MediaPlayback #3] WARNING: Decoder=2844f877400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 27064, MediaPlayback #3] WARNING: Decoder=2844f877400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #17] WARNING: 2b4665fc280 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #17] WARNING: Decoder=2b478465800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #17] WARNING: Decoder=2b478465800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #17] WARNING: 2b46bde4c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #17] WARNING: Decoder=2b478465800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #17] WARNING: Decoder=2b478465800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #17] WARNING: 2b46bde4c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #17] WARNING: Decoder=2b478465800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #17] WARNING: Decoder=2b478465800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #17] WARNING: 2b46bde4c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #17] WARNING: Decoder=2b478465800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #17] WARNING: Decoder=2b478465800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #18] WARNING: 2b46bde4c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #18] WARNING: Decoder=2b478465800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #18] WARNING: Decoder=2b478465800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #18] WARNING: 2b46bde4c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #17] WARNING: Decoder=2b478465800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #17] WARNING: Decoder=2b478465800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
+[Child 4840, MediaPlayback #25] WARNING: 2b4665fc340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #25] WARNING: Decoder=2b4753dc000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #25] WARNING: Decoder=2b4753dc000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #25] WARNING: 2b4665fc340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #25] WARNING: Decoder=2b4753dc000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #25] WARNING: Decoder=2b4753dc000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #24] WARNING: 2b4665fc340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #24] WARNING: Decoder=2b4753dc000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #24] WARNING: Decoder=2b4753dc000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #24] WARNING: 2b4665fc340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #25] WARNING: Decoder=2b4753dc000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #25] WARNING: Decoder=2b4753dc000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #24] WARNING: 2b4665fc340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #24] WARNING: Decoder=2b4753dc000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #24] WARNING: Decoder=2b4753dc000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #25] WARNING: 2b4665fc340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #25] WARNING: Decoder=2b4753dc000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #25] WARNING: Decoder=2b4753dc000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-[Child 27064, MediaPlayback #10] WARNING: 2844613d100 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 27064, MediaPlayback #10] WARNING: Decoder=2844edc0800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 27064, MediaPlayback #10] WARNING: Decoder=2844edc0800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 27064, MediaPlayback #10] WARNING: 2844613ddc0 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 27064, MediaPlayback #9] WARNING: Decoder=2844edc0800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 27064, MediaPlayback #9] WARNING: Decoder=2844edc0800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 27064, MediaPlayback #10] WARNING: 2844613ddc0 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 27064, MediaPlayback #9] WARNING: Decoder=2844edc0800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 27064, MediaPlayback #9] WARNING: Decoder=2844edc0800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 27064, MediaPlayback #9] WARNING: 2844613ddc0 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 27064, MediaPlayback #10] WARNING: Decoder=2844edc0800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 27064, MediaPlayback #10] WARNING: Decoder=2844edc0800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 27064, MediaPlayback #10] WARNING: 2844613ddc0 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 27064, MediaPlayback #10] WARNING: Decoder=2844edc0800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 27064, MediaPlayback #10] WARNING: Decoder=2844edc0800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 27064, MediaPlayback #9] WARNING: 2844613ddc0 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 27064, MediaPlayback #9] WARNING: Decoder=2844edc0800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 27064, MediaPlayback #9] WARNING: Decoder=2844edc0800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-er.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-[Parent 2940, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Parent 2940, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Child 26668, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
-[Child 26668, Chrome_ChildThread] WARN
+[Child 4840, MediaPlayback #32] WARNING: 2b4665fc340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #32] WARNING: Decoder=2b4753de000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #32] WARNING: Decoder=2b4753de000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #31] WARNING: 2b46bde4c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #31] WARNING: Decoder=2b4753de000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #31] WARNING: Decoder=2b4753de000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #32] WARNING: 2b46bde4c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #32] WARNING: Decoder=2b4753de000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #32] WARNING: Decoder=2b4753de000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #32] WARNING: 2b46bde4c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #32] WARNING: Decoder=2b4753de000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #32] WARNING: Decoder=2b4753de000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #32] WARNING: 2b46bde4c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #32] WARNING: Decoder=2b4753de000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #32] WARNING: Decoder=2b4753de000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #31] WARNING: 2b46bde4c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #31] WARNING: Decoder=2b4753de000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #31] WARNING: Decoder=2b4753de000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
+[Child 4840, MediaPlayback #38] WARNING: 2b4665fc280 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #38] WARNING: Decoder=2b478141800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #38] WARNING: Decoder=2b478141800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #39] WARNING: 2b4665fc280 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #39] WARNING: Decoder=2b478141800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #39] WARNING: Decoder=2b478141800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #38] WARNING: 2b4665fc280 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #38] WARNING: Decoder=2b478141800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #38] WARNING: Decoder=2b478141800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #38] WARNING: 2b4665fc280 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #38] WARNING: Decoder=2b478141800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #38] WARNING: Decoder=2b478141800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #39] WARNING: 2b4665fc280 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #39] WARNING: Decoder=2b478141800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #39] WARNING: Decoder=2b478141800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 4840, MediaPlayback #39] WARNING: 2b4665fc280 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 4840, MediaPlayback #39] WARNING: Decoder=2b478141800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 4840, MediaPlayback #39] WARNING: Decoder=2b478141800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Parent 28220, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 23032, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 28220, Gecko_IOThread] WARNING: file z:/build/build/src/ipc/chromium/src/base/process_util_win.cc, line 188
+[Parent 28220, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4840, Chrome_ChildThread] WARNING: 
+###!!! [Parent][MessageChannel] Error: (msgtype=0x15008C,name=PBrowser::Msg_UpdateNativeWindowHandle) Closed channel: cannot send/recv
+
+pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrom
+###!!! [Parent][MessageChannel] Error: (msgtype=0x15007F,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+
+e/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x150001,name=PBrowser::Msg_AsyncMessage) Closed channel: cannot send/recv
+
+[Child 4840, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+JavaScript error: chrome://browser/content/tab-content.js, line 281: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIMessageSender.sendAsyncMessage]
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x150001,name=PBrowser::Msg_AsyncMessage) Closed channel: cannot send/recv
+
+JavaScript error: chrome://browser/content/content.js, line 705: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIMessageSender.sendAsyncMessage]
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x15002B,name=PBrowser::Msg_SetInputContext) Closed channel: cannot send/recv
+
+[Parent 28220, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #32] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #33] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #33] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #33] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #32] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #32] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #32] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #34] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #34] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #34] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #34] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #34] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #34] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #35] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #35] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #35] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #34] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #34] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #34] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #35] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #35] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #35] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #34] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #35] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #35] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #36] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #36] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #36] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #36] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #36] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #36] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #36] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #37] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #37] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #37] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #37] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #37] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #36] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #37] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #37] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #36] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #36] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #36] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #39] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #39] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #39] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #38] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #38] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #38] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #39] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #39] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #39] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #38] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #38] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #38] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #38] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #38] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #38] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #39] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #38] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #38] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #41] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #41] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #41] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #40] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #40] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #40] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #41] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #41] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #41] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #42] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #40] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #40] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #42] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #40] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #40] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 19120, MediaPlayback #42] WARNING: 1ca8f490400 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 19120, MediaPlayback #41] WARNING: Decoder=1ca94887c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 19120, MediaPlayback #41] WARNING: Decoder=1ca94887c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Parent 20908, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 20908, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 19120, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 19120, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 20908, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
-ine 3746
-[Child 19016, MediaPlayback #12] WARNING: Decoder=2092f8ac800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #12] WARNING: 20928c9dac0 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #12] WARNING: Decoder=2092f8ac800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #12] WARNING: Decoder=2092f8ac800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #11] WARNING: 20928c9dac0 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #11] WARNING: Decoder=2092f8ac800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #11] WARNING: Decoder=2092f8ac800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #11] WARNING: 20928c9dac0 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #11] WARNING: Decoder=2092f8ac800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #11] WARNING: Decoder=2092f8ac800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #12] WARNING: 20928c9dac0 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #12] WARNING: Decoder=2092f8ac800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #12] WARNING: Decoder=2092f8ac800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #12] WARNING: 20928c9dac0 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #12] WARNING: Decoder=2092f8ac800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #12] WARNING: Decoder=2092f8ac800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #19] WARNING: 20922b46040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #19] WARNING: Decoder=2092f87b000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #19] WARNING: Decoder=2092f87b000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #19] WARNING: 20922b46040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #19] WARNING: Decoder=2092f87b000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #19] WARNING: Decoder=2092f87b000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #18] WARNING: 20922b46040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #19] WARNING: Decoder=2092f87b000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #19] WARNING: Decoder=2092f87b000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #18] WARNING: 20922b46040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #18] WARNING: Decoder=2092f87b000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #18] WARNING: Decoder=2092f87b000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #18] WARNING: 20922b46040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #18] WARNING: Decoder=2092f87b000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #18] WARNING: Decoder=2092f87b000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #19] WARNING: 20922b46040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #19] WARNING: Decoder=2092f87b000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #19] WARNING: Decoder=2092f87b000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+
+[Child 21480, MediaPlayback #58] WARNING: Decoder=23b978a0800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-[Child 19016, MediaPlayback #26] WARNING: 20922b46040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #26] WARNING: Decoder=2092f8b4400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #26] WARNING: Decoder=2092f8b4400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #25] WARNING: 20922b46100 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #26] WARNING: Decoder=2092f8b4400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #26] WARNING: Decoder=2092f8b4400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #25] WARNING: 20922b46100 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #25] WARNING: Decoder=2092f8b4400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #25] WARNING: Decoder=2092f8b4400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #25] WARNING: 20922b46100 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #25] WARNING: Decoder=2092f8b4400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #25] WARNING: Decoder=2092f8b4400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #26] WARNING: 20922b46100 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #25] WARNING: Decoder=2092f8b4400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #25] WARNING: Decoder=2092f8b4400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #26] WARNING: 20922b46100 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #25] WARNING: Decoder=2092f8b4400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #25] WARNING: Decoder=2092f8b4400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 21480, MediaPlayback #64] WARNING: 23b92095c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 21480, MediaPlayback #64] WARNING: Decoder=23b9789c800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 21480, MediaPlayback #64] WARNING: Decoder=23b9789c800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 21480, MediaPlayback #63] WARNING: 23b9219da00 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 21480, MediaPlayback #63] WARNING: Decoder=23b9789c800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 21480, MediaPlayback #63] WARNING: Decoder=23b9789c800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 21480, MediaPlayback #63] WARNING: 23b9219da00 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 21480, MediaPlayback #63] WARNING: Decoder=23b9789c800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 21480, MediaPlayback #63] WARNING: Decoder=23b9789c800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 21480, MediaPlayback #63] WARNING: 23b9219da00 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 21480, MediaPlayback #63] WARNING: Decoder=23b9789c800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 21480, MediaPlayback #63] WARNING: Decoder=23b9789c800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 21480, MediaPlayback #64] WARNING: 23b9219da00 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 21480, MediaPlayback #64] WARNING: Decoder=23b9789c800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 21480, MediaPlayback #64] WARNING: Decoder=23b9789c800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 21480, MediaPlayback #64] WARNING: 23b9219da00 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 21480, MediaPlayback #64] WARNING: Decoder=23b9789c800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 21480, MediaPlayback #64] WARNING: Decoder=23b9789c800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-[Child 19016, MediaPlayback #33] WARNING: 20922b46040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #33] WARNING: Decoder=2092d8c3c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #33] WARNING: Decoder=2092d8c3c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #32] WARNING: 20922b46040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #32] WARNING: Decoder=2092d8c3c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #32] WARNING: Decoder=2092d8c3c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #33] WARNING: 20922b46040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #33] WARNING: Decoder=2092d8c3c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #33] WARNING: Decoder=2092d8c3c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #33] WARNING: 20922b46040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #33] WARNING: Decoder=2092d8c3c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #33] WARNING: Decoder=2092d8c3c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #33] WARNING: 20922b46040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #33] WARNING: Decoder=2092d8c3c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #33] WARNING: Decoder=2092d8c3c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #32] WARNING: 20922b46040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #32] WARNING: Decoder=2092d8c3c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #32] WARNING: Decoder=2092d8c3c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 21480, MediaPlayback #69] WARNING: 23b869f2340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 21480, MediaPlayback #69] WARNING: Decoder=23b978a1800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 21480, MediaPlayback #69] WARNING: Decoder=23b978a1800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 21480, MediaPlayback #68] WARNING: 23b869f2340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 21480, MediaPlayback #68] WARNING: Decoder=23b978a1800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 21480, MediaPlayback #68] WARNING: Decoder=23b978a1800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 21480, MediaPlayback #69] WARNING: 23b869f2340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 21480, MediaPlayback #68] WARNING: Decoder=23b978a1800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 21480, MediaPlayback #68] WARNING: Decoder=23b978a1800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 21480, MediaPlayback #68] WARNING: 23b869f2340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 21480, MediaPlayback #68] WARNING: Decoder=23b978a1800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 21480, MediaPlayback #68] WARNING: Decoder=23b978a1800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 21480, MediaPlayback #68] WARNING: 23b869f2340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 21480, MediaPlayback #68] WARNING: Decoder=23b978a1800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 21480, MediaPlayback #68] WARNING: Decoder=23b978a1800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
+[Child 21480, MediaPlayback #69] WARNING: 23b869f2340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
+[Child 21480, MediaPlayback #69] WARNING: Decoder=23b978a1800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Child 21480, MediaPlayback #69] WARNING: Decoder=23b978a1800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
 JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-[Child 19016, MediaPlayback #40] WARNING: 20922b46340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #40] WARNING: Decoder=2092dfaf400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #40] WARNING: Decoder=2092dfaf400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #40] WARNING: 20922b46a00 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #40] WARNING: Decoder=2092dfaf400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #40] WARNING: Decoder=2092dfaf400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #40] WARNING: 20922b46a00 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #40] WARNING: Decoder=2092dfaf400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #40] WARNING: Decoder=2092dfaf400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #40] WARNING: 20922b46a00 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #40] WARNING: Decoder=2092dfaf400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #40] WARNING: Decoder=2092dfaf400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #40] WARNING: 20922b46a00 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #40] WARNING: Decoder=2092dfaf400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #40] WARNING: Decoder=2092dfaf400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #40] WARNING: 20922b46a00 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #40] WARNING: Decoder=2092dfaf400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #40] WARNING: Decoder=2092dfaf400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-[Child 19016, MediaPlayback #45] WARNING: 2091d5f9340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #45] WARNING: Decoder=2092f875400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #45] WARNING: Decoder=2092f875400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #44] WARNING: 2091d5f9340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #44] WARNING: Decoder=2092f875400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #44] WARNING: Decoder=2092f875400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #45] WARNING: 2091d5f9340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #45] WARNING: Decoder=2092f875400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #45] WARNING: Decoder=2092f875400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #45] WARNING: 2091d5f9340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #45] WARNING: Decoder=2092f875400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #45] WARNING: Decoder=2092f875400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #45] WARNING: 2091d5f9340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #45] WARNING: Decoder=2092f875400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #45] WARNING: Decoder=2092f875400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #45] WARNING: 2091d5f9340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #45] WARNING: Decoder=2092f875400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #45] WARNING: Decoder=2092f875400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-[Child 19016, MediaPlayback #50] WARNING: 2091d5f9340 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #50] WARNING: Decoder=2092f8b1400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #50] WARNING: Decoder=2092f8b1400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #49] WARNING: 20928c9dc40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #50] WARNING: Decoder=2092f8b1400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #50] WARNING: Decoder=2092f8b1400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #49] WARNING: 20928c9dc40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #49] WARNING: Decoder=2092f8b1400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #49] WARNING: Decoder=2092f8b1400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #49] WARNING: 20928c9dc40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #49] WARNING: Decoder=2092f8b1400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #49] WARNING: Decoder=2092f8b1400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #50] WARNING: 20928c9dc40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #49] WARNING: Decoder=2092f8b1400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #49] WARNING: Decoder=2092f8b1400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #50] WARNING: 20928c9dc40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #50] WARNING: Decoder=2092f8b1400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #50] WARNING: Decoder=2092f8b1400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-[Child 19016, MediaPlayback #53] WARNING: 20922ce2c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #53] WARNING: Decoder=2092d8b6c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #53] WARNING: Decoder=2092d8b6c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #54] WARNING: 20922ce2c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #53] WARNING: Decoder=2092d8b6c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #53] WARNING: Decoder=2092d8b6c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #54] WARNING: 20922ce2c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #53] WARNING: Decoder=2092d8b6c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #53] WARNING: Decoder=2092d8b6c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #54] WARNING: 20922ce2c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #54] WARNING: Decoder=2092d8b6c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #54] WARNING: Decoder=2092d8b6c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #54] WARNING: 20922ce2c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #53] WARNING: Decoder=2092d8b6c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #53] WARNING: Decoder=2092d8b6c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #53] WARNING: 20922ce2c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #53] WARNING: Decoder=2092d8b6c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #53] WARNING: Decoder=2092d8b6c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-[Child 19016, MediaPlayback #58] WARNING: 20922ce2c40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #58] WARNING: Decoder=2092f87f000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #58] WARNING: Decoder=2092f87f000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #59] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #59] WARNING: Decoder=2092f87f000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #59] WARNING: Decoder=2092f87f000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #58] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #58] WARNING: Decoder=2092f87f000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #58] WARNING: Decoder=2092f87f000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #59] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #59] WARNING: Decoder=2092f87f000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #59] WARNING: Decoder=2092f87f000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #58] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #58] WARNING: Decoder=2092f87f000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #58] WARNING: Decoder=2092f87f000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #59] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #59] WARNING: Decoder=2092f87f000 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #59] WARNING: Decoder=2092f87f000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-[Child 19016, MediaPlayback #64] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #64] WARNING: Decoder=2092dfb1400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #64] WARNING: Decoder=2092dfb1400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #63] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #63] WARNING: Decoder=2092dfb1400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #63] WARNING: Decoder=2092dfb1400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #64] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #64] WARNING: Decoder=2092dfb1400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #64] WARNING: Decoder=2092dfb1400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #63] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #63] WARNING: Decoder=2092dfb1400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #63] WARNING: Decoder=2092dfb1400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #63] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #63] WARNING: Decoder=2092dfb1400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #63] WARNING: Decoder=2092dfb1400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #64] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #64] WARNING: Decoder=2092dfb1400 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #64] WARNING: Decoder=2092dfb1400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-[Child 19016, MediaPlayback #67] WARNING: 20928bcef40 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #67] WARNING: Decoder=2092f87e800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #67] WARNING: Decoder=2092f87e800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #67] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #68] WARNING: Decoder=2092f87e800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #68] WARNING: Decoder=2092f87e800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #68] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #67] WARNING: Decoder=2092f87e800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #67] WARNING: Decoder=2092f87e800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #68] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #68] WARNING: Decoder=2092f87e800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #68] WARNING: Decoder=2092f87e800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #67] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #68] WARNING: Decoder=2092f87e800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #68] WARNING: Decoder=2092f87e800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #68] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #68] WARNING: Decoder=2092f87e800 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #68] WARNING: Decoder=2092f87e800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-108446227-1, line 69: unreachable code after return statement
-[Child 19016, MediaPlayback #72] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #72] WARNING: Decoder=2092f8a8c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
-[Child 19016, MediaPlayback #72] WARNING: Decoder=2092f8a8c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
-[Child 19016, MediaPlayback #72] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
-[Child 19016, MediaPlayback #72] WARNING: Decoder=2092f8a8c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746
+[Parent 21836, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 21836, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 21480, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 21836, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[GPU 7440, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+hine.cpp, line 3746
 [Child 19016, MediaPlayback #72] WARNING: Decoder=2092f8a8c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3445
 [Child 19016, MediaPlayback #73] WARNING: 20928bd4040 Can't get cubeb context!: file z:/build/build/src/dom/media/AudioStream.cpp, line 359
 [Child 19016, MediaPlayback #73] WARNING: Decoder=2092f8a8c00 [OnMediaSinkAudioError]: file z:/build/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3746

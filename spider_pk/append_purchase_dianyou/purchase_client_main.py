@@ -293,12 +293,10 @@ def start_purchase(purchase_element_list, interval, money):
             time.sleep(2)
             # 提交按钮
             print "click submit"
-            if len(purchase_element_list) > 6:
+            if len(purchase_element_list) > 7:
                 submit = purchase_driver.find_element_by_xpath('//*[@id="betSlipDivContent"]/table/tbody/tr[3]/td/a[1]')
-            elif len(purchase_element_list) > 3:
-                submit = purchase_driver.find_element_by_xpath('//*[@id="betSlipDivContent"]/table/tbody/tr[2]/td/a[1]')
             else:
-                submit = purchase_driver.find_element_by_xpath('//*[@id="betSlipDivContent"]/table/tbody/tr[1]/td/a[1]')
+                submit = purchase_driver.find_element_by_xpath('//*[@id="betSlipDivContent"]/table/tbody/tr[2]/td/a[1]')
             #'//*[@id="betSlipDivContent"]/table/tbody/tr[2]/td/a[1]'
             #'//*[@id="betSlipDivContent"]/table/tbody/tr[3]/td/a[1]'
             submit.click()

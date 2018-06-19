@@ -151,7 +151,9 @@ def get_predict_kill_and_save(interval, last_purchase_hit, xiazhu_nums):
             current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
         save_predict_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         #基于前面开奖结果计算下注金额基础(1为基准值)
-        xiazhu_money = get_xiazhu_money_base_on_history_purchase_record(purchase_number_list, current_date)
+        #xiazhu_money = get_xiazhu_money_base_on_history_purchase_record(purchase_number_list, current_date)
+         #基于前面开奖结果计算下注金额基础(1为基准值)  递增追加
+        xiazhu_money = get_xiazhu_money_base_on_history_purchase_record_increase(purchase_number_list, current_date)
 
         #保存
         p = KillPredict(kill_predict_date=current_date, save_predict_time=save_predict_time, lottery_id = int(predict_lottery_id), kill_predict_number = purchase_number_list,
@@ -160,8 +162,39 @@ def get_predict_kill_and_save(interval, last_purchase_hit, xiazhu_nums):
                             predict_number_all=predict_number_all_list_str, xiazhu_money=xiazhu_money, gain_money=0, is_xiazhu=0, input_money=0, xiazhu_nums=purchase_mingci_number)
         p.save()
 
-#基于历史购买记录计算本期的下注金额基数
-def get_xiazhu_money_base_on_history_purchase_record(purchase_number_list, current_date,):
+
+#基于历史购买记录计算本期的下注金额基数--,递增追加，未中加一，中了元数据保持
+def get_xiazhu_money_base_on_history_purchase_record_increase(purchase_number_list, current_date):
+    xiazhu_predicts = KillPredict.objects.filter(kill_predict_date=current_date).order_by("-lottery_id")
+    last_xiazhu_predict = xiazhu_predicts
+    xiahu_money_result = 1
+    gain_money_total = 0
+    for xiazhu_predict in xiazhu_predicts:
+        if (xiazhu_predict.is_xiazhu == 1):
+            if (xiazhu_predict.xiazhu_money > 1):
+                gain_money_total = gain_money_total + xiazhu_predict.gain_money
+                print "gain_money_total sub:",gain_money_total
+            elif xiazhu_predict.xiazhu_money == 1:
+                gain_money_total = gain_money_total + xiazhu_predict.gain_money
+                print "gain_money_total sub:",gain_money_total
+                break
+    print "gain_money_total total:",gain_money_total
+    if gain_money_total < 0:
+        #上一期命中，递增下注
+        if last_xiazhu_predict.gain_money <= 0:
+            xiahu_money_result = last_xiazhu_predict.xiazhu_money + 1
+        #否则保持不变
+        else:
+            xiahu_money_result = last_xiazhu_predict.xiazhu_money
+    else:
+        xiahu_money_result = 1
+
+    xiahu_money_result = int(xiahu_money_result)
+    print "result xiazhu:",xiahu_money_result
+    return xiahu_money_result
+
+#基于历史购买记录计算本期的下注金额基数,---追加方案，无损追加
+def get_xiazhu_money_base_on_history_purchase_record(purchase_number_list, current_date):
     xiazhu_predicts = KillPredict.objects.filter(kill_predict_date=current_date).order_by("-lottery_id")
     xiahu_money_result = 1
     gain_money_total = 0
@@ -174,6 +207,24 @@ def get_xiazhu_money_base_on_history_purchase_record(purchase_number_list, curre
             lose_times = lose_times + 1
             print "gain_money_total sub:",gain_money_total
     print "gain_money_total total:",gain_money_total
+
+    chaoqi_count = 0
+    #连续未中大于6期处理
+    if lose_times > 6:
+        print "lose times over!!!!",lose_times
+        gain_money_total = 0
+        #取余
+        lose_times = lose_times % 7
+        print "lose times init !!!!",lose_times
+        for xiazhu_predict in xiazhu_predicts:
+            if (xiazhu_predict.is_xiazhu == 1 and xiazhu_predict.gain_money > 0):
+                break
+            if (xiazhu_predict.is_xiazhu == 1 and xiazhu_predict.gain_money < 0):
+            #只计算6期以后的赔的金额
+                if lose_times > chaoqi_count:
+                    gain_money_total = gain_money_total + xiazhu_predict.gain_money
+                    chaoqi_count = chaoqi_count + 1
+
     current_purchase_length = 0
     for purchase_number in purchase_number_list.split(','):
         if purchase_number == '0':
@@ -199,6 +250,7 @@ def get_xiazhu_money_base_on_history_purchase_record(purchase_number_list, curre
     	print "lose_times:",lose_times
         xiahu_money_result = int((lose_times_money + xiahu_money_result)/2)
     #xiahu_money_result = min(xiahu_money_result,lose_times_money)
+    xiahu_money_result = int(xiahu_money_result)
     print "result xiazhu:",xiahu_money_result
     return xiahu_money_result
 

@@ -5,7 +5,7 @@ import time
 import threading
 import datetime
 
-import append_purchase.purchase_client_main
+import append_purchase_jinsha.purchase_client_main
 
 
 
@@ -58,7 +58,7 @@ def loaddata(c_thread,thread_num,interval):
                 current_date = time.strftime("%Y%m%d %H:%M:%S", time.localtime())
                 print current_date
                 print "start purchase"
-                append_purchase.purchase_client_main.get_predict_kill_and_save(interval)
+                append_purchase_jinsha.purchase_client_main.get_predict_kill_and_save(interval)
                 # auto_visit.main.auto_visit_commit(interval)
                 last_minute = current_minute
                 if current_minute < 5:

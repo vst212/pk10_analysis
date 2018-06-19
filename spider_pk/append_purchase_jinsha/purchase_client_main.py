@@ -7,8 +7,8 @@ from django.views.decorators.csrf import csrf_exempt    #用于处理post请求�
 from django.shortcuts import render_to_response
 
 from append_predict.models import ProbUser
-from append_purchase.client_thread  import ThreadControl
-from append_purchase.purchase_driver import get_driver
+from append_purchase_jinsha.client_thread  import ThreadControl
+from append_purchase_jinsha.purchase_driver import get_driver
 
 
 from append_predict.spider_pk10 import get_html_result,load_lottery_predict, get_lottery_id_number
@@ -16,6 +16,9 @@ from append_predict.main import get_predict_model_value
 
 from append_predict.models import KillPredict
 import datetime
+
+import json
+import urllib2
 
 class Singleton(object):
     def __new__(cls, *args, **kw):
@@ -25,16 +28,12 @@ class Singleton(object):
         return cls._instance
 
 class SingleDriver(Singleton):
-    # def __init__(self, driver):
-    #   self.driver = driver
     def get_driver(self):
         return self.driver
     def set_driver(self, driver):
         self.driver = driver
 
 class SingleDriverMultiple(Singleton):
-    # def __init__(self, driver):
-    #   self.driver = driver
     def get_driver(self):
         return self.driver
     def set_driver(self, driver):
@@ -64,13 +63,6 @@ def control_probuser_thread(request):
     #显示活跃状态
     prob_user = ProbUser.objects.get(user_name=user_name)
     if control == 'start':
-
-        #杀号的driver
-        #driver = spider_predict_selenium()
-        #info_dict["driver"] = driver
-
-        #购买driver
-        #单例模式
         try:
             web_driver = SingleDriver()
             driver = web_driver.get_driver()
@@ -105,14 +97,12 @@ def control_probuser_thread(request):
         except:
             print "not thread alive"
     prob_user_list =  ProbUser.objects.all()
-    return render_to_response('append_purchase_main.html',{"prob_user_list":prob_user_list, "p_rule":request.POST['in_rule'], "p_monery":money,
+    return render_to_response('append_purchase_jinsha_main.html',{"prob_user_list":prob_user_list, "p_rule":request.POST['in_rule'], "p_monery":money,
                                                 "p_upper_monery_1":request.POST['in_upper_monery_1'], "p_lower_monery_1":request.POST['in_lower_monery_1']})
     # return render_to_response('qzone_info.html',{"thread_name":th_name, "control":control, "thread_list":thread_list,"info_active":info_active})
 
 #主页面
 def auto_admin(request):
-    # ProbTotals.objects.all().delete()
-    # thread_list =  ProbUser.objects.get(thread_name=th_name)
     prob_user_list =  ProbUser.objects.all()
     for prob_user in prob_user_list:
         c  = ThreadControl()
@@ -131,70 +121,11 @@ def auto_admin(request):
             print prob_user.user_name, " not start"
             prob_user.user_status = 0
             prob_user.save()
-    return render_to_response('append_purchase_main.html',{"prob_user_list":prob_user_list})
+    return render_to_response('append_purchase_jinsha_main.html',{"prob_user_list":prob_user_list})
 
 
-#抓取，保存，自动购买
-def spider_save_predict_purchase(interval):
-    #爬取当天结果,存入objects
-    html_json = get_html_result()
-    if html_json == '':
-        pass
-    else:
-        load_lottery_predict(html_json)
-
-        #获取models predict最新值
-        lottery_id,kill_predict_number = get_predict_model_value()
-        print "lottery_id",lottery_id
-        if lottery_id == 0:
-            print "no predict record in history"
-        else:
-            #获取该期的开奖号码
-            lottery_num = get_lottery_id_number(lottery_id)
-            print "lottery_num:",lottery_num
-            if (lottery_num):
-                #计算命中率并更新models
-                #print "save lottery_number"
-                calculate_percisoin(lottery_id, lottery_num, kill_predict_number, interval)
-            else:
-                print "pay interface lottery id request faild"
-    get_predict_kill_and_save(interval)
-    return 0
-
+#自动购买
 def get_predict_kill_and_save(interval):
-
-    #计算统计流程
-    save_gain_flag_confirm = True
-    while(save_gain_flag_confirm):
-        purchase_flag_minute = int(time.strftime("%M", time.localtime())) % 10
-        purchase_flag_second = int(time.strftime("%S", time.localtime()))
-        print "minute:",purchase_flag_minute, "second:",purchase_flag_second
-        if (purchase_flag_minute == 4) or (purchase_flag_minute == 3 and purchase_flag_second >= 15) or (purchase_flag_minute == 9) or (purchase_flag_minute == 8 and purchase_flag_second >= 15):
-            print "request server interface!"
-            result_info = get_server_request_info()
-            if result_info:
-                last_id = int(result_info['last_lottery_id'])
-                predict_id = int(result_info['predict_lottery_id'])
-                #interval['money'] = result_info['xiazhu_money'] * interval['money']
-                print "calc money is:",interval['money']
-                money = result_info['xiazhu_money'] * interval['money']
-                print "calc money is:", money
-                #result_info['lottery_number'] = '02,07,03,08,01,04,06,05,09,10'
-                #result_info['predict_number_list_desc'] = '[8|4|6|7]---,[1|4|6|7|8|10]---,[1|10|4|6|7]---,[0]---,[1|2|4|10|9]---,[1|10|3|9|7]---,[8|1|4|6|7]---,[0]---,[8|1|4|5|9]---,[0]'
-                if last_id == predict_id:
-                    #calculate_percisoin(last_id, result_info['lottery_number'], result_info['predict_number_list'], result_info['predict_number_list_desc'], interval)
-                    save_gain_flag_confirm = False
-                else:
-                    print "wait time until spider pay interface ok"
-            else:
-                print "get server interface error for save gain!"
-            time.sleep(5)
-        else:
-            print "save time is no region!"
-            time.sleep(5)
-        if (purchase_flag_minute == 4 and purchase_flag_second >= 30) or (purchase_flag_minute == 9 and purchase_flag_second >= 30):
-            save_gain_flag_confirm = False
-
     #购买流程
     purchase_flag_confirm = True
     while(purchase_flag_confirm):
@@ -225,7 +156,7 @@ def get_predict_kill_and_save(interval):
                             print "xiazhu money:",money
 
                             #获取购买元素列表个数
-                            purchase_element_list = get_xiazhu_message(purchase_number_list)
+                            purchase_element_list = get_xiazhu_message_jinsha(purchase_number_list)
                             if len(purchase_element_list) > 0:
                                 # 购买
                                 purchase_result = start_purchase(purchase_element_list, interval, money)
@@ -298,7 +229,7 @@ def calculate_percisoin(lottery_id, lottery_num, kill_predict_number, purchase_n
         print 'length error'
 
 
-#购买
+#购买 新金沙
 def start_purchase(purchase_element_list, interval, money):
     #计算历史总盈利
     gain_all_money = 0
@@ -308,63 +239,48 @@ def start_purchase(purchase_element_list, interval, money):
         if (gain.gain_money):
             gain_all_money = gain_all_money + gain.gain_money
     print "gain_all_money:",gain_all_money
+
     #开始购买
     try:
-
-        interval['purchase_driver'] = reload_pk10_driver(interval['purchase_driver'])
+        interval['purchase_driver'] = reload_jinsha_pk10_url(interval['purchase_driver'])
         purchase_driver = interval['purchase_driver']
-        print "exchange frame!"
-        purchase_driver.switch_to_frame("frame")
-        time.sleep(2)
-        try:
-            gain_all_money = int(purchase_driver.find_element_by_class_name('lottery_info_left').find_element_by_id('bresult').text.replace(',',''))
-        except:
-            print "get gain_all_money error!"
-            gain_all_money = 0
-        print "gain_all_money:", gain_all_money
 
-        try:
+        if 1:
+            #切换到子框架
+            # print "chongzhi!"
+            # purchase_driver.find_element_by_xpath('//*[@id="memberMainContent"]/div[2]/table/tbody/tr/td[2]/a[2]').click()
+            # time.sleep(2)
+
+            #遍历填充值
             print "start fill"
             for purchase_element in purchase_element_list:
                 print "purchase_element:",purchase_element
-                print "current xaizhu money",int(money)
                 sub_element = purchase_driver.find_element_by_xpath(purchase_element)
-                #追加下注
-                sub_element.send_keys(str(int(money)))
-                #下注一元
-                #sub_element.send_keys(str(1))
-                #time.sleep(1)
-            confirm_button = purchase_driver.find_element_by_xpath('//*[@id="header"]/div[2]/div/input[1]')
-            confirm_button.click()
-            time.sleep(1)
+                sub_element.send_keys(money)
+                time.sleep(2)
 
-            #返回原始框架
-            print "return back"
-            purchase_driver.switch_to_default_content()
-            time.sleep(1)
+            print "confirm..."
+            #'li_chip_btn'
+            confirm = purchase_driver.find_element_by_xpath('//*[@id="btn_order_confirm"]')
+            confirm.click()
+            time.sleep(2)
+            # 提交按钮
+            print "click submit"
+            #'//*[@id="order_ok"]'
 
-            submit_button = purchase_driver.find_element_by_xpath('/html/body/div[6]/div[3]/div/button[1]/span')
-            submit_button.click()
-            time.sleep(1)
-            print "ok"
-            try:
-                purchase_driver.switch_to.alert.accept();
-                print "yu e buzu"
-            except:
-                print "yu e chongzu!"
+            submit = purchase_driver.find_element_by_xpath('//*[@id="order_ok"]')
 
-            time.sleep(1)
-            print "current url:",purchase_driver.current_url
+            #'//*[@id="betSlipDivContent"]/table/tbody/tr[2]/td/a[1]'
+            #'//*[@id="betSlipDivContent"]/table/tbody/tr[3]/td/a[1]'
+            submit.click()
+
             return True
-        except:
-            print "purchase driver error element not found !!!"
-            return False
     except:
         return False
 
 
 #根据预测list转换成要购买的元素
-def get_xiazhu_message(purchase_number_str):
+def get_xiazhu_message_jinsha(purchase_number_str):
     buy_element_list = []
     # purchase_number_str = '0,9|2|4|7,9|2|10|6,3|4|5|6|7|9,8|1|2|10,1|2|5|7|8|9,1|3|6|8|9|10'
     purchase_number_list = purchase_number_str.split(',')
@@ -374,78 +290,45 @@ def get_xiazhu_message(purchase_number_str):
         else:
             purchase_numbers = purchase_number_list[index].split('|')
             for purchase_number in purchase_numbers:
-                buy_element_list.append('//*[@id="a_B' + str(index+1) + '_' + str(purchase_number) + '"]/input')
+                # 构造path
+                column = str((index % 5) + 1)
+                # 补全2位值
+                value = str(int(purchase_number) + 1)
+
+                xpath = '//*[@id="itmStakeInput2' + column + '1' + value + '"]'
+                if index >= 5 :
+                    xpath = '//*[@id="odds_body"]/div[2]/div[' + column + ']/ul/li[' + value + ']/div[3]/input'
+                else:
+                    xpath = '//*[@id="odds_body"]/div[1]/div[' + column + ']/ul/li[' + value + ']/div[3]/input'
+
+                #1-1
+                #'//*[@id="odds_body"]/div[1]/div[1]/ul/li[2]/div[3]/input'
+                #1-6
+                #'//*[@id="odds_body"]/div[1]/div[1]/ul/li[7]/div[3]/input'
+                #1-10
+                #'//*[@id="odds_body"]/div[1]/div[1]/ul/li[11]/div[3]/input'
+                #2-1
+                #'//*[@id="odds_body"]/div[1]/div[2]/ul/li[2]/div[3]/input'
+
+                #6-1
+                #'//*[@id="odds_body"]/div[2]/div[1]/ul/li[2]/div[3]/input'
+                #6-8
+                #'//*[@id="odds_body"]/div[2]/div[1]/ul/li[9]/div[3]/input'
+                print "xpath:",xpath
+                buy_element_list.append(xpath)
     print buy_element_list
     return buy_element_list
 
-#根据预测list转换成要购买的元素的对立元素
-def get_xiazhu_message_trans(purchase_number_str):
-    buy_element_list = []
-    # purchase_number_str = '0,9|2|4|7,9|2|10|6,3|4|5|6|7|9,8|1|2|10,1|2|5|7|8|9,1|3|6|8|9|10'
-    base_set = set(['1','2','3','4','5','6','7','8','9','10'])
-    # print base_set
-    purchase_number_list = purchase_number_str.split(',')
-    for index in range(len(purchase_number_list)):
-        if purchase_number_list[index] == '0':
-            pass
-        else:
-            purchase_numbers = purchase_number_list[index].split('|')
-            purchase_numbers_set = set(purchase_numbers)
-            # print "base",base_set
-            # print "purchase",purchase_numbers_set
-            trans_purchase_numbers =  list(base_set - purchase_numbers_set)
-            for purchase_number in trans_purchase_numbers:
-                buy_element_list.append('//*[@id="a_B' + str(index+1) + '_' + str(purchase_number) + '"]/input')
-    print buy_element_list
-    return buy_element_list
 
 
-def reload_pk10_driver(purchase_driver):
-    #purchase_driver = interval['purchase_driver']
-    purchase_url = purchase_driver.current_url
-    print "purchase_url:",purchase_url
-    purchase_driver.get(purchase_url)
+def reload_jinsha_pk10_url(driver):
+    #重新加载
+    print "reload pk10"
+    driver.get(driver.current_url)
+    print "current_url:",driver.current_url
+    return driver
 
-    time.sleep(2)
-    #点击广告
-    try:
-        purchase_driver.find_element_by_xpath('//*[@id="notice_button1"]/a').click()
-        time.sleep(1)
-    except:
-        pass
 
-    try:
-        purchase_driver.find_element_by_xpath('//*[@id="notice_button2"]/a').click()
-        time.sleep(1)
-    except:
-        pass
-
-    try:
-        purchase_driver.find_element_by_xpath('//*[@id="notice_button3"]/a').click()
-        time.sleep(1)
-    except:
-        pass
-
-    try:
-        purchase_driver.find_element_by_xpath('//*[@id="notice_button4"]/a').click()
-        time.sleep(1)
-    except:
-        pass
-
-    pk10 = purchase_driver.find_element_by_xpath('//*[@id="l_BJPK10"]/span')
-    pk10.click()
-    time.sleep(1)
-
-    # 1-10
-    element_1_10 = purchase_driver.find_element_by_xpath('//*[@id="sub_BJPK10"]/a[2]')
-    element_1_10.click()
-    time.sleep(3)
-
-    return purchase_driver
-
-import json
-from django.http import HttpResponse
-import urllib2
 def get_server_request_info():
     headers = {
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
@@ -470,9 +353,3 @@ def get_server_request_info():
             count = count + 1
     return {}
 
-
-def get_lottery_msg(request):
-    current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
-    obj_pro_predict = KillPredict.objects.filter(kill_predict_date=current_date)
-    print "obj_pro",obj_pro_predict
-    return render_to_response('test.html',{"obj_pro_predict":obj_pro_predict})
