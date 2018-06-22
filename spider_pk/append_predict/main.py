@@ -166,7 +166,10 @@ def get_predict_kill_and_save(interval, last_purchase_hit, xiazhu_nums):
 #基于历史购买记录计算本期的下注金额基数--,递增追加，未中加一，中了元数据保持
 def get_xiazhu_money_base_on_history_purchase_record_increase(purchase_number_list, current_date):
     xiazhu_predicts = KillPredict.objects.filter(kill_predict_date=current_date).order_by("-lottery_id")
-    last_xiazhu_predict = xiazhu_predicts
+    for xiazhu_predict in xiazhu_predicts:
+        last_xiazhu_predict = xiazhu_predict
+        if last_xiazhu_predict.xiazhu_money != 0:
+            break
     xiahu_money_result = 1
     gain_money_total = 0
     for xiazhu_predict in xiazhu_predicts:
@@ -178,14 +181,30 @@ def get_xiazhu_money_base_on_history_purchase_record_increase(purchase_number_li
                 gain_money_total = gain_money_total + xiazhu_predict.gain_money
                 print "gain_money_total sub:",gain_money_total
                 break
+
     print "gain_money_total total:",gain_money_total
-    if gain_money_total < 0:
+    current_purchase_length = 0
+    for purchase_number in purchase_number_list.split(','):
+        if purchase_number == '0':
+            continue
+        else:
+            current_purchase_length = len(purchase_number.split('|'))
+            break
+    if gain_money_total < -1:
         #上一期命中，递增下注
-        if last_xiazhu_predict.gain_money <= 0:
-            xiahu_money_result = last_xiazhu_predict.xiazhu_money + 1
+        if last_xiazhu_predict.gain_money < 0:
+            #平方增长
+            #xiahu_money_result = math.pow((math.sqrt(last_xiazhu_predict.xiazhu_money) + 1),2)
+            #n(n+1)/2增长
+            xiahu_money_result = int(math.ceil(math.sqrt(last_xiazhu_predict.xiazhu_money * 2)) + last_xiazhu_predict.xiazhu_money)
         #否则保持不变
         else:
-            xiahu_money_result = last_xiazhu_predict.xiazhu_money
+            #print "purchase_number_list len",current_purchase_length
+            calc_xainzhu = math.ceil(math.fabs(gain_money_total/(10 - current_purchase_length)))
+            #print "calc_xainzhu:",calc_xainzhu
+            #print "last_xiazhu_predict.xiazhu_money:",last_xiazhu_predict.xiazhu_money
+            xiahu_money_result = min(last_xiazhu_predict.xiazhu_money,calc_xainzhu)
+            #print "xiahu_money_result:",xiahu_money_result
     else:
         xiahu_money_result = 1
 

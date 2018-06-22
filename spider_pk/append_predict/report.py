@@ -14,7 +14,7 @@ from append_predict.main import calculate_percisoin
 def predict_report(request):
     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
     obj_pro_predict = KillPredict.objects.filter(kill_predict_date=current_date)
-    print "obj_pro",obj_pro_predict
+    #print "obj_pro",obj_pro_predict
     return render_to_response('append_predict_list.html',{"obj_pro_predict":obj_pro_predict})
 
 #更新，处理lottery_number为空的情况
