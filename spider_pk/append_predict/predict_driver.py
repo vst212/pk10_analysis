@@ -7,6 +7,10 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 from append_predict.models import KillPredict
 
+from pkten_log.pk_log import PkLog
+
+pk_logger = PkLog('append_predict.predict_driver').log()
+
 #获取predict driver
 def spider_predict_selenium():
 
@@ -40,7 +44,8 @@ def get_soup_list(driver):
             return soup_list
         except:
             driver.quit()
-            print "spider predict faild!"
+            #print "spider predict faild!"
+            pk_logger.error("spider predict faild!")
             time.sleep(3)
             driver = spider_predict_selenium()
             if count > 2:

@@ -6,6 +6,10 @@ import time
 import simplejson
 from append_predict.models import PredictLottery
 
+from pkten_log.pk_log import PkLog
+
+pk_logger = PkLog('append_predict.spider_pk10').log()
+
 def get_html_result():
     headers = {
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
@@ -22,6 +26,7 @@ def get_html_result():
             else:
                 url = "http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=" + current_date
             print url
+            pk_logger.info("url:%s",url)
             req = urllib2.Request(url = url, headers = headers)
             page = urllib2.urlopen(req, timeout=15)
                 # page = urllib2.urlopen(url)
@@ -33,7 +38,8 @@ def get_html_result():
         except:
             #if count > 2:
                 #flag = False
-            print 'spider pay interface faild! please exit process......  over purchase!!!'
+            #print 'spider pay interface faild! please exit process......  over purchase!!!'
+            pk_logger.error( 'spider pay interface faild! please exit process......  over purchase!!!')
             time.sleep(15)
         count = count + 1
     return ''

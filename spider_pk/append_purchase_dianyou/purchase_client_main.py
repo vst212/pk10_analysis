@@ -10,15 +10,14 @@ from append_predict.models import ProbUser
 from append_purchase_dianyou.client_thread  import ThreadControl
 from append_purchase_dianyou.purchase_driver import get_driver
 
-
-from append_predict.spider_pk10 import get_html_result,load_lottery_predict, get_lottery_id_number
-from append_predict.main import get_predict_model_value
-
 from append_predict.models import KillPredict
 import datetime
 
 import json
 import urllib2
+
+from pkten_log.pk_log import PkLog
+pk_logger = PkLog('append_purchase_dianyou.purchase_client_main').log()
 
 class Singleton(object):
     def __new__(cls, *args, **kw):
@@ -44,7 +43,7 @@ class SingleDriverMultiple(Singleton):
 def control_probuser_thread(request):
     user_name = request.POST['user_name']
     password = ProbUser.objects.get(user_name=user_name).user_password;
-    print "password:",password
+    #print "password:",password
     control = request.POST['control']
 
     money = request.POST['auto_in_money']
@@ -58,8 +57,9 @@ def control_probuser_thread(request):
     info_dict["upper_money"] = int(request.POST['in_upper_monery_1'])
     info_dict["lower_money"] = int(request.POST['in_lower_monery_1'])
 
-    print "info_dict:",info_dict,
-    print "money:",info_dict["money"]
+    #print "info_dict:",info_dict,
+    #print "money:",info_dict["money"]
+    pk_logger.info("money:%s",info_dict["money"])
     #显示活跃状态
     prob_user = ProbUser.objects.get(user_name=user_name)
     if control == 'start':
@@ -77,14 +77,14 @@ def control_probuser_thread(request):
         #出现错误，则线程不存在，因此启动线程
         try:
             status = c.is_alive(user_name)
-            print "thread is alive? ",status
+            pk_logger.warn("thread is alive?:%s",status)
             if status:
-                print "thread is alive,caonot start twice!"
+                pk_logger.warn("thread is alive,caonot start twice!")
             else:
-                print "start ..........thread1"
+                pk_logger.warn("start ..........thread1")
                 c.start(user_name, info_dict)
         except:
-            print "thread is not alive start!!!"
+            pk_logger.warn("thread is not alive start!!!")
             c.start(user_name, info_dict)
         prob_user.user_status = 1
         prob_user.save()
@@ -95,7 +95,7 @@ def control_probuser_thread(request):
             prob_user.user_status = 0
             prob_user.save()
         except:
-            print "not thread alive"
+            pk_logger.warn("not thread alive")
     prob_user_list =  ProbUser.objects.all()
     return render_to_response('append_purchase_dianyou_main.html',{"prob_user_list":prob_user_list, "p_rule":request.POST['in_rule'], "p_monery":money,
                                                 "p_upper_monery_1":request.POST['in_upper_monery_1'], "p_lower_monery_1":request.POST['in_lower_monery_1']})
@@ -118,7 +118,7 @@ def auto_admin(request):
                 prob_user.user_status = 0
                 prob_user.save()
         except:
-            print prob_user.user_name, " not start"
+            pk_logger.info("%s not start",prob_user.user_name)
             prob_user.user_status = 0
             prob_user.save()
     return render_to_response('append_purchase_dianyou_main.html',{"prob_user_list":prob_user_list})
@@ -126,42 +126,14 @@ def auto_admin(request):
 
 #自动购买
 def get_predict_kill_and_save(interval):
-    #计算统计流程
-    # save_gain_flag_confirm = True
-    # while(save_gain_flag_confirm):
-    #     purchase_flag_minute = int(time.strftime("%M", time.localtime())) % 10
-    #     purchase_flag_second = int(time.strftime("%S", time.localtime()))
-    #     print "minute:",purchase_flag_minute, "second:",purchase_flag_second
-    #     if (purchase_flag_minute == 4) or (purchase_flag_minute == 3 and purchase_flag_second >= 15) or (purchase_flag_minute == 9) or (purchase_flag_minute == 8 and purchase_flag_second >= 15):
-    #         print "request server interface!"
-    #         result_info = get_server_request_info()
-    #         if result_info:
-    #             last_id = int(result_info['last_lottery_id'])
-    #             predict_id = int(result_info['predict_lottery_id'])
-    #             print "calc money is:",interval['money']
-    #             money = result_info['xiazhu_money'] * interval['money']
-    #             print "calc money is:", money
-    #             if last_id == predict_id:
-    #                 calculate_percisoin(last_id, result_info['lottery_number'], result_info['predict_number_list'], result_info['predict_number_list_desc'], interval)
-    #                 save_gain_flag_confirm = False
-    #             else:
-    #                 print "wait time until spider pay interface ok"
-    #         else:
-    #             print "get server interface error for save gain!"
-    #         time.sleep(5)
-    #     else:
-    #         print "save time is no region!"
-    #         time.sleep(5)
-    #     if (purchase_flag_minute == 4 and purchase_flag_second >= 30) or (purchase_flag_minute == 9 and purchase_flag_second >= 30):
-    #         save_gain_flag_confirm = False
     #购买流程
     purchase_flag_confirm = True
     while(purchase_flag_confirm):
         purchase_flag_minute = int(time.strftime("%M", time.localtime())) % 10
         purchase_flag_second = int(time.strftime("%S", time.localtime()))
-        print "minute:",purchase_flag_minute, "second:",purchase_flag_second
+        pk_logger.info("current time:%s,%s",purchase_flag_minute,purchase_flag_second)
         if (purchase_flag_minute > 3 and purchase_flag_minute < 5) or (purchase_flag_minute == 5 and purchase_flag_second < 40) or (purchase_flag_minute > 8) or (purchase_flag_minute == 0 and purchase_flag_second < 40):
-            print "request server interface!"
+            pk_logger.info("request server interface!")
             result_info = get_server_request_info()
             if 1:
                 #判断是否获取接口数据正确
@@ -174,14 +146,12 @@ def get_predict_kill_and_save(interval):
                         save_predict_time = datetime.datetime.strptime(result_info['save_predict_time'],'%Y-%m-%d %H:%M:%S')
                         current_time = datetime.datetime.now()
                         if (current_time - save_predict_time).seconds > 180:
-                            print "unfounded new predict"
-                            print "purchase faild!"
+                            pk_logger.info("unfounded new predict,purchase faild!")
                             purchase_flag_confirm = False
                         else:
                             purchase_number_list = result_info['predict_number_list']
                             money = result_info['xiazhu_money'] * interval['money']
-                            print "start purchase"
-                            print "xiazhu money:",money
+                            pk_logger.info("start purchase, xiazhu money:%s",money)
 
                             #获取购买元素列表个数
                             purchase_element_list = get_xiazhu_message_dianyou(purchase_number_list)
@@ -190,26 +160,25 @@ def get_predict_kill_and_save(interval):
                                 purchase_result = start_purchase(purchase_element_list, interval, money)
                                 input_money = len(purchase_element_list) * money
                                 if purchase_result:
-                                    print "purchase sucess!"
-                                    print "input_money:",input_money
+                                    pk_logger.info("purchase sucess!, input money:%s",input_money)
                                     p = KillPredict.objects.get(lottery_id=predict_id)
                                     p.is_xiazhu = 1
                                     p.input_money = input_money
                                     p.save()
-                                    print "save xiazhu sucess!"
+                                    pk_logger.info("save xiazhu args sucess!")
                                 else:
-                                    print "purchase faild!"
+                                    pk_logger.info("purchase faild!")
                             else:
-                                print 'no element in purchase_element_list '
+                                pk_logger.info("no element in purchase_element_list")
                         purchase_flag_confirm = False
                     else:
-                        print "wait time until save ok"
+                        pk_logger.info("wait time until shahao message save ok")
                 else:
-                    print "get server interface error!"
+                    pk_logger.info("get server interface error!")
                 time.sleep(5)
         else:
             time.sleep(15)
-            print "purchase time is no region!"
+            pk_logger.info("purchase time is no region!")
 
 #计算命中率，盈利
 def calculate_percisoin(lottery_id, lottery_num, kill_predict_number, purchase_number_list_desc, interval):
@@ -267,42 +236,37 @@ def start_purchase(purchase_element_list, interval, money):
     for gain in sum_objects_predict:
         if (gain.gain_money):
             gain_all_money = gain_all_money + gain.gain_money
-    print "gain_all_money:",gain_all_money
+    pk_logger.info("calc gain_all_money:%d", gain_all_money)
 
     #开始购买
-    try:
+    if 1:
         interval['purchase_driver'] = reload_pxiagme1_pk10_driver(interval['purchase_driver'])
         purchase_driver = interval['purchase_driver']
 
         if 1:
             #切换到子框架
-            print "chongzhi!"
             purchase_driver.find_element_by_xpath('//*[@id="memberMainContent"]/div[2]/table/tbody/tr/td[2]/a[2]').click()
-            time.sleep(2)
+            time.sleep(1)
 
             #遍历填充值
-            print "start fill"
             for purchase_element in purchase_element_list:
-                print "purchase_element:",purchase_element
+                pk_logger.info("start purchase purchase_element:%s",purchase_element)
+                pk_logger.info("current xaizhu money:%d",int(money))
                 sub_element = purchase_driver.find_element_by_xpath(purchase_element)
                 sub_element.send_keys(money)
 
-            print "confirm..."
             confirm = purchase_driver.find_element_by_xpath('//*[@id="memberMainContent"]/div[2]/table/tbody/tr/td[2]/a[1]')
             confirm.click()
-            time.sleep(2)
+            time.sleep(1)
             # 提交按钮
-            print "click submit"
             if len(purchase_element_list) > 7:
                 submit = purchase_driver.find_element_by_xpath('//*[@id="betSlipDivContent"]/table/tbody/tr[3]/td/a[1]')
             else:
                 submit = purchase_driver.find_element_by_xpath('//*[@id="betSlipDivContent"]/table/tbody/tr[2]/td/a[1]')
-            #'//*[@id="betSlipDivContent"]/table/tbody/tr[2]/td/a[1]'
-            #'//*[@id="betSlipDivContent"]/table/tbody/tr[3]/td/a[1]'
             submit.click()
 
             return True
-    except:
+    else:
         return False
 
 
@@ -324,18 +288,17 @@ def get_xiazhu_message_dianyou(purchase_number_str):
                 # 补全2位值
                 value = str(purchase_number).zfill(2)
                 xpath = '//*[@id="itmStakeInput2' + column + '1' + value + '"]'
-                print "xpath:",xpath
+                #print "xpath:",xpath
                 buy_element_list.append(xpath)
-    print buy_element_list
+    #print buy_element_list
     return buy_element_list
 
 
 def reload_pxiagme1_pk10_driver(driver):
     #重新加载
-    print "reload pk10"
+    pk_logger.info("reload purchase_url:%s",driver.current_url)
     driver.get(driver.current_url)
     driver.switch_to_frame("topFrame")
-    print "top frameset1"
     time.sleep(1)
 
     #pk10
@@ -353,14 +316,22 @@ def reload_pxiagme1_pk10_driver(driver):
     #切换到主框架
     driver.switch_to_frame("mainFrame")
     # driver.switch_to.frame()
-    print "switch mainFrame"
     time.sleep(1)
     #获取输入框
     #一般
-    element_normal = driver.find_element_by_xpath('//*[@id="normalBetSlip"]')
-    element_normal.click()
-    time.sleep(3)
-    print driver.current_url
+    common_flag = True
+    while common_flag:
+        try:
+            element_normal = driver.find_element_by_xpath('//*[@id="normalBetSlip"]')
+            element_normal.click()
+            common_flag = False
+        except:
+            pk_logger.error("reload id=normalBetSlip error")
+            time.sleep(10)
+            reload_pxiagme1_pk10_driver(driver)
+
+    time.sleep(1)
+    #print driver.current_url
     return driver
 
 
@@ -381,7 +352,7 @@ def get_server_request_info():
             request_flag = False
             return info_dict
         except:
-            print "request server faild!"
+            pk_logger.error(" get server request info request server faild!")
             time.sleep(3)
             if count > 2:
                 request_flag = False

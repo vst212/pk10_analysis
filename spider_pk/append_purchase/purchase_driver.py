@@ -6,6 +6,9 @@ __author__ = 'shifeixiang'
 from selenium import webdriver
 import time
 
+from pkten_log.pk_log import PkLog
+
+pk_logger = PkLog('append_purchase.purchase_driver').log()
 
 def get_driver(username,password):
     # chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
@@ -48,7 +51,8 @@ def get_driver(username,password):
             code_flag = False
         except:
             driver.quit()
-            print "please input code!"
+            #print "please input code!"
+            pk_logger.warn("请输入验证码")
             time.sleep(5)
             # chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
             # options = webdriver.ChromeOptions()
@@ -78,25 +82,26 @@ def get_driver(username,password):
         driver.find_element_by_xpath('//*[@id="notice_button1"]/a').click()
         time.sleep(1)
     except:
-        print "unfound button1"
+        pk_logger.warn("unfound button1")
+        #print "unfound button1"
 
     try:
         driver.find_element_by_xpath('//*[@id="notice_button2"]/a').click()
         time.sleep(1)
     except:
-        print "unfound button2"
+        pk_logger.warn("unfound button2")
 
     try:
         driver.find_element_by_xpath('//*[@id="notice_button3"]/a').click()
         time.sleep(1)
     except:
-        print "unfound button3"
+        pk_logger.warn("unfound button3")
 
     try:
         driver.find_element_by_xpath('//*[@id="notice_button4"]/a').click()
         time.sleep(1)
     except:
-        print "unfound button4"
+        pk_logger.warn("unfound button4")
 
     #pk10
     pk10 = driver.find_element_by_xpath('//*[@id="l_BJPK10"]/span')
@@ -108,44 +113,7 @@ def get_driver(username,password):
     element_1_10.click()
     time.sleep(1)
 
-    print driver.current_url
+    #print driver.current_url
 
     return driver
 
-    driver.switch_to_frame("frame")
-    time.sleep(2)
-
-    input_1_big = driver.find_element_by_xpath('//*[@id="a_B1_2"]/input')
-    input_1_big.send_keys(12)
-
-    input_1_big = driver.find_element_by_xpath('//*[@id="a_B1_3"]/input')
-    input_1_big.send_keys(12)
-
-    input_1_big = driver.find_element_by_xpath('//*[@id="a_B2_1"]/input')
-    input_1_big.send_keys(12)
-
-    input_1_big = driver.find_element_by_xpath('//*[@id="header"]/div[2]/div/input[1]')
-    input_1_big.click()
-    time.sleep(1)
-
-    #返回原始框架
-    driver.switch_to_default_content()
-    time.sleep(1)
-
-    input_1_big = driver.find_element_by_xpath('/html/body/div[6]/div[3]/div/button[1]/span')
-    input_1_big.click()
-    time.sleep(10)
-
-    return driver
-
-
-    # continue_flag = True
-    #
-    # '1-1://*[@id="a_B1_1"]/input'
-    # '1-2://*[@id="a_B1_2"]/input'
-    # '2-1://*[@id="a_B2_1"]/input'
-    # '3-6://*[@id="a_B3_6"]/input'
-    #
-    # '确定://*[@id="header"]/div[2]/div/input[1]'
-    #
-    # '弹窗确定：/html/body/div[6]/div[3]/div/button[1]/span'

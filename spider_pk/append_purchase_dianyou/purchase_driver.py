@@ -4,12 +4,18 @@ __author__ = 'shifeixiang'
 from selenium import webdriver
 import time
 
-def get_driver(username,password):
-    chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
-    options = webdriver.ChromeOptions()
-    options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
-    driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
+from pkten_log.pk_log import PkLog
+pk_logger = PkLog('append_purchase_dianyou.purchase_driver').log()
 
+def get_driver(username,password):
+    #谷歌浏览器
+    # chromedriver = "E:\\python\\webdriver\\chrome\\chromedriver37.exe"
+    # options = webdriver.ChromeOptions()
+    # options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
+    # driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
+
+    #火狐浏览器
+    driver = webdriver.Firefox(executable_path = 'E:\\python\\webdriver\\firefox\\geckodriver.exe')
     driver.get('http://pxkagme1.lot1068.net:8082/member/Welcome.action?searchKeyword=99935')
 
     driver.maximize_window();
@@ -37,14 +43,15 @@ def get_driver(username,password):
             time.sleep(2)
             code_flag = False
         except:
-            print "please input code!"
+            pk_logger.info("please input code!")
+            #print "please input code!"
             time.sleep(5)
             code_flag = True
 
     time.sleep(1)
     #跳转到top框架，获取北京10
     driver.switch_to_frame("topFrame")
-    print "top frameset1"
+    #print "top frameset1"
     time.sleep(1)
 
     #pk10
@@ -61,7 +68,7 @@ def get_driver(username,password):
     time.sleep(1)
     #切换到主框架
     driver.switch_to_frame("mainFrame")
-    print "switch mainFrame"
+    #print "switch mainFrame"
     time.sleep(1)
     #获取输入框
     #一般
@@ -73,10 +80,9 @@ def get_driver(username,password):
 
 def reload_pk10_url(driver):
     #重新加载
-    print "reload pk10"
+    pk_logger.info("reload pk10,url:%s",driver.current_url)
     driver.get(driver.current_url)
     driver.switch_to_frame("topFrame")
-    print "top frameset1"
     time.sleep(1)
 
     #pk10
@@ -93,13 +99,12 @@ def reload_pk10_url(driver):
     time.sleep(1)
     #切换到主框架
     driver.switch_to_frame("mainFrame")
-    print "switch mainFrame"
     time.sleep(1)
     #获取输入框
     #一般
     element_normal = driver.find_element_by_xpath('//*[@id="normalBetSlip"]')
     element_normal.click()
-    time.sleep(3)
-    print driver.current_url
+    time.sleep(1)
+    #print driver.current_url
     return driver
 

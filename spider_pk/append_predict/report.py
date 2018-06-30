@@ -11,6 +11,11 @@ import datetime
 from append_predict.spider_pk10 import get_html_result,get_lottery_id_number,load_lottery_predict
 from append_predict.main import calculate_percisoin
 
+
+from pkten_log.pk_log import PkLog
+
+pk_logger = PkLog('append_predict.report').log()
+
 def predict_report(request):
     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
     obj_pro_predict = KillPredict.objects.filter(kill_predict_date=current_date)
@@ -40,24 +45,29 @@ def control_predict_report(request):
         xiazhu_money = sub_predict.xiazhu_money
         # print "lottery_number:",type(sub_predict.lottery_number)
         if lottery_number == '' and record_index < (all_record_count-1):
-            print "no lottery_num"
+            #print "no lottery_num"
+            pk_logger.info("no lottery_num")
             html_json = get_html_result()
             if html_json == '':
                 pass
             else:
                 load_lottery_predict(html_json)
-                print "lottery_id",lottery_id
+                pk_logger.info("lottery_id: %d", lottery_id)
+                #print "lottery_id",lottery_id
                 if lottery_id == 0:
-                    print "no predict record in history"
+                    #print "no predict record in history"
+                    pk_logger.info("no predict record in history")
                 else:
                     #获取该期的开奖号码
                     lottery_num, lottery_time = get_lottery_id_number(lottery_id)
-                    print "lottery_num:",lottery_num
+                    #print "lottery_num:",lottery_num
+                    pk_logger.info("lottery_num: %s", lottery_num)
                     if (lottery_num):
                         #计算命中率并更新models
                         calculate_percisoin(lottery_id, lottery_num, kill_predict_number, lottery_time, xiazhu_money)
                     else:
-                        print "pay interface lottery id request faild"
+                        pk_logger.info("pay interface lottery id request faild")
+                        #print "pay interface lottery id request faild"
 
         record_index = record_index + 1
 
@@ -93,7 +103,8 @@ def control_predict_report(request):
                 # print "current_hour:", current_hour
             except:
                 current_hour = 9
-                print "no time"
+                pk_logger.info("no time")
+                #print "no time"
 
 
             for i in range(len(lottery_num_list)):
@@ -106,9 +117,6 @@ def control_predict_report(request):
                     all_count = all_count + len(predict_num_list[i])
                     #设置间隔时间，1表示每小时统计一次
                     if (current_hour-base_hour) > 1:
-                        # print "current_kill_predict_time:",current_kill_predict_time
-                        # print "every_hour_all_total:",every_hour_all_total
-                        # print "every_hour_target_total:",every_hour_target_total
                         if every_hour_all_total>0:
                             p = KillPredictTotal(kill_predict_date=in_date, predict_total=every_hour_all_total, target_total=every_hour_target_total,
                                                  predict_accuracy=float(float(every_hour_target_total)/float(every_hour_all_total)), predict_column_desc=int(current_hour)-1,
@@ -137,14 +145,7 @@ def control_predict_report(request):
                                                  predict_accuracy=float(float(every_hour_target_total)/float(every_hour_all_total)), predict_column_desc=int(base_hour)+1,
                                                  gain_all_money=every_hour_gain_all_money, xiazhu_all_money=every_hour_xiazhu_all_money)
         p.save()
-    # print "current_kill_predict_time:",current_kill_predict_time
-    # print "every_hour_all_total:",every_hour_all_total
-    # print "every_hour_target_total:",every_hour_target_total
 
-                    # print "all_count,target_count:", all_count,target_count
-        # count_count = count_count + 1
-        # if count_count == 2:
-        #     break
     if all_count > 0:
         p = KillPredictTotal(kill_predict_date=in_date, predict_total=all_count, target_total=target_count, predict_accuracy=float(float(target_count)/float(all_count)), predict_column_desc='总数',
                              gain_all_money=gain_all_money, xiazhu_all_money=xiazhu_all_money )
@@ -153,16 +154,22 @@ def control_predict_report(request):
 
     return render_to_response('append_predict_list.html',{"obj_pro_predict":obj_pro_predict, "obj_pro_predict_total":obj_pro_predict_total,  "p_date":in_date})
 
+#获取最新10条数据
+def get_last_ten_report(request):
+    current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
+    obj_pro_predict = KillPredict.objects.filter(kill_predict_date=current_date)
+    #print "obj_pro",obj_pro_predict
+    return render_to_response('last_ten_report_list.html',{"obj_pro_predict":obj_pro_predict})
 
 def get_lottery_msg(request):
     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
     obj_pro_predict = PredictLottery.objects.filter(lottery_date=current_date)
-    print "obj_pro",obj_pro_predict
+    #print "obj_pro",obj_pro_predict
     return render_to_response('test.html',{"obj_pro_predict":obj_pro_predict})
 
 
 def get_kill_predict_msg(request):
     current_date = time.strftime('%Y-%m-%d',time.localtime(time.time()))
     obj_pro_kill_predict = KillPredict.objects.filter(kill_predict_date=current_date)
-    print "obj_pro_kill_predict",obj_pro_kill_predict
+    #print "obj_pro_kill_predict",obj_pro_kill_predict
     return render_to_response('test.html',{"obj_pro_kill_predict":obj_pro_kill_predict})

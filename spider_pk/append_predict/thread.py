@@ -6,6 +6,9 @@ import datetime
 # from predict.main import spider_save_predict
 import append_predict.main
 
+from pkten_log.pk_log import PkLog
+
+pk_logger = PkLog('append_predict.thread').log()
 
 class Spider(threading.Thread):
     # __metaclass__ = Singleton
@@ -35,7 +38,8 @@ class ThreadControl():
     #获取当前线程名称
     # def get_name(self):
     def stop(self,thread_num):
-        print "stop"
+        #print "stop"
+        pk_logger.info("stop")
         spider = self.current_thread[str(thread_num)]
         spider.stop()
 
@@ -62,8 +66,10 @@ def loaddata(c_thread,thread_num,interval):
                 if judge_num>2 :
                     # if 1:
                     current_date = time.strftime("%Y%m%d %H:%M:%S", time.localtime())
-                    print current_date
-                    print "start purchase"
+                    #print current_date
+                    pk_logger.info("current_date:%s", current_date)
+                    pk_logger.info("start purchase")
+                    #print "start purchase"
                     append_predict.main.spider_save_predict(interval)
                     # auto_visit.main.auto_visit_commit(interval)
                     last_minute = current_minute
@@ -80,6 +86,7 @@ def loaddata(c_thread,thread_num,interval):
                 time.sleep(10)
         else:
             time.sleep(60)
-    print "exit!"
+    #print "exit!"
+    pk_logger.info("exit")
     time.sleep(10)
     interval['driver'].quit()

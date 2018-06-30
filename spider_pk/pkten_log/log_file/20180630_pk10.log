@@ -1,0 +1,903 @@
+2018-06-30 11:19:46,171 - append_predict.main - INFO - hy0101 not start
+2018-06-30 11:19:46,529 - append_predict.main - INFO - a1008 not start
+2018-06-30 11:19:46,779 - append_predict.main - INFO - xiao1235 not start
+2018-06-30 11:19:46,956 - append_predict.main - INFO - xiao147 not start
+2018-06-30 11:19:47,167 - append_predict.main - INFO - hy0606 not start
+2018-06-30 11:20:12,967 - append_predict.main - DEBUG - thread is not alive start!!!
+2018-06-30 11:23:02,980 - append_predict.thread - INFO - current_date:20180630 11:23:02
+2018-06-30 11:23:02,980 - append_predict.thread - INFO - start purchase
+2018-06-30 11:23:12,980 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-06-30
+2018-06-30 11:23:14,994 - append_predict.main - DEBUG - predicts is null
+2018-06-30 11:23:14,996 - append_predict.main - DEBUG - lottery_id: 0
+2018-06-30 11:23:14,996 - append_predict.main - DEBUG - no predict record in history
+2018-06-30 11:24:10,635 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 32.32
+2018-06-30 11:24:10,648 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 35.35
+2018-06-30 11:24:10,660 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 28.28
+2018-06-30 11:24:10,671 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 40.4
+2018-06-30 11:24:10,683 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 43.43
+2018-06-30 11:24:10,696 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 34.34
+2018-06-30 11:24:10,707 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 39.39
+2018-06-30 11:24:10,717 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 37.37
+2018-06-30 11:24:10,730 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 37.37
+2018-06-30 11:24:10,742 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 29.29
+2018-06-30 11:24:10,743 - append_predict.predict_append_rule_100 - INFO - current_percent_all_min: 28.28
+2018-06-30 11:24:10,755 - append_predict.predict_append_rule_100 - INFO - number_list: [10, 9, 5, 8, 6, 7, 2, 9, 4, 2]
+2018-06-30 11:24:10,769 - append_predict.predict_append_rule_100 - INFO - number_list: [3, 7, 2, 8, 10, 10, 6, 9, 1, 7]
+2018-06-30 11:24:10,780 - append_predict.predict_append_rule_100 - INFO - number_list: [2, 10, 7, 8, 10, 1, 6, 9, 7, 2]
+2018-06-30 11:24:10,780 - append_predict.predict_append_rule_100 - INFO - last hit
+2018-06-30 11:24:10,793 - append_predict.predict_append_rule_100 - INFO - number_list: [6, 3, 6, 10, 3, 7, 2, 8, 4, 10]
+2018-06-30 11:24:10,805 - append_predict.predict_append_rule_100 - INFO - number_list: [3, 1, 10, 5, 3, 2, 2, 10, 4, 9]
+2018-06-30 11:24:10,816 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 7, 1, 8, 7, 10, 3, 3, 6, 3]
+2018-06-30 11:24:10,831 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 4, 4, 7, 6, 3, 4, 8, 6, 5]
+2018-06-30 11:24:10,842 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 2, 5, 3, 10, 5, 9, 5, 9, 6]
+2018-06-30 11:24:10,855 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 5, 5, 6, 6, 4, 2, 7, 9, 2]
+2018-06-30 11:24:10,868 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 4, 2, 3, 8, 1, 1, 4, 9, 1]
+2018-06-30 11:24:10,868 - append_predict.main - INFO - save predict_lottery_id : 690219
+2018-06-30 11:24:10,868 - append_predict.main - INFO - save purchase_number_list : 0,0,1|2|6|7|8|9|10,0,0,0,0,0,0,0
+2018-06-30 11:24:10,869 - append_predict.main - INFO - gain_money_total total : 0
+2018-06-30 11:24:10,871 - append_predict.main - INFO - result xiazhu : 1
+2018-06-30 11:28:03,983 - append_predict.thread - INFO - current_date:20180630 11:28:03
+2018-06-30 11:28:03,983 - append_predict.thread - INFO - start purchase
+2018-06-30 11:28:13,986 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-06-30
+2018-06-30 11:28:16,196 - append_predict.main - DEBUG - lottery_id: 690219
+2018-06-30 11:28:16,197 - append_predict.main - INFO - lottery_num: 09,10,01,08,03,06,05,04,07,02
+2018-06-30 11:28:16,197 - append_predict.main - DEBUG - mingci [3]: 1
+2018-06-30 11:28:16,197 - append_predict.main - DEBUG - purchase_number_list[i]: [u'1', u'2', u'6', u'7', u'8', u'9', u'10']
+2018-06-30 11:28:16,197 - append_predict.main - DEBUG - ------all_count: 7  ----target_count: 1 
+2018-06-30 11:28:16,197 - append_predict.main - DEBUG - target_count: 0.142857
+2018-06-30 11:28:16,260 - append_predict.main - INFO - last_purchase_hit: True
+2018-06-30 11:28:16,260 - append_predict.main - INFO - xiazhu_nums: 3
+2018-06-30 11:29:12,259 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 32.32
+2018-06-30 11:29:12,273 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 35.35
+2018-06-30 11:29:12,288 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 28.28
+2018-06-30 11:29:12,302 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 40.4
+2018-06-30 11:29:12,315 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 43.43
+2018-06-30 11:29:12,326 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 34.34
+2018-06-30 11:29:12,339 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 39.39
+2018-06-30 11:29:12,355 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 38.38
+2018-06-30 11:29:12,367 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 37.37
+2018-06-30 11:29:12,378 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 29.29
+2018-06-30 11:29:12,378 - append_predict.predict_append_rule_100 - INFO - current_percent_all_min: 28.28
+2018-06-30 11:29:12,394 - append_predict.predict_append_rule_100 - INFO - number_list: [4, 1, 8, 10, 3, 7, 7, 3, 7, 10]
+2018-06-30 11:29:12,407 - append_predict.predict_append_rule_100 - INFO - number_list: [9, 1, 9, 9, 3, 7, 1, 3, 1, 1]
+2018-06-30 11:29:12,418 - append_predict.predict_append_rule_100 - INFO - number_list: [10, 8, 3, 7, 6, 4, 3, 1, 6, 6]
+2018-06-30 11:29:12,418 - append_predict.predict_append_rule_100 - INFO - last hit
+2018-06-30 11:29:12,433 - append_predict.predict_append_rule_100 - INFO - number_list: [6, 5, 4, 6, 3, 1, 9, 1, 4, 7]
+2018-06-30 11:29:12,447 - append_predict.predict_append_rule_100 - INFO - number_list: [10, 8, 1, 10, 3, 10, 9, 1, 8, 3]
+2018-06-30 11:29:12,460 - append_predict.predict_append_rule_100 - INFO - number_list: [6, 4, 8, 3, 6, 3, 9, 9, 9, 6]
+2018-06-30 11:29:12,473 - append_predict.predict_append_rule_100 - INFO - number_list: [9, 1, 3, 6, 3, 6, 1, 3, 9, 4]
+2018-06-30 11:29:12,486 - append_predict.predict_append_rule_100 - INFO - number_list: [10, 4, 2, 8, 9, 5, 8, 1, 3, 8]
+2018-06-30 11:29:12,499 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 1, 4, 10, 1, 3, 8, 9, 7, 1]
+2018-06-30 11:29:12,512 - append_predict.predict_append_rule_100 - INFO - number_list: [5, 2, 3, 10, 5, 8, 3, 6, 6, 3]
+2018-06-30 11:29:12,513 - append_predict.main - INFO - save predict_lottery_id : 690220
+2018-06-30 11:29:12,515 - append_predict.main - INFO - save purchase_number_list : 0,0,1|3|4|6|7|8|10,0,0,0,0,0,0,0
+2018-06-30 11:29:12,516 - append_predict.main - INFO - gain_money_total total : 0
+2018-06-30 11:29:12,517 - append_predict.main - INFO - result xiazhu : 1
+2018-06-30 11:30:39,009 - append_purchase.purchase_client_main - INFO - hy0101 not start
+2018-06-30 11:30:39,140 - append_purchase.purchase_client_main - INFO - a1008 not start
+2018-06-30 11:30:39,362 - append_purchase.purchase_client_main - INFO - xiao1235 not start
+2018-06-30 11:30:39,440 - append_purchase.purchase_client_main - INFO - xiao147 not start
+2018-06-30 11:30:39,500 - append_purchase.purchase_client_main - INFO - hy0606 not start
+2018-06-30 11:30:53,088 - append_purchase_jinsha.purchase_client_main - INFO - hy0101 not start
+2018-06-30 11:30:53,454 - append_purchase_jinsha.purchase_client_main - INFO - a1008 not start
+2018-06-30 11:30:53,706 - append_purchase_jinsha.purchase_client_main - INFO - xiao1235 not start
+2018-06-30 11:30:53,947 - append_purchase_jinsha.purchase_client_main - INFO - xiao147 not start
+2018-06-30 11:30:54,203 - append_purchase_jinsha.purchase_client_main - INFO - hy0606 not start
+2018-06-30 11:30:58,734 - append_purchase_jinsha.purchase_client_main - INFO - money:1
+2018-06-30 11:31:37,319 - append_purchase_jinsha.purchase_driver - INFO - click agree
+2018-06-30 11:31:41,255 - append_purchase_jinsha.purchase_driver - INFO - click notice!
+2018-06-30 11:31:45,987 - append_purchase_jinsha.purchase_driver - INFO - click notice bool!
+2018-06-30 11:31:50,459 - append_purchase_jinsha.purchase_driver - INFO - current_url:http://www.ag888xjs.net/Member/Index/play/lottery_id/3.html
+2018-06-30 11:32:00,460 - append_purchase_jinsha.purchase_client_main - WARNING - thread is not alive start!!!
+2018-06-30 11:33:00,467 - append_purchase_jinsha.client_thread - INFO - start purchase
+2018-06-30 11:33:05,621 - append_predict.thread - INFO - current_date:20180630 11:33:05
+2018-06-30 11:33:05,621 - append_predict.thread - INFO - start purchase
+2018-06-30 11:33:15,625 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-06-30
+2018-06-30 11:33:17,798 - append_predict.main - DEBUG - lottery_id: 690220
+2018-06-30 11:33:17,802 - append_predict.main - INFO - lottery_num: 03,07,06,09,02,08,10,05,04,01
+2018-06-30 11:33:17,802 - append_predict.main - DEBUG - mingci [3]: 6
+2018-06-30 11:33:17,802 - append_predict.main - DEBUG - purchase_number_list[i]: [u'1', u'3', u'4', u'6', u'7', u'8', u'10']
+2018-06-30 11:33:17,803 - append_predict.main - DEBUG - ------all_count: 7  ----target_count: 1 
+2018-06-30 11:33:17,803 - append_predict.main - DEBUG - target_count: 0.142857
+2018-06-30 11:33:17,871 - append_predict.main - INFO - last_purchase_hit: True
+2018-06-30 11:33:17,872 - append_predict.main - INFO - xiazhu_nums: 3
+2018-06-30 11:33:20,467 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:33:40,469 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:34:00,470 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:34:00,470 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:34:00,598 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 11:34:05,601 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:34:05,611 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 11:34:10,612 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:34:10,625 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 11:34:14,141 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 32.32
+2018-06-30 11:34:14,157 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 35.35
+2018-06-30 11:34:14,177 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 28.28
+2018-06-30 11:34:14,194 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 40.4
+2018-06-30 11:34:14,210 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 44.44
+2018-06-30 11:34:14,223 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 33.33
+2018-06-30 11:34:14,242 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 40.4
+2018-06-30 11:34:14,260 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 38.38
+2018-06-30 11:34:14,276 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 36.36
+2018-06-30 11:34:14,292 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 30.3
+2018-06-30 11:34:14,293 - append_predict.predict_append_rule_100 - INFO - current_percent_all_min: 28.28
+2018-06-30 11:34:14,309 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 4, 2, 8, 9, 3, 2, 1, 3, 8]
+2018-06-30 11:34:14,325 - append_predict.predict_append_rule_100 - INFO - number_list: [9, 7, 8, 4, 9, 8, 6, 1, 4, 3]
+2018-06-30 11:34:14,342 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 5, 3, 9, 10, 10, 9, 2, 3, 3]
+2018-06-30 11:34:14,342 - append_predict.predict_append_rule_100 - INFO - last hit
+2018-06-30 11:34:14,361 - append_predict.predict_append_rule_100 - INFO - number_list: [4, 1, 7, 8, 1, 7, 10, 6, 2, 2]
+2018-06-30 11:34:14,378 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 8, 6, 2, 7, 4, 7, 1, 7, 10]
+2018-06-30 11:34:14,394 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 4, 5, 3, 6, 2, 7, 10, 1, 3]
+2018-06-30 11:34:14,407 - append_predict.predict_append_rule_100 - INFO - number_list: [6, 3, 7, 8, 4, 3, 2, 7, 8, 8]
+2018-06-30 11:34:14,418 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 1, 7, 8, 2, 5, 7, 2, 3, 8]
+2018-06-30 11:34:14,430 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 3, 10, 7, 7, 7, 3, 5, 9, 2]
+2018-06-30 11:34:14,441 - append_predict.predict_append_rule_100 - INFO - number_list: [4, 5, 3, 6, 4, 7, 2, 2, 1, 10]
+2018-06-30 11:34:14,444 - append_predict.main - INFO - save predict_lottery_id : 690221
+2018-06-30 11:34:14,444 - append_predict.main - INFO - save purchase_number_list : 0,0,2|3|5|8|9|10,0,0,0,0,0,0,0
+2018-06-30 11:34:14,447 - append_predict.main - INFO - gain_money_total total : 0
+2018-06-30 11:34:14,447 - append_predict.main - INFO - result xiazhu : 1
+2018-06-30 11:34:15,627 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:34:15,697 - append_purchase_jinsha.purchase_client_main - INFO - start purchase, 下注金额:1
+2018-06-30 11:34:15,703 - append_purchase_jinsha.purchase_client_main - INFO - calc gain_all_money:0
+2018-06-30 11:34:15,709 - append_purchase_jinsha.purchase_client_main - INFO - reload purchase_url:http://www.ag888xjs.net/Member/Index/play/lottery_id/3.html
+2018-06-30 11:34:16,066 - append_purchase_jinsha.purchase_client_main - INFO - purchase_url reload ok
+2018-06-30 11:34:21,068 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[3]/div[3]/input
+2018-06-30 11:34:21,069 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 11:34:22,092 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[4]/div[3]/input
+2018-06-30 11:34:22,092 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 11:34:23,111 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[6]/div[3]/input
+2018-06-30 11:34:23,115 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 11:34:24,132 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[9]/div[3]/input
+2018-06-30 11:34:24,132 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 11:34:25,151 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[10]/div[3]/input
+2018-06-30 11:34:25,151 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 11:34:26,167 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[11]/div[3]/input
+2018-06-30 11:34:26,167 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 11:34:30,907 - append_purchase_jinsha.purchase_client_main - INFO - click submit
+2018-06-30 11:34:31,382 - append_purchase_jinsha.purchase_client_main - INFO - purchase sucess!, input money:6
+2018-06-30 11:34:31,461 - append_purchase_jinsha.purchase_client_main - INFO - save xiazhu args sucess!
+2018-06-30 11:38:07,558 - append_predict.thread - INFO - current_date:20180630 11:38:07
+2018-06-30 11:38:07,558 - append_predict.thread - INFO - start purchase
+2018-06-30 11:38:09,476 - append_purchase_jinsha.client_thread - INFO - start purchase
+2018-06-30 11:38:17,559 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-06-30
+2018-06-30 11:38:20,197 - append_predict.main - DEBUG - lottery_id: 690221
+2018-06-30 11:38:20,197 - append_predict.main - INFO - lottery_num: 06,09,01,07,05,08,04,02,03,10
+2018-06-30 11:38:20,198 - append_predict.main - DEBUG - mingci [3]: 1
+2018-06-30 11:38:20,198 - append_predict.main - DEBUG - purchase_number_list[i]: [u'2', u'3', u'5', u'8', u'9', u'10']
+2018-06-30 11:38:20,198 - append_predict.main - DEBUG - ------all_count: 6  ----target_count: 0 
+2018-06-30 11:38:20,200 - append_predict.main - DEBUG - target_count: 0.000000
+2018-06-30 11:38:20,322 - append_predict.main - INFO - last_purchase_hit: False
+2018-06-30 11:38:20,322 - append_predict.main - INFO - xiazhu_nums: 3
+2018-06-30 11:38:29,477 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:38:49,479 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:39:09,480 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:39:09,480 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:39:09,496 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 11:39:14,497 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:39:14,513 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 11:39:16,526 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 32.32
+2018-06-30 11:39:16,539 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 34.34
+2018-06-30 11:39:16,549 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 29.29
+2018-06-30 11:39:16,562 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 40.4
+2018-06-30 11:39:16,575 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 45.45
+2018-06-30 11:39:16,585 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 33.33
+2018-06-30 11:39:16,598 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 40.4
+2018-06-30 11:39:16,608 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 38.38
+2018-06-30 11:39:16,621 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 36.36
+2018-06-30 11:39:16,634 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 30.3
+2018-06-30 11:39:16,634 - append_predict.predict_append_rule_100 - INFO - current_percent_all_min: 29.29
+2018-06-30 11:39:16,647 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 10, 2, 7, 7, 4, 2, 1, 4, 10]
+2018-06-30 11:39:16,658 - append_predict.predict_append_rule_100 - INFO - number_list: [5, 3, 9, 9, 8, 1, 2, 9, 6, 1]
+2018-06-30 11:39:16,673 - append_predict.predict_append_rule_100 - INFO - number_list: [9, 4, 10, 3, 1, 8, 10, 8, 9, 8]
+2018-06-30 11:39:16,674 - append_predict.predict_append_rule_100 - INFO - last not hit
+2018-06-30 11:39:16,684 - append_predict.predict_append_rule_100 - INFO - number_list: [3, 7, 5, 10, 7, 7, 5, 9, 7, 2]
+2018-06-30 11:39:16,698 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 10, 3, 7, 2, 2, 10, 1, 6, 1]
+2018-06-30 11:39:16,710 - append_predict.predict_append_rule_100 - INFO - number_list: [9, 5, 8, 6, 3, 10, 10, 5, 5, 3]
+2018-06-30 11:39:16,721 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 10, 4, 4, 4, 10, 6, 4, 1, 1]
+2018-06-30 11:39:16,740 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 9, 4, 9, 9, 9, 1, 7, 1, 3]
+2018-06-30 11:39:16,755 - append_predict.predict_append_rule_100 - INFO - number_list: [2, 3, 2, 4, 6, 9, 5, 7, 3, 4]
+2018-06-30 11:39:16,769 - append_predict.predict_append_rule_100 - INFO - number_list: [10, 4, 3, 8, 6, 3, 5, 4, 5, 1]
+2018-06-30 11:39:16,769 - append_predict.main - INFO - save predict_lottery_id : 690222
+2018-06-30 11:39:16,770 - append_predict.main - INFO - save purchase_number_list : 0,0,1|3|4|8|9|10,0,0,0,0,0,0,0
+2018-06-30 11:39:16,773 - append_predict.main - INFO - gain_money_total total : -6
+2018-06-30 11:39:16,773 - append_predict.main - INFO - result xiazhu : 2
+2018-06-30 11:39:19,516 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:39:19,532 - append_purchase_jinsha.purchase_client_main - INFO - start purchase, 下注金额:2
+2018-06-30 11:39:19,538 - append_purchase_jinsha.purchase_client_main - INFO - calc gain_all_money:-6
+2018-06-30 11:39:19,545 - append_purchase_jinsha.purchase_client_main - INFO - reload purchase_url:http://www.ag888xjs.net/Member/Index/play/lottery_id/3.html
+2018-06-30 11:39:19,851 - append_purchase_jinsha.purchase_client_main - INFO - purchase_url reload ok
+2018-06-30 11:39:24,854 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[2]/div[3]/input
+2018-06-30 11:39:24,859 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:2
+2018-06-30 11:39:25,882 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[4]/div[3]/input
+2018-06-30 11:39:25,884 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:2
+2018-06-30 11:39:26,901 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[5]/div[3]/input
+2018-06-30 11:39:26,901 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:2
+2018-06-30 11:39:27,918 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[9]/div[3]/input
+2018-06-30 11:39:27,918 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:2
+2018-06-30 11:39:28,946 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[10]/div[3]/input
+2018-06-30 11:39:28,946 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:2
+2018-06-30 11:39:29,963 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[11]/div[3]/input
+2018-06-30 11:39:29,964 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:2
+2018-06-30 11:39:34,701 - append_purchase_jinsha.purchase_client_main - INFO - click submit
+2018-06-30 11:39:35,177 - append_purchase_jinsha.purchase_client_main - INFO - purchase sucess!, input money:12
+2018-06-30 11:39:35,256 - append_purchase_jinsha.purchase_client_main - INFO - save xiazhu args sucess!
+2018-06-30 11:43:03,276 - append_purchase_jinsha.client_thread - INFO - start purchase
+2018-06-30 11:43:09,864 - append_predict.thread - INFO - current_date:20180630 11:43:09
+2018-06-30 11:43:09,864 - append_predict.thread - INFO - start purchase
+2018-06-30 11:43:19,871 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-06-30
+2018-06-30 11:43:22,303 - append_predict.main - DEBUG - lottery_id: 690222
+2018-06-30 11:43:22,305 - append_predict.main - INFO - lottery_num: 04,01,06,09,03,02,05,08,07,10
+2018-06-30 11:43:22,305 - append_predict.main - DEBUG - mingci [3]: 6
+2018-06-30 11:43:22,305 - append_predict.main - DEBUG - purchase_number_list[i]: [u'1', u'3', u'4', u'8', u'9', u'10']
+2018-06-30 11:43:22,305 - append_predict.main - DEBUG - ------all_count: 6  ----target_count: 0 
+2018-06-30 11:43:22,305 - append_predict.main - DEBUG - target_count: 0.000000
+2018-06-30 11:43:22,367 - append_predict.main - INFO - last_purchase_hit: False
+2018-06-30 11:43:22,371 - append_predict.main - INFO - xiazhu_nums: 3
+2018-06-30 11:43:23,276 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:43:43,278 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:44:03,279 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:44:03,279 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:44:03,302 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 11:44:08,305 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:44:08,329 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 11:44:13,332 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:44:13,357 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 11:44:18,322 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 31.31
+2018-06-30 11:44:18,334 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 34.34
+2018-06-30 11:44:18,348 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 30.3
+2018-06-30 11:44:18,358 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:44:18,367 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 40.4
+2018-06-30 11:44:18,384 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 11:44:18,391 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 45.45
+2018-06-30 11:44:18,404 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 33.33
+2018-06-30 11:44:18,417 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 40.4
+2018-06-30 11:44:18,430 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 38.38
+2018-06-30 11:44:18,443 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 36.36
+2018-06-30 11:44:18,453 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 29.29
+2018-06-30 11:44:18,453 - append_predict.predict_append_rule_100 - INFO - current_percent_all_min: 29.29
+2018-06-30 11:44:18,467 - append_predict.predict_append_rule_100 - INFO - number_list: [9, 2, 3, 8, 8, 6, 3, 9, 5, 6]
+2018-06-30 11:44:18,479 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 3, 2, 9, 6, 3, 1, 6, 7, 2]
+2018-06-30 11:44:18,492 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 5, 2, 10, 7, 5, 2, 3, 7, 5]
+2018-06-30 11:44:18,506 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 7, 1, 2, 2, 10, 2, 10, 10, 6]
+2018-06-30 11:44:18,517 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 10, 1, 5, 7, 1, 5, 1, 10, 8]
+2018-06-30 11:44:18,529 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 4, 7, 4, 10, 5, 3, 1, 3, 6]
+2018-06-30 11:44:18,542 - append_predict.predict_append_rule_100 - INFO - number_list: [5, 9, 1, 9, 2, 5, 9, 2, 8, 6]
+2018-06-30 11:44:18,553 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 7, 5, 8, 8, 2, 10, 6, 9, 2]
+2018-06-30 11:44:18,569 - append_predict.predict_append_rule_100 - INFO - number_list: [2, 4, 3, 8, 4, 7, 4, 6, 10, 8]
+2018-06-30 11:44:18,579 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 5, 4, 6, 2, 6, 2, 1, 6, 2]
+2018-06-30 11:44:18,581 - append_predict.predict_append_rule_100 - INFO - last not hit
+2018-06-30 11:44:18,581 - append_predict.main - INFO - save predict_lottery_id : 690223
+2018-06-30 11:44:18,581 - append_predict.main - INFO - save purchase_number_list : 0,0,0,0,0,0,0,0,0,1|2|4|5|6|7
+2018-06-30 11:44:18,582 - append_predict.main - INFO - gain_money_total total : -18
+2018-06-30 11:44:18,586 - append_predict.main - INFO - result xiazhu : 3
+2018-06-30 11:44:23,387 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:44:23,411 - append_purchase_jinsha.purchase_client_main - INFO - start purchase, 下注金额:3
+2018-06-30 11:44:23,417 - append_purchase_jinsha.purchase_client_main - INFO - calc gain_all_money:-18
+2018-06-30 11:44:23,420 - append_purchase_jinsha.purchase_client_main - INFO - reload purchase_url:http://www.ag888xjs.net/Member/Index/play/lottery_id/3.html
+2018-06-30 11:44:23,719 - append_purchase_jinsha.purchase_client_main - INFO - purchase_url reload ok
+2018-06-30 11:44:28,720 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[2]/div[5]/ul/li[2]/div[3]/input
+2018-06-30 11:44:28,726 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:3
+2018-06-30 11:44:29,743 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[2]/div[5]/ul/li[3]/div[3]/input
+2018-06-30 11:44:29,743 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:3
+2018-06-30 11:44:30,759 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[2]/div[5]/ul/li[5]/div[3]/input
+2018-06-30 11:44:30,759 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:3
+2018-06-30 11:44:31,776 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[2]/div[5]/ul/li[6]/div[3]/input
+2018-06-30 11:44:31,776 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:3
+2018-06-30 11:44:32,793 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[2]/div[5]/ul/li[7]/div[3]/input
+2018-06-30 11:44:32,793 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:3
+2018-06-30 11:44:33,815 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[2]/div[5]/ul/li[8]/div[3]/input
+2018-06-30 11:44:33,815 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:3
+2018-06-30 11:44:38,553 - append_purchase_jinsha.purchase_client_main - INFO - click submit
+2018-06-30 11:44:39,066 - append_purchase_jinsha.purchase_client_main - INFO - purchase sucess!, input money:18
+2018-06-30 11:44:39,148 - append_purchase_jinsha.purchase_client_main - INFO - save xiazhu args sucess!
+2018-06-30 11:48:01,674 - append_predict.thread - INFO - current_date:20180630 11:48:01
+2018-06-30 11:48:01,674 - append_predict.thread - INFO - start purchase
+2018-06-30 11:48:07,161 - append_purchase_jinsha.client_thread - INFO - start purchase
+2018-06-30 11:48:11,677 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-06-30
+2018-06-30 11:48:14,308 - append_predict.main - DEBUG - lottery_id: 690223
+2018-06-30 11:48:14,309 - append_predict.main - INFO - lottery_num: 03,10,02,04,05,08,07,01,06,09
+2018-06-30 11:48:14,309 - append_predict.main - DEBUG - mingci [10]: 9
+2018-06-30 11:48:14,309 - append_predict.main - DEBUG - purchase_number_list[i]: [u'1', u'2', u'4', u'5', u'6', u'7']
+2018-06-30 11:48:14,309 - append_predict.main - DEBUG - ------all_count: 6  ----target_count: 0 
+2018-06-30 11:48:14,309 - append_predict.main - DEBUG - target_count: 0.000000
+2018-06-30 11:48:14,371 - append_predict.main - INFO - last_purchase_hit: False
+2018-06-30 11:48:14,371 - append_predict.main - INFO - xiazhu_nums: 10
+2018-06-30 11:48:27,163 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:48:47,164 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:49:07,164 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:49:07,164 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:49:07,187 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 11:49:09,970 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 30.3
+2018-06-30 11:49:09,986 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 35.35
+2018-06-30 11:49:10,002 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 29.29
+2018-06-30 11:49:10,015 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 40.4
+2018-06-30 11:49:10,026 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 45.45
+2018-06-30 11:49:10,039 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 34.34
+2018-06-30 11:49:10,052 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 40.4
+2018-06-30 11:49:10,068 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 39.39
+2018-06-30 11:49:10,079 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 35.35
+2018-06-30 11:49:10,095 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 30.3
+2018-06-30 11:49:10,098 - append_predict.predict_append_rule_100 - INFO - current_percent_all_min: 29.29
+2018-06-30 11:49:10,111 - append_predict.predict_append_rule_100 - INFO - number_list: [6, 2, 8, 9, 6, 5, 3, 5, 3, 1]
+2018-06-30 11:49:10,127 - append_predict.predict_append_rule_100 - INFO - number_list: [5, 5, 5, 1, 9, 10, 2, 8, 4, 3]
+2018-06-30 11:49:10,138 - append_predict.predict_append_rule_100 - INFO - number_list: [5, 4, 2, 2, 10, 8, 9, 6, 10, 2]
+2018-06-30 11:49:10,138 - append_predict.predict_append_rule_100 - INFO - last not hit
+2018-06-30 11:49:10,151 - append_predict.predict_append_rule_100 - INFO - number_list: [5, 3, 7, 10, 9, 8, 6, 2, 10, 8]
+2018-06-30 11:49:10,163 - append_predict.predict_append_rule_100 - INFO - number_list: [6, 4, 9, 1, 4, 1, 7, 10, 10, 7]
+2018-06-30 11:49:10,176 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 7, 5, 2, 4, 9, 4, 4, 8, 6]
+2018-06-30 11:49:10,187 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 7, 1, 1, 2, 1, 4, 6, 2, 4]
+2018-06-30 11:49:10,198 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 8, 4, 8, 3, 5, 3, 10, 7, 5]
+2018-06-30 11:49:10,210 - append_predict.predict_append_rule_100 - INFO - number_list: [6, 7, 1, 1, 1, 6, 1, 4, 3, 1]
+2018-06-30 11:49:10,223 - append_predict.predict_append_rule_100 - INFO - number_list: [3, 7, 2, 5, 7, 7, 1, 4, 1, 6]
+2018-06-30 11:49:10,223 - append_predict.main - INFO - save predict_lottery_id : 690224
+2018-06-30 11:49:10,223 - append_predict.main - INFO - save purchase_number_list : 0,0,2|4|5|6|8|9|10,0,0,0,0,0,0,0
+2018-06-30 11:49:10,227 - append_predict.main - INFO - gain_money_total total : -36
+2018-06-30 11:49:10,227 - append_predict.main - INFO - result xiazhu : 4
+2018-06-30 11:49:12,188 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:49:12,207 - append_purchase_jinsha.purchase_client_main - INFO - start purchase, 下注金额:4
+2018-06-30 11:49:12,213 - append_purchase_jinsha.purchase_client_main - INFO - calc gain_all_money:-36
+2018-06-30 11:49:12,216 - append_purchase_jinsha.purchase_client_main - INFO - reload purchase_url:http://www.ag888xjs.net/Member/Index/play/lottery_id/3.html
+2018-06-30 11:49:12,543 - append_purchase_jinsha.purchase_client_main - INFO - purchase_url reload ok
+2018-06-30 11:49:17,545 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[3]/div[3]/input
+2018-06-30 11:49:17,545 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:49:18,568 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[5]/div[3]/input
+2018-06-30 11:49:18,581 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:49:19,595 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[6]/div[3]/input
+2018-06-30 11:49:19,596 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:49:20,611 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[7]/div[3]/input
+2018-06-30 11:49:20,611 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:49:21,631 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[9]/div[3]/input
+2018-06-30 11:49:21,631 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:49:22,648 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[10]/div[3]/input
+2018-06-30 11:49:22,648 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:49:23,664 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[11]/div[3]/input
+2018-06-30 11:49:23,664 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:49:28,411 - append_purchase_jinsha.purchase_client_main - INFO - click submit
+2018-06-30 11:49:28,930 - append_purchase_jinsha.purchase_client_main - INFO - purchase sucess!, input money:28
+2018-06-30 11:49:29,072 - append_purchase_jinsha.purchase_client_main - INFO - save xiazhu args sucess!
+2018-06-30 11:53:03,322 - append_predict.thread - INFO - current_date:20180630 11:53:03
+2018-06-30 11:53:03,322 - append_predict.thread - INFO - start purchase
+2018-06-30 11:53:07,086 - append_purchase_jinsha.client_thread - INFO - start purchase
+2018-06-30 11:53:13,323 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-06-30
+2018-06-30 11:53:16,075 - append_predict.main - DEBUG - lottery_id: 690224
+2018-06-30 11:53:16,075 - append_predict.main - INFO - lottery_num: 07,03,06,05,01,08,09,02,04,10
+2018-06-30 11:53:16,075 - append_predict.main - DEBUG - mingci [3]: 6
+2018-06-30 11:53:16,078 - append_predict.main - DEBUG - purchase_number_list[i]: [u'2', u'4', u'5', u'6', u'8', u'9', u'10']
+2018-06-30 11:53:16,078 - append_predict.main - DEBUG - ------all_count: 7  ----target_count: 1 
+2018-06-30 11:53:16,078 - append_predict.main - DEBUG - target_count: 0.142857
+2018-06-30 11:53:16,138 - append_predict.main - INFO - last_purchase_hit: True
+2018-06-30 11:53:16,138 - append_predict.main - INFO - xiazhu_nums: 3
+2018-06-30 11:53:27,088 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:53:47,089 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:54:07,091 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:54:07,092 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:54:07,124 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 11:54:12,125 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:54:12,151 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 11:54:12,176 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 30.3
+2018-06-30 11:54:12,190 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 35.35
+2018-06-30 11:54:12,206 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 29.29
+2018-06-30 11:54:12,220 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 39.39
+2018-06-30 11:54:12,233 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 45.45
+2018-06-30 11:54:12,246 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 34.34
+2018-06-30 11:54:12,259 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 41.41
+2018-06-30 11:54:12,273 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 40.4
+2018-06-30 11:54:12,286 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 35.35
+2018-06-30 11:54:12,296 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 30.3
+2018-06-30 11:54:12,296 - append_predict.predict_append_rule_100 - INFO - current_percent_all_min: 29.29
+2018-06-30 11:54:12,311 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 5, 5, 10, 6, 7, 6, 2, 1, 7]
+2018-06-30 11:54:12,322 - append_predict.predict_append_rule_100 - INFO - number_list: [5, 6, 2, 10, 7, 9, 6, 1, 8, 8]
+2018-06-30 11:54:12,335 - append_predict.predict_append_rule_100 - INFO - number_list: [4, 7, 10, 8, 6, 5, 2, 8, 1, 7]
+2018-06-30 11:54:12,335 - append_predict.predict_append_rule_100 - INFO - last hit
+2018-06-30 11:54:12,348 - append_predict.predict_append_rule_100 - INFO - number_list: [5, 9, 6, 6, 3, 5, 3, 10, 10, 6]
+2018-06-30 11:54:12,361 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 1, 10, 8, 9, 1, 2, 9, 3, 7]
+2018-06-30 11:54:12,371 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 6, 9, 5, 1, 3, 7, 1, 4, 5]
+2018-06-30 11:54:12,384 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 4, 8, 10, 7, 4, 8, 7, 7, 8]
+2018-06-30 11:54:12,397 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 1, 2, 8, 6, 8, 2, 9, 1, 10]
+2018-06-30 11:54:12,407 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 4, 10, 7, 2, 2, 3, 9, 9, 6]
+2018-06-30 11:54:12,421 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 3, 4, 9, 5, 4, 1, 3, 1, 6]
+2018-06-30 11:54:12,421 - append_predict.main - INFO - save predict_lottery_id : 690225
+2018-06-30 11:54:12,423 - append_predict.main - INFO - save purchase_number_list : 0,0,1|2|4|5|6|7|8|10,0,0,0,0,0,0,0
+2018-06-30 11:54:12,424 - append_predict.main - INFO - gain_money_total total : -24
+2018-06-30 11:54:12,424 - append_predict.main - DEBUG - purchase_number_list len: 8
+2018-06-30 11:54:12,444 - append_predict.main - INFO - calc_xainzhu:13, last_xiazhu:4
+2018-06-30 11:54:12,453 - append_predict.main - INFO - result xiazhu : 4
+2018-06-30 11:54:17,154 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:54:17,170 - append_purchase_jinsha.purchase_client_main - INFO - start purchase, 下注金额:4
+2018-06-30 11:54:17,174 - append_purchase_jinsha.purchase_client_main - INFO - calc gain_all_money:-24
+2018-06-30 11:54:17,178 - append_purchase_jinsha.purchase_client_main - INFO - reload purchase_url:http://www.ag888xjs.net/Member/Index/play/lottery_id/3.html
+2018-06-30 11:54:17,464 - append_purchase_jinsha.purchase_client_main - INFO - purchase_url reload ok
+2018-06-30 11:54:22,466 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[2]/div[3]/input
+2018-06-30 11:54:22,466 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:54:23,486 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[3]/div[3]/input
+2018-06-30 11:54:23,490 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:54:24,506 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[5]/div[3]/input
+2018-06-30 11:54:24,506 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:54:25,523 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[6]/div[3]/input
+2018-06-30 11:54:25,523 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:54:26,540 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[7]/div[3]/input
+2018-06-30 11:54:26,540 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:54:27,559 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[8]/div[3]/input
+2018-06-30 11:54:27,559 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:54:28,575 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[9]/div[3]/input
+2018-06-30 11:54:28,575 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:54:29,598 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[11]/div[3]/input
+2018-06-30 11:54:29,598 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:54:34,348 - append_purchase_jinsha.purchase_client_main - INFO - click submit
+2018-06-30 11:54:34,803 - append_purchase_jinsha.purchase_client_main - INFO - purchase sucess!, input money:32
+2018-06-30 11:54:34,917 - append_purchase_jinsha.purchase_client_main - INFO - save xiazhu args sucess!
+2018-06-30 11:58:02,931 - append_purchase_jinsha.client_thread - INFO - start purchase
+2018-06-30 11:58:05,551 - append_predict.thread - INFO - current_date:20180630 11:58:05
+2018-06-30 11:58:05,551 - append_predict.thread - INFO - start purchase
+2018-06-30 11:58:15,552 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-06-30
+2018-06-30 11:58:18,457 - append_predict.main - DEBUG - lottery_id: 690225
+2018-06-30 11:58:18,460 - append_predict.main - INFO - lottery_num: 09,01,05,02,08,03,06,04,10,07
+2018-06-30 11:58:18,460 - append_predict.main - DEBUG - mingci [3]: 5
+2018-06-30 11:58:18,460 - append_predict.main - DEBUG - purchase_number_list[i]: [u'1', u'2', u'4', u'5', u'6', u'7', u'8', u'10']
+2018-06-30 11:58:18,460 - append_predict.main - DEBUG - ------all_count: 8  ----target_count: 1 
+2018-06-30 11:58:18,460 - append_predict.main - DEBUG - target_count: 0.125000
+2018-06-30 11:58:18,528 - append_predict.main - INFO - last_purchase_hit: True
+2018-06-30 11:58:18,528 - append_predict.main - INFO - xiazhu_nums: 3
+2018-06-30 11:58:22,933 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:58:42,934 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:59:02,936 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 11:59:02,936 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:59:02,953 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 11:59:07,954 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:59:07,973 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 11:59:12,976 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:59:12,986 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 11:59:16,176 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 30.3
+2018-06-30 11:59:16,188 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 34.34
+2018-06-30 11:59:16,200 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 29.29
+2018-06-30 11:59:16,211 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 39.39
+2018-06-30 11:59:16,226 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 44.44
+2018-06-30 11:59:16,237 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 33.33
+2018-06-30 11:59:16,249 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 42.42
+2018-06-30 11:59:16,262 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 41.41
+2018-06-30 11:59:16,273 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 35.35
+2018-06-30 11:59:16,286 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 29.29
+2018-06-30 11:59:16,286 - append_predict.predict_append_rule_100 - INFO - current_percent_all_min: 29.29
+2018-06-30 11:59:16,301 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 10, 9, 10, 1, 10, 2, 8, 6, 1]
+2018-06-30 11:59:16,312 - append_predict.predict_append_rule_100 - INFO - number_list: [2, 9, 1, 6, 3, 3, 6, 4, 2, 8]
+2018-06-30 11:59:16,325 - append_predict.predict_append_rule_100 - INFO - number_list: [2, 6, 10, 7, 8, 10, 6, 2, 3, 6]
+2018-06-30 11:59:16,325 - append_predict.predict_append_rule_100 - INFO - last hit
+2018-06-30 11:59:16,336 - append_predict.predict_append_rule_100 - INFO - number_list: [4, 3, 6, 3, 4, 7, 10, 10, 8, 6]
+2018-06-30 11:59:16,349 - append_predict.predict_append_rule_100 - INFO - number_list: [10, 2, 7, 1, 5, 4, 8, 9, 6, 4]
+2018-06-30 11:59:16,361 - append_predict.predict_append_rule_100 - INFO - number_list: [3, 5, 5, 8, 6, 6, 1, 9, 7, 7]
+2018-06-30 11:59:16,374 - append_predict.predict_append_rule_100 - INFO - number_list: [4, 6, 4, 2, 10, 5, 9, 2, 7, 9]
+2018-06-30 11:59:16,385 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 5, 5, 4, 7, 7, 9, 8, 9, 9]
+2018-06-30 11:59:16,398 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 8, 7, 2, 9, 7, 1, 5, 8, 1]
+2018-06-30 11:59:16,411 - append_predict.predict_append_rule_100 - INFO - number_list: [5, 9, 10, 4, 7, 9, 6, 6, 7, 8]
+2018-06-30 11:59:16,411 - append_predict.main - INFO - save predict_lottery_id : 690226
+2018-06-30 11:59:16,411 - append_predict.main - INFO - save purchase_number_list : 0,0,2|3|6|7|8|10,0,0,0,0,0,0,0
+2018-06-30 11:59:16,413 - append_predict.main - INFO - gain_money_total total : -16
+2018-06-30 11:59:16,414 - append_predict.main - DEBUG - purchase_number_list len: 6
+2018-06-30 11:59:16,414 - append_predict.main - INFO - calc_xainzhu:5, last_xiazhu:4
+2018-06-30 11:59:16,414 - append_predict.main - INFO - result xiazhu : 4
+2018-06-30 11:59:17,989 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 11:59:18,006 - append_purchase_jinsha.purchase_client_main - INFO - start purchase, 下注金额:4
+2018-06-30 11:59:18,010 - append_purchase_jinsha.purchase_client_main - INFO - calc gain_all_money:-16
+2018-06-30 11:59:18,013 - append_purchase_jinsha.purchase_client_main - INFO - reload purchase_url:http://www.ag888xjs.net/Member/Index/play/lottery_id/3.html
+2018-06-30 11:59:18,315 - append_purchase_jinsha.purchase_client_main - INFO - purchase_url reload ok
+2018-06-30 11:59:23,316 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[3]/div[3]/input
+2018-06-30 11:59:23,318 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:59:24,338 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[4]/div[3]/input
+2018-06-30 11:59:24,341 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:59:25,374 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[7]/div[3]/input
+2018-06-30 11:59:25,374 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:59:26,392 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[8]/div[3]/input
+2018-06-30 11:59:26,392 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:59:27,414 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[9]/div[3]/input
+2018-06-30 11:59:27,414 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:59:28,431 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[11]/div[3]/input
+2018-06-30 11:59:28,431 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:4
+2018-06-30 11:59:33,168 - append_purchase_jinsha.purchase_client_main - INFO - click submit
+2018-06-30 11:59:33,687 - append_purchase_jinsha.purchase_client_main - INFO - purchase sucess!, input money:24
+2018-06-30 11:59:33,789 - append_purchase_jinsha.purchase_client_main - INFO - save xiazhu args sucess!
+2018-06-30 12:03:01,805 - append_purchase_jinsha.client_thread - INFO - start purchase
+2018-06-30 12:03:09,507 - append_predict.thread - INFO - current_date:20180630 12:03:09
+2018-06-30 12:03:09,507 - append_predict.thread - INFO - start purchase
+2018-06-30 12:03:19,509 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-06-30
+2018-06-30 12:03:21,806 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:03:22,558 - append_predict.main - DEBUG - lottery_id: 690226
+2018-06-30 12:03:22,559 - append_predict.main - INFO - lottery_num: 08,06,07,02,04,01,09,03,10,05
+2018-06-30 12:03:22,559 - append_predict.main - DEBUG - mingci [3]: 7
+2018-06-30 12:03:22,559 - append_predict.main - DEBUG - purchase_number_list[i]: [u'2', u'3', u'6', u'7', u'8', u'10']
+2018-06-30 12:03:22,561 - append_predict.main - DEBUG - ------all_count: 6  ----target_count: 1 
+2018-06-30 12:03:22,562 - append_predict.main - DEBUG - target_count: 0.166667
+2018-06-30 12:03:22,721 - append_predict.main - INFO - last_purchase_hit: True
+2018-06-30 12:03:22,726 - append_predict.main - INFO - xiazhu_nums: 3
+2018-06-30 12:03:41,808 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:04:01,809 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:04:01,809 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:04:01,828 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 12:04:06,832 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:04:06,842 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 12:04:11,845 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:04:11,867 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 12:04:16,868 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:04:16,880 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 12:04:18,746 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 30.3
+2018-06-30 12:04:18,759 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 34.34
+2018-06-30 12:04:18,772 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 29.29
+2018-06-30 12:04:18,782 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 40.4
+2018-06-30 12:04:18,796 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 44.44
+2018-06-30 12:04:18,809 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 32.32
+2018-06-30 12:04:18,821 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 42.42
+2018-06-30 12:04:18,834 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 41.41
+2018-06-30 12:04:18,844 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 41.41
+2018-06-30 12:04:18,861 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 36.36
+2018-06-30 12:04:18,861 - append_predict.predict_append_rule_100 - INFO - current_percent_all_min: 29.29
+2018-06-30 12:04:18,878 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 4, 5, 2, 8, 2, 7, 9, 10, 7]
+2018-06-30 12:04:18,890 - append_predict.predict_append_rule_100 - INFO - number_list: [2, 10, 8, 8, 9, 3, 8, 10, 6, 8]
+2018-06-30 12:04:18,901 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 6, 7, 1, 8, 10, 3, 5, 8, 9]
+2018-06-30 12:04:18,901 - append_predict.predict_append_rule_100 - INFO - last hit
+2018-06-30 12:04:18,914 - append_predict.predict_append_rule_100 - INFO - number_list: [3, 1, 10, 1, 10, 8, 9, 10, 9, 2]
+2018-06-30 12:04:18,927 - append_predict.predict_append_rule_100 - INFO - number_list: [10, 6, 10, 4, 8, 5, 6, 6, 3, 9]
+2018-06-30 12:04:18,938 - append_predict.predict_append_rule_100 - INFO - number_list: [9, 10, 9, 4, 8, 1, 1, 3, 2, 1]
+2018-06-30 12:04:18,950 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 4, 1, 3, 2, 7, 1, 6, 5, 4]
+2018-06-30 12:04:18,964 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 7, 4, 7, 3, 9, 7, 3, 7, 10]
+2018-06-30 12:04:18,976 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 7, 4, 7, 3, 9, 7, 3, 7, 10]
+2018-06-30 12:04:18,990 - append_predict.predict_append_rule_100 - INFO - number_list: [4, 10, 3, 8, 5, 3, 4, 4, 9, 1]
+2018-06-30 12:04:18,990 - append_predict.main - INFO - save predict_lottery_id : 690227
+2018-06-30 12:04:18,990 - append_predict.main - INFO - save purchase_number_list : 0,0,1|3|5|6|7|8|9|10,0,0,0,0,0,0,0
+2018-06-30 12:04:18,993 - append_predict.main - INFO - gain_money_total total : -1
+2018-06-30 12:04:18,993 - append_predict.main - DEBUG - purchase_number_list len: 8
+2018-06-30 12:04:18,993 - append_predict.main - INFO - calc_xainzhu:1, last_xiazhu:4
+2018-06-30 12:04:18,993 - append_predict.main - INFO - result xiazhu : 1
+2018-06-30 12:04:21,882 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:04:21,898 - append_purchase_jinsha.purchase_client_main - INFO - start purchase, 下注金额:1
+2018-06-30 12:04:21,904 - append_purchase_jinsha.purchase_client_main - INFO - calc gain_all_money:-1
+2018-06-30 12:04:21,907 - append_purchase_jinsha.purchase_client_main - INFO - reload purchase_url:http://www.ag888xjs.net/Member/Index/play/lottery_id/3.html
+2018-06-30 12:04:22,198 - append_purchase_jinsha.purchase_client_main - INFO - purchase_url reload ok
+2018-06-30 12:04:27,198 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[2]/div[3]/input
+2018-06-30 12:04:27,198 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:04:28,217 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[4]/div[3]/input
+2018-06-30 12:04:28,219 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:04:29,236 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[6]/div[3]/input
+2018-06-30 12:04:29,236 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:04:30,250 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[7]/div[3]/input
+2018-06-30 12:04:30,252 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:04:31,272 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[8]/div[3]/input
+2018-06-30 12:04:31,276 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:04:32,292 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[9]/div[3]/input
+2018-06-30 12:04:32,292 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:04:33,306 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[10]/div[3]/input
+2018-06-30 12:04:33,306 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:04:34,323 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[11]/div[3]/input
+2018-06-30 12:04:34,323 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:04:39,072 - append_purchase_jinsha.purchase_client_main - INFO - click submit
+2018-06-30 12:04:39,536 - append_purchase_jinsha.purchase_client_main - INFO - purchase sucess!, input money:8
+2018-06-30 12:04:39,598 - append_purchase_jinsha.purchase_client_main - INFO - save xiazhu args sucess!
+2018-06-30 12:08:04,605 - append_purchase_jinsha.client_thread - INFO - start purchase
+2018-06-30 12:08:09,073 - append_predict.thread - INFO - current_date:20180630 12:08:09
+2018-06-30 12:08:09,073 - append_predict.thread - INFO - start purchase
+2018-06-30 12:08:19,076 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-06-30
+2018-06-30 12:08:22,565 - append_predict.main - DEBUG - lottery_id: 690227
+2018-06-30 12:08:22,566 - append_predict.main - INFO - lottery_num: 05,09,08,03,06,04,10,02,01,07
+2018-06-30 12:08:22,568 - append_predict.main - DEBUG - mingci [3]: 8
+2018-06-30 12:08:22,569 - append_predict.main - DEBUG - purchase_number_list[i]: [u'1', u'3', u'5', u'6', u'7', u'8', u'9', u'10']
+2018-06-30 12:08:22,569 - append_predict.main - DEBUG - ------all_count: 8  ----target_count: 1 
+2018-06-30 12:08:22,571 - append_predict.main - DEBUG - target_count: 0.125000
+2018-06-30 12:08:22,736 - append_predict.main - INFO - last_purchase_hit: True
+2018-06-30 12:08:22,736 - append_predict.main - INFO - xiazhu_nums: 3
+2018-06-30 12:08:24,607 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:08:44,648 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:09:04,651 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:09:04,651 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:09:04,667 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 12:09:09,668 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:09:09,680 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 12:09:14,683 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:09:14,694 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 12:09:18,635 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 29.29
+2018-06-30 12:09:18,648 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 34.34
+2018-06-30 12:09:18,663 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 29.29
+2018-06-30 12:09:18,677 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 39.39
+2018-06-30 12:09:18,690 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 44.44
+2018-06-30 12:09:18,703 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 32.32
+2018-06-30 12:09:18,716 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 43.43
+2018-06-30 12:09:18,727 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 42.42
+2018-06-30 12:09:18,740 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 35.35
+2018-06-30 12:09:18,752 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 29.29
+2018-06-30 12:09:18,753 - append_predict.predict_append_rule_100 - INFO - current_percent_all_min: 29.29
+2018-06-30 12:09:18,766 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 1, 8, 4, 3, 2, 1, 3, 4, 1]
+2018-06-30 12:09:18,767 - append_predict.predict_append_rule_100 - INFO - last hit
+2018-06-30 12:09:18,782 - append_predict.predict_append_rule_100 - INFO - number_list: [4, 5, 7, 3, 4, 4, 5, 10, 4, 5]
+2018-06-30 12:09:18,798 - append_predict.predict_append_rule_100 - INFO - number_list: [3, 3, 4, 4, 6, 1, 1, 9, 4, 6]
+2018-06-30 12:09:18,812 - append_predict.predict_append_rule_100 - INFO - number_list: [10, 6, 3, 10, 4, 3, 8, 1, 3, 6]
+2018-06-30 12:09:18,825 - append_predict.predict_append_rule_100 - INFO - number_list: [6, 9, 3, 10, 10, 9, 4, 9, 10, 9]
+2018-06-30 12:09:18,838 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 4, 4, 4, 9, 10, 8, 2, 1, 9]
+2018-06-30 12:09:18,854 - append_predict.predict_append_rule_100 - INFO - number_list: [10, 4, 8, 5, 9, 8, 1, 4, 9, 10]
+2018-06-30 12:09:18,868 - append_predict.predict_append_rule_100 - INFO - number_list: [10, 9, 5, 9, 4, 8, 4, 1, 6, 10]
+2018-06-30 12:09:18,882 - append_predict.predict_append_rule_100 - INFO - number_list: [4, 8, 3, 3, 10, 5, 7, 9, 2, 4]
+2018-06-30 12:09:18,897 - append_predict.predict_append_rule_100 - INFO - number_list: [2, 5, 5, 6, 1, 5, 1, 8, 4, 2]
+2018-06-30 12:09:18,897 - append_predict.main - INFO - save predict_lottery_id : 690228
+2018-06-30 12:09:18,897 - append_predict.main - INFO - save purchase_number_list : 8|1|2|3|4,0,0,0,0,0,0,0,0,0
+2018-06-30 12:09:18,898 - append_predict.main - INFO - gain_money_total total : 1
+2018-06-30 12:09:18,900 - append_predict.main - INFO - result xiazhu : 1
+2018-06-30 12:09:19,697 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:09:19,713 - append_purchase_jinsha.purchase_client_main - INFO - start purchase, 下注金额:1
+2018-06-30 12:09:19,719 - append_purchase_jinsha.purchase_client_main - INFO - calc gain_all_money:0
+2018-06-30 12:09:19,721 - append_purchase_jinsha.purchase_client_main - INFO - reload purchase_url:http://www.ag888xjs.net/Member/Index/play/lottery_id/3.html
+2018-06-30 12:09:20,039 - append_purchase_jinsha.purchase_client_main - INFO - purchase_url reload ok
+2018-06-30 12:09:25,042 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[1]/ul/li[9]/div[3]/input
+2018-06-30 12:09:25,042 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:09:26,062 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[1]/ul/li[2]/div[3]/input
+2018-06-30 12:09:26,062 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:09:27,082 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[1]/ul/li[3]/div[3]/input
+2018-06-30 12:09:27,082 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:09:28,099 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[1]/ul/li[4]/div[3]/input
+2018-06-30 12:09:28,099 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:09:29,115 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[1]/ul/li[5]/div[3]/input
+2018-06-30 12:09:29,118 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:09:33,858 - append_purchase_jinsha.purchase_client_main - INFO - click submit
+2018-06-30 12:09:34,375 - append_purchase_jinsha.purchase_client_main - INFO - purchase sucess!, input money:5
+2018-06-30 12:09:34,451 - append_purchase_jinsha.purchase_client_main - INFO - save xiazhu args sucess!
+2018-06-30 12:13:01,986 - append_predict.thread - INFO - current_date:20180630 12:13:01
+2018-06-30 12:13:01,987 - append_predict.thread - INFO - start purchase
+2018-06-30 12:13:02,467 - append_purchase_jinsha.client_thread - INFO - start purchase
+2018-06-30 12:13:11,994 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-06-30
+2018-06-30 12:13:14,869 - append_predict.main - DEBUG - lottery_id: 690228
+2018-06-30 12:13:14,872 - append_predict.main - INFO - lottery_num: 03,04,06,02,01,09,05,08,10,07
+2018-06-30 12:13:14,874 - append_predict.main - DEBUG - mingci [1]: 3
+2018-06-30 12:13:14,874 - append_predict.main - DEBUG - purchase_number_list[i]: [u'8', u'1', u'2', u'3', u'4']
+2018-06-30 12:13:14,874 - append_predict.main - DEBUG - ------all_count: 5  ----target_count: 1 
+2018-06-30 12:13:14,874 - append_predict.main - DEBUG - target_count: 0.200000
+2018-06-30 12:13:14,964 - append_predict.main - INFO - last_purchase_hit: True
+2018-06-30 12:13:14,969 - append_predict.main - INFO - xiazhu_nums: 1
+2018-06-30 12:13:22,470 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:13:42,471 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:14:02,479 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:14:02,479 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:14:02,496 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 12:14:07,497 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:14:07,509 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 12:14:10,897 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 29.29
+2018-06-30 12:14:10,908 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 34.34
+2018-06-30 12:14:10,924 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 28.28
+2018-06-30 12:14:10,936 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 40.4
+2018-06-30 12:14:10,947 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 45.45
+2018-06-30 12:14:10,960 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 31.31
+2018-06-30 12:14:10,973 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 42.42
+2018-06-30 12:14:10,987 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 42.42
+2018-06-30 12:14:10,999 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 35.35
+2018-06-30 12:14:11,010 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 30.3
+2018-06-30 12:14:11,010 - append_predict.predict_append_rule_100 - INFO - current_percent_all_min: 28.28
+2018-06-30 12:14:11,023 - append_predict.predict_append_rule_100 - INFO - number_list: [9, 8, 7, 3, 5, 7, 5, 5, 1, 9]
+2018-06-30 12:14:11,036 - append_predict.predict_append_rule_100 - INFO - number_list: [10, 7, 9, 1, 9, 4, 7, 3, 6, 10]
+2018-06-30 12:14:11,049 - append_predict.predict_append_rule_100 - INFO - number_list: [3, 1, 7, 2, 2, 6, 10, 10, 1, 2]
+2018-06-30 12:14:11,049 - append_predict.predict_append_rule_100 - INFO - last hit
+2018-06-30 12:14:11,061 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 3, 7, 7, 1, 5, 10, 7, 5, 9]
+2018-06-30 12:14:11,072 - append_predict.predict_append_rule_100 - INFO - number_list: [9, 8, 9, 5, 1, 7, 6, 9, 4, 7]
+2018-06-30 12:14:11,085 - append_predict.predict_append_rule_100 - INFO - number_list: [5, 5, 2, 2, 10, 6, 1, 6, 4, 9]
+2018-06-30 12:14:11,095 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 5, 6, 3, 10, 4, 6, 5, 3, 2]
+2018-06-30 12:14:11,117 - append_predict.predict_append_rule_100 - INFO - number_list: [4, 4, 5, 4, 7, 9, 5, 8, 9, 10]
+2018-06-30 12:14:11,132 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 7, 6, 1, 9, 9, 10, 8, 6, 3]
+2018-06-30 12:14:11,151 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 7, 3, 9, 3, 2, 7, 6, 7, 10]
+2018-06-30 12:14:11,151 - append_predict.main - INFO - save predict_lottery_id : 690229
+2018-06-30 12:14:11,153 - append_predict.main - INFO - save purchase_number_list : 0,0,1|2|3|6|7|10,0,0,0,0,0,0,0
+2018-06-30 12:14:11,154 - append_predict.main - INFO - gain_money_total total : 4
+2018-06-30 12:14:11,154 - append_predict.main - INFO - result xiazhu : 1
+2018-06-30 12:14:12,513 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:14:12,529 - append_purchase_jinsha.purchase_client_main - INFO - start purchase, 下注金额:1
+2018-06-30 12:14:12,536 - append_purchase_jinsha.purchase_client_main - INFO - calc gain_all_money:5
+2018-06-30 12:14:12,542 - append_purchase_jinsha.purchase_client_main - INFO - reload purchase_url:http://www.ag888xjs.net/Member/Index/play/lottery_id/3.html
+2018-06-30 12:14:12,872 - append_purchase_jinsha.purchase_client_main - INFO - purchase_url reload ok
+2018-06-30 12:14:17,875 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[2]/div[3]/input
+2018-06-30 12:14:17,875 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:14:18,898 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[3]/div[3]/input
+2018-06-30 12:14:18,898 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:14:19,914 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[4]/div[3]/input
+2018-06-30 12:14:19,914 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:14:20,930 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[7]/div[3]/input
+2018-06-30 12:14:20,930 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:14:21,947 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[8]/div[3]/input
+2018-06-30 12:14:21,950 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:14:22,967 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[11]/div[3]/input
+2018-06-30 12:14:22,967 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:14:27,713 - append_purchase_jinsha.purchase_client_main - INFO - click submit
+2018-06-30 12:14:28,223 - append_purchase_jinsha.purchase_client_main - INFO - purchase sucess!, input money:6
+2018-06-30 12:14:28,306 - append_purchase_jinsha.purchase_client_main - INFO - save xiazhu args sucess!
+2018-06-30 12:18:04,232 - append_predict.thread - INFO - current_date:20180630 12:18:04
+2018-06-30 12:18:04,233 - append_predict.thread - INFO - start purchase
+2018-06-30 12:18:06,322 - append_purchase_jinsha.client_thread - INFO - start purchase
+2018-06-30 12:18:14,236 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-06-30
+2018-06-30 12:18:17,392 - append_predict.main - DEBUG - lottery_id: 690229
+2018-06-30 12:18:17,394 - append_predict.main - INFO - lottery_num: 05,06,03,01,02,07,08,09,04,10
+2018-06-30 12:18:17,394 - append_predict.main - DEBUG - mingci [3]: 3
+2018-06-30 12:18:17,395 - append_predict.main - DEBUG - purchase_number_list[i]: [u'1', u'2', u'3', u'6', u'7', u'10']
+2018-06-30 12:18:17,395 - append_predict.main - DEBUG - ------all_count: 6  ----target_count: 1 
+2018-06-30 12:18:17,395 - append_predict.main - DEBUG - target_count: 0.166667
+2018-06-30 12:18:17,515 - append_predict.main - INFO - last_purchase_hit: True
+2018-06-30 12:18:17,515 - append_predict.main - INFO - xiazhu_nums: 3
+2018-06-30 12:18:26,322 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:18:46,325 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:19:06,325 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:19:06,329 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:19:06,361 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 12:19:11,365 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:19:11,381 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 12:19:16,002 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 29.29
+2018-06-30 12:19:16,016 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 33.33
+2018-06-30 12:19:16,036 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 27.27
+2018-06-30 12:19:16,053 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 39.39
+2018-06-30 12:19:16,075 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 46.46
+2018-06-30 12:19:16,089 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 32.32
+2018-06-30 12:19:16,105 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 41.41
+2018-06-30 12:19:16,119 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 41.41
+2018-06-30 12:19:16,135 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 35.35
+2018-06-30 12:19:16,151 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 30.3
+2018-06-30 12:19:16,151 - append_predict.predict_append_rule_100 - INFO - current_percent_all_min: 27.27
+2018-06-30 12:19:16,167 - append_predict.predict_append_rule_100 - INFO - number_list: [9, 6, 9, 1, 1, 3, 8, 1, 4, 1]
+2018-06-30 12:19:16,183 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 4, 7, 8, 3, 10, 9, 10, 2, 1]
+2018-06-30 12:19:16,197 - append_predict.predict_append_rule_100 - INFO - number_list: [4, 4, 1, 6, 6, 6, 9, 10, 6, 3]
+2018-06-30 12:19:16,198 - append_predict.predict_append_rule_100 - INFO - last hit
+2018-06-30 12:19:16,216 - append_predict.predict_append_rule_100 - INFO - number_list: [6, 5, 8, 8, 6, 9, 3, 5, 4, 3]
+2018-06-30 12:19:16,230 - append_predict.predict_append_rule_100 - INFO - number_list: [3, 2, 4, 8, 1, 5, 10, 2, 4, 7]
+2018-06-30 12:19:16,244 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 3, 6, 5, 5, 9, 10, 4, 3, 4]
+2018-06-30 12:19:16,256 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 4, 6, 1, 1, 2, 8, 6, 1, 8]
+2018-06-30 12:19:16,269 - append_predict.predict_append_rule_100 - INFO - number_list: [3, 9, 6, 5, 7, 10, 10, 3, 10, 8]
+2018-06-30 12:19:16,282 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 1, 9, 9, 1, 2, 8, 3, 3, 8]
+2018-06-30 12:19:16,293 - append_predict.predict_append_rule_100 - INFO - number_list: [9, 4, 2, 10, 10, 7, 2, 5, 6, 2]
+2018-06-30 12:19:16,293 - append_predict.main - INFO - save predict_lottery_id : 690230
+2018-06-30 12:19:16,295 - append_predict.main - INFO - save purchase_number_list : 0,0,1|3|4|6|9|10,0,0,0,0,0,0,0
+2018-06-30 12:19:16,296 - append_predict.main - INFO - gain_money_total total : 3
+2018-06-30 12:19:16,296 - append_predict.main - INFO - result xiazhu : 1
+2018-06-30 12:19:16,382 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:19:16,398 - append_purchase_jinsha.purchase_client_main - INFO - start purchase, 下注金额:1
+2018-06-30 12:19:16,404 - append_purchase_jinsha.purchase_client_main - INFO - calc gain_all_money:9
+2018-06-30 12:19:16,408 - append_purchase_jinsha.purchase_client_main - INFO - reload purchase_url:http://www.ag888xjs.net/Member/Index/play/lottery_id/3.html
+2018-06-30 12:19:16,730 - append_purchase_jinsha.purchase_client_main - INFO - purchase_url reload ok
+2018-06-30 12:19:21,732 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[2]/div[3]/input
+2018-06-30 12:19:21,732 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:19:22,753 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[4]/div[3]/input
+2018-06-30 12:19:22,753 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:19:23,769 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[5]/div[3]/input
+2018-06-30 12:19:23,772 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:19:24,786 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[7]/div[3]/input
+2018-06-30 12:19:24,788 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:19:25,806 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[10]/div[3]/input
+2018-06-30 12:19:25,811 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:19:26,826 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[11]/div[3]/input
+2018-06-30 12:19:26,826 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:19:31,571 - append_purchase_jinsha.purchase_client_main - INFO - click submit
+2018-06-30 12:19:32,088 - append_purchase_jinsha.purchase_client_main - INFO - purchase sucess!, input money:6
+2018-06-30 12:19:32,322 - append_purchase_jinsha.purchase_client_main - INFO - save xiazhu args sucess!
+2018-06-30 12:23:00,345 - append_purchase_jinsha.client_thread - INFO - start purchase
+2018-06-30 12:23:09,384 - append_predict.thread - INFO - current_date:20180630 12:23:09
+2018-06-30 12:23:09,384 - append_predict.thread - INFO - start purchase
+2018-06-30 12:23:19,388 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-06-30
+2018-06-30 12:23:20,349 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:23:22,808 - append_predict.main - DEBUG - lottery_id: 690230
+2018-06-30 12:23:22,809 - append_predict.main - INFO - lottery_num: 02,08,09,04,10,05,07,01,06,03
+2018-06-30 12:23:22,809 - append_predict.main - DEBUG - mingci [3]: 9
+2018-06-30 12:23:22,811 - append_predict.main - DEBUG - purchase_number_list[i]: [u'1', u'3', u'4', u'6', u'9', u'10']
+2018-06-30 12:23:22,811 - append_predict.main - DEBUG - ------all_count: 6  ----target_count: 1 
+2018-06-30 12:23:22,811 - append_predict.main - DEBUG - target_count: 0.166667
+2018-06-30 12:23:22,884 - append_predict.main - INFO - last_purchase_hit: True
+2018-06-30 12:23:22,884 - append_predict.main - INFO - xiazhu_nums: 3
+2018-06-30 12:23:40,351 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:24:00,354 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:24:00,354 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:24:00,372 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 12:24:05,374 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:24:05,384 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 12:24:10,384 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:24:10,403 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 12:24:15,404 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:24:15,417 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 12:24:18,821 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 30.3
+2018-06-30 12:24:18,832 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 32.32
+2018-06-30 12:24:18,845 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 27.27
+2018-06-30 12:24:18,862 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 39.39
+2018-06-30 12:24:18,874 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 45.45
+2018-06-30 12:24:18,888 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 32.32
+2018-06-30 12:24:18,901 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 40.4
+2018-06-30 12:24:18,914 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 42.42
+2018-06-30 12:24:18,927 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 36.36
+2018-06-30 12:24:18,937 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 30.3
+2018-06-30 12:24:18,938 - append_predict.predict_append_rule_100 - INFO - current_percent_all_min: 27.27
+2018-06-30 12:24:18,951 - append_predict.predict_append_rule_100 - INFO - number_list: [10, 10, 8, 3, 3, 3, 9, 5, 7, 6]
+2018-06-30 12:24:18,966 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 1, 3, 1, 10, 1, 5, 5, 9, 7]
+2018-06-30 12:24:18,979 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 7, 10, 6, 5, 7, 2, 9, 2, 9]
+2018-06-30 12:24:18,979 - append_predict.predict_append_rule_100 - INFO - last hit
+2018-06-30 12:24:18,993 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 5, 9, 5, 9, 2, 6, 3, 2, 8]
+2018-06-30 12:24:19,006 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 9, 3, 4, 2, 4, 9, 3, 3, 2]
+2018-06-30 12:24:19,019 - append_predict.predict_append_rule_100 - INFO - number_list: [8, 5, 6, 5, 7, 4, 7, 8, 6, 3]
+2018-06-30 12:24:19,032 - append_predict.predict_append_rule_100 - INFO - number_list: [3, 9, 3, 10, 10, 5, 6, 5, 8, 9]
+2018-06-30 12:24:19,046 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 3, 8, 4, 8, 3, 10, 9, 7, 1]
+2018-06-30 12:24:19,059 - append_predict.predict_append_rule_100 - INFO - number_list: [5, 7, 4, 4, 4, 8, 8, 10, 8, 9]
+2018-06-30 12:24:19,073 - append_predict.predict_append_rule_100 - INFO - number_list: [6, 1, 5, 6, 2, 3, 3, 9, 7, 2]
+2018-06-30 12:24:19,073 - append_predict.main - INFO - save predict_lottery_id : 690231
+2018-06-30 12:24:19,075 - append_predict.main - INFO - save purchase_number_list : 0,0,2|5|6|7|8|9|10,0,0,0,0,0,0,0
+2018-06-30 12:24:19,076 - append_predict.main - INFO - gain_money_total total : 3
+2018-06-30 12:24:19,076 - append_predict.main - INFO - result xiazhu : 1
+2018-06-30 12:24:20,420 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:24:20,437 - append_purchase_jinsha.purchase_client_main - INFO - start purchase, 下注金额:1
+2018-06-30 12:24:20,444 - append_purchase_jinsha.purchase_client_main - INFO - calc gain_all_money:13
+2018-06-30 12:24:20,450 - append_purchase_jinsha.purchase_client_main - INFO - reload purchase_url:http://www.ag888xjs.net/Member/Index/play/lottery_id/3.html
+2018-06-30 12:24:20,760 - append_purchase_jinsha.purchase_client_main - INFO - purchase_url reload ok
+2018-06-30 12:24:25,763 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[3]/div[3]/input
+2018-06-30 12:24:25,763 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:24:26,782 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[6]/div[3]/input
+2018-06-30 12:24:26,782 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:24:27,799 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[7]/div[3]/input
+2018-06-30 12:24:27,805 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:24:28,821 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[8]/div[3]/input
+2018-06-30 12:24:28,821 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:24:29,838 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[9]/div[3]/input
+2018-06-30 12:24:29,838 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:24:30,855 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[10]/div[3]/input
+2018-06-30 12:24:30,855 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:24:31,875 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[11]/div[3]/input
+2018-06-30 12:24:31,875 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:24:36,615 - append_purchase_jinsha.purchase_client_main - INFO - click submit
+2018-06-30 12:24:37,128 - append_purchase_jinsha.purchase_client_main - INFO - purchase sucess!, input money:7
+2018-06-30 12:24:37,278 - append_purchase_jinsha.purchase_client_main - INFO - save xiazhu args sucess!
+2018-06-30 12:28:02,154 - append_predict.thread - INFO - current_date:20180630 12:28:02
+2018-06-30 12:28:02,155 - append_predict.thread - INFO - start purchase
+2018-06-30 12:28:05,292 - append_purchase_jinsha.client_thread - INFO - start purchase
+2018-06-30 12:28:12,157 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-06-30
+2018-06-30 12:28:15,625 - append_predict.main - DEBUG - lottery_id: 690231
+2018-06-30 12:28:15,627 - append_predict.main - INFO - lottery_num: 01,06,08,09,05,04,03,10,07,02
+2018-06-30 12:28:15,628 - append_predict.main - DEBUG - mingci [3]: 8
+2018-06-30 12:28:15,628 - append_predict.main - DEBUG - purchase_number_list[i]: [u'2', u'5', u'6', u'7', u'8', u'9', u'10']
+2018-06-30 12:28:15,630 - append_predict.main - DEBUG - ------all_count: 7  ----target_count: 1 
+2018-06-30 12:28:15,630 - append_predict.main - DEBUG - target_count: 0.142857
+2018-06-30 12:28:15,703 - append_predict.main - INFO - last_purchase_hit: True
+2018-06-30 12:28:15,703 - append_predict.main - INFO - xiazhu_nums: 3
+2018-06-30 12:28:25,295 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:28:45,296 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:29:05,298 - append_purchase_jinsha.purchase_client_main - INFO - purchase time is no region!
+2018-06-30 12:29:05,299 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:29:05,323 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 12:29:10,325 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:29:10,335 - append_purchase_jinsha.purchase_client_main - INFO - wait time until shahao message save ok
+2018-06-30 12:29:11,743 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 30.3
+2018-06-30 12:29:11,759 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 33.33
+2018-06-30 12:29:11,770 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 27.27
+2018-06-30 12:29:11,785 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 39.39
+2018-06-30 12:29:11,796 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 45.45
+2018-06-30 12:29:11,809 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 32.32
+2018-06-30 12:29:11,822 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 40.4
+2018-06-30 12:29:11,835 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 41.41
+2018-06-30 12:29:11,848 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 35.35
+2018-06-30 12:29:11,859 - append_predict.predict_append_rule_100 - INFO - current_percent_all: 30.3
+2018-06-30 12:29:11,859 - append_predict.predict_append_rule_100 - INFO - current_percent_all_min: 27.27
+2018-06-30 12:29:11,872 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 3, 2, 2, 3, 5, 6, 7, 10, 1]
+2018-06-30 12:29:11,885 - append_predict.predict_append_rule_100 - INFO - number_list: [10, 4, 6, 10, 2, 6, 9, 8, 10, 5]
+2018-06-30 12:29:11,900 - append_predict.predict_append_rule_100 - INFO - number_list: [10, 7, 4, 1, 7, 2, 2, 7, 8, 4]
+2018-06-30 12:29:11,900 - append_predict.predict_append_rule_100 - INFO - last hit
+2018-06-30 12:29:11,911 - append_predict.predict_append_rule_100 - INFO - number_list: [3, 9, 5, 10, 9, 1, 1, 10, 10, 3]
+2018-06-30 12:29:11,923 - append_predict.predict_append_rule_100 - INFO - number_list: [5, 2, 3, 7, 9, 6, 5, 5, 1, 2]
+2018-06-30 12:29:11,937 - append_predict.predict_append_rule_100 - INFO - number_list: [1, 7, 6, 10, 3, 7, 10, 2, 3, 2]
+2018-06-30 12:29:11,950 - append_predict.predict_append_rule_100 - INFO - number_list: [9, 7, 10, 7, 4, 8, 10, 8, 8, 9]
+2018-06-30 12:29:11,961 - append_predict.predict_append_rule_100 - INFO - number_list: [2, 10, 9, 5, 4, 9, 7, 8, 5, 10]
+2018-06-30 12:29:11,976 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 1, 2, 5, 6, 1, 7, 2, 1, 3]
+2018-06-30 12:29:11,987 - append_predict.predict_append_rule_100 - INFO - number_list: [7, 10, 7, 10, 7, 2, 1, 4, 3, 3]
+2018-06-30 12:29:11,990 - append_predict.main - INFO - save predict_lottery_id : 690232
+2018-06-30 12:29:11,990 - append_predict.main - INFO - save purchase_number_list : 0,0,1|2|4|7|8|10,0,0,0,0,0,0,0
+2018-06-30 12:29:11,992 - append_predict.main - INFO - gain_money_total total : 2
+2018-06-30 12:29:11,993 - append_predict.main - INFO - result xiazhu : 1
+2018-06-30 12:29:15,336 - append_purchase_jinsha.purchase_client_main - INFO - request server interface!
+2018-06-30 12:29:15,352 - append_purchase_jinsha.purchase_client_main - INFO - start purchase, 下注金额:1
+2018-06-30 12:29:15,362 - append_purchase_jinsha.purchase_client_main - INFO - calc gain_all_money:16
+2018-06-30 12:29:15,368 - append_purchase_jinsha.purchase_client_main - INFO - reload purchase_url:http://www.ag888xjs.net/Member/Index/play/lottery_id/3.html
+2018-06-30 12:29:15,760 - append_purchase_jinsha.purchase_client_main - INFO - purchase_url reload ok
+2018-06-30 12:29:20,765 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[2]/div[3]/input
+2018-06-30 12:29:20,765 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:29:21,786 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[3]/div[3]/input
+2018-06-30 12:29:21,786 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:29:22,802 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[5]/div[3]/input
+2018-06-30 12:29:22,802 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:29:23,823 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[8]/div[3]/input
+2018-06-30 12:29:23,825 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:29:24,842 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[9]/div[3]/input
+2018-06-30 12:29:24,842 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:29:25,858 - append_purchase_jinsha.purchase_client_main - INFO - start purchase purchase_element://*[@id="odds_body"]/div[1]/div[3]/ul/li[11]/div[3]/input
+2018-06-30 12:29:25,858 - append_purchase_jinsha.purchase_client_main - INFO - current xaizhu money:1
+2018-06-30 12:29:30,596 - append_purchase_jinsha.purchase_client_main - INFO - click submit
+2018-06-30 12:29:31,112 - append_purchase_jinsha.purchase_client_main - INFO - purchase sucess!, input money:6
+2018-06-30 12:29:31,190 - append_purchase_jinsha.purchase_client_main - INFO - save xiazhu args sucess!

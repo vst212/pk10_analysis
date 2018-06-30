@@ -136,6 +136,9 @@ urlpatterns = [
     url(r'^append_control_predict_thread/$', append_predict.main.control_predict_thread),
     url(r'^append_predict_report/$', append_predict.report.predict_report),
     url(r'^append_control_predict_report/$', append_predict.report.control_predict_report),
+
+    #######返回部分报表
+    url(r'^report/$', append_predict.report.get_last_ten_report),
     ###获取预测数据
     url(r'^get_append_predict_data/$', append_predict.main.get_predict),
     #设置用户set_user_data

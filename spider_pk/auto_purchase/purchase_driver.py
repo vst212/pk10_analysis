@@ -137,15 +137,3 @@ def get_driver(username,password):
     time.sleep(10)
 
     return driver
-
-
-    continue_flag = True
-
-    '1-1://*[@id="a_B1_1"]/input'
-    '1-2://*[@id="a_B1_2"]/input'
-    '2-1://*[@id="a_B2_1"]/input'
-    '3-6://*[@id="a_B3_6"]/input'
-
-    '确定://*[@id="header"]/div[2]/div/input[1]'
-
-    '弹窗确定：/html/body/div[6]/div[3]/div/button[1]/span'
