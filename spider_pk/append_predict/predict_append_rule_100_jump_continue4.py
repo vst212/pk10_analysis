@@ -283,7 +283,7 @@ def get_purchase_list(interval, last_purchase_hit, xiazhu_nums):
     pk_logger.info("current_percent_all_second_min: %s" , current_percent_all_second_min)
 
     #第一名与次名相差8，这使用次名作为最小值
-    if current_percent_all_second_min - current_percent_all_min >= 8:
+    if current_percent_all_second_min - current_percent_all_min >= 10:
         current_percent_all_min = current_percent_all_second_min
 
     current_percent_all_list_str = str(current_percent_all_list)
@@ -305,9 +305,14 @@ def get_purchase_list(interval, last_purchase_hit, xiazhu_nums):
                 purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
                 purchase_mingci_number = page_count_index
                 #防止有相同的最大连中名次，多次购买。
-                current_all_continue_hit_max = current_all_continue_hit_max + 1
+                #current_all_continue_hit_max = current_all_continue_hit_max + 1
             else:
-                purchase_number = '0'
+                if current_percent_all == current_percent_all_min:
+                    pk_logger.info("last hit")
+                    purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
+                    purchase_mingci_number = page_count_index
+                else:
+                    purchase_number = '0'
         #没有4期连中的情况
         else:
             #上期命中情况
@@ -321,7 +326,7 @@ def get_purchase_list(interval, last_purchase_hit, xiazhu_nums):
                     purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
                     purchase_mingci_number = page_count_index
                     #防止有相同的最小名次，多次购买。
-                    current_percent_all_min = 0
+                    #current_percent_all_min = 0
                 else:
                     purchase_number = '0'
             #上期未命中情况
@@ -337,7 +342,7 @@ def get_purchase_list(interval, last_purchase_hit, xiazhu_nums):
                     purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
                     purchase_mingci_number = page_count_index
                     #防止有相同的最小名次，多次购买。
-                    current_percent_all_min = 0
+                    #current_percent_all_min = 0
                 else:
                     purchase_number = '0'
 

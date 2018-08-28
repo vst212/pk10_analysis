@@ -26,7 +26,7 @@ def spider_predict_selenium():
             driver_flag = False
             return driver
         except:
-            pk_logger.error("get driver time out")
+            print "get driver time out"
             driver.quit()
             time.sleep(10)
 
@@ -53,23 +53,23 @@ def get_soup_list(interval):
                 js = "var q=document.documentElement.scrollTop=300"
                 driver.execute_script(js)
                 #print "scroll finish!"
-                #pk_logger.info("scroll finish!")
+                pk_logger.info("scroll finish!")
 
                 #处理100期
                 #print 'click select'
-                #pk_logger.info("click select")
+                pk_logger.info("click select")
                 driver.find_element_by_class_name('colorWorld_selectJtou').click()
                 time.sleep(1)
                 #print 'click 10'
                 #driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div/div[1]/div/div/div/div/span[1]').click()
                 #print 'click 100'
-                #pk_logger.info("click 100")
+                pk_logger.info("click 100")
                 driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div/div[1]/div/div/div/div/span[4]').click()
                 time.sleep(2)
                 #处理完成
 
                 for i in range(10):
-                    #'/html/body/div[3]/div[2]/div/div/div[2]/div[2]/span[1]/span'
+                    '/html/body/div[3]/div[2]/div/div/div[2]/div[2]/span[1]/span'
                     driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div/div[2]/div[2]/span[' + str(i+1) + ']/span').click()
                     time.sleep(4)
                     soup = BeautifulSoup(driver.page_source)
@@ -105,7 +105,12 @@ def get_kill_purchase_list(soup):
     number_str_all_list = []
     prev_number_list = []
     hit_number = 0
+
+    #每个名次命中率列表
+    continue_hit_list = []
+    all_continue_hit_number = 0
     for tr in soup.find(class_='lotteryPublic_tableBlock').find_all('tr'):
+        #百分比
         if count == 1:
             p_percent = 0
             current_percent_all = 30
@@ -117,6 +122,21 @@ def get_kill_purchase_list(soup):
                 if p_percent == 10:
                     current_percent_all = float(str(td.string).strip().replace("%",""))
                 p_percent = p_percent + 1
+
+        #当前连中个数
+        if count == 2:
+            p_continue_hit = 0
+            for td in tr.find_all(class_='font_blue0f'):
+                #前10个为10个名次的连中个数
+                if p_continue_hit < 10:
+                    value = int(str(td.string))
+                    #pk_logger.info("continue hit number:%d", value)
+                    continue_hit_list.append(value)
+                #总连续命中个数
+                if p_continue_hit == 10:
+                    all_continue_hit_number = int(str(td.string))
+                    #pk_logger.info("all continue hit number:%d", all_continue_hit_number)
+                p_continue_hit = p_continue_hit + 1
 
         if count == 5:
             p_number = 0
@@ -155,13 +175,15 @@ def get_kill_purchase_list(soup):
     #全部杀中
     else:
         kill_all_flag = True
-    return protty_id,percent_list,number_list,number_str_all_list,kill_all_flag,current_percent_all
+    return protty_id,percent_list,number_list,number_str_all_list,kill_all_flag,current_percent_all,all_continue_hit_number
 
 
 
-#基于一个名次soup 获取预测号码列表 ，杀号率列表，期号
-def get_min_current_percent_all(soup):
+#基于一个名次soup 获取预测杀号率列表 总杀号率  总连中个数
+def get_min_current_percent_all_and_continue_hit(soup):
     count = 1
+    continue_hit_list = []
+    all_continue_hit_number = 0
     for tr in soup.find(class_='lotteryPublic_tableBlock').find_all('tr'):
         if count == 1:
             p_percent = 0
@@ -170,14 +192,29 @@ def get_min_current_percent_all(soup):
                     current_percent_all = float(str(td.string).strip().replace("%",""))
                 p_percent = p_percent + 1
             #print "current_percent_all:",current_percent_all
+
+        #当前连中个数
+        if count == 2:
+            p_continue_hit = 0
+            for td in tr.find_all(class_='font_blue0f'):
+                #前10个为10个名次的连中个数
+                if p_continue_hit < 10:
+                    value = int(str(td.string))
+                    #pk_logger.info("continue hit number:%d", value)
+                    continue_hit_list.append(value)
+                #总连续命中个数
+                if p_continue_hit == 10:
+                    all_continue_hit_number = int(str(td.string))
+                    #pk_logger.info("all continue hit number:%d", all_continue_hit_number)
+                p_continue_hit = p_continue_hit + 1
         count = count + 1
 
-    return current_percent_all
+    return current_percent_all,all_continue_hit_number
 
 
 #号码处理，排名前6的号码过滤，剩余的号码购买
 def max_min_deal(percent_list,number_list, kill_list, purchase_list, current_percent_all):
-    if current_percent_all < 45:
+    if current_percent_all < 50:
         last_number = list(set(number_list))
     # elif current_percent_all>= 40:
     #     #杀掉号码，取前6名作为杀号码
@@ -222,47 +259,87 @@ def get_purchase_list(interval, last_purchase_hit, xiazhu_nums):
     #获取最小的总百分比
     current_percent_all_min = 50
     current_percent_all_list = []
+
+    current_all_continue_hit_max = 0
+    current_all_continue_hit_list = []
     for soup in soup_list:
-        current_percent_all = get_min_current_percent_all(soup)
+        #获取总百分比，获取总连续命中
+        current_percent_all,all_continue_hit_number = get_min_current_percent_all_and_continue_hit(soup)
         current_percent_all_list.append(current_percent_all)
-        #print "current_percent_all:",current_percent_all
+        current_all_continue_hit_list.append(all_continue_hit_number)
         pk_logger.info("current_percent_all: %s" , current_percent_all)
+        pk_logger.info("all_continue_hit_number: %s" , all_continue_hit_number)
+        #排序，找出最小的命中率
         if current_percent_all_min > current_percent_all:
             current_percent_all_min = current_percent_all
+        #排序，找出最大的连中次数
+        if current_all_continue_hit_max < all_continue_hit_number:
+            current_all_continue_hit_max = all_continue_hit_number
+
+    current_percent_all_min = sorted(current_percent_all_list)[0]
+    current_percent_all_second_min = sorted(current_percent_all_list)[1]
+
+    pk_logger.info("current_percent_all_min: %s" , current_percent_all_min)
+    pk_logger.info("current_percent_all_second_min: %s" , current_percent_all_second_min)
+
+    #第一名与次名相差8，这使用次名作为最小值
+    if current_percent_all_second_min - current_percent_all_min >= 8:
+        current_percent_all_min = current_percent_all_second_min
+
     current_percent_all_list_str = str(current_percent_all_list)
     #print "current_percent_all_min:",current_percent_all_min
     pk_logger.info("current_percent_all_min: %s" , current_percent_all_min)
+    pk_logger.info("current_all_continue_hit_max: %s" , current_all_continue_hit_max)
     #循环遍历，满足条件的提取出来
     for soup in soup_list:
-        protty_id, percent_list,number_list,number_str_all_list,kill_all_flag,current_percent_all = get_kill_purchase_list(soup)
+        protty_id, percent_list,number_list,number_str_all_list,kill_all_flag,current_percent_all,all_continue_hit_number = get_kill_purchase_list(soup)
         current_number_all = "|".join(number_str_all_list)
         predict_number_all_list.append(current_number_all)
         kill_list = []
         purchase_list = []
 
-        #上期命中情况
-        if (last_purchase_hit):
-            if current_percent_all == current_percent_all_min:
-                #print "last hit"
-                pk_logger.info("last hit")
+        #有大于等于连续3期命中的，跳转过去
+        if current_all_continue_hit_max > 3 :
+            if all_continue_hit_number == current_all_continue_hit_max:
+                pk_logger.info("jump to continue hit:%d",current_all_continue_hit_max)
                 purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
                 purchase_mingci_number = page_count_index
-                current_percent_all_min = 0
+                #防止有相同的最大连中名次，多次购买。
+                current_all_continue_hit_max = current_all_continue_hit_max + 1
             else:
                 purchase_number = '0'
-        #上期未命中情况
+        #没有4期连中的情况
         else:
-            #使用同一未中名次
-            #if xiazhu_nums == page_count_index:
-            #按照排名最小的取值
-            if current_percent_all == current_percent_all_min:
-                #print "last not hit"
-                pk_logger.info("last not hit")
-                purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
-                purchase_mingci_number = page_count_index
-                current_percent_all_min = 0
+            #上期命中情况
+            if (last_purchase_hit):
+                #最小的购买
+                if current_percent_all == current_percent_all_min:
+                #最小和次小的购买
+                #if current_percent_all <= current_percent_all_second_min:
+                    #print "last hit"
+                    pk_logger.info("last hit")
+                    purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
+                    purchase_mingci_number = page_count_index
+                    #防止有相同的最小名次，多次购买。
+                    current_percent_all_min = 0
+                else:
+                    purchase_number = '0'
+            #上期未命中情况
             else:
-                purchase_number = '0'
+                #使用同一未中名次
+                #if xiazhu_nums == page_count_index:
+                #按照排名最小的取值
+                if current_percent_all == current_percent_all_min:
+                #最小和次小的购买
+                #if current_percent_all <= current_percent_all_second_min:
+                    #print "last not hit"
+                    pk_logger.info("last not hit")
+                    purchase_number = max_min_deal(percent_list, number_list, kill_list, purchase_list, current_percent_all)
+                    purchase_mingci_number = page_count_index
+                    #防止有相同的最小名次，多次购买。
+                    current_percent_all_min = 0
+                else:
+                    purchase_number = '0'
 
         if count == len(soup_list) - 1:
             purchase_number_list = purchase_number_list + str(purchase_number)

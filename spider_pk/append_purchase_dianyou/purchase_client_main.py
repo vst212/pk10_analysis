@@ -290,14 +290,17 @@ def get_xiazhu_message_dianyou(purchase_number_str):
                 xpath = '//*[@id="itmStakeInput2' + column + '1' + value + '"]'
                 #print "xpath:",xpath
                 buy_element_list.append(xpath)
+
     #print buy_element_list
     return buy_element_list
 
 
 def reload_pxiagme1_pk10_driver(driver):
     #重新加载
+    time.sleep(2)
     pk_logger.info("reload purchase_url:%s",driver.current_url)
     driver.get(driver.current_url)
+    time.sleep(3)
     driver.switch_to_frame("topFrame")
     time.sleep(1)
 

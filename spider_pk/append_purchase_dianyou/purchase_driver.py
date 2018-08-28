@@ -16,7 +16,7 @@ def get_driver(username,password):
 
     #火狐浏览器
     driver = webdriver.Firefox(executable_path = 'E:\\python\\webdriver\\firefox\\geckodriver.exe')
-    driver.get('http://pxkagme1.lot1068.net:8082/member/Welcome.action?searchKeyword=99935')
+    driver.get('http://pxkagme1.lot1068.net:8082/member/Welcome.action?searchKeyword=33588')
 
     driver.maximize_window();
     user_elem = driver.find_element_by_name("userCode")

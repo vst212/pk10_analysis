@@ -1,0 +1,107 @@
+2018-08-21 15:34:24,545 - append_predict_sandd.main - INFO - test not start
+2018-08-21 15:34:55,384 - append_predict_sandd.main - DEBUG - thread is not alive start!!!
+2018-08-21 15:34:55,384 - append_predict_sandd.thread - INFO - current_date:20180821 15:34:55
+2018-08-21 15:34:55,392 - append_predict_sandd.thread - INFO - start purchase
+2018-08-21 15:35:05,397 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-21
+2018-08-21 15:35:16,563 - append_predict_sandd.main - DEBUG - predicts is null
+2018-08-21 15:35:16,565 - append_predict_sandd.main - DEBUG - lottery_id: 0
+2018-08-21 15:35:16,565 - append_predict_sandd.main - DEBUG - no predict record in history
+2018-08-21 15:35:20,144 - append_predict_sandd.predict_append_rule - INFO - scroll finish!
+2018-08-21 15:35:20,148 - append_predict_sandd.predict_append_rule - INFO - click select
+2018-08-21 15:35:21,509 - append_predict_sandd.predict_append_rule - INFO - click 100
+2018-08-21 15:36:08,338 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 39.39
+2018-08-21 15:36:08,338 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 0
+2018-08-21 15:36:08,355 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 42.42
+2018-08-21 15:36:08,355 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 0
+2018-08-21 15:36:08,374 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 33.33
+2018-08-21 15:36:08,374 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 0
+2018-08-21 15:36:08,391 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 44.44
+2018-08-21 15:36:08,391 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 1
+2018-08-21 15:36:08,408 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 29.29
+2018-08-21 15:36:08,408 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 0
+2018-08-21 15:36:08,430 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 29.29
+2018-08-21 15:36:08,430 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 0
+2018-08-21 15:36:08,447 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 29.29
+2018-08-21 15:36:08,448 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 0
+2018-08-21 15:36:08,464 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 31.31
+2018-08-21 15:36:08,464 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 0
+2018-08-21 15:36:08,493 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 28.28
+2018-08-21 15:36:08,493 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 0
+2018-08-21 15:36:08,509 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 36.36
+2018-08-21 15:36:08,510 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 6
+2018-08-21 15:36:08,510 - append_predict_sandd.predict_append_rule - INFO - current_percent_all_min: 28.28
+2018-08-21 15:36:08,510 - append_predict_sandd.predict_append_rule - INFO - current_percent_all_second_min: 29.29
+2018-08-21 15:36:08,510 - append_predict_sandd.predict_append_rule - INFO - current_percent_all_min: 28.28
+2018-08-21 15:36:08,512 - append_predict_sandd.predict_append_rule - INFO - current_all_continue_hit_max: 6
+2018-08-21 15:36:08,526 - append_predict_sandd.predict_append_rule - INFO - number_list: [2, 3, 8, 3, 10, 6, 2, 3, 6, 3]
+2018-08-21 15:36:08,540 - append_predict_sandd.predict_append_rule - INFO - number_list: [9, 5, 6, 5, 9, 4, 2, 2, 1, 8]
+2018-08-21 15:36:08,556 - append_predict_sandd.predict_append_rule - INFO - number_list: [4, 10, 1, 2, 9, 6, 6, 4, 9, 4]
+2018-08-21 15:36:08,572 - append_predict_sandd.predict_append_rule - INFO - number_list: [6, 1, 7, 3, 8, 8, 9, 4, 10, 7]
+2018-08-21 15:36:08,595 - append_predict_sandd.predict_append_rule - INFO - number_list: [7, 1, 5, 8, 3, 7, 5, 1, 8, 2]
+2018-08-21 15:36:08,627 - append_predict_sandd.predict_append_rule - INFO - number_list: [7, 1, 5, 8, 3, 7, 5, 1, 8, 2]
+2018-08-21 15:36:08,644 - append_predict_sandd.predict_append_rule - INFO - number_list: [10, 10, 1, 9, 1, 1, 9, 2, 8, 9]
+2018-08-21 15:36:08,661 - append_predict_sandd.predict_append_rule - INFO - number_list: [8, 5, 2, 5, 1, 6, 1, 8, 10, 9]
+2018-08-21 15:36:08,674 - append_predict_sandd.predict_append_rule - INFO - number_list: [1, 4, 6, 3, 5, 4, 7, 4, 5, 5]
+2018-08-21 15:36:08,697 - append_predict_sandd.predict_append_rule - INFO - number_list: [10, 1, 2, 8, 4, 2, 6, 7, 10, 4]
+2018-08-21 15:36:08,698 - append_predict_sandd.predict_append_rule - INFO - jump to continue hit:6
+2018-08-21 15:36:08,698 - append_predict_sandd.main - INFO - save predict_lottery_id : 699577
+2018-08-21 15:36:08,698 - append_predict_sandd.main - INFO - save purchase_number_list : 0,0,0,0,0,0,0,0,0,1|2|4|6|7|8|10
+2018-08-21 15:36:08,700 - append_predict_sandd.main - INFO - gain_money_total total : 0
+2018-08-21 15:36:08,700 - append_predict_sandd.main - DEBUG - purchase_number_list len: 7
+2018-08-21 15:36:08,701 - append_predict_sandd.main - INFO - next_xiazhu_all total : -7
+2018-08-21 15:36:08,701 - append_predict_sandd.main - INFO - result xiazhu : 1
+2018-08-21 15:38:01,844 - append_predict_sandd.thread - INFO - current_date:20180821 15:38:01
+2018-08-21 15:38:01,845 - append_predict_sandd.thread - INFO - start purchase
+2018-08-21 15:38:11,854 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-21
+2018-08-21 15:38:22,250 - append_predict_sandd.main - DEBUG - lottery_id: 699577
+2018-08-21 15:38:22,252 - append_predict_sandd.main - INFO - lottery_num: 03,10,08,04,01,09,07,05,02,06
+2018-08-21 15:38:22,252 - append_predict_sandd.main - DEBUG - mingci [10]: 6
+2018-08-21 15:38:22,253 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1', u'2', u'4', u'6', u'7', u'8', u'10']
+2018-08-21 15:38:22,253 - append_predict_sandd.main - DEBUG - ------all_count: 7  ----target_count: 1 
+2018-08-21 15:38:22,253 - append_predict_sandd.main - DEBUG - target_count: 0.142857
+2018-08-21 15:38:22,469 - append_predict_sandd.main - INFO - last_purchase_hit: True
+2018-08-21 15:38:22,470 - append_predict_sandd.main - INFO - xiazhu_nums: 10
+2018-08-21 15:38:26,651 - append_predict_sandd.predict_append_rule - INFO - scroll finish!
+2018-08-21 15:38:26,651 - append_predict_sandd.predict_append_rule - INFO - click select
+2018-08-21 15:38:27,881 - append_predict_sandd.predict_append_rule - INFO - click 100
+2018-08-21 15:39:14,539 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 38.38
+2018-08-21 15:39:14,540 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 0
+2018-08-21 15:39:14,558 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 42.42
+2018-08-21 15:39:14,559 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 1
+2018-08-21 15:39:14,602 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 34.34
+2018-08-21 15:39:14,619 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 1
+2018-08-21 15:39:14,651 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 44.44
+2018-08-21 15:39:14,651 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 0
+2018-08-21 15:39:14,668 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 44.44
+2018-08-21 15:39:14,668 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 0
+2018-08-21 15:39:14,684 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 29.29
+2018-08-21 15:39:14,686 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 0
+2018-08-21 15:39:14,700 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 39.39
+2018-08-21 15:39:14,700 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 0
+2018-08-21 15:39:14,717 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 31.31
+2018-08-21 15:39:14,720 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 0
+2018-08-21 15:39:14,734 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 28.28
+2018-08-21 15:39:14,734 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 0
+2018-08-21 15:39:14,753 - append_predict_sandd.predict_append_rule - INFO - current_percent_all: 28.28
+2018-08-21 15:39:14,753 - append_predict_sandd.predict_append_rule - INFO - all_continue_hit_number: 0
+2018-08-21 15:39:14,753 - append_predict_sandd.predict_append_rule - INFO - current_percent_all_min: 28.28
+2018-08-21 15:39:14,753 - append_predict_sandd.predict_append_rule - INFO - current_percent_all_second_min: 28.28
+2018-08-21 15:39:14,753 - append_predict_sandd.predict_append_rule - INFO - current_percent_all_min: 28.28
+2018-08-21 15:39:14,753 - append_predict_sandd.predict_append_rule - INFO - current_all_continue_hit_max: 1
+2018-08-21 15:39:14,767 - append_predict_sandd.predict_append_rule - INFO - number_list: [10, 8, 6, 10, 1, 7, 7, 8, 10, 8]
+2018-08-21 15:39:14,786 - append_predict_sandd.predict_append_rule - INFO - number_list: [2, 1, 4, 4, 1, 6, 8, 5, 7, 2]
+2018-08-21 15:39:14,805 - append_predict_sandd.predict_append_rule - INFO - number_list: [7, 4, 1, 1, 9, 8, 5, 1, 5, 10]
+2018-08-21 15:39:14,825 - append_predict_sandd.predict_append_rule - INFO - number_list: [8, 3, 10, 7, 10, 1, 6, 1, 7, 7]
+2018-08-21 15:39:14,848 - append_predict_sandd.predict_append_rule - INFO - number_list: [8, 3, 10, 7, 10, 1, 6, 1, 7, 7]
+2018-08-21 15:39:14,881 - append_predict_sandd.predict_append_rule - INFO - number_list: [6, 3, 6, 1, 9, 3, 9, 1, 8, 6]
+2018-08-21 15:39:14,901 - append_predict_sandd.predict_append_rule - INFO - number_list: [6, 2, 2, 7, 8, 3, 7, 7, 10, 9]
+2018-08-21 15:39:14,917 - append_predict_sandd.predict_append_rule - INFO - number_list: [5, 7, 8, 6, 9, 4, 9, 3, 3, 2]
+2018-08-21 15:39:14,934 - append_predict_sandd.predict_append_rule - INFO - number_list: [4, 5, 10, 9, 4, 10, 2, 3, 2, 4]
+2018-08-21 15:39:14,934 - append_predict_sandd.predict_append_rule - INFO - last hit
+2018-08-21 15:39:14,956 - append_predict_sandd.predict_append_rule - INFO - number_list: [4, 5, 10, 9, 4, 10, 2, 3, 2, 4]
+2018-08-21 15:39:14,957 - append_predict_sandd.main - INFO - save predict_lottery_id : 699578
+2018-08-21 15:39:14,959 - append_predict_sandd.main - INFO - save purchase_number_list : 0,0,0,0,0,0,0,0,2|3|4|5|9|10,0
+2018-08-21 15:39:14,961 - append_predict_sandd.main - INFO - gain_money_total total : 0
+2018-08-21 15:39:14,970 - append_predict_sandd.main - DEBUG - purchase_number_list len: 6
+2018-08-21 15:39:14,971 - append_predict_sandd.main - INFO - next_xiazhu_all total : -6
+2018-08-21 15:39:14,974 - append_predict_sandd.main - INFO - result xiazhu : 1

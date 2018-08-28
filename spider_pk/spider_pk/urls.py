@@ -57,6 +57,17 @@ import append_purchase_dianyou.purchase_client_main
 import append_purchase_jinsha.purchase_client_main
 
 
+#####力德 自动化购买
+import append_purchase_lide.purchase_client_main
+
+
+
+#######################追加方式自动化 --两面盘
+import append_predict_sandd.main
+import append_predict_sandd.report
+import append_predict_sandd.user
+import append_purchase_lide_sandd.purchase_client_main
+
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
     ##########################################V8版本#####################################
@@ -137,6 +148,9 @@ urlpatterns = [
     url(r'^append_predict_report/$', append_predict.report.predict_report),
     url(r'^append_control_predict_report/$', append_predict.report.control_predict_report),
 
+    #演示数据
+    url(r'^show_report/', append_predict.report.get_yanshi_report_max_incerease),
+
     #######返回部分报表
     url(r'^report/$', append_predict.report.get_last_ten_report),
     ###获取预测数据
@@ -162,6 +176,31 @@ urlpatterns = [
     ######基于杀号自动化购买####
     url(r'^append_purchase_jinsha/$', append_purchase_jinsha.purchase_client_main.auto_admin),
     url(r'^append_purchase_jinsha_control/$', append_purchase_jinsha.purchase_client_main.control_probuser_thread),
+
+
+    #######!!!++++++++++++++++++++++++++++++++基于追加方式的新一期优化  力德系统自动化购买++++++++++++++++++######################
+    ######基于杀号自动化购买####
+    url(r'^append_purchase_lide/$', append_purchase_lide.purchase_client_main.auto_admin),
+    url(r'^append_purchase_lide_control/$', append_purchase_lide.purchase_client_main.control_probuser_thread),
+
+
+    ###################################################################################################
+    #########################################两面盘####################################################
+    ###################################################################################################
+    url(r'^append_predict_sandd_main/$', append_predict_sandd.main.predict_main),
+    url(r'^append_control_predict_sandd_thread/$', append_predict_sandd.main.control_predict_thread),
+    url(r'^append_predict_sandd_report/$', append_predict_sandd.report.predict_report),
+    url(r'^append_control_predict_sandd_report/$', append_predict_sandd.report.control_predict_report),
+
+    #设置用户set_user_data
+    url(r'^set_append_sandd_user/$', append_predict_sandd.user.set_user),
+    ###获取预测数据
+    url(r'^get_append_predict_sandd_data/$', append_predict_sandd.main.get_predict),
+    #力德
+    url(r'^append_purchase_lide_sandd/$', append_purchase_lide_sandd.purchase_client_main.auto_admin),
+    url(r'^append_purchase_lide_sandd_control/$', append_purchase_lide_sandd.purchase_client_main.control_probuser_thread),
+
+
 
 
 ]

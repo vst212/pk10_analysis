@@ -170,7 +170,7 @@ def get_predict_kill_and_save(interval):
                                 else:
                                     pk_logger.info("purchase faild!")
                             else:
-                                pk_logger.info("no element in purchase_element_list")
+                                pk_logger.info("element less 5 in purchase_element_list")
                         purchase_flag_confirm = False
                     else:
                         pk_logger.info("wait time until shahao message save ok")
@@ -239,11 +239,11 @@ def start_purchase(purchase_element_list, interval, money):
     pk_logger.info("calc gain_all_money:%d", gain_all_money)
 
     #开始购买
-    if 1:
+    try:
         interval['purchase_driver'] = reload_jinsha_pk10_url(interval['purchase_driver'])
         purchase_driver = interval['purchase_driver']
 
-        if 1:
+        try:
             #遍历填充值
             for purchase_element in purchase_element_list:
                 pk_logger.info("start purchase purchase_element:%s",purchase_element)
@@ -266,7 +266,11 @@ def start_purchase(purchase_element_list, interval, money):
             submit.click()
 
             return True
-    else:
+        except:
+            pk_logger.error("send keys error, get element error!")
+            return False
+    except:
+        pk_logger.error("reload pk10 current url error!")
         return False
 
 
@@ -318,7 +322,15 @@ def reload_jinsha_pk10_url(driver):
         element = WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.ID , "odds_body")))
         pk_logger.info("purchase_url reload ok")
     except:
-        pk_logger.error("purchase_url reload error timeout")
+        pk_logger.error("purchase_url reload first error timeout")
+        driver.get(driver.current_url)
+        try:
+            element = WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.ID , "odds_body")))
+            pk_logger.info("purchase_url reload ok")
+        except:
+            driver.get(driver.current_url)
+            pk_logger.error("purchase_url reload second error timeout")
+
     time.sleep(5)
     return driver
 

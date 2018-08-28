@@ -7,10 +7,15 @@ from append_predict.models import ProbUser
 from append_predict.models import KillPredict,PredictLottery
 from append_predict.thread import ThreadControl
 import math
-#追加方式规则，以最小的命中率的杀号作为购买号码
-#from append_predict.predict_append_rule_100 import spider_predict_selenium,get_purchase_list
+#追加方式规则，以最小的命中率的杀号作为购买号码--公司
+#from append_predict.predict_append_rule_100_min import spider_predict_selenium,get_purchase_list
 #追加方式规则，以最小的命中率的杀号作为购买号码，同一名次未命中则继续购买同一名次，如果有大于等于4的连中名次，则跳转。
-from append_predict.predict_append_rule_100_jump_continue4 import spider_predict_selenium,get_purchase_list
+#from append_predict.predict_append_rule_100_jump_continue4 import spider_predict_selenium,get_purchase_list
+#基于购买最小的优化，有四个连中，跳转，次小比最小大8，使用次小
+from append_predict.predict_append_rule_100_jump_continue4_base_min import spider_predict_selenium,get_purchase_list
+#最小命中率 号码是6个 四期未中跳转
+#from append_predict.predict_append_rule_100_jump_continue4_base_min_6zhu import spider_predict_selenium,get_purchase_list
+
 
 from append_predict.spider_pk10 import get_html_result,get_lottery_id_number,load_lottery_predict
 import time
@@ -174,9 +179,13 @@ def get_predict_kill_and_save(interval, last_purchase_hit, xiazhu_nums):
         #基于前面开奖结果计算下注金额基础(1为基准值)
         #xiazhu_money = get_xiazhu_money_base_on_history_purchase_record(purchase_number_list, current_date)
         #基于前面开奖结果计算下注金额基础(1为基准值)  递增(n*(n+ 1))/2追加
-        xiazhu_money = get_xiazhu_money_base_on_history_purchase_record_increase(purchase_number_list, current_date)
+        #xiazhu_money = get_xiazhu_money_base_on_history_purchase_record_increase(purchase_number_list, current_date)
         #基于前面开奖结果计算下注金额基础(1为基准值)  递增1追加
         #xiazhu_money = get_xiazhu_money_base_on_history_purchase_record_increase_one(purchase_number_list, current_date)
+        #自定义倍数
+        #xiazhu_money = get_xiazhu_money_base_on_history_purchase_record_increase_define(purchase_number_list, current_date)
+        #保本追加
+        xiazhu_money = get_xiazhu_money_base_on_history_purchase_record_baoben(purchase_number_list, current_date)
 
         #保存
         p = KillPredict(kill_predict_date=current_date, save_predict_time=save_predict_time, lottery_id = int(predict_lottery_id), kill_predict_number = purchase_number_list,
@@ -212,7 +221,11 @@ def get_xiazhu_money_base_on_history_purchase_record_increase(purchase_number_li
         else:
             current_purchase_length = current_purchase_length + len(purchase_number.split('|'))
             column_count = column_count + 1
-            break
+    pk_logger.debug("purchase_number_list len: %d",current_purchase_length)
+
+    if gain_money_total < -450:
+        gain_money_total = 0
+
     if gain_money_total < -1:
         #上一期命中，递增下注
         if last_xiazhu_predict.gain_money < 0:
@@ -222,7 +235,6 @@ def get_xiazhu_money_base_on_history_purchase_record_increase(purchase_number_li
             xiahu_money_result = int(math.ceil(math.sqrt(last_xiazhu_predict.xiazhu_money * 2)) + last_xiazhu_predict.xiazhu_money)
         #否则保持不变
         else:
-            pk_logger.debug("purchase_number_list len: %d",current_purchase_length)
             # calc_xainzhu = math.ceil(math.fabs(gain_money_total/(10 - current_purchase_length)))
             # xiahu_money_result = min(last_xiazhu_predict.xiazhu_money,calc_xainzhu)
             #若本期不购买，则下注金额使用上一期
@@ -231,7 +243,109 @@ def get_xiazhu_money_base_on_history_purchase_record_increase(purchase_number_li
             else:
                 calc_xainzhu = math.ceil(math.fabs(gain_money_total/(10*column_count - current_purchase_length)))
                 pk_logger.info("calc_xainzhu:%d, last_xiazhu:%d",calc_xainzhu, last_xiazhu_predict.xiazhu_money)
-                xiahu_money_result = min(last_xiazhu_predict.xiazhu_money,calc_xainzhu)
+                xiahu_money_result = max(min(last_xiazhu_predict.xiazhu_money,calc_xainzhu),2)
+    else:
+        xiahu_money_result = 1
+
+    xiahu_money_result = int(xiahu_money_result)
+    pk_logger.info("result xiazhu : %d",xiahu_money_result)
+    return xiahu_money_result
+
+
+
+#基于历史购买记录计算本期的下注金额基数--1  3  6 12  25，中了递减，不中递增，6/12两次 25 2次
+def get_xiazhu_money_base_on_history_purchase_record_increase_define(purchase_number_list, current_date):
+    xiazhu_predicts = KillPredict.objects.filter(kill_predict_date=current_date).order_by("-lottery_id")
+    record_index = 0
+    for xiazhu_predict in xiazhu_predicts:
+        if xiazhu_predict.is_xiazhu == 1 and record_index == 0:
+            last_xiazhu_predict = xiazhu_predict
+            record_index = record_index + 1
+            continue
+        if xiazhu_predict.is_xiazhu == 1 and record_index == 1:
+            last_last_xiazhu_predict = xiazhu_predict
+            record_index = record_index + 1
+            continue
+    xiahu_money_result = 1
+    gain_money_total = 0
+    for xiazhu_predict in xiazhu_predicts:
+        if (xiazhu_predict.is_xiazhu == 1):
+            if (xiazhu_predict.xiazhu_money > 1):
+                gain_money_total = gain_money_total + xiazhu_predict.gain_money
+            elif xiazhu_predict.xiazhu_money == 1:
+                gain_money_total = gain_money_total + xiazhu_predict.gain_money
+                break
+
+    pk_logger.info("gain_money_total total : %d",gain_money_total)
+    #总长度，即总购买个数
+    current_purchase_length = 0
+    #名次个数，考虑名次相同的情况或者同事有4期未中的情况
+    column_count = 0
+    for purchase_number in purchase_number_list.split(','):
+        if purchase_number == '0':
+            continue
+        else:
+            current_purchase_length = current_purchase_length + len(purchase_number.split('|'))
+            column_count = column_count + 1
+    pk_logger.debug("purchase_number_list len: %d",current_purchase_length)
+    if gain_money_total < -500:
+        gain_money_total = 0
+    if record_index > 1:
+        pk_logger.info("last_xiazhu_predict.xiazhu_money:%s",last_xiazhu_predict.xiazhu_money)
+        pk_logger.info("last_xiazhu_predict.gain_money:%s", last_xiazhu_predict.gain_money)
+        pk_logger.info("last_last_xiazhu_predict.xiazhu_money:%s",last_last_xiazhu_predict.xiazhu_money)
+    else:
+        pk_logger.info("no predict record")
+    if gain_money_total < -1:
+        #上一期命中，递增下注
+        if last_xiazhu_predict.xiazhu_money == 1:
+            if last_xiazhu_predict.gain_money < 0:
+                xiahu_money_result = 3
+            else:
+                xiahu_money_result = 3
+        if last_xiazhu_predict.xiazhu_money == 3:
+            if last_xiazhu_predict.gain_money < 0:
+                xiahu_money_result = 6
+            else:
+                xiahu_money_result = 1
+
+        if last_xiazhu_predict.xiazhu_money == 6:
+            if last_last_xiazhu_predict.xiazhu_money == 6 or last_last_xiazhu_predict.xiazhu_money == 3:
+                if last_xiazhu_predict.gain_money < 0:
+                    xiahu_money_result = 12
+                else:
+                    xiahu_money_result = 3
+            else:
+                if last_xiazhu_predict.gain_money < 0:
+                    xiahu_money_result = 12
+                else:
+                    xiahu_money_result = 6
+
+        if last_xiazhu_predict.xiazhu_money == 12:
+            if last_last_xiazhu_predict.xiazhu_money == 12 or last_last_xiazhu_predict.xiazhu_money == 6:
+                if last_xiazhu_predict.gain_money < 0:
+                    xiahu_money_result = 25
+                else:
+                    xiahu_money_result = 6
+
+            else:
+                if last_xiazhu_predict.gain_money < 0:
+                    xiahu_money_result = 25
+                else:
+                    xiahu_money_result = 12
+
+        if last_xiazhu_predict.xiazhu_money == 25:
+            if last_last_xiazhu_predict.xiazhu_money == 25:
+                if last_xiazhu_predict.gain_money < 0:
+                    xiahu_money_result = 1
+                else:
+                    xiahu_money_result = 12
+            else:
+                if last_xiazhu_predict.gain_money < 0:
+                    xiahu_money_result = 25
+                else:
+                    xiahu_money_result = 12
+
     else:
         xiahu_money_result = 1
 
@@ -269,7 +383,9 @@ def get_xiazhu_money_base_on_history_purchase_record_increase_one(purchase_numbe
         else:
             current_purchase_length = current_purchase_length + len(purchase_number.split('|'))
             column_count = column_count + 1
-            break
+    pk_logger.debug("purchase_number_list len: %d",current_purchase_length)
+    if gain_money_total < -300:
+        gain_money_total = 0
     if gain_money_total < -1:
         #上一期命中，递增下注
         if last_xiazhu_predict.gain_money < 0:
@@ -277,22 +393,84 @@ def get_xiazhu_money_base_on_history_purchase_record_increase_one(purchase_numbe
             #xiahu_money_result = math.pow((math.sqrt(last_xiazhu_predict.xiazhu_money) + 1),2)
             #n(n+1)/2增长
             #xiahu_money_result = int(math.ceil(math.sqrt(last_xiazhu_predict.xiazhu_money * 2)) + last_xiazhu_predict.xiazhu_money)
-            #1增长
-            xiahu_money_result = last_xiazhu_predict.xiazhu_money + 1
+            #3的倍数增长
+            # if last_xiazhu_predict.xiazhu_money == 1:
+            #     xiahu_money_result = last_xiazhu_predict.xiazhu_money + 2
+            # else:
+            #     xiahu_money_result = last_xiazhu_predict.xiazhu_money + 3
+            #加一增长
+            calc_xainzhu = math.ceil(math.fabs(gain_money_total/(10*column_count - current_purchase_length)))
+            xiahu_money_result = last_xiazhu_predict.xiazhu_money + 2
+            pk_logger.info("calc_xainzhu:%d, last_xiazhu increase:%d",calc_xainzhu, xiahu_money_result)
+            xiahu_money_result = min(max(calc_xainzhu,2), xiahu_money_result)
         #否则保持不变
         else:
-            pk_logger.debug("purchase_number_list len: %d",current_purchase_length)
             #若本期不购买，则下注金额使用上一期
             if column_count == 0 or current_purchase_length == 0:
                 xiahu_money_result = last_xiazhu_predict.xiazhu_money
             else:
                 calc_xainzhu = math.ceil(math.fabs(gain_money_total/(10*column_count - current_purchase_length)))
                 pk_logger.info("calc_xainzhu:%d, last_xiazhu:%d",calc_xainzhu, last_xiazhu_predict.xiazhu_money)
-                xiahu_money_result = min(last_xiazhu_predict.xiazhu_money,calc_xainzhu)
+                xiahu_money_result = max(min(last_xiazhu_predict.xiazhu_money,calc_xainzhu),2)
     else:
         xiahu_money_result = 1
 
     xiahu_money_result = int(xiahu_money_result)
+    pk_logger.info("result xiazhu : %d",xiahu_money_result)
+    return xiahu_money_result
+
+
+#保本追加  总金额超过一定数目初始化
+def get_xiazhu_money_base_on_history_purchase_record_baoben(purchase_number_list, current_date):
+    xiazhu_predicts = KillPredict.objects.filter(kill_predict_date=current_date).order_by("-lottery_id")
+    for xiazhu_predict in xiazhu_predicts:
+        last_xiazhu_predict = xiazhu_predict
+        if last_xiazhu_predict.xiazhu_money != 0 and last_xiazhu_predict.is_xiazhu == 1:
+            break
+    xiahu_money_result = 1
+    gain_money_total = 0
+    for xiazhu_predict in xiazhu_predicts:
+        if (xiazhu_predict.is_xiazhu == 1):
+            if (xiazhu_predict.xiazhu_money > 1):
+                gain_money_total = gain_money_total + xiazhu_predict.gain_money
+            elif xiazhu_predict.xiazhu_money == 1:
+                gain_money_total = gain_money_total + xiazhu_predict.gain_money
+                break
+
+    pk_logger.info("gain_money_total total : %d",gain_money_total)
+    #总长度，即总购买个数
+    current_purchase_length = 0
+    #名次个数，考虑名次相同的情况或者同事有4期未中的情况
+    column_count = 0
+    for purchase_number in purchase_number_list.split(','):
+        if purchase_number == '0':
+            continue
+        else:
+            current_purchase_length = current_purchase_length + len(purchase_number.split('|'))
+            column_count = column_count + 1
+    pk_logger.debug("purchase_number_list len: %d",current_purchase_length)
+    # if gain_money_total < -300:
+    #     gain_money_total = 0
+    if gain_money_total < -1:
+        #上一期命中，递增下注
+        if last_xiazhu_predict.gain_money < 0:
+
+            calc_xainzhu = round(math.fabs(gain_money_total/(9.9*column_count - current_purchase_length)))
+            pk_logger.info("calc_xainzhu:%d, last_xiazhu increase:%d",calc_xainzhu, xiahu_money_result)
+            xiahu_money_result = max(calc_xainzhu,2)
+        else:
+            xiahu_money_result = 1
+    else:
+        xiahu_money_result = 1
+    next_xiazhu_all = gain_money_total - current_purchase_length * xiahu_money_result
+    pk_logger.info("next_xiazhu_all total : %d",next_xiazhu_all)
+    if next_xiazhu_all < -350:
+        xiahu_money_result = 1
+
+    xiahu_money_result = int(xiahu_money_result)
+
+    #临时测试使用
+    #xiahu_money_result = 1
     pk_logger.info("result xiazhu : %d",xiahu_money_result)
     return xiahu_money_result
 

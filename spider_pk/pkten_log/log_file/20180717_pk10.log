@@ -1,0 +1,97 @@
+2018-07-17 16:20:14,546 - append_purchase.purchase_client_main - INFO - a1008 not start
+2018-07-17 16:20:15,157 - append_purchase.purchase_client_main - INFO - xiao1235 not start
+2018-07-17 16:20:15,460 - append_purchase.purchase_client_main - INFO - xiao147 not start
+2018-07-17 16:20:15,704 - append_purchase.purchase_client_main - INFO - hy0606 not start
+2018-07-17 16:20:15,969 - append_purchase.purchase_client_main - INFO - qwe12345678 not start
+2018-07-17 16:20:16,388 - append_purchase.purchase_client_main - INFO - hyy01245 not start
+2018-07-17 16:20:57,759 - append_purchase_lide.purchase_client_main - INFO - a1008 not start
+2018-07-17 16:20:57,977 - append_purchase_lide.purchase_client_main - INFO - xiao1235 not start
+2018-07-17 16:20:58,062 - append_purchase_lide.purchase_client_main - INFO - xiao147 not start
+2018-07-17 16:20:58,138 - append_purchase_lide.purchase_client_main - INFO - hy0606 not start
+2018-07-17 16:20:58,474 - append_purchase_lide.purchase_client_main - INFO - qwe12345678 not start
+2018-07-17 16:20:58,628 - append_purchase_lide.purchase_client_main - INFO - hyy01245 not start
+2018-07-17 16:22:13,746 - append_purchase_lide.purchase_client_main - INFO - user_name:hy0606
+2018-07-17 16:22:13,746 - append_purchase_lide.purchase_client_main - INFO - password:Abc123
+2018-07-17 16:22:13,747 - append_purchase_lide.purchase_client_main - INFO - init monry:1
+2018-07-17 16:23:09,907 - append_purchase.purchase_driver - WARNING - 请输入验证码
+2018-07-17 16:23:09,907 - append_purchase.purchase_driver - WARNING - 请输入验证码
+2018-07-17 17:18:00,132 - append_purchase_lide.purchase_client_main - INFO - a1008 not start
+2018-07-17 17:18:00,306 - append_purchase_lide.purchase_client_main - INFO - xiao1235 not start
+2018-07-17 17:18:00,433 - append_purchase_lide.purchase_client_main - INFO - xiao147 not start
+2018-07-17 17:18:00,532 - append_purchase_lide.purchase_client_main - INFO - hy0606 not start
+2018-07-17 17:18:00,608 - append_purchase_lide.purchase_client_main - INFO - qwe12345678 not start
+2018-07-17 17:18:00,683 - append_purchase_lide.purchase_client_main - INFO - hyy01245 not start
+2018-07-17 17:19:16,538 - append_purchase_lide.purchase_client_main - INFO - a1008 not start
+2018-07-17 17:19:16,678 - append_purchase_lide.purchase_client_main - INFO - xiao1235 not start
+2018-07-17 17:19:16,823 - append_purchase_lide.purchase_client_main - INFO - xiao147 not start
+2018-07-17 17:19:17,007 - append_purchase_lide.purchase_client_main - INFO - qwe12345678 not start
+2018-07-17 17:19:17,082 - append_purchase_lide.purchase_client_main - INFO - hyy01245 not start
+2018-07-17 17:19:17,154 - append_purchase_lide.purchase_client_main - INFO - qtm123 not start
+2018-07-17 17:19:20,190 - append_purchase_lide.purchase_client_main - INFO - user_name:qtm123
+2018-07-17 17:19:20,190 - append_purchase_lide.purchase_client_main - INFO - password:abcd1234
+2018-07-17 17:19:20,193 - append_purchase_lide.purchase_client_main - INFO - init monry:1
+2018-07-17 17:19:55,726 - append_purchase_lide.purchase_driver - WARNING - no notice or click notice error!
+2018-07-17 17:19:58,846 - append_purchase_lide.purchase_driver - INFO - click agree ok
+2018-07-17 17:20:01,142 - append_purchase_lide.purchase_driver - INFO - click menu ok
+2018-07-17 17:21:37,601 - append_purchase_lide.purchase_client_main - INFO - a1008 not start
+2018-07-17 17:21:37,750 - append_purchase_lide.purchase_client_main - INFO - xiao1235 not start
+2018-07-17 17:21:37,904 - append_purchase_lide.purchase_client_main - INFO - xiao147 not start
+2018-07-17 17:21:38,030 - append_purchase_lide.purchase_client_main - INFO - qwe12345678 not start
+2018-07-17 17:21:38,191 - append_purchase_lide.purchase_client_main - INFO - hyy01245 not start
+2018-07-17 17:21:38,361 - append_purchase_lide.purchase_client_main - INFO - qtm123 not start
+2018-07-17 17:21:41,680 - append_purchase_lide.purchase_client_main - INFO - user_name:qtm123
+2018-07-17 17:21:41,680 - append_purchase_lide.purchase_client_main - INFO - password:abcd1234
+2018-07-17 17:21:41,680 - append_purchase_lide.purchase_client_main - INFO - init monry:1
+2018-07-17 17:22:01,140 - append_purchase_lide.purchase_driver - WARNING - no notice or click notice error!
+2018-07-17 17:22:03,523 - append_purchase_lide.purchase_driver - INFO - click agree ok
+2018-07-17 17:22:09,759 - append_purchase_lide.purchase_driver - INFO - click menu ok
+2018-07-17 17:22:15,032 - append_purchase_lide.purchase_driver - INFO - click pk10 ok
+2018-07-17 17:29:38,509 - append_purchase_lide.purchase_client_main - INFO - a1008 not start
+2018-07-17 17:29:38,601 - append_purchase_lide.purchase_client_main - INFO - xiao1235 not start
+2018-07-17 17:29:38,693 - append_purchase_lide.purchase_client_main - INFO - xiao147 not start
+2018-07-17 17:29:38,769 - append_purchase_lide.purchase_client_main - INFO - qwe12345678 not start
+2018-07-17 17:29:38,842 - append_purchase_lide.purchase_client_main - INFO - hyy01245 not start
+2018-07-17 17:29:38,918 - append_purchase_lide.purchase_client_main - INFO - qtm123 not start
+2018-07-17 17:29:41,121 - append_purchase_lide.purchase_client_main - INFO - user_name:qtm123
+2018-07-17 17:29:41,121 - append_purchase_lide.purchase_client_main - INFO - password:abcd1234
+2018-07-17 17:29:41,122 - append_purchase_lide.purchase_client_main - INFO - init monry:1
+2018-07-17 17:29:58,433 - append_purchase_lide.purchase_driver - WARNING - no notice or click notice error!
+2018-07-17 17:30:00,723 - append_purchase_lide.purchase_driver - INFO - click agree ok
+2018-07-17 17:30:06,953 - append_purchase_lide.purchase_driver - INFO - click menu ok
+2018-07-17 17:30:12,187 - append_purchase_lide.purchase_driver - INFO - click pk10 ok
+2018-07-17 17:40:05,552 - append_purchase_lide.purchase_client_main - INFO - a1008 not start
+2018-07-17 17:40:05,641 - append_purchase_lide.purchase_client_main - INFO - xiao1235 not start
+2018-07-17 17:40:05,717 - append_purchase_lide.purchase_client_main - INFO - xiao147 not start
+2018-07-17 17:40:05,809 - append_purchase_lide.purchase_client_main - INFO - qwe12345678 not start
+2018-07-17 17:40:05,885 - append_purchase_lide.purchase_client_main - INFO - hyy01245 not start
+2018-07-17 17:40:05,994 - append_purchase_lide.purchase_client_main - INFO - qtm123 not start
+2018-07-17 17:40:08,335 - append_purchase_lide.purchase_client_main - INFO - user_name:qtm123
+2018-07-17 17:40:08,338 - append_purchase_lide.purchase_client_main - INFO - password:abcd1234
+2018-07-17 17:40:08,341 - append_purchase_lide.purchase_client_main - INFO - init monry:1
+2018-07-17 17:40:28,026 - append_purchase_lide.purchase_driver - INFO - click notice ok
+2018-07-17 17:40:30,176 - append_purchase_lide.purchase_driver - INFO - click agree ok
+2018-07-17 17:40:36,405 - append_purchase_lide.purchase_driver - INFO - click menu ok
+2018-07-17 17:40:41,634 - append_purchase_lide.purchase_driver - INFO - click pk10 ok
+2018-07-17 17:48:30,785 - append_purchase_lide.purchase_client_main - INFO - a1008 not start
+2018-07-17 17:48:31,023 - append_purchase_lide.purchase_client_main - INFO - xiao1235 not start
+2018-07-17 17:48:31,474 - append_purchase_lide.purchase_client_main - INFO - xiao147 not start
+2018-07-17 17:48:31,552 - append_purchase_lide.purchase_client_main - INFO - qwe12345678 not start
+2018-07-17 17:48:31,625 - append_purchase_lide.purchase_client_main - INFO - hyy01245 not start
+2018-07-17 17:48:31,726 - append_purchase_lide.purchase_client_main - INFO - qtm123 not start
+2018-07-17 17:48:31,727 - append_purchase_lide.purchase_client_main - INFO - a1008 not start
+2018-07-17 17:48:32,085 - append_purchase_lide.purchase_client_main - INFO - xiao1235 not start
+2018-07-17 17:48:32,224 - append_purchase_lide.purchase_client_main - INFO - xiao147 not start
+2018-07-17 17:48:32,486 - append_purchase_lide.purchase_client_main - INFO - qwe12345678 not start
+2018-07-17 17:48:32,565 - append_purchase_lide.purchase_client_main - INFO - hyy01245 not start
+2018-07-17 17:48:32,654 - append_purchase_lide.purchase_client_main - INFO - qtm123 not start
+2018-07-17 17:48:35,671 - append_purchase_lide.purchase_client_main - INFO - user_name:qtm123
+2018-07-17 17:48:35,673 - append_purchase_lide.purchase_client_main - INFO - password:abcd1234
+2018-07-17 17:48:35,673 - append_purchase_lide.purchase_client_main - INFO - init monry:1
+2018-07-17 17:48:53,016 - append_purchase_lide.purchase_driver - WARNING - no notice or click notice error!
+2018-07-17 17:48:55,132 - append_purchase_lide.purchase_driver - INFO - click agree ok
+2018-07-17 17:49:01,365 - append_purchase_lide.purchase_driver - INFO - click menu ok
+2018-07-17 17:49:06,594 - append_purchase_lide.purchase_driver - INFO - click pk10 ok
+2018-07-17 17:49:09,607 - append_purchase_lide.purchase_driver - INFO - switch mainFrame ok
+2018-07-17 17:49:12,855 - append_purchase_lide.purchase_driver - INFO - click 1-10 ok
+2018-07-17 17:49:42,855 - append_purchase_lide.purchase_client_main - WARNING - thread is not alive start!!!
+2018-07-17 17:49:42,861 - append_purchase_lide.client_thread - INFO - 开始购买

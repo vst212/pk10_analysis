@@ -50,7 +50,10 @@ INSTALLED_APPS = [
     'append_purchase',
     'append_purchase_dianyou',
     'append_purchase_jinsha',
-    'pkten_log'
+    'append_purchase_lide',
+    'pkten_log',
+    'append_purchase_baodao_sandd',
+    'append_predict_sandd',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,515 @@
+2018-08-23 09:40:40,171 - append_predict_sandd.main - INFO - test not start
+2018-08-23 09:40:41,566 - append_predict_sandd.main - DEBUG - thread is not alive start!!!
+2018-08-23 09:43:01,584 - append_predict_sandd.thread - INFO - current_date:20180823 09:43:01
+2018-08-23 09:43:01,584 - append_predict_sandd.thread - INFO - start purchase
+2018-08-23 09:43:11,585 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-23
+2018-08-23 09:43:12,601 - append_predict_sandd.main - DEBUG - predicts is null
+2018-08-23 09:46:07,223 - append_predict_sandd.main - INFO - test not start
+2018-08-23 09:46:07,319 - append_predict_sandd.main - INFO - qq5338 not start
+2018-08-23 09:46:09,104 - append_predict_sandd.main - DEBUG - thread is not alive start!!!
+2018-08-23 09:48:09,118 - append_predict_sandd.thread - INFO - current_date:20180823 09:48:09
+2018-08-23 09:48:09,118 - append_predict_sandd.thread - INFO - start purchase
+2018-08-23 09:48:19,119 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-23
+2018-08-23 09:48:20,062 - append_predict_sandd.main - DEBUG - predicts is null
+2018-08-23 09:48:20,063 - append_predict_sandd.main - DEBUG - lottery_id: 0
+2018-08-23 09:48:20,063 - append_predict_sandd.main - DEBUG - no predict record in history
+2018-08-23 09:53:09,308 - append_predict_sandd.main - INFO - test not start
+2018-08-23 09:53:09,381 - append_predict_sandd.main - INFO - qq5338 not start
+2018-08-23 09:53:22,953 - append_predict_sandd.main - INFO - test not start
+2018-08-23 09:53:23,022 - append_predict_sandd.main - INFO - qq5338 not start
+2018-08-23 09:53:24,448 - append_predict_sandd.main - DEBUG - thread is not alive start!!!
+2018-08-23 09:53:24,450 - append_predict_sandd.thread - INFO - current_date:20180823 09:53:24
+2018-08-23 09:53:24,451 - append_predict_sandd.thread - INFO - start purchase
+2018-08-23 09:53:34,453 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-23
+2018-08-23 09:53:36,641 - append_predict_sandd.main - DEBUG - predicts is null
+2018-08-23 09:53:36,642 - append_predict_sandd.main - DEBUG - lottery_id: 0
+2018-08-23 09:53:36,642 - append_predict_sandd.main - DEBUG - no predict record in history
+2018-08-23 09:53:36,644 - append_predict_sandd.main - INFO - save predict_lottery_id : 699867
+2018-08-23 09:53:36,644 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 1, 1, 1, 0, 0, 0, 0, 1, 0]
+2018-08-23 09:53:36,645 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2018-08-23 09:54:51,062 - append_purchase_lide_sandd.purchase_client_main - INFO - test not start
+2018-08-23 09:54:51,362 - append_purchase_lide_sandd.purchase_client_main - INFO - qq5338 not start
+2018-08-23 09:54:56,549 - append_purchase_lide_sandd.purchase_client_main - INFO - user_name:qq5338
+2018-08-23 09:54:56,552 - append_purchase_lide_sandd.purchase_client_main - INFO - password:qq123456
+2018-08-23 09:54:56,553 - append_purchase_lide_sandd.purchase_client_main - INFO - init monry:3
+2018-08-23 09:55:14,667 - append_purchase_lide_sand.purchase_driver - WARNING - no notice or click notice error!
+2018-08-23 09:55:16,036 - append_purchase_lide_sand.purchase_driver - INFO - click agree ok
+2018-08-23 09:55:20,257 - append_purchase_lide_sand.purchase_driver - INFO - click menu ok
+2018-08-23 09:55:22,523 - append_purchase_lide_sand.purchase_driver - INFO - click pk10 ok
+2018-08-23 09:55:24,535 - append_purchase_lide_sand.purchase_driver - INFO - switch mainFrame ok
+2018-08-23 09:55:24,549 - append_purchase_lide_sandd.purchase_client_main - WARNING - thread is not alive start!!!
+2018-08-23 09:58:04,565 - append_purchase_lide_sandd.client_thread - INFO - 开始购买
+2018-08-23 09:58:09,726 - append_predict_sandd.thread - INFO - current_date:20180823 09:58:09
+2018-08-23 09:58:09,726 - append_predict_sandd.thread - INFO - start purchase
+2018-08-23 09:58:19,566 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 09:58:19,757 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-23
+2018-08-23 09:58:21,217 - append_predict_sandd.main - DEBUG - lottery_id: 699867
+2018-08-23 09:58:21,219 - append_predict_sandd.main - INFO - lottery_num: 03,10,07,05,06,02,08,04,09,01
+2018-08-23 09:58:21,220 - append_predict_sandd.main - DEBUG - mingci [1]: 3
+2018-08-23 09:58:21,220 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 09:58:21,220 - append_predict_sandd.main - DEBUG - mingci [2]: 10
+2018-08-23 09:58:21,220 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 09:58:21,221 - append_predict_sandd.main - DEBUG - mingci [3]: 7
+2018-08-23 09:58:21,221 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 09:58:21,221 - append_predict_sandd.main - DEBUG - mingci [4]: 5
+2018-08-23 09:58:21,221 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 09:58:21,223 - append_predict_sandd.main - DEBUG - mingci [5]: 6
+2018-08-23 09:58:21,223 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 09:58:21,223 - append_predict_sandd.main - DEBUG - mingci [6]: 2
+2018-08-23 09:58:21,223 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 09:58:21,223 - append_predict_sandd.main - DEBUG - mingci [7]: 8
+2018-08-23 09:58:21,226 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 09:58:21,226 - append_predict_sandd.main - DEBUG - mingci [8]: 4
+2018-08-23 09:58:21,226 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 09:58:21,226 - append_predict_sandd.main - DEBUG - mingci [9]: 9
+2018-08-23 09:58:21,226 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 09:58:21,226 - append_predict_sandd.main - DEBUG - mingci [10]: 1
+2018-08-23 09:58:21,226 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 09:58:21,226 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-23 09:58:21,226 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-23 09:58:21,342 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-23 09:58:21,344 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-23 09:58:21,345 - append_predict_sandd.main - INFO - save predict_lottery_id : 699868
+2018-08-23 09:58:21,345 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 1, 1, 0, 0, 0, 0, 1, 1]
+2018-08-23 09:58:21,345 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+2018-08-23 09:58:34,568 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 09:58:49,569 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 09:59:04,572 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 09:59:05,009 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 09:59:08,017 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 09:59:11,029 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 09:59:14,039 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 09:59:17,040 - append_purchase_lide_sandd.purchase_client_main - INFO - get server interface error!
+2018-08-23 09:59:22,055 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 09:59:25,095 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 09:59:28,105 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 09:59:31,112 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 09:59:34,115 - append_purchase_lide_sandd.purchase_client_main - INFO - get server interface error!
+2018-08-23 09:59:39,141 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 09:59:42,177 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 09:59:45,309 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 09:59:48,733 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 09:59:51,736 - append_purchase_lide_sandd.purchase_client_main - INFO - get server interface error!
+2018-08-23 09:59:56,753 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 09:59:59,763 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 10:00:02,845 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 10:00:05,894 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 10:00:08,953 - append_purchase_lide_sandd.purchase_client_main - INFO - get server interface error!
+2018-08-23 10:00:13,969 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 10:00:16,979 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 10:00:20,003 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 10:00:23,035 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 10:00:26,039 - append_purchase_lide_sandd.purchase_client_main - INFO - get server interface error!
+2018-08-23 10:00:31,048 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 10:00:34,058 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 10:00:37,071 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 10:00:40,079 - append_purchase_lide_sandd.purchase_client_main - ERROR -  get server request info request server faild!
+2018-08-23 10:00:43,081 - append_purchase_lide_sandd.purchase_client_main - INFO - get server interface error!
+2018-08-23 10:01:41,102 - append_predict_sandd.main - INFO - test not start
+2018-08-23 10:01:41,183 - append_predict_sandd.main - INFO - qq5338 not start
+2018-08-23 10:01:42,760 - append_predict_sandd.main - DEBUG - thread is not alive start!!!
+2018-08-23 10:01:54,295 - append_purchase_lide_sandd.purchase_client_main - INFO - test not start
+2018-08-23 10:01:54,384 - append_purchase_lide_sandd.purchase_client_main - INFO - qq5338 not start
+2018-08-23 10:01:57,056 - append_purchase_lide_sandd.purchase_client_main - INFO - user_name:qq5338
+2018-08-23 10:01:57,056 - append_purchase_lide_sandd.purchase_client_main - INFO - password:qq123456
+2018-08-23 10:01:57,058 - append_purchase_lide_sandd.purchase_client_main - INFO - init monry:2
+2018-08-23 10:02:12,403 - append_purchase_lide_sand.purchase_driver - WARNING - no notice or click notice error!
+2018-08-23 10:02:13,846 - append_purchase_lide_sand.purchase_driver - INFO - click agree ok
+2018-08-23 10:02:18,085 - append_purchase_lide_sand.purchase_driver - INFO - click menu ok
+2018-08-23 10:02:18,196 - append_purchase_lide_sand.purchase_driver - ERROR - login error, relogin
+2018-08-23 10:02:37,944 - append_purchase_lide_sand.purchase_driver - WARNING - no notice or click notice error!
+2018-08-23 10:02:39,332 - append_purchase_lide_sand.purchase_driver - INFO - click agree ok
+2018-08-23 10:02:43,553 - append_purchase_lide_sand.purchase_driver - INFO - click menu ok
+2018-08-23 10:02:45,825 - append_purchase_lide_sand.purchase_driver - INFO - click pk10 ok
+2018-08-23 10:02:47,836 - append_purchase_lide_sand.purchase_driver - INFO - switch mainFrame ok
+2018-08-23 10:02:47,838 - append_purchase_lide_sandd.purchase_client_main - WARNING - thread is not alive start!!!
+2018-08-23 10:03:02,785 - append_predict_sandd.thread - INFO - current_date:20180823 10:03:02
+2018-08-23 10:03:02,789 - append_predict_sandd.thread - INFO - start purchase
+2018-08-23 10:03:07,842 - append_purchase_lide_sandd.client_thread - INFO - 开始购买
+2018-08-23 10:03:12,789 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-23
+2018-08-23 10:03:14,243 - append_predict_sandd.main - DEBUG - lottery_id: 699868
+2018-08-23 10:03:14,244 - append_predict_sandd.main - INFO - lottery_num: 06,08,01,10,09,04,03,07,02,05
+2018-08-23 10:03:14,246 - append_predict_sandd.main - DEBUG - mingci [1]: 6
+2018-08-23 10:03:14,246 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:03:14,246 - append_predict_sandd.main - DEBUG - mingci [2]: 8
+2018-08-23 10:03:14,246 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:03:14,246 - append_predict_sandd.main - DEBUG - mingci [3]: 1
+2018-08-23 10:03:14,246 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:03:14,246 - append_predict_sandd.main - DEBUG - mingci [4]: 10
+2018-08-23 10:03:14,246 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:03:14,246 - append_predict_sandd.main - DEBUG - mingci [5]: 9
+2018-08-23 10:03:14,246 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:03:14,247 - append_predict_sandd.main - DEBUG - mingci [6]: 4
+2018-08-23 10:03:14,247 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:03:14,247 - append_predict_sandd.main - DEBUG - mingci [7]: 3
+2018-08-23 10:03:14,247 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:03:14,247 - append_predict_sandd.main - DEBUG - mingci [8]: 7
+2018-08-23 10:03:14,247 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:03:14,249 - append_predict_sandd.main - DEBUG - mingci [9]: 2
+2018-08-23 10:03:14,250 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:03:14,250 - append_predict_sandd.main - DEBUG - mingci [10]: 5
+2018-08-23 10:03:14,250 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:03:14,250 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 1 
+2018-08-23 10:03:14,250 - append_predict_sandd.main - DEBUG - target_count: 0.100000
+2018-08-23 10:03:14,322 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-23 10:03:14,322 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-23 10:03:14,326 - append_predict_sandd.main - INFO - save predict_lottery_id : 699869
+2018-08-23 10:03:14,328 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 0, 1, 0, 1, 0, 1, 1, 0, 1]
+2018-08-23 10:03:14,328 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2018-08-23 10:03:22,842 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:03:37,844 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:03:52,845 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:04:07,846 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:04:07,983 - append_purchase_lide_sandd.purchase_client_main - INFO - start purchase, xiazhu money:0,0,0,0,0,0,0,0,0,0
+2018-08-23 10:04:07,983 - append_purchase_lide_sandd.purchase_client_main - INFO - no element in purchase_element_list
+2018-08-23 10:06:54,229 - append_predict_sandd.main - INFO - test not start
+2018-08-23 10:06:54,309 - append_predict_sandd.main - INFO - qq5338 not start
+2018-08-23 10:06:58,645 - append_purchase_lide_sandd.purchase_client_main - INFO - test not start
+2018-08-23 10:06:58,737 - append_purchase_lide_sandd.purchase_client_main - INFO - qq5338 not start
+2018-08-23 10:07:01,194 - append_purchase_lide_sandd.purchase_client_main - INFO - user_name:qq5338
+2018-08-23 10:07:01,197 - append_purchase_lide_sandd.purchase_client_main - INFO - password:qq123456
+2018-08-23 10:07:01,197 - append_purchase_lide_sandd.purchase_client_main - INFO - init monry:2
+2018-08-23 10:07:17,740 - append_purchase_lide_sand.purchase_driver - WARNING - no notice or click notice error!
+2018-08-23 10:07:19,177 - append_purchase_lide_sand.purchase_driver - INFO - click agree ok
+2018-08-23 10:07:23,407 - append_purchase_lide_sand.purchase_driver - INFO - click menu ok
+2018-08-23 10:07:23,503 - append_purchase_lide_sand.purchase_driver - ERROR - login error, relogin
+2018-08-23 10:07:43,282 - append_purchase_lide_sand.purchase_driver - WARNING - no notice or click notice error!
+2018-08-23 10:07:44,888 - append_purchase_lide_sand.purchase_driver - INFO - click agree ok
+2018-08-23 10:07:49,109 - append_purchase_lide_sand.purchase_driver - INFO - click menu ok
+2018-08-23 10:07:51,392 - append_purchase_lide_sand.purchase_driver - INFO - click pk10 ok
+2018-08-23 10:07:53,404 - append_purchase_lide_sand.purchase_driver - INFO - switch mainFrame ok
+2018-08-23 10:07:53,405 - append_purchase_lide_sandd.purchase_client_main - WARNING - thread is not alive start!!!
+2018-08-23 10:08:03,408 - append_purchase_lide_sandd.client_thread - INFO - 开始购买
+2018-08-23 10:08:18,410 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:08:33,411 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:08:48,411 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:09:03,414 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:09:03,436 - append_purchase_lide_sandd.purchase_client_main - INFO - unfounded new predict,purchase faild!
+2018-08-23 10:13:01,454 - append_purchase_lide_sandd.client_thread - INFO - 开始购买
+2018-08-23 10:13:16,456 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:13:31,457 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:13:46,460 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:14:01,460 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:14:01,467 - append_purchase_lide_sandd.purchase_client_main - INFO - unfounded new predict,purchase faild!
+2018-08-23 10:18:09,480 - append_purchase_lide_sandd.client_thread - INFO - 开始购买
+2018-08-23 10:18:24,483 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:18:39,487 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:18:54,490 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:19:09,492 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:19:09,497 - append_purchase_lide_sandd.purchase_client_main - INFO - unfounded new predict,purchase faild!
+2018-08-23 10:22:33,161 - append_predict_sandd.main - INFO - test not start
+2018-08-23 10:22:33,220 - append_predict_sandd.main - INFO - qq5338 not start
+2018-08-23 10:22:34,809 - append_predict_sandd.main - DEBUG - thread is not alive start!!!
+2018-08-23 10:23:04,813 - append_predict_sandd.thread - INFO - current_date:20180823 10:23:04
+2018-08-23 10:23:04,813 - append_predict_sandd.thread - INFO - start purchase
+2018-08-23 10:23:07,512 - append_purchase_lide_sandd.client_thread - INFO - 开始购买
+2018-08-23 10:23:14,815 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-23
+2018-08-23 10:23:16,213 - append_predict_sandd.main - DEBUG - lottery_id: 699869
+2018-08-23 10:23:16,217 - append_predict_sandd.main - INFO - lottery_num: 06,04,08,02,09,10,01,07,03,05
+2018-08-23 10:23:16,219 - append_predict_sandd.main - DEBUG - mingci [1]: 6
+2018-08-23 10:23:16,223 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:23:16,223 - append_predict_sandd.main - DEBUG - mingci [2]: 4
+2018-08-23 10:23:16,224 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:23:16,226 - append_predict_sandd.main - DEBUG - mingci [3]: 8
+2018-08-23 10:23:16,226 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:23:16,226 - append_predict_sandd.main - DEBUG - mingci [4]: 2
+2018-08-23 10:23:16,226 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:23:16,226 - append_predict_sandd.main - DEBUG - mingci [5]: 9
+2018-08-23 10:23:16,226 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:23:16,226 - append_predict_sandd.main - DEBUG - mingci [6]: 10
+2018-08-23 10:23:16,227 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:23:16,227 - append_predict_sandd.main - DEBUG - mingci [7]: 1
+2018-08-23 10:23:16,229 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:23:16,230 - append_predict_sandd.main - DEBUG - mingci [8]: 7
+2018-08-23 10:23:16,230 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:23:16,230 - append_predict_sandd.main - DEBUG - mingci [9]: 3
+2018-08-23 10:23:16,230 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:23:16,230 - append_predict_sandd.main - DEBUG - mingci [10]: 5
+2018-08-23 10:23:16,230 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:23:16,232 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-23 10:23:16,232 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-23 10:23:16,299 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-23 10:23:16,301 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-23 10:23:16,305 - append_predict_sandd.main - INFO - save predict_lottery_id : 699873
+2018-08-23 10:23:16,305 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 1, 0, 0, 1, 1, 0, 0, 1]
+2018-08-23 10:23:16,305 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2018-08-23 10:23:22,513 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:23:37,515 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:23:52,516 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:24:07,516 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:24:07,526 - append_purchase_lide_sandd.purchase_client_main - INFO - start purchase, xiazhu money:0,0,0,0,0,0,0,0,0,0
+2018-08-23 10:24:07,526 - append_purchase_lide_sandd.purchase_client_main - INFO - xiazhu money:[]
+2018-08-23 10:24:07,526 - append_purchase_lide_sandd.purchase_client_main - INFO - no element in purchase_element_list
+2018-08-23 10:28:05,676 - append_purchase_lide_sandd.client_thread - INFO - 开始购买
+2018-08-23 10:28:09,411 - append_predict_sandd.thread - INFO - current_date:20180823 10:28:09
+2018-08-23 10:28:09,411 - append_predict_sandd.thread - INFO - start purchase
+2018-08-23 10:28:19,414 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-23
+2018-08-23 10:28:20,678 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:28:20,796 - append_predict_sandd.main - DEBUG - lottery_id: 699873
+2018-08-23 10:28:20,798 - append_predict_sandd.main - INFO - lottery_num: 05,04,08,06,02,03,10,09,07,01
+2018-08-23 10:28:20,798 - append_predict_sandd.main - DEBUG - mingci [1]: 5
+2018-08-23 10:28:20,799 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:28:20,799 - append_predict_sandd.main - DEBUG - mingci [2]: 4
+2018-08-23 10:28:20,799 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:28:20,799 - append_predict_sandd.main - DEBUG - mingci [3]: 8
+2018-08-23 10:28:20,799 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:28:20,799 - append_predict_sandd.main - DEBUG - mingci [4]: 6
+2018-08-23 10:28:20,799 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:28:20,799 - append_predict_sandd.main - DEBUG - mingci [5]: 2
+2018-08-23 10:28:20,801 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:28:20,801 - append_predict_sandd.main - DEBUG - mingci [6]: 3
+2018-08-23 10:28:20,801 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:28:20,801 - append_predict_sandd.main - DEBUG - mingci [7]: 10
+2018-08-23 10:28:20,801 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:28:20,801 - append_predict_sandd.main - DEBUG - mingci [8]: 9
+2018-08-23 10:28:20,802 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:28:20,802 - append_predict_sandd.main - DEBUG - mingci [9]: 7
+2018-08-23 10:28:20,802 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:28:20,802 - append_predict_sandd.main - DEBUG - mingci [10]: 1
+2018-08-23 10:28:20,802 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:28:20,802 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-23 10:28:20,802 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-23 10:28:20,868 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-23 10:28:20,869 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-23 10:28:20,871 - append_predict_sandd.main - INFO - save predict_lottery_id : 699874
+2018-08-23 10:28:20,871 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 0, 0, 0, 1, 0, 1, 1, 1]
+2018-08-23 10:28:20,872 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2018-08-23 10:28:35,680 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:28:50,681 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:29:05,683 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:29:05,720 - append_purchase_lide_sandd.purchase_client_main - INFO - start purchase, xiazhu money:0,0,0,0,0,0,0,0,0,0
+2018-08-23 10:29:05,721 - append_purchase_lide_sandd.purchase_client_main - INFO - xiazhu money:[]
+2018-08-23 10:29:05,721 - append_purchase_lide_sandd.purchase_client_main - INFO - no element in purchase_element_list
+2018-08-23 10:33:03,730 - append_purchase_lide_sandd.client_thread - INFO - 开始购买
+2018-08-23 10:33:03,983 - append_predict_sandd.thread - INFO - current_date:20180823 10:33:03
+2018-08-23 10:33:03,983 - append_predict_sandd.thread - INFO - start purchase
+2018-08-23 10:33:13,983 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-23
+2018-08-23 10:33:16,119 - append_predict_sandd.main - DEBUG - lottery_id: 699874
+2018-08-23 10:33:16,121 - append_predict_sandd.main - INFO - lottery_num: 06,02,01,04,05,10,03,08,07,09
+2018-08-23 10:33:16,121 - append_predict_sandd.main - DEBUG - mingci [1]: 6
+2018-08-23 10:33:16,121 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:33:16,121 - append_predict_sandd.main - DEBUG - mingci [2]: 2
+2018-08-23 10:33:16,121 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:33:16,122 - append_predict_sandd.main - DEBUG - mingci [3]: 1
+2018-08-23 10:33:16,122 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:33:16,122 - append_predict_sandd.main - DEBUG - mingci [4]: 4
+2018-08-23 10:33:16,122 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:33:16,124 - append_predict_sandd.main - DEBUG - mingci [5]: 5
+2018-08-23 10:33:16,124 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:33:16,125 - append_predict_sandd.main - DEBUG - mingci [6]: 10
+2018-08-23 10:33:16,125 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:33:16,127 - append_predict_sandd.main - DEBUG - mingci [7]: 3
+2018-08-23 10:33:16,127 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:33:16,127 - append_predict_sandd.main - DEBUG - mingci [8]: 8
+2018-08-23 10:33:16,127 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:33:16,127 - append_predict_sandd.main - DEBUG - mingci [9]: 7
+2018-08-23 10:33:16,128 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:33:16,128 - append_predict_sandd.main - DEBUG - mingci [10]: 9
+2018-08-23 10:33:16,128 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:33:16,128 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-23 10:33:16,128 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-23 10:33:16,211 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-23 10:33:16,211 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-23 10:33:16,213 - append_predict_sandd.main - INFO - save predict_lottery_id : 699875
+2018-08-23 10:33:16,214 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 0, 1, 0, 1, 0, 1, 0, 1, 1]
+2018-08-23 10:33:16,214 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 1, 1, 0, 0]
+2018-08-23 10:33:18,732 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:33:33,733 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:33:48,733 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:34:03,734 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:34:03,778 - append_purchase_lide_sandd.purchase_client_main - INFO - start purchase, xiazhu money:0,0,0,0,0,0,1,1,0,0
+2018-08-23 10:34:03,779 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase mingci:7
+2018-08-23 10:34:03,779 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase number:1
+2018-08-23 10:34:03,779 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase mingci:8
+2018-08-23 10:34:03,779 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase number:0
+2018-08-23 10:35:09,145 - append_predict_sandd.main - INFO - test not start
+2018-08-23 10:35:09,234 - append_predict_sandd.main - INFO - qq5338 not start
+2018-08-23 10:35:11,017 - append_predict_sandd.main - DEBUG - thread is not alive start!!!
+2018-08-23 10:35:12,683 - append_purchase_lide_sandd.purchase_client_main - INFO - test not start
+2018-08-23 10:35:12,778 - append_purchase_lide_sandd.purchase_client_main - INFO - qq5338 not start
+2018-08-23 10:35:15,486 - append_purchase_lide_sandd.purchase_client_main - INFO - user_name:qq5338
+2018-08-23 10:35:15,486 - append_purchase_lide_sandd.purchase_client_main - INFO - password:qq123456
+2018-08-23 10:35:15,486 - append_purchase_lide_sandd.purchase_client_main - INFO - init monry:2
+2018-08-23 10:35:30,651 - append_purchase_lide_sand.purchase_driver - WARNING - no notice or click notice error!
+2018-08-23 10:35:32,075 - append_purchase_lide_sand.purchase_driver - INFO - click agree ok
+2018-08-23 10:35:36,302 - append_purchase_lide_sand.purchase_driver - INFO - click menu ok
+2018-08-23 10:35:36,395 - append_purchase_lide_sand.purchase_driver - ERROR - login error, relogin
+2018-08-23 10:35:55,313 - append_purchase_lide_sand.purchase_driver - WARNING - no notice or click notice error!
+2018-08-23 10:35:56,707 - append_purchase_lide_sand.purchase_driver - INFO - click agree ok
+2018-08-23 10:36:00,940 - append_purchase_lide_sand.purchase_driver - INFO - click menu ok
+2018-08-23 10:36:01,042 - append_purchase_lide_sand.purchase_driver - ERROR - login error, relogin
+2018-08-23 10:36:20,394 - append_purchase_lide_sand.purchase_driver - WARNING - no notice or click notice error!
+2018-08-23 10:36:21,776 - append_purchase_lide_sand.purchase_driver - INFO - click agree ok
+2018-08-23 10:36:26,000 - append_purchase_lide_sand.purchase_driver - INFO - click menu ok
+2018-08-23 10:36:28,286 - append_purchase_lide_sand.purchase_driver - INFO - click pk10 ok
+2018-08-23 10:36:30,293 - append_purchase_lide_sand.purchase_driver - INFO - switch mainFrame ok
+2018-08-23 10:36:30,293 - append_purchase_lide_sandd.purchase_client_main - WARNING - thread is not alive start!!!
+2018-08-23 10:38:00,299 - append_purchase_lide_sandd.client_thread - INFO - 开始购买
+2018-08-23 10:38:01,049 - append_predict_sandd.thread - INFO - current_date:20180823 10:38:01
+2018-08-23 10:38:01,049 - append_predict_sandd.thread - INFO - start purchase
+2018-08-23 10:38:11,049 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-23
+2018-08-23 10:38:13,190 - append_predict_sandd.main - DEBUG - lottery_id: 699875
+2018-08-23 10:38:13,191 - append_predict_sandd.main - INFO - lottery_num: 09,06,07,02,05,01,04,03,10,08
+2018-08-23 10:38:13,193 - append_predict_sandd.main - DEBUG - mingci [1]: 9
+2018-08-23 10:38:13,193 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:38:13,193 - append_predict_sandd.main - DEBUG - mingci [2]: 6
+2018-08-23 10:38:13,193 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:38:13,193 - append_predict_sandd.main - DEBUG - mingci [3]: 7
+2018-08-23 10:38:13,194 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:38:13,194 - append_predict_sandd.main - DEBUG - mingci [4]: 2
+2018-08-23 10:38:13,194 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:38:13,194 - append_predict_sandd.main - DEBUG - mingci [5]: 5
+2018-08-23 10:38:13,194 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:38:13,194 - append_predict_sandd.main - DEBUG - mingci [6]: 1
+2018-08-23 10:38:13,194 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:38:13,194 - append_predict_sandd.main - DEBUG - mingci [7]: 4
+2018-08-23 10:38:13,194 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:38:13,194 - append_predict_sandd.main - DEBUG - mingci [8]: 3
+2018-08-23 10:38:13,194 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:38:13,194 - append_predict_sandd.main - DEBUG - mingci [9]: 10
+2018-08-23 10:38:13,196 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:38:13,196 - append_predict_sandd.main - DEBUG - mingci [10]: 8
+2018-08-23 10:38:13,196 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:38:13,196 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-23 10:38:13,197 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-23 10:38:13,296 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-23 10:38:13,299 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-23 10:38:13,302 - append_predict_sandd.main - INFO - save predict_lottery_id : 699876
+2018-08-23 10:38:13,302 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 1, 0, 1, 1, 0, 1, 0, 0]
+2018-08-23 10:38:13,302 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 2, 2, 0, 0]
+2018-08-23 10:38:15,301 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:38:30,302 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:38:45,302 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:39:00,311 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:39:00,375 - append_purchase_lide_sandd.purchase_client_main - INFO - start purchase, xiazhu money:0,0,0,0,0,0,2,2,0,0
+2018-08-23 10:39:00,375 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase mingci:7
+2018-08-23 10:39:00,375 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase number:0
+2018-08-23 10:39:00,375 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase mingci:8
+2018-08-23 10:39:00,375 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase number:1
+2018-08-23 10:39:00,377 - append_purchase_lide_sandd.purchase_client_main - INFO - xiazhu money:[4, 4]
+2018-08-23 10:39:00,378 - append_purchase_lide_sandd.purchase_client_main - INFO - calc gain_all_money:0
+2018-08-23 10:39:01,385 - append_purchase_lide_sandd.purchase_client_main - INFO - current mainIFrame ok
+2018-08-23 10:39:02,388 - append_purchase_lide_sandd.purchase_client_main - ERROR - find inw_3_13 error,exit
+2018-08-23 10:39:05,391 - append_purchase_lide_sandd.purchase_client_main - ERROR - find inw_3_13 error,restart
+2018-08-23 10:39:21,648 - append_purchase_lide_sand.purchase_driver - WARNING - no notice or click notice error!
+2018-08-23 10:39:23,065 - append_purchase_lide_sand.purchase_driver - INFO - click agree ok
+2018-08-23 10:39:27,832 - append_purchase_lide_sand.purchase_driver - INFO - click menu ok
+2018-08-23 10:39:27,930 - append_purchase_lide_sand.purchase_driver - ERROR - login error, relogin
+2018-08-23 10:53:24,463 - append_predict_sandd.main - INFO - test not start
+2018-08-23 10:53:24,542 - append_predict_sandd.main - INFO - qq5338 not start
+2018-08-23 10:53:27,584 - append_predict_sandd.main - DEBUG - thread is not alive start!!!
+2018-08-23 10:53:27,586 - append_predict_sandd.thread - INFO - current_date:20180823 10:53:27
+2018-08-23 10:53:27,588 - append_predict_sandd.thread - INFO - start purchase
+2018-08-23 10:53:34,790 - append_purchase_lide_sandd.purchase_client_main - INFO - test not start
+2018-08-23 10:53:34,868 - append_purchase_lide_sandd.purchase_client_main - INFO - qq5338 not start
+2018-08-23 10:53:37,591 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-23
+2018-08-23 10:53:39,763 - append_purchase_lide_sandd.purchase_client_main - INFO - user_name:qq5338
+2018-08-23 10:53:39,763 - append_purchase_lide_sandd.purchase_client_main - INFO - password:qq123456
+2018-08-23 10:53:39,765 - append_purchase_lide_sandd.purchase_client_main - INFO - init monry:2
+2018-08-23 10:53:39,907 - append_predict_sandd.main - DEBUG - lottery_id: 699876
+2018-08-23 10:53:39,908 - append_predict_sandd.main - INFO - lottery_num: 06,04,07,01,02,10,08,03,09,05
+2018-08-23 10:53:39,910 - append_predict_sandd.main - DEBUG - mingci [1]: 6
+2018-08-23 10:53:39,910 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:53:39,913 - append_predict_sandd.main - DEBUG - mingci [2]: 4
+2018-08-23 10:53:39,914 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:53:39,914 - append_predict_sandd.main - DEBUG - mingci [3]: 7
+2018-08-23 10:53:39,947 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:53:39,947 - append_predict_sandd.main - DEBUG - mingci [4]: 1
+2018-08-23 10:53:39,950 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:53:39,969 - append_predict_sandd.main - DEBUG - mingci [5]: 2
+2018-08-23 10:53:39,974 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:53:39,986 - append_predict_sandd.main - DEBUG - mingci [6]: 10
+2018-08-23 10:53:40,005 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:53:40,007 - append_predict_sandd.main - DEBUG - mingci [7]: 8
+2018-08-23 10:53:40,009 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:53:40,009 - append_predict_sandd.main - DEBUG - mingci [8]: 3
+2018-08-23 10:53:40,009 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:53:40,015 - append_predict_sandd.main - DEBUG - mingci [9]: 9
+2018-08-23 10:53:40,019 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:53:40,019 - append_predict_sandd.main - DEBUG - mingci [10]: 5
+2018-08-23 10:53:40,020 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:53:40,023 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 2 
+2018-08-23 10:53:40,023 - append_predict_sandd.main - DEBUG - target_count: 0.200000
+2018-08-23 10:53:40,401 - append_predict_sandd.main - INFO - last_purchase_hit: True
+2018-08-23 10:53:40,401 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-23 10:53:40,404 - append_predict_sandd.main - INFO - save predict_lottery_id : 699879
+2018-08-23 10:53:40,404 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 1, 1, 0, 1, 0, 1, 0, 0, 1]
+2018-08-23 10:53:40,404 - append_predict_sandd.main - INFO - save beishu_number_list : [4, 0, 0, 0, 0, 0, 0, 0, 0, 3]
+2018-08-23 10:53:54,641 - append_purchase_lide_sand.purchase_driver - WARNING - no notice or click notice error!
+2018-08-23 10:53:56,045 - append_purchase_lide_sand.purchase_driver - INFO - click agree ok
+2018-08-23 10:54:00,290 - append_purchase_lide_sand.purchase_driver - INFO - click menu ok
+2018-08-23 10:54:02,553 - append_purchase_lide_sand.purchase_driver - INFO - click pk10 ok
+2018-08-23 10:54:04,565 - append_purchase_lide_sand.purchase_driver - INFO - switch mainFrame ok
+2018-08-23 10:54:07,795 - append_purchase_lide_sand.purchase_driver - INFO - click 1-10 ok
+2018-08-23 10:54:07,795 - append_purchase_lide_sandd.purchase_client_main - WARNING - thread is not alive start!!!
+2018-08-23 10:54:07,796 - append_purchase_lide_sandd.client_thread - INFO - 开始购买
+2018-08-23 10:54:07,999 - append_purchase_lide_sandd.purchase_client_main - INFO - start purchase, xiazhu money:4,0,0,0,0,0,0,0,0,3
+2018-08-23 10:54:08,013 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase mingci:1
+2018-08-23 10:54:08,013 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase number:0
+2018-08-23 10:54:08,016 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase mingci:10
+2018-08-23 10:54:08,016 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase number:1
+2018-08-23 10:54:08,016 - append_purchase_lide_sandd.purchase_client_main - INFO - xiazhu money:[8, 6]
+2018-08-23 10:54:08,019 - append_purchase_lide_sandd.purchase_client_main - INFO - calc gain_all_money:0
+2018-08-23 10:54:13,035 - append_purchase_lide_sandd.purchase_client_main - INFO - switch mainIFrame ok
+2018-08-23 10:54:13,285 - append_purchase_lide_sandd.purchase_client_main - INFO - find inw_3_13 ok
+2018-08-23 10:54:16,292 - append_purchase_lide_sandd.purchase_client_main - ERROR - web get gain_all_money error!
+2018-08-23 10:54:16,292 - append_purchase_lide_sandd.purchase_client_main - INFO - start purchase purchase_element://*[@id="inw_3_14"]/input
+2018-08-23 10:54:16,293 - append_purchase_lide_sandd.purchase_client_main - INFO - current xaizhu money:8
+2018-08-23 10:54:17,322 - append_purchase_lide_sandd.purchase_client_main - INFO - start purchase purchase_element://*[@id="inw_35_149"]/input
+2018-08-23 10:54:17,322 - append_purchase_lide_sandd.purchase_client_main - INFO - current xaizhu money:6
+2018-08-23 10:54:21,605 - append_purchase_lide_sandd.purchase_client_main - INFO - commit ok
+2018-08-23 10:54:23,839 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase ok
+2018-08-23 10:54:23,841 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase sucess!, input money:14
+2018-08-23 10:54:23,921 - append_purchase_lide_sandd.purchase_client_main - INFO - save xiazhu args sucess!
+2018-08-23 10:58:01,960 - append_purchase_lide_sandd.client_thread - INFO - 开始购买
+2018-08-23 10:58:03,539 - append_predict_sandd.thread - INFO - current_date:20180823 10:58:03
+2018-08-23 10:58:03,539 - append_predict_sandd.thread - INFO - start purchase
+2018-08-23 10:58:13,539 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-23
+2018-08-23 10:58:15,736 - append_predict_sandd.main - DEBUG - lottery_id: 699879
+2018-08-23 10:58:15,736 - append_predict_sandd.main - INFO - lottery_num: 02,09,07,10,03,04,08,06,05,01
+2018-08-23 10:58:15,737 - append_predict_sandd.main - DEBUG - mingci [1]: 2
+2018-08-23 10:58:15,737 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:58:15,737 - append_predict_sandd.main - DEBUG - mingci [2]: 9
+2018-08-23 10:58:15,739 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:58:15,739 - append_predict_sandd.main - DEBUG - mingci [3]: 7
+2018-08-23 10:58:15,739 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:58:15,740 - append_predict_sandd.main - DEBUG - mingci [4]: 10
+2018-08-23 10:58:15,740 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:58:15,740 - append_predict_sandd.main - DEBUG - mingci [5]: 3
+2018-08-23 10:58:15,740 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:58:15,740 - append_predict_sandd.main - DEBUG - mingci [6]: 4
+2018-08-23 10:58:15,740 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:58:15,740 - append_predict_sandd.main - DEBUG - mingci [7]: 8
+2018-08-23 10:58:15,742 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:58:15,742 - append_predict_sandd.main - DEBUG - mingci [8]: 6
+2018-08-23 10:58:15,742 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:58:15,742 - append_predict_sandd.main - DEBUG - mingci [9]: 5
+2018-08-23 10:58:15,743 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 0
+2018-08-23 10:58:15,743 - append_predict_sandd.main - DEBUG - mingci [10]: 1
+2018-08-23 10:58:15,743 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: 1
+2018-08-23 10:58:15,743 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 2 
+2018-08-23 10:58:15,743 - append_predict_sandd.main - DEBUG - target_count: 0.200000
+2018-08-23 10:58:15,819 - append_predict_sandd.main - INFO - last_purchase_hit: True
+2018-08-23 10:58:15,823 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-23 10:58:15,831 - append_predict_sandd.main - INFO - save predict_lottery_id : 699880
+2018-08-23 10:58:15,831 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 1, 1, 0, 1, 0, 0, 0, 1, 1]
+2018-08-23 10:58:15,832 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+2018-08-23 10:58:16,961 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:58:31,963 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:58:46,963 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:59:01,967 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase time is no region!
+2018-08-23 10:59:01,983 - append_purchase_lide_sandd.purchase_client_main - INFO - start purchase, xiazhu money:0,0,0,0,0,0,0,0,1,0
+2018-08-23 10:59:01,986 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase mingci:9
+2018-08-23 10:59:01,986 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase number:1
+2018-08-23 10:59:01,986 - append_purchase_lide_sandd.purchase_client_main - INFO - xiazhu money:[2]
+2018-08-23 10:59:01,987 - append_purchase_lide_sandd.purchase_client_main - INFO - calc gain_all_money:9
+2018-08-23 10:59:07,007 - append_purchase_lide_sandd.purchase_client_main - INFO - switch mainIFrame ok
+2018-08-23 10:59:07,013 - append_purchase_lide_sandd.purchase_client_main - WARNING - not found 0-1.
+2018-08-23 10:59:07,017 - append_purchase_lide_sandd.purchase_client_main - INFO - find inw_3_13 ok
+2018-08-23 10:59:10,026 - append_purchase_lide_sandd.purchase_client_main - ERROR - web get gain_all_money error!
+2018-08-23 10:59:10,026 - append_purchase_lide_sandd.purchase_client_main - INFO - start purchase purchase_element://*[@id="inw_32_135"]/input
+2018-08-23 10:59:10,026 - append_purchase_lide_sandd.purchase_client_main - INFO - current xaizhu money:2
+2018-08-23 10:59:13,282 - append_purchase_lide_sandd.purchase_client_main - INFO - commit ok
+2018-08-23 10:59:15,506 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase ok
+2018-08-23 10:59:15,506 - append_purchase_lide_sandd.purchase_client_main - INFO - purchase sucess!, input money:2
+2018-08-23 10:59:15,611 - append_purchase_lide_sandd.purchase_client_main - INFO - save xiazhu args sucess!

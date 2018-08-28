@@ -1,0 +1,1866 @@
+2018-08-22 13:02:02,171 - append_predict.main - INFO - a1008 not start
+2018-08-22 13:02:02,338 - append_predict.main - INFO - xiao1235 not start
+2018-08-22 13:02:02,450 - append_predict.main - INFO - xiao147 not start
+2018-08-22 13:02:02,562 - append_predict.main - INFO - qwe12345678 not start
+2018-08-22 13:02:02,634 - append_predict.main - INFO - hyy01245 not start
+2018-08-22 13:02:02,709 - append_predict.main - INFO - qtm123 not start
+2018-08-22 13:02:02,907 - append_predict.main - INFO - lv6868 not start
+2018-08-22 13:02:14,026 - append_predict_sandd.main - INFO - test not start
+2018-08-22 13:02:35,895 - append_predict_sandd.main - DEBUG - thread is not alive start!!!
+2018-08-22 13:03:05,898 - append_predict_sandd.thread - INFO - current_date:20180822 13:03:05
+2018-08-22 13:03:05,900 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 13:03:15,901 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 13:04:34,078 - append_predict_sandd.main - INFO - test not start
+2018-08-22 13:04:35,707 - append_predict_sandd.main - INFO - test not start
+2018-08-22 13:04:45,091 - append_predict_sandd.main - DEBUG - thread is not alive start!!!
+2018-08-22 13:04:45,092 - append_predict_sandd.thread - INFO - current_date:20180822 13:04:45
+2018-08-22 13:04:45,094 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 13:04:55,095 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 13:06:21,471 - append_predict_sandd.main - INFO - test not start
+2018-08-22 13:06:23,045 - append_predict_sandd.main - DEBUG - thread is not alive start!!!
+2018-08-22 13:08:03,112 - append_predict_sandd.thread - INFO - current_date:20180822 13:08:03
+2018-08-22 13:08:03,112 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 13:08:13,114 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 13:08:31,111 - append_predict_sandd.main - DEBUG - predicts is null
+2018-08-22 13:08:31,112 - append_predict_sandd.main - DEBUG - lottery_id: 0
+2018-08-22 13:08:31,114 - append_predict_sandd.main - DEBUG - no predict record in history
+2018-08-22 13:08:31,118 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 13:08:31,118 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 13:08:31,118 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 13:08:31,118 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 13:08:31,119 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 13:08:31,119 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 13:08:31,121 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 13:08:31,121 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 13:08:31,121 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 13:08:31,121 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 13:08:31,122 - append_predict_sandd.main - INFO - save predict_lottery_id : 699727
+2018-08-22 13:08:31,122 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 1, 0, 1, 0, 1, 0, 0, 1]
+2018-08-22 13:13:04,581 - append_predict_sandd.thread - INFO - current_date:20180822 13:13:04
+2018-08-22 13:13:04,581 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 13:13:14,582 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 13:13:20,578 - append_predict_sandd.main - DEBUG - lottery_id: 699727
+2018-08-22 13:13:20,578 - append_predict_sandd.main - INFO - lottery_num: 08,03,04,10,07,09,05,02,06,01
+2018-08-22 13:13:20,578 - append_predict_sandd.main - DEBUG - mingci [1]: 8
+2018-08-22 13:13:20,578 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 13:13:20,579 - append_predict_sandd.main - DEBUG - mingci [2]: 3
+2018-08-22 13:13:20,579 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:13:20,579 - append_predict_sandd.main - DEBUG - mingci [3]: 4
+2018-08-22 13:13:20,579 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:13:20,579 - append_predict_sandd.main - DEBUG - mingci [4]: 10
+2018-08-22 13:13:20,581 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:13:20,581 - append_predict_sandd.main - DEBUG - mingci [5]: 7
+2018-08-22 13:13:20,581 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:13:20,581 - append_predict_sandd.main - DEBUG - mingci [6]: 9
+2018-08-22 13:13:20,581 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:13:20,581 - append_predict_sandd.main - DEBUG - mingci [7]: 5
+2018-08-22 13:13:20,581 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:13:20,582 - append_predict_sandd.main - DEBUG - mingci [8]: 2
+2018-08-22 13:13:20,582 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:13:20,582 - append_predict_sandd.main - DEBUG - mingci [9]: 6
+2018-08-22 13:13:20,582 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:13:20,582 - append_predict_sandd.main - DEBUG - mingci [10]: 1
+2018-08-22 13:13:20,582 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 13:13:20,582 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 13:13:20,582 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 13:13:20,726 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 13:13:20,729 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 13:13:20,732 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 13:13:20,733 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 13:13:20,733 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 13:13:20,734 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 13:13:20,734 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 13:13:20,734 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 13:13:20,736 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 13:13:20,736 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 13:13:20,736 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 13:13:20,736 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 13:13:20,737 - append_predict_sandd.main - INFO - save predict_lottery_id : 699728
+2018-08-22 13:13:20,737 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 1, 0, 0, 1, 1, 1, 0, 0, 1]
+2018-08-22 13:23:02,144 - append_predict_sandd.main - INFO - test not start
+2018-08-22 13:23:03,944 - append_predict_sandd.main - DEBUG - thread is not alive start!!!
+2018-08-22 13:23:03,944 - append_predict_sandd.thread - INFO - current_date:20180822 13:23:03
+2018-08-22 13:23:03,946 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 13:23:13,947 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 13:23:20,516 - append_predict_sandd.main - DEBUG - lottery_id: 699728
+2018-08-22 13:23:20,517 - append_predict_sandd.main - INFO - lottery_num: 01,03,09,05,02,10,08,04,06,07
+2018-08-22 13:23:20,517 - append_predict_sandd.main - DEBUG - mingci [1]: 1
+2018-08-22 13:23:20,517 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 13:23:20,519 - append_predict_sandd.main - DEBUG - mingci [2]: 3
+2018-08-22 13:23:20,519 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:23:20,519 - append_predict_sandd.main - DEBUG - mingci [3]: 9
+2018-08-22 13:23:20,519 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:23:20,519 - append_predict_sandd.main - DEBUG - mingci [4]: 5
+2018-08-22 13:23:20,519 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:23:20,519 - append_predict_sandd.main - DEBUG - mingci [5]: 2
+2018-08-22 13:23:20,519 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:23:20,520 - append_predict_sandd.main - DEBUG - mingci [6]: 10
+2018-08-22 13:23:20,520 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:23:20,520 - append_predict_sandd.main - DEBUG - mingci [7]: 8
+2018-08-22 13:23:20,520 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:23:20,520 - append_predict_sandd.main - DEBUG - mingci [8]: 4
+2018-08-22 13:23:20,520 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:23:20,522 - append_predict_sandd.main - DEBUG - mingci [9]: 6
+2018-08-22 13:23:20,522 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:23:20,522 - append_predict_sandd.main - DEBUG - mingci [10]: 7
+2018-08-22 13:23:20,522 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 13:23:20,522 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 13:23:20,522 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 13:23:20,588 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 13:23:20,589 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 13:23:20,592 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 13:23:20,595 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 13:23:20,596 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 13:23:20,596 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 13:23:20,598 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 13:23:20,598 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 13:23:20,598 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 13:23:20,598 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 13:23:20,599 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 13:23:20,599 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 13:23:20,599 - append_predict_sandd.main - INFO - save predict_lottery_id : 699730
+2018-08-22 13:23:20,599 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 1, 0, 0, 1, 1, 0, 0, 1]
+2018-08-22 13:23:20,601 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 2, 0, 0, 0, 0]
+2018-08-22 13:28:03,691 - append_predict_sandd.thread - INFO - current_date:20180822 13:28:03
+2018-08-22 13:28:03,691 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 13:28:13,693 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 13:28:19,224 - append_predict_sandd.main - DEBUG - lottery_id: 699730
+2018-08-22 13:28:19,226 - append_predict_sandd.main - INFO - lottery_num: 09,06,07,01,05,03,02,04,08,10
+2018-08-22 13:28:19,226 - append_predict_sandd.main - DEBUG - mingci [1]: 9
+2018-08-22 13:28:19,226 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 13:28:19,226 - append_predict_sandd.main - DEBUG - mingci [2]: 6
+2018-08-22 13:28:19,226 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:28:19,226 - append_predict_sandd.main - DEBUG - mingci [3]: 7
+2018-08-22 13:28:19,226 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:28:19,226 - append_predict_sandd.main - DEBUG - mingci [4]: 1
+2018-08-22 13:28:19,226 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:28:19,227 - append_predict_sandd.main - DEBUG - mingci [5]: 5
+2018-08-22 13:28:19,227 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:28:19,227 - append_predict_sandd.main - DEBUG - mingci [6]: 3
+2018-08-22 13:28:19,227 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:28:19,227 - append_predict_sandd.main - DEBUG - mingci [7]: 2
+2018-08-22 13:28:19,227 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:28:19,229 - append_predict_sandd.main - DEBUG - mingci [8]: 4
+2018-08-22 13:28:19,229 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:28:19,229 - append_predict_sandd.main - DEBUG - mingci [9]: 8
+2018-08-22 13:28:19,229 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:28:19,229 - append_predict_sandd.main - DEBUG - mingci [10]: 10
+2018-08-22 13:28:19,229 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 13:28:19,230 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 13:28:19,230 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 13:28:19,303 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 13:28:19,303 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 13:28:19,308 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 13:28:19,308 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 13:28:19,309 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 13:28:19,309 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 13:28:19,311 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 13:28:19,311 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 13:28:19,311 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 13:28:19,311 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 13:28:19,312 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 13:28:19,312 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 13:28:19,312 - append_predict_sandd.main - INFO - save predict_lottery_id : 699731
+2018-08-22 13:28:19,312 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 1, 1, 1, 1, 0, 0, 0, 0]
+2018-08-22 13:28:19,312 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 1, 0, 0, 1, 0, 0, 0]
+2018-08-22 13:33:02,407 - append_predict_sandd.thread - INFO - current_date:20180822 13:33:02
+2018-08-22 13:33:02,414 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 13:33:12,420 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 13:33:17,769 - append_predict_sandd.main - DEBUG - lottery_id: 699731
+2018-08-22 13:33:17,770 - append_predict_sandd.main - INFO - lottery_num: 01,10,04,07,03,09,05,06,08,02
+2018-08-22 13:33:17,772 - append_predict_sandd.main - DEBUG - mingci [1]: 1
+2018-08-22 13:33:17,772 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 13:33:17,772 - append_predict_sandd.main - DEBUG - mingci [2]: 10
+2018-08-22 13:33:17,772 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:33:17,772 - append_predict_sandd.main - DEBUG - mingci [3]: 4
+2018-08-22 13:33:17,773 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:33:17,775 - append_predict_sandd.main - DEBUG - mingci [4]: 7
+2018-08-22 13:33:17,775 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:33:17,775 - append_predict_sandd.main - DEBUG - mingci [5]: 3
+2018-08-22 13:33:17,775 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:33:17,775 - append_predict_sandd.main - DEBUG - mingci [6]: 9
+2018-08-22 13:33:17,775 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:33:17,775 - append_predict_sandd.main - DEBUG - mingci [7]: 5
+2018-08-22 13:33:17,775 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:33:17,775 - append_predict_sandd.main - DEBUG - mingci [8]: 6
+2018-08-22 13:33:17,775 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:33:17,776 - append_predict_sandd.main - DEBUG - mingci [9]: 8
+2018-08-22 13:33:17,776 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:33:17,776 - append_predict_sandd.main - DEBUG - mingci [10]: 2
+2018-08-22 13:33:17,776 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 13:33:17,778 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 13:33:17,778 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 13:33:17,835 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 13:33:17,835 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 13:33:17,839 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 13:33:17,839 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 13:33:17,839 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 13:33:17,839 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 13:33:17,839 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 13:33:17,841 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 13:33:17,842 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 13:33:17,842 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 13:33:17,842 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 13:33:17,842 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 13:33:17,842 - append_predict_sandd.main - INFO - save predict_lottery_id : 699732
+2018-08-22 13:33:17,842 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 0, 1, 1, 1, 1, 0, 0, 0]
+2018-08-22 13:33:17,844 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 2, 0, 0, 0]
+2018-08-22 13:38:00,953 - append_predict_sandd.thread - INFO - current_date:20180822 13:38:00
+2018-08-22 13:38:00,953 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 13:38:10,956 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 13:38:17,628 - append_predict_sandd.main - DEBUG - lottery_id: 699732
+2018-08-22 13:38:17,631 - append_predict_sandd.main - INFO - lottery_num: 03,08,05,06,04,07,10,09,02,01
+2018-08-22 13:38:17,631 - append_predict_sandd.main - DEBUG - mingci [1]: 3
+2018-08-22 13:38:17,631 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 13:38:17,632 - append_predict_sandd.main - DEBUG - mingci [2]: 8
+2018-08-22 13:38:17,632 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:38:17,632 - append_predict_sandd.main - DEBUG - mingci [3]: 5
+2018-08-22 13:38:17,632 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:38:17,632 - append_predict_sandd.main - DEBUG - mingci [4]: 6
+2018-08-22 13:38:17,632 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:38:17,634 - append_predict_sandd.main - DEBUG - mingci [5]: 4
+2018-08-22 13:38:17,634 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:38:17,634 - append_predict_sandd.main - DEBUG - mingci [6]: 7
+2018-08-22 13:38:17,634 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:38:17,634 - append_predict_sandd.main - DEBUG - mingci [7]: 10
+2018-08-22 13:38:17,634 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:38:17,634 - append_predict_sandd.main - DEBUG - mingci [8]: 9
+2018-08-22 13:38:17,634 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:38:17,634 - append_predict_sandd.main - DEBUG - mingci [9]: 2
+2018-08-22 13:38:17,634 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:38:17,634 - append_predict_sandd.main - DEBUG - mingci [10]: 1
+2018-08-22 13:38:17,634 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 13:38:17,635 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 13:38:17,635 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 13:38:17,710 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 13:38:17,710 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 13:38:17,714 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 13:38:17,714 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 13:38:17,717 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 13:38:17,717 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 13:38:17,717 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 13:38:17,717 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 13:38:17,717 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 13:38:17,719 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 13:38:17,719 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 13:38:17,719 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 13:38:17,720 - append_predict_sandd.main - INFO - save predict_lottery_id : 699733
+2018-08-22 13:38:17,720 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 1, 0, 0, 1, 0, 1, 0, 1]
+2018-08-22 13:38:17,720 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 4, 0, 0, 0]
+2018-08-22 13:43:00,828 - append_predict_sandd.thread - INFO - current_date:20180822 13:43:00
+2018-08-22 13:43:00,828 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 13:43:10,829 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 13:43:17,404 - append_predict_sandd.main - DEBUG - lottery_id: 699733
+2018-08-22 13:43:17,404 - append_predict_sandd.main - INFO - lottery_num: 02,04,06,07,01,05,08,10,03,09
+2018-08-22 13:43:17,404 - append_predict_sandd.main - DEBUG - mingci [1]: 2
+2018-08-22 13:43:17,405 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 13:43:17,405 - append_predict_sandd.main - DEBUG - mingci [2]: 4
+2018-08-22 13:43:17,405 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:43:17,405 - append_predict_sandd.main - DEBUG - mingci [3]: 6
+2018-08-22 13:43:17,405 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:43:17,407 - append_predict_sandd.main - DEBUG - mingci [4]: 7
+2018-08-22 13:43:17,407 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:43:17,407 - append_predict_sandd.main - DEBUG - mingci [5]: 1
+2018-08-22 13:43:17,407 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:43:17,407 - append_predict_sandd.main - DEBUG - mingci [6]: 5
+2018-08-22 13:43:17,407 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:43:17,407 - append_predict_sandd.main - DEBUG - mingci [7]: 8
+2018-08-22 13:43:17,407 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:43:17,407 - append_predict_sandd.main - DEBUG - mingci [8]: 10
+2018-08-22 13:43:17,407 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:43:17,407 - append_predict_sandd.main - DEBUG - mingci [9]: 3
+2018-08-22 13:43:17,408 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:43:17,408 - append_predict_sandd.main - DEBUG - mingci [10]: 9
+2018-08-22 13:43:17,408 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 13:43:17,408 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 13:43:17,408 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 13:43:17,474 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 13:43:17,476 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 13:43:17,480 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 13:43:17,480 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 13:43:17,480 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 13:43:17,480 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 13:43:17,480 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 13:43:17,480 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 13:43:17,480 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 13:43:17,482 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 13:43:17,483 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 13:43:17,487 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 13:43:17,487 - append_predict_sandd.main - INFO - save predict_lottery_id : 699734
+2018-08-22 13:43:17,489 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 0, 0, 1, 1, 1, 0, 0, 1, 1]
+2018-08-22 13:43:17,489 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+2018-08-22 13:48:00,594 - append_predict_sandd.thread - INFO - current_date:20180822 13:48:00
+2018-08-22 13:48:00,595 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 13:48:10,595 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 13:48:16,437 - append_predict_sandd.main - DEBUG - lottery_id: 699734
+2018-08-22 13:48:16,438 - append_predict_sandd.main - INFO - lottery_num: 04,10,08,03,06,07,05,02,09,01
+2018-08-22 13:48:16,438 - append_predict_sandd.main - DEBUG - mingci [1]: 4
+2018-08-22 13:48:16,438 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 13:48:16,440 - append_predict_sandd.main - DEBUG - mingci [2]: 10
+2018-08-22 13:48:16,440 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:48:16,440 - append_predict_sandd.main - DEBUG - mingci [3]: 8
+2018-08-22 13:48:16,440 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:48:16,440 - append_predict_sandd.main - DEBUG - mingci [4]: 3
+2018-08-22 13:48:16,440 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:48:16,440 - append_predict_sandd.main - DEBUG - mingci [5]: 6
+2018-08-22 13:48:16,441 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:48:16,444 - append_predict_sandd.main - DEBUG - mingci [6]: 7
+2018-08-22 13:48:16,444 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:48:16,444 - append_predict_sandd.main - DEBUG - mingci [7]: 5
+2018-08-22 13:48:16,444 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:48:16,444 - append_predict_sandd.main - DEBUG - mingci [8]: 2
+2018-08-22 13:48:16,444 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:48:16,444 - append_predict_sandd.main - DEBUG - mingci [9]: 9
+2018-08-22 13:48:16,446 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:48:16,447 - append_predict_sandd.main - DEBUG - mingci [10]: 1
+2018-08-22 13:48:16,447 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 13:48:16,447 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 13:48:16,447 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 13:48:16,730 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 13:48:16,734 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 13:48:16,742 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 13:48:16,743 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 13:48:16,743 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 13:48:16,743 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 13:48:16,743 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 13:48:16,743 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 13:48:16,744 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 13:48:16,746 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 13:48:16,746 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 13:48:16,746 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 13:48:16,746 - append_predict_sandd.main - INFO - save predict_lottery_id : 699735
+2018-08-22 13:48:16,746 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 0, 0, 1, 0, 1, 1, 0, 1, 1]
+2018-08-22 13:48:16,747 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+2018-08-22 13:53:09,928 - append_predict_sandd.thread - INFO - current_date:20180822 13:53:09
+2018-08-22 13:53:09,928 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 13:53:19,930 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 13:53:25,326 - append_predict_sandd.main - DEBUG - lottery_id: 699735
+2018-08-22 13:53:25,326 - append_predict_sandd.main - INFO - lottery_num: 04,05,09,06,01,03,08,07,10,02
+2018-08-22 13:53:25,328 - append_predict_sandd.main - DEBUG - mingci [1]: 4
+2018-08-22 13:53:25,328 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 13:53:25,328 - append_predict_sandd.main - DEBUG - mingci [2]: 5
+2018-08-22 13:53:25,328 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:53:25,328 - append_predict_sandd.main - DEBUG - mingci [3]: 9
+2018-08-22 13:53:25,328 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:53:25,328 - append_predict_sandd.main - DEBUG - mingci [4]: 6
+2018-08-22 13:53:25,328 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:53:25,328 - append_predict_sandd.main - DEBUG - mingci [5]: 1
+2018-08-22 13:53:25,329 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:53:25,329 - append_predict_sandd.main - DEBUG - mingci [6]: 3
+2018-08-22 13:53:25,329 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:53:25,329 - append_predict_sandd.main - DEBUG - mingci [7]: 8
+2018-08-22 13:53:25,331 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:53:25,331 - append_predict_sandd.main - DEBUG - mingci [8]: 7
+2018-08-22 13:53:25,331 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:53:25,331 - append_predict_sandd.main - DEBUG - mingci [9]: 10
+2018-08-22 13:53:25,331 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:53:25,331 - append_predict_sandd.main - DEBUG - mingci [10]: 2
+2018-08-22 13:53:25,331 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 13:53:25,331 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 13:53:25,332 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 13:53:25,394 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 13:53:25,394 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 13:53:25,398 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 13:53:25,398 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 13:53:25,398 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 13:53:25,398 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 13:53:25,398 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 13:53:25,398 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 13:53:25,400 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 13:53:25,400 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 13:53:25,400 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 13:53:25,400 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 13:53:25,401 - append_predict_sandd.main - INFO - save predict_lottery_id : 699736
+2018-08-22 13:53:25,401 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 1, 1, 0, 1, 1, 0, 1, 0, 0]
+2018-08-22 13:53:25,401 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 2, 0, 0, 0, 0, 0]
+2018-08-22 13:58:08,532 - append_predict_sandd.thread - INFO - current_date:20180822 13:58:08
+2018-08-22 13:58:08,532 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 13:58:18,538 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 13:58:24,326 - append_predict_sandd.main - DEBUG - lottery_id: 699736
+2018-08-22 13:58:24,328 - append_predict_sandd.main - INFO - lottery_num: 09,01,08,04,03,10,07,05,02,06
+2018-08-22 13:58:24,328 - append_predict_sandd.main - DEBUG - mingci [1]: 9
+2018-08-22 13:58:24,328 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 13:58:24,328 - append_predict_sandd.main - DEBUG - mingci [2]: 1
+2018-08-22 13:58:24,328 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:58:24,328 - append_predict_sandd.main - DEBUG - mingci [3]: 8
+2018-08-22 13:58:24,328 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:58:24,328 - append_predict_sandd.main - DEBUG - mingci [4]: 4
+2018-08-22 13:58:24,329 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:58:24,329 - append_predict_sandd.main - DEBUG - mingci [5]: 3
+2018-08-22 13:58:24,331 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:58:24,331 - append_predict_sandd.main - DEBUG - mingci [6]: 10
+2018-08-22 13:58:24,331 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:58:24,331 - append_predict_sandd.main - DEBUG - mingci [7]: 7
+2018-08-22 13:58:24,331 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:58:24,331 - append_predict_sandd.main - DEBUG - mingci [8]: 5
+2018-08-22 13:58:24,332 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 13:58:24,332 - append_predict_sandd.main - DEBUG - mingci [9]: 2
+2018-08-22 13:58:24,332 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 13:58:24,332 - append_predict_sandd.main - DEBUG - mingci [10]: 6
+2018-08-22 13:58:24,332 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 13:58:24,332 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 13:58:24,332 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 13:58:24,400 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 13:58:24,401 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 13:58:24,404 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 13:58:24,404 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 13:58:24,405 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 13:58:24,405 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 13:58:24,405 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 13:58:24,405 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 13:58:24,405 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 13:58:24,407 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 13:58:24,407 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 13:58:24,407 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 13:58:24,407 - append_predict_sandd.main - INFO - save predict_lottery_id : 699737
+2018-08-22 13:58:24,407 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 1, 0, 0, 1, 0, 1, 1, 0, 0]
+2018-08-22 13:58:24,407 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+2018-08-22 14:03:07,551 - append_predict_sandd.thread - INFO - current_date:20180822 14:03:07
+2018-08-22 14:03:07,551 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 14:03:17,552 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 14:03:24,388 - append_predict_sandd.main - DEBUG - lottery_id: 699737
+2018-08-22 14:03:24,391 - append_predict_sandd.main - INFO - lottery_num: 01,05,06,10,02,08,03,07,09,04
+2018-08-22 14:03:24,392 - append_predict_sandd.main - DEBUG - mingci [1]: 1
+2018-08-22 14:03:24,392 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 14:03:24,394 - append_predict_sandd.main - DEBUG - mingci [2]: 5
+2018-08-22 14:03:24,394 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:03:24,394 - append_predict_sandd.main - DEBUG - mingci [3]: 6
+2018-08-22 14:03:24,394 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:03:24,394 - append_predict_sandd.main - DEBUG - mingci [4]: 10
+2018-08-22 14:03:24,394 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:03:24,394 - append_predict_sandd.main - DEBUG - mingci [5]: 2
+2018-08-22 14:03:24,394 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:03:24,395 - append_predict_sandd.main - DEBUG - mingci [6]: 8
+2018-08-22 14:03:24,395 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:03:24,395 - append_predict_sandd.main - DEBUG - mingci [7]: 3
+2018-08-22 14:03:24,395 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:03:24,395 - append_predict_sandd.main - DEBUG - mingci [8]: 7
+2018-08-22 14:03:24,397 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:03:24,397 - append_predict_sandd.main - DEBUG - mingci [9]: 9
+2018-08-22 14:03:24,397 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:03:24,397 - append_predict_sandd.main - DEBUG - mingci [10]: 4
+2018-08-22 14:03:24,397 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 14:03:24,397 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 14:03:24,398 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 14:03:24,628 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 14:03:24,654 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 14:03:24,703 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 14:03:24,714 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 14:03:24,732 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 14:03:24,732 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 14:03:24,747 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 14:03:24,762 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 14:03:24,770 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 14:03:24,788 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 14:03:24,799 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 14:03:24,832 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 14:03:24,891 - append_predict_sandd.main - INFO - save predict_lottery_id : 699738
+2018-08-22 14:03:24,944 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 1, 0, 0, 0, 0, 1, 1, 1, 0]
+2018-08-22 14:03:24,976 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2018-08-22 14:08:05,154 - append_predict_sandd.thread - INFO - current_date:20180822 14:08:05
+2018-08-22 14:08:05,155 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 14:08:15,157 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 14:08:21,045 - append_predict_sandd.main - DEBUG - lottery_id: 699738
+2018-08-22 14:08:21,051 - append_predict_sandd.main - INFO - lottery_num: 08,01,02,03,10,05,09,07,06,04
+2018-08-22 14:08:21,051 - append_predict_sandd.main - DEBUG - mingci [1]: 8
+2018-08-22 14:08:21,052 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 14:08:21,052 - append_predict_sandd.main - DEBUG - mingci [2]: 1
+2018-08-22 14:08:21,053 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:08:21,055 - append_predict_sandd.main - DEBUG - mingci [3]: 2
+2018-08-22 14:08:21,056 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:08:21,056 - append_predict_sandd.main - DEBUG - mingci [4]: 3
+2018-08-22 14:08:21,058 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:08:21,058 - append_predict_sandd.main - DEBUG - mingci [5]: 10
+2018-08-22 14:08:21,058 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:08:21,069 - append_predict_sandd.main - DEBUG - mingci [6]: 5
+2018-08-22 14:08:21,075 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:08:21,078 - append_predict_sandd.main - DEBUG - mingci [7]: 9
+2018-08-22 14:08:21,078 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:08:21,078 - append_predict_sandd.main - DEBUG - mingci [8]: 7
+2018-08-22 14:08:21,078 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:08:21,078 - append_predict_sandd.main - DEBUG - mingci [9]: 6
+2018-08-22 14:08:21,078 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:08:21,078 - append_predict_sandd.main - DEBUG - mingci [10]: 4
+2018-08-22 14:08:21,078 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 14:08:21,079 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 14:08:21,079 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 14:08:21,167 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 14:08:21,171 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 14:08:21,187 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 14:08:21,194 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 14:08:21,196 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 14:08:21,197 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 14:08:21,197 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 14:08:21,197 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 14:08:21,197 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 14:08:21,197 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 14:08:21,197 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 14:08:21,198 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 14:08:21,198 - append_predict_sandd.main - INFO - save predict_lottery_id : 699739
+2018-08-22 14:08:21,198 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 1, 0, 1, 0, 1, 1, 1, 0, 0]
+2018-08-22 14:08:21,198 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2018-08-22 14:13:04,342 - append_predict_sandd.thread - INFO - current_date:20180822 14:13:04
+2018-08-22 14:13:04,367 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 14:13:14,433 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 14:13:20,467 - append_predict_sandd.main - DEBUG - lottery_id: 699739
+2018-08-22 14:13:20,470 - append_predict_sandd.main - INFO - lottery_num: 03,05,10,02,01,04,06,08,09,07
+2018-08-22 14:13:20,474 - append_predict_sandd.main - DEBUG - mingci [1]: 3
+2018-08-22 14:13:20,476 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 14:13:20,476 - append_predict_sandd.main - DEBUG - mingci [2]: 5
+2018-08-22 14:13:20,476 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:13:20,476 - append_predict_sandd.main - DEBUG - mingci [3]: 10
+2018-08-22 14:13:20,476 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:13:20,476 - append_predict_sandd.main - DEBUG - mingci [4]: 2
+2018-08-22 14:13:20,476 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:13:20,477 - append_predict_sandd.main - DEBUG - mingci [5]: 1
+2018-08-22 14:13:20,477 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:13:20,477 - append_predict_sandd.main - DEBUG - mingci [6]: 4
+2018-08-22 14:13:20,477 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:13:20,477 - append_predict_sandd.main - DEBUG - mingci [7]: 6
+2018-08-22 14:13:20,479 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:13:20,479 - append_predict_sandd.main - DEBUG - mingci [8]: 8
+2018-08-22 14:13:20,479 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:13:20,479 - append_predict_sandd.main - DEBUG - mingci [9]: 9
+2018-08-22 14:13:20,479 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:13:20,479 - append_predict_sandd.main - DEBUG - mingci [10]: 7
+2018-08-22 14:13:20,479 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 14:13:20,480 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 14:13:20,480 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 14:13:20,592 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 14:13:20,594 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 14:13:20,596 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 14:13:20,596 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 14:13:20,598 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 14:13:20,598 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 14:13:20,598 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 14:13:20,598 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 14:13:20,598 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 14:13:20,598 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 14:13:20,598 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 14:13:20,599 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 14:13:20,599 - append_predict_sandd.main - INFO - save predict_lottery_id : 699740
+2018-08-22 14:13:20,599 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 1, 0, 0, 1, 0, 0, 0, 1, 1]
+2018-08-22 14:13:20,599 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+2018-08-22 14:18:03,736 - append_predict_sandd.thread - INFO - current_date:20180822 14:18:03
+2018-08-22 14:18:03,736 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 14:18:13,746 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 14:18:19,457 - append_predict_sandd.main - DEBUG - lottery_id: 699740
+2018-08-22 14:18:19,460 - append_predict_sandd.main - INFO - lottery_num: 10,04,03,06,07,02,08,01,05,09
+2018-08-22 14:18:19,460 - append_predict_sandd.main - DEBUG - mingci [1]: 10
+2018-08-22 14:18:19,460 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 14:18:19,461 - append_predict_sandd.main - DEBUG - mingci [2]: 4
+2018-08-22 14:18:19,461 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:18:19,463 - append_predict_sandd.main - DEBUG - mingci [3]: 3
+2018-08-22 14:18:19,463 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:18:19,463 - append_predict_sandd.main - DEBUG - mingci [4]: 6
+2018-08-22 14:18:19,463 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:18:19,463 - append_predict_sandd.main - DEBUG - mingci [5]: 7
+2018-08-22 14:18:19,463 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:18:19,463 - append_predict_sandd.main - DEBUG - mingci [6]: 2
+2018-08-22 14:18:19,464 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:18:19,464 - append_predict_sandd.main - DEBUG - mingci [7]: 8
+2018-08-22 14:18:19,464 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:18:19,466 - append_predict_sandd.main - DEBUG - mingci [8]: 1
+2018-08-22 14:18:19,467 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:18:19,467 - append_predict_sandd.main - DEBUG - mingci [9]: 5
+2018-08-22 14:18:19,467 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:18:19,467 - append_predict_sandd.main - DEBUG - mingci [10]: 9
+2018-08-22 14:18:19,467 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 14:18:19,469 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 14:18:19,469 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 14:18:19,536 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 14:18:19,538 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 14:18:19,542 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 14:18:19,542 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 14:18:19,542 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 14:18:19,542 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 14:18:19,542 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 14:18:19,543 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 14:18:19,543 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 14:18:19,543 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 14:18:19,543 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 14:18:19,545 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 14:18:19,545 - append_predict_sandd.main - INFO - save predict_lottery_id : 699741
+2018-08-22 14:18:19,545 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 0, 1, 0, 1, 0, 0, 1, 1, 1]
+2018-08-22 14:18:19,546 - append_predict_sandd.main - INFO - save beishu_number_list : [1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2018-08-22 14:23:02,816 - append_predict_sandd.thread - INFO - current_date:20180822 14:23:02
+2018-08-22 14:23:02,845 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 14:23:12,845 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 14:23:20,411 - append_predict_sandd.main - DEBUG - lottery_id: 699741
+2018-08-22 14:23:20,413 - append_predict_sandd.main - INFO - lottery_num: 02,06,07,10,04,03,09,01,08,05
+2018-08-22 14:23:20,413 - append_predict_sandd.main - DEBUG - mingci [1]: 2
+2018-08-22 14:23:20,414 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 14:23:20,414 - append_predict_sandd.main - DEBUG - mingci [2]: 6
+2018-08-22 14:23:20,414 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:23:20,414 - append_predict_sandd.main - DEBUG - mingci [3]: 7
+2018-08-22 14:23:20,414 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:23:20,415 - append_predict_sandd.main - DEBUG - mingci [4]: 10
+2018-08-22 14:23:20,415 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:23:20,415 - append_predict_sandd.main - DEBUG - mingci [5]: 4
+2018-08-22 14:23:20,415 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:23:20,415 - append_predict_sandd.main - DEBUG - mingci [6]: 3
+2018-08-22 14:23:20,417 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:23:20,417 - append_predict_sandd.main - DEBUG - mingci [7]: 9
+2018-08-22 14:23:20,417 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:23:20,417 - append_predict_sandd.main - DEBUG - mingci [8]: 1
+2018-08-22 14:23:20,417 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:23:20,417 - append_predict_sandd.main - DEBUG - mingci [9]: 8
+2018-08-22 14:23:20,417 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:23:20,417 - append_predict_sandd.main - DEBUG - mingci [10]: 5
+2018-08-22 14:23:20,417 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 14:23:20,417 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 14:23:20,417 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 14:23:20,588 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 14:23:20,588 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 14:23:20,594 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 14:23:20,594 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 14:23:20,594 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 14:23:20,595 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 14:23:20,595 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 14:23:20,595 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 14:23:20,595 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 14:23:20,595 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 14:23:20,595 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 14:23:20,595 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 14:23:20,595 - append_predict_sandd.main - INFO - save predict_lottery_id : 699742
+2018-08-22 14:23:20,608 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 0, 1, 0, 0, 1, 1, 1, 0, 1]
+2018-08-22 14:23:20,615 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2018-08-22 14:28:03,842 - append_predict_sandd.thread - INFO - current_date:20180822 14:28:03
+2018-08-22 14:28:03,842 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 14:28:13,846 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 14:28:22,415 - append_predict_sandd.main - DEBUG - lottery_id: 699742
+2018-08-22 14:28:22,417 - append_predict_sandd.main - INFO - lottery_num: 10,08,06,09,05,01,02,07,03,04
+2018-08-22 14:28:22,417 - append_predict_sandd.main - DEBUG - mingci [1]: 10
+2018-08-22 14:28:22,417 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 14:28:22,418 - append_predict_sandd.main - DEBUG - mingci [2]: 8
+2018-08-22 14:28:22,418 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:28:22,421 - append_predict_sandd.main - DEBUG - mingci [3]: 6
+2018-08-22 14:28:22,421 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:28:22,421 - append_predict_sandd.main - DEBUG - mingci [4]: 9
+2018-08-22 14:28:22,421 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:28:22,421 - append_predict_sandd.main - DEBUG - mingci [5]: 5
+2018-08-22 14:28:22,421 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:28:22,421 - append_predict_sandd.main - DEBUG - mingci [6]: 1
+2018-08-22 14:28:22,421 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:28:22,421 - append_predict_sandd.main - DEBUG - mingci [7]: 2
+2018-08-22 14:28:22,423 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:28:22,423 - append_predict_sandd.main - DEBUG - mingci [8]: 7
+2018-08-22 14:28:22,423 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:28:22,423 - append_predict_sandd.main - DEBUG - mingci [9]: 3
+2018-08-22 14:28:22,423 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:28:22,423 - append_predict_sandd.main - DEBUG - mingci [10]: 4
+2018-08-22 14:28:22,424 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 14:28:22,424 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 14:28:22,424 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 14:28:22,483 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 14:28:22,483 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 14:28:22,487 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 14:28:22,487 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 14:28:22,487 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 14:28:22,487 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 14:28:22,489 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 14:28:22,489 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 14:28:22,489 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 14:28:22,490 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 14:28:22,490 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 14:28:22,490 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 14:28:22,490 - append_predict_sandd.main - INFO - save predict_lottery_id : 699743
+2018-08-22 14:28:22,490 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 0, 0, 1, 1, 1, 0, 1, 1, 0]
+2018-08-22 14:28:22,490 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2018-08-22 14:33:05,676 - append_predict_sandd.thread - INFO - current_date:20180822 14:33:05
+2018-08-22 14:33:05,676 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 14:33:15,677 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 14:33:21,880 - append_predict_sandd.main - DEBUG - lottery_id: 699743
+2018-08-22 14:33:21,881 - append_predict_sandd.main - INFO - lottery_num: 09,01,08,05,07,04,10,03,06,02
+2018-08-22 14:33:21,881 - append_predict_sandd.main - DEBUG - mingci [1]: 9
+2018-08-22 14:33:21,881 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 14:33:21,881 - append_predict_sandd.main - DEBUG - mingci [2]: 1
+2018-08-22 14:33:21,881 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:33:21,882 - append_predict_sandd.main - DEBUG - mingci [3]: 8
+2018-08-22 14:33:21,882 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:33:21,882 - append_predict_sandd.main - DEBUG - mingci [4]: 5
+2018-08-22 14:33:21,882 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:33:21,882 - append_predict_sandd.main - DEBUG - mingci [5]: 7
+2018-08-22 14:33:21,882 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:33:21,884 - append_predict_sandd.main - DEBUG - mingci [6]: 4
+2018-08-22 14:33:21,884 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:33:21,884 - append_predict_sandd.main - DEBUG - mingci [7]: 10
+2018-08-22 14:33:21,884 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:33:21,884 - append_predict_sandd.main - DEBUG - mingci [8]: 3
+2018-08-22 14:33:21,884 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:33:21,884 - append_predict_sandd.main - DEBUG - mingci [9]: 6
+2018-08-22 14:33:21,884 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:33:21,884 - append_predict_sandd.main - DEBUG - mingci [10]: 2
+2018-08-22 14:33:21,884 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 14:33:21,884 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 14:33:21,884 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 14:33:21,944 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 14:33:21,944 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 14:33:21,947 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 14:33:21,947 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 14:33:21,947 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 14:33:21,947 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 14:33:21,947 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 14:33:21,947 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 14:33:21,948 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 14:33:21,951 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 14:33:21,951 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 14:33:21,953 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 14:33:21,953 - append_predict_sandd.main - INFO - save predict_lottery_id : 699744
+2018-08-22 14:33:21,953 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 1, 0, 1, 1, 0, 0, 1, 0, 0]
+2018-08-22 14:33:21,953 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+2018-08-22 14:38:05,066 - append_predict_sandd.thread - INFO - current_date:20180822 14:38:05
+2018-08-22 14:38:05,069 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 14:38:15,086 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 14:38:24,289 - append_predict_sandd.main - DEBUG - lottery_id: 699744
+2018-08-22 14:38:24,289 - append_predict_sandd.main - INFO - lottery_num: 03,06,04,02,01,05,08,07,10,09
+2018-08-22 14:38:24,290 - append_predict_sandd.main - DEBUG - mingci [1]: 3
+2018-08-22 14:38:24,290 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 14:38:24,290 - append_predict_sandd.main - DEBUG - mingci [2]: 6
+2018-08-22 14:38:24,290 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:38:24,290 - append_predict_sandd.main - DEBUG - mingci [3]: 4
+2018-08-22 14:38:24,292 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:38:24,292 - append_predict_sandd.main - DEBUG - mingci [4]: 2
+2018-08-22 14:38:24,292 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:38:24,292 - append_predict_sandd.main - DEBUG - mingci [5]: 1
+2018-08-22 14:38:24,292 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:38:24,292 - append_predict_sandd.main - DEBUG - mingci [6]: 5
+2018-08-22 14:38:24,295 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:38:24,296 - append_predict_sandd.main - DEBUG - mingci [7]: 8
+2018-08-22 14:38:24,298 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:38:24,299 - append_predict_sandd.main - DEBUG - mingci [8]: 7
+2018-08-22 14:38:24,299 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:38:24,299 - append_predict_sandd.main - DEBUG - mingci [9]: 10
+2018-08-22 14:38:24,299 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:38:24,299 - append_predict_sandd.main - DEBUG - mingci [10]: 9
+2018-08-22 14:38:24,299 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 14:38:24,299 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 14:38:24,301 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 14:38:24,453 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 14:38:24,454 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 14:38:24,466 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 14:38:24,467 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 14:38:24,469 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 14:38:24,469 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 14:38:24,469 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 14:38:24,470 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 14:38:24,470 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 14:38:24,470 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 14:38:24,470 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 14:38:24,470 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 14:38:24,470 - append_predict_sandd.main - INFO - save predict_lottery_id : 699745
+2018-08-22 14:38:24,470 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 0, 0, 1, 1, 0, 1, 0, 1]
+2018-08-22 14:38:24,470 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2018-08-22 14:43:07,658 - append_predict_sandd.thread - INFO - current_date:20180822 14:43:07
+2018-08-22 14:43:07,668 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 14:43:17,673 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 14:43:26,073 - append_predict_sandd.main - DEBUG - lottery_id: 699745
+2018-08-22 14:43:26,075 - append_predict_sandd.main - INFO - lottery_num: 09,06,05,02,07,08,03,01,10,04
+2018-08-22 14:43:26,075 - append_predict_sandd.main - DEBUG - mingci [1]: 9
+2018-08-22 14:43:26,076 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 14:43:26,076 - append_predict_sandd.main - DEBUG - mingci [2]: 6
+2018-08-22 14:43:26,076 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:43:26,076 - append_predict_sandd.main - DEBUG - mingci [3]: 5
+2018-08-22 14:43:26,076 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:43:26,076 - append_predict_sandd.main - DEBUG - mingci [4]: 2
+2018-08-22 14:43:26,078 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:43:26,078 - append_predict_sandd.main - DEBUG - mingci [5]: 7
+2018-08-22 14:43:26,078 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:43:26,078 - append_predict_sandd.main - DEBUG - mingci [6]: 8
+2018-08-22 14:43:26,078 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:43:26,078 - append_predict_sandd.main - DEBUG - mingci [7]: 3
+2018-08-22 14:43:26,078 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:43:26,078 - append_predict_sandd.main - DEBUG - mingci [8]: 1
+2018-08-22 14:43:26,078 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:43:26,078 - append_predict_sandd.main - DEBUG - mingci [9]: 10
+2018-08-22 14:43:26,078 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:43:26,079 - append_predict_sandd.main - DEBUG - mingci [10]: 4
+2018-08-22 14:43:26,079 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 14:43:26,079 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 14:43:26,079 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 14:43:26,141 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 14:43:26,144 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 14:43:26,174 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 14:43:26,177 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 14:43:26,178 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 14:43:26,180 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 14:43:26,180 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 14:43:26,180 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 14:43:26,180 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 14:43:26,180 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 14:43:26,181 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 14:43:26,181 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 14:43:26,181 - append_predict_sandd.main - INFO - save predict_lottery_id : 699746
+2018-08-22 14:43:26,183 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 1, 0, 1, 0, 1, 1, 0, 0]
+2018-08-22 14:43:26,186 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 1, 0, 0, 0, 0]
+2018-08-22 14:48:09,315 - append_predict_sandd.thread - INFO - current_date:20180822 14:48:09
+2018-08-22 14:48:09,315 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 14:48:19,316 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 14:48:25,499 - append_predict_sandd.main - DEBUG - lottery_id: 699746
+2018-08-22 14:48:25,500 - append_predict_sandd.main - INFO - lottery_num: 01,10,09,08,02,05,07,04,03,06
+2018-08-22 14:48:25,500 - append_predict_sandd.main - DEBUG - mingci [1]: 1
+2018-08-22 14:48:25,500 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 14:48:25,500 - append_predict_sandd.main - DEBUG - mingci [2]: 10
+2018-08-22 14:48:25,500 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:48:25,500 - append_predict_sandd.main - DEBUG - mingci [3]: 9
+2018-08-22 14:48:25,502 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:48:25,502 - append_predict_sandd.main - DEBUG - mingci [4]: 8
+2018-08-22 14:48:25,502 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:48:25,503 - append_predict_sandd.main - DEBUG - mingci [5]: 2
+2018-08-22 14:48:25,503 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:48:25,503 - append_predict_sandd.main - DEBUG - mingci [6]: 5
+2018-08-22 14:48:25,503 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:48:25,503 - append_predict_sandd.main - DEBUG - mingci [7]: 7
+2018-08-22 14:48:25,503 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:48:25,503 - append_predict_sandd.main - DEBUG - mingci [8]: 4
+2018-08-22 14:48:25,503 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:48:25,503 - append_predict_sandd.main - DEBUG - mingci [9]: 3
+2018-08-22 14:48:25,505 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:48:25,505 - append_predict_sandd.main - DEBUG - mingci [10]: 6
+2018-08-22 14:48:25,505 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 14:48:25,505 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 14:48:25,506 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 14:48:25,594 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 14:48:25,594 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 14:48:25,598 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 14:48:25,598 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 14:48:25,598 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 14:48:25,598 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 14:48:25,598 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 14:48:25,598 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 14:48:25,598 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 14:48:25,599 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 14:48:25,599 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 14:48:25,599 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 14:48:25,599 - append_predict_sandd.main - INFO - save predict_lottery_id : 699747
+2018-08-22 14:48:25,599 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 1, 0, 0, 1, 1, 0, 1, 0]
+2018-08-22 14:48:25,601 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 2, 0, 0, 0, 0]
+2018-08-22 14:53:08,767 - append_predict_sandd.thread - INFO - current_date:20180822 14:53:08
+2018-08-22 14:53:08,767 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 14:53:18,772 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 14:53:25,961 - append_predict_sandd.main - DEBUG - lottery_id: 699747
+2018-08-22 14:53:25,963 - append_predict_sandd.main - INFO - lottery_num: 01,04,03,09,06,07,02,08,10,05
+2018-08-22 14:53:25,964 - append_predict_sandd.main - DEBUG - mingci [1]: 1
+2018-08-22 14:53:25,964 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 14:53:25,964 - append_predict_sandd.main - DEBUG - mingci [2]: 4
+2018-08-22 14:53:25,964 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:53:25,964 - append_predict_sandd.main - DEBUG - mingci [3]: 3
+2018-08-22 14:53:25,966 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:53:25,966 - append_predict_sandd.main - DEBUG - mingci [4]: 9
+2018-08-22 14:53:25,967 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:53:25,967 - append_predict_sandd.main - DEBUG - mingci [5]: 6
+2018-08-22 14:53:25,967 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:53:25,967 - append_predict_sandd.main - DEBUG - mingci [6]: 7
+2018-08-22 14:53:25,967 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:53:25,967 - append_predict_sandd.main - DEBUG - mingci [7]: 2
+2018-08-22 14:53:25,967 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:53:25,967 - append_predict_sandd.main - DEBUG - mingci [8]: 8
+2018-08-22 14:53:25,967 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:53:25,967 - append_predict_sandd.main - DEBUG - mingci [9]: 10
+2018-08-22 14:53:25,967 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:53:25,969 - append_predict_sandd.main - DEBUG - mingci [10]: 5
+2018-08-22 14:53:25,969 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 14:53:25,969 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 14:53:25,969 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 14:53:26,035 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 14:53:26,036 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 14:53:26,039 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 14:53:26,039 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 14:53:26,039 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 14:53:26,039 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 14:53:26,039 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 14:53:26,040 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 14:53:26,040 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 14:53:26,040 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 14:53:26,040 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 14:53:26,042 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 14:53:26,042 - append_predict_sandd.main - INFO - save predict_lottery_id : 699748
+2018-08-22 14:53:26,042 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 1, 1, 0, 1, 0, 0, 0, 1]
+2018-08-22 14:53:26,042 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2018-08-22 14:58:09,158 - append_predict_sandd.thread - INFO - current_date:20180822 14:58:09
+2018-08-22 14:58:09,168 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 14:58:19,177 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 14:58:25,520 - append_predict_sandd.main - DEBUG - lottery_id: 699748
+2018-08-22 14:58:25,522 - append_predict_sandd.main - INFO - lottery_num: 04,05,07,08,10,09,03,06,01,02
+2018-08-22 14:58:25,522 - append_predict_sandd.main - DEBUG - mingci [1]: 4
+2018-08-22 14:58:25,522 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 14:58:25,523 - append_predict_sandd.main - DEBUG - mingci [2]: 5
+2018-08-22 14:58:25,523 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:58:25,523 - append_predict_sandd.main - DEBUG - mingci [3]: 7
+2018-08-22 14:58:25,523 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:58:25,523 - append_predict_sandd.main - DEBUG - mingci [4]: 8
+2018-08-22 14:58:25,523 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:58:25,523 - append_predict_sandd.main - DEBUG - mingci [5]: 10
+2018-08-22 14:58:25,523 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:58:25,523 - append_predict_sandd.main - DEBUG - mingci [6]: 9
+2018-08-22 14:58:25,523 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 14:58:25,523 - append_predict_sandd.main - DEBUG - mingci [7]: 3
+2018-08-22 14:58:25,523 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:58:25,523 - append_predict_sandd.main - DEBUG - mingci [8]: 6
+2018-08-22 14:58:25,523 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:58:25,523 - append_predict_sandd.main - DEBUG - mingci [9]: 1
+2018-08-22 14:58:25,525 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 14:58:25,525 - append_predict_sandd.main - DEBUG - mingci [10]: 2
+2018-08-22 14:58:25,525 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 14:58:25,525 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 14:58:25,525 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 14:58:25,607 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 14:58:25,607 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 14:58:25,611 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 14:58:25,611 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 14:58:25,611 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 14:58:25,611 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 14:58:25,611 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 14:58:25,612 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 14:58:25,612 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 14:58:25,612 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 14:58:25,612 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 14:58:25,612 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 14:58:25,614 - append_predict_sandd.main - INFO - save predict_lottery_id : 699749
+2018-08-22 14:58:25,614 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 1, 1, 0, 0, 1, 1, 0, 1, 0]
+2018-08-22 14:58:25,614 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+2018-08-22 15:03:08,812 - append_predict_sandd.thread - INFO - current_date:20180822 15:03:08
+2018-08-22 15:03:08,828 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 15:03:18,832 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 15:03:26,752 - append_predict_sandd.main - DEBUG - lottery_id: 699749
+2018-08-22 15:03:26,753 - append_predict_sandd.main - INFO - lottery_num: 04,07,03,01,08,09,10,02,06,05
+2018-08-22 15:03:26,753 - append_predict_sandd.main - DEBUG - mingci [1]: 4
+2018-08-22 15:03:26,753 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 15:03:26,755 - append_predict_sandd.main - DEBUG - mingci [2]: 7
+2018-08-22 15:03:26,755 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:03:26,755 - append_predict_sandd.main - DEBUG - mingci [3]: 3
+2018-08-22 15:03:26,755 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:03:26,755 - append_predict_sandd.main - DEBUG - mingci [4]: 1
+2018-08-22 15:03:26,756 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:03:26,756 - append_predict_sandd.main - DEBUG - mingci [5]: 8
+2018-08-22 15:03:26,756 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:03:26,756 - append_predict_sandd.main - DEBUG - mingci [6]: 9
+2018-08-22 15:03:26,756 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:03:26,756 - append_predict_sandd.main - DEBUG - mingci [7]: 10
+2018-08-22 15:03:26,756 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:03:26,756 - append_predict_sandd.main - DEBUG - mingci [8]: 2
+2018-08-22 15:03:26,756 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:03:26,756 - append_predict_sandd.main - DEBUG - mingci [9]: 6
+2018-08-22 15:03:26,756 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:03:26,757 - append_predict_sandd.main - DEBUG - mingci [10]: 5
+2018-08-22 15:03:26,757 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 15:03:26,757 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 15:03:26,757 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 15:03:26,904 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 15:03:26,907 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 15:03:26,911 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 15:03:26,924 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 15:03:26,924 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 15:03:26,924 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 15:03:26,926 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 15:03:26,926 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 15:03:26,927 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 15:03:26,927 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 15:03:26,927 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 15:03:26,927 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 15:03:26,927 - append_predict_sandd.main - INFO - save predict_lottery_id : 699750
+2018-08-22 15:03:26,927 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 1, 1, 1, 0, 1, 0, 0, 0, 1]
+2018-08-22 15:03:26,927 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 1, 0, 0, 1, 0, 2, 1]
+2018-08-22 15:08:07,184 - append_predict_sandd.thread - INFO - current_date:20180822 15:08:07
+2018-08-22 15:08:07,184 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 15:08:17,186 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 15:08:24,648 - append_predict_sandd.main - DEBUG - lottery_id: 699750
+2018-08-22 15:08:24,648 - append_predict_sandd.main - INFO - lottery_num: 01,06,05,07,09,08,02,03,10,04
+2018-08-22 15:08:24,650 - append_predict_sandd.main - DEBUG - mingci [1]: 1
+2018-08-22 15:08:24,650 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 15:08:24,650 - append_predict_sandd.main - DEBUG - mingci [2]: 6
+2018-08-22 15:08:24,650 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:08:24,650 - append_predict_sandd.main - DEBUG - mingci [3]: 5
+2018-08-22 15:08:24,651 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:08:24,651 - append_predict_sandd.main - DEBUG - mingci [4]: 7
+2018-08-22 15:08:24,651 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:08:24,651 - append_predict_sandd.main - DEBUG - mingci [5]: 9
+2018-08-22 15:08:24,651 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:08:24,651 - append_predict_sandd.main - DEBUG - mingci [6]: 8
+2018-08-22 15:08:24,651 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:08:24,653 - append_predict_sandd.main - DEBUG - mingci [7]: 2
+2018-08-22 15:08:24,654 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:08:24,654 - append_predict_sandd.main - DEBUG - mingci [8]: 3
+2018-08-22 15:08:24,654 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:08:24,655 - append_predict_sandd.main - DEBUG - mingci [9]: 10
+2018-08-22 15:08:24,655 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:08:24,655 - append_predict_sandd.main - DEBUG - mingci [10]: 4
+2018-08-22 15:08:24,657 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 15:08:24,657 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 15:08:24,658 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 15:08:24,723 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 15:08:24,724 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 15:08:24,729 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 15:08:24,730 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 15:08:24,730 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 15:08:24,730 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 15:08:24,730 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 15:08:24,730 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 15:08:24,730 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 15:08:24,732 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 15:08:24,732 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 15:08:24,732 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 15:08:24,732 - append_predict_sandd.main - INFO - save predict_lottery_id : 699751
+2018-08-22 15:08:24,733 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 1, 1, 1, 0, 0, 1, 0, 0]
+2018-08-22 15:08:24,733 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 2]
+2018-08-22 15:13:07,834 - append_predict_sandd.thread - INFO - current_date:20180822 15:13:07
+2018-08-22 15:13:07,834 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 15:13:17,835 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 15:13:24,157 - append_predict_sandd.main - DEBUG - lottery_id: 699751
+2018-08-22 15:13:24,161 - append_predict_sandd.main - INFO - lottery_num: 08,04,02,03,10,07,05,09,06,01
+2018-08-22 15:13:24,161 - append_predict_sandd.main - DEBUG - mingci [1]: 8
+2018-08-22 15:13:24,163 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 15:13:24,163 - append_predict_sandd.main - DEBUG - mingci [2]: 4
+2018-08-22 15:13:24,163 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:13:24,163 - append_predict_sandd.main - DEBUG - mingci [3]: 2
+2018-08-22 15:13:24,163 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:13:24,163 - append_predict_sandd.main - DEBUG - mingci [4]: 3
+2018-08-22 15:13:24,164 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:13:24,164 - append_predict_sandd.main - DEBUG - mingci [5]: 10
+2018-08-22 15:13:24,165 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:13:24,167 - append_predict_sandd.main - DEBUG - mingci [6]: 7
+2018-08-22 15:13:24,167 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:13:24,167 - append_predict_sandd.main - DEBUG - mingci [7]: 5
+2018-08-22 15:13:24,167 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:13:24,167 - append_predict_sandd.main - DEBUG - mingci [8]: 9
+2018-08-22 15:13:24,167 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:13:24,167 - append_predict_sandd.main - DEBUG - mingci [9]: 6
+2018-08-22 15:13:24,167 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:13:24,167 - append_predict_sandd.main - DEBUG - mingci [10]: 1
+2018-08-22 15:13:24,167 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 15:13:24,168 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 15:13:24,168 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 15:13:24,250 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 15:13:24,296 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 15:13:24,299 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 15:13:24,301 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 15:13:24,301 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 15:13:24,301 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 15:13:24,302 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 15:13:24,302 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 15:13:24,302 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 15:13:24,302 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 15:13:24,302 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 15:13:24,302 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 15:13:24,302 - append_predict_sandd.main - INFO - save predict_lottery_id : 699752
+2018-08-22 15:13:24,302 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 0, 0, 1, 0, 1, 1, 1, 0, 1]
+2018-08-22 15:13:24,303 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]
+2018-08-22 15:18:07,595 - append_predict_sandd.thread - INFO - current_date:20180822 15:18:07
+2018-08-22 15:18:07,596 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 15:18:17,598 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 15:18:24,990 - append_predict_sandd.main - DEBUG - lottery_id: 699752
+2018-08-22 15:18:24,990 - append_predict_sandd.main - INFO - lottery_num: 10,05,03,06,08,02,01,04,09,07
+2018-08-22 15:18:24,990 - append_predict_sandd.main - DEBUG - mingci [1]: 10
+2018-08-22 15:18:24,992 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 15:18:24,992 - append_predict_sandd.main - DEBUG - mingci [2]: 5
+2018-08-22 15:18:24,992 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:18:24,992 - append_predict_sandd.main - DEBUG - mingci [3]: 3
+2018-08-22 15:18:24,992 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:18:24,992 - append_predict_sandd.main - DEBUG - mingci [4]: 6
+2018-08-22 15:18:24,993 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:18:24,993 - append_predict_sandd.main - DEBUG - mingci [5]: 8
+2018-08-22 15:18:24,993 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:18:24,993 - append_predict_sandd.main - DEBUG - mingci [6]: 2
+2018-08-22 15:18:24,993 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:18:24,993 - append_predict_sandd.main - DEBUG - mingci [7]: 1
+2018-08-22 15:18:24,993 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:18:24,994 - append_predict_sandd.main - DEBUG - mingci [8]: 4
+2018-08-22 15:18:24,994 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:18:24,994 - append_predict_sandd.main - DEBUG - mingci [9]: 9
+2018-08-22 15:18:24,994 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:18:24,994 - append_predict_sandd.main - DEBUG - mingci [10]: 7
+2018-08-22 15:18:24,994 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 15:18:24,996 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 15:18:24,996 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 15:18:25,062 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 15:18:25,062 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 15:18:25,098 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 15:18:25,099 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 15:18:25,099 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 15:18:25,101 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 15:18:25,101 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 15:18:25,101 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 15:18:25,101 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 15:18:25,101 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 15:18:25,101 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 15:18:25,101 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 15:18:25,102 - append_predict_sandd.main - INFO - save predict_lottery_id : 699753
+2018-08-22 15:18:25,102 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 1, 1, 0, 0, 0, 1, 0, 1, 1]
+2018-08-22 15:18:25,102 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 1, 0, 0, 0, 0]
+2018-08-22 15:23:08,273 - append_predict_sandd.thread - INFO - current_date:20180822 15:23:08
+2018-08-22 15:23:08,273 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 15:23:18,276 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 15:23:25,009 - append_predict_sandd.main - DEBUG - lottery_id: 699753
+2018-08-22 15:23:25,009 - append_predict_sandd.main - INFO - lottery_num: 10,01,03,09,07,05,02,08,04,06
+2018-08-22 15:23:25,009 - append_predict_sandd.main - DEBUG - mingci [1]: 10
+2018-08-22 15:23:25,009 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 15:23:25,010 - append_predict_sandd.main - DEBUG - mingci [2]: 1
+2018-08-22 15:23:25,010 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:23:25,010 - append_predict_sandd.main - DEBUG - mingci [3]: 3
+2018-08-22 15:23:25,010 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:23:25,010 - append_predict_sandd.main - DEBUG - mingci [4]: 9
+2018-08-22 15:23:25,010 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:23:25,010 - append_predict_sandd.main - DEBUG - mingci [5]: 7
+2018-08-22 15:23:25,010 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:23:25,012 - append_predict_sandd.main - DEBUG - mingci [6]: 5
+2018-08-22 15:23:25,012 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:23:25,012 - append_predict_sandd.main - DEBUG - mingci [7]: 2
+2018-08-22 15:23:25,012 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:23:25,012 - append_predict_sandd.main - DEBUG - mingci [8]: 8
+2018-08-22 15:23:25,012 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:23:25,012 - append_predict_sandd.main - DEBUG - mingci [9]: 4
+2018-08-22 15:23:25,012 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:23:25,013 - append_predict_sandd.main - DEBUG - mingci [10]: 6
+2018-08-22 15:23:25,013 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 15:23:25,013 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 15:23:25,013 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 15:23:25,085 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 15:23:25,085 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 15:23:25,092 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 15:23:25,092 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 15:23:25,095 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 15:23:25,095 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 15:23:25,095 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 15:23:25,095 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 15:23:25,096 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 15:23:25,096 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 15:23:25,098 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 15:23:25,098 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 15:23:25,098 - append_predict_sandd.main - INFO - save predict_lottery_id : 699754
+2018-08-22 15:23:25,098 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 1, 1, 1, 1, 1, 0, 0, 0, 0]
+2018-08-22 15:23:25,099 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 2, 0, 0, 0, 0]
+2018-08-22 15:28:08,232 - append_predict_sandd.thread - INFO - current_date:20180822 15:28:08
+2018-08-22 15:28:08,232 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 15:28:18,233 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 15:28:25,246 - append_predict_sandd.main - DEBUG - lottery_id: 699754
+2018-08-22 15:28:25,249 - append_predict_sandd.main - INFO - lottery_num: 06,01,08,09,05,10,04,03,07,02
+2018-08-22 15:28:25,249 - append_predict_sandd.main - DEBUG - mingci [1]: 6
+2018-08-22 15:28:25,249 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 15:28:25,250 - append_predict_sandd.main - DEBUG - mingci [2]: 1
+2018-08-22 15:28:25,250 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:28:25,250 - append_predict_sandd.main - DEBUG - mingci [3]: 8
+2018-08-22 15:28:25,250 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:28:25,250 - append_predict_sandd.main - DEBUG - mingci [4]: 9
+2018-08-22 15:28:25,250 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:28:25,252 - append_predict_sandd.main - DEBUG - mingci [5]: 5
+2018-08-22 15:28:25,252 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:28:25,253 - append_predict_sandd.main - DEBUG - mingci [6]: 10
+2018-08-22 15:28:25,272 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:28:25,273 - append_predict_sandd.main - DEBUG - mingci [7]: 4
+2018-08-22 15:28:25,273 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:28:25,273 - append_predict_sandd.main - DEBUG - mingci [8]: 3
+2018-08-22 15:28:25,273 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:28:25,273 - append_predict_sandd.main - DEBUG - mingci [9]: 7
+2018-08-22 15:28:25,273 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:28:25,275 - append_predict_sandd.main - DEBUG - mingci [10]: 2
+2018-08-22 15:28:25,275 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 15:28:25,276 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 15:28:25,276 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 15:28:25,397 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 15:28:25,398 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 15:28:25,434 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 15:28:25,434 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 15:28:25,436 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 15:28:25,437 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 15:28:25,437 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 15:28:25,438 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 15:28:25,440 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 15:28:25,441 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 15:28:25,443 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 15:28:25,444 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 15:28:25,444 - append_predict_sandd.main - INFO - save predict_lottery_id : 699755
+2018-08-22 15:28:25,446 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 1, 0, 1, 1, 0, 0, 1, 1, 0]
+2018-08-22 15:28:25,446 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 4, 0, 0, 1, 0]
+2018-08-22 15:33:08,586 - append_predict_sandd.thread - INFO - current_date:20180822 15:33:08
+2018-08-22 15:33:08,589 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 15:33:18,591 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 15:33:27,980 - append_predict_sandd.main - DEBUG - lottery_id: 699755
+2018-08-22 15:33:27,986 - append_predict_sandd.main - INFO - lottery_num: 06,04,07,02,08,09,05,03,01,10
+2018-08-22 15:33:27,986 - append_predict_sandd.main - DEBUG - mingci [1]: 6
+2018-08-22 15:33:27,986 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 15:33:27,986 - append_predict_sandd.main - DEBUG - mingci [2]: 4
+2018-08-22 15:33:27,986 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:33:27,986 - append_predict_sandd.main - DEBUG - mingci [3]: 7
+2018-08-22 15:33:27,987 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:33:27,987 - append_predict_sandd.main - DEBUG - mingci [4]: 2
+2018-08-22 15:33:27,987 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:33:27,987 - append_predict_sandd.main - DEBUG - mingci [5]: 8
+2018-08-22 15:33:27,987 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:33:27,987 - append_predict_sandd.main - DEBUG - mingci [6]: 9
+2018-08-22 15:33:27,989 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:33:27,989 - append_predict_sandd.main - DEBUG - mingci [7]: 5
+2018-08-22 15:33:27,989 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:33:27,990 - append_predict_sandd.main - DEBUG - mingci [8]: 3
+2018-08-22 15:33:28,000 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:33:28,002 - append_predict_sandd.main - DEBUG - mingci [9]: 1
+2018-08-22 15:33:28,003 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:33:28,005 - append_predict_sandd.main - DEBUG - mingci [10]: 10
+2018-08-22 15:33:28,005 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 15:33:28,005 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 15:33:28,005 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 15:33:28,068 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 15:33:28,068 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 15:33:28,078 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 15:33:28,082 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 15:33:28,084 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 15:33:28,085 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 15:33:28,085 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 15:33:28,102 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 15:33:28,102 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 15:33:28,102 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 15:33:28,102 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 15:33:28,104 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 15:33:28,104 - append_predict_sandd.main - INFO - save predict_lottery_id : 699756
+2018-08-22 15:33:28,104 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 0, 1, 0, 0, 1, 1, 1, 1, 0]
+2018-08-22 15:33:28,104 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 8, 0, 0, 0, 0]
+2018-08-22 15:38:01,236 - append_predict_sandd.thread - INFO - current_date:20180822 15:38:01
+2018-08-22 15:38:01,236 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 15:38:11,256 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 15:38:20,657 - append_predict_sandd.main - DEBUG - lottery_id: 699756
+2018-08-22 15:38:20,658 - append_predict_sandd.main - INFO - lottery_num: 08,02,07,03,05,10,01,06,09,04
+2018-08-22 15:38:20,660 - append_predict_sandd.main - DEBUG - mingci [1]: 8
+2018-08-22 15:38:20,660 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 15:38:20,660 - append_predict_sandd.main - DEBUG - mingci [2]: 2
+2018-08-22 15:38:20,661 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:38:20,661 - append_predict_sandd.main - DEBUG - mingci [3]: 7
+2018-08-22 15:38:20,661 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:38:20,661 - append_predict_sandd.main - DEBUG - mingci [4]: 3
+2018-08-22 15:38:20,661 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:38:20,661 - append_predict_sandd.main - DEBUG - mingci [5]: 5
+2018-08-22 15:38:20,661 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:38:20,661 - append_predict_sandd.main - DEBUG - mingci [6]: 10
+2018-08-22 15:38:20,661 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:38:20,661 - append_predict_sandd.main - DEBUG - mingci [7]: 1
+2018-08-22 15:38:20,661 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:38:20,661 - append_predict_sandd.main - DEBUG - mingci [8]: 6
+2018-08-22 15:38:20,661 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:38:20,663 - append_predict_sandd.main - DEBUG - mingci [9]: 9
+2018-08-22 15:38:20,663 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:38:20,663 - append_predict_sandd.main - DEBUG - mingci [10]: 4
+2018-08-22 15:38:20,663 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 15:38:20,663 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 15:38:20,663 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 15:38:20,730 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 15:38:20,730 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 15:38:20,756 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 15:38:20,759 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 15:38:20,759 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 15:38:20,760 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 15:38:20,760 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 15:38:20,762 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 15:38:20,762 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 15:38:20,762 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 15:38:20,762 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 15:38:20,763 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 15:38:20,763 - append_predict_sandd.main - INFO - save predict_lottery_id : 699757
+2018-08-22 15:38:20,763 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 0, 1, 1, 1, 0, 1, 0, 1, 0]
+2018-08-22 15:38:20,763 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 16, 0, 0, 0, 0]
+2018-08-22 15:43:03,907 - append_predict_sandd.thread - INFO - current_date:20180822 15:43:03
+2018-08-22 15:43:03,911 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 15:43:13,911 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 15:43:20,411 - append_predict_sandd.main - DEBUG - lottery_id: 699757
+2018-08-22 15:43:20,414 - append_predict_sandd.main - INFO - lottery_num: 08,04,03,02,05,10,09,06,01,07
+2018-08-22 15:43:20,414 - append_predict_sandd.main - DEBUG - mingci [1]: 8
+2018-08-22 15:43:20,414 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 15:43:20,417 - append_predict_sandd.main - DEBUG - mingci [2]: 4
+2018-08-22 15:43:20,417 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:43:20,417 - append_predict_sandd.main - DEBUG - mingci [3]: 3
+2018-08-22 15:43:20,418 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:43:20,438 - append_predict_sandd.main - DEBUG - mingci [4]: 2
+2018-08-22 15:43:20,438 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:43:20,440 - append_predict_sandd.main - DEBUG - mingci [5]: 5
+2018-08-22 15:43:20,443 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:43:20,443 - append_predict_sandd.main - DEBUG - mingci [6]: 10
+2018-08-22 15:43:20,443 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:43:20,443 - append_predict_sandd.main - DEBUG - mingci [7]: 9
+2018-08-22 15:43:20,443 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:43:20,444 - append_predict_sandd.main - DEBUG - mingci [8]: 6
+2018-08-22 15:43:20,444 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:43:20,444 - append_predict_sandd.main - DEBUG - mingci [9]: 1
+2018-08-22 15:43:20,444 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:43:20,444 - append_predict_sandd.main - DEBUG - mingci [10]: 7
+2018-08-22 15:43:20,444 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 15:43:20,444 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 15:43:20,444 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 15:43:20,519 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 15:43:20,525 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 15:43:20,546 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 15:43:20,546 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 15:43:20,546 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 15:43:20,548 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 15:43:20,548 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 15:43:20,548 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 15:43:20,548 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 15:43:20,549 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 15:43:20,549 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 15:43:20,549 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 15:43:20,551 - append_predict_sandd.main - INFO - save predict_lottery_id : 699758
+2018-08-22 15:43:20,551 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 0, 1, 0, 1, 0, 1, 0, 1, 1]
+2018-08-22 15:43:20,552 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+2018-08-22 15:48:03,674 - append_predict_sandd.thread - INFO - current_date:20180822 15:48:03
+2018-08-22 15:48:03,674 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 15:48:13,726 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 15:48:21,802 - append_predict_sandd.main - DEBUG - lottery_id: 699758
+2018-08-22 15:48:21,808 - append_predict_sandd.main - INFO - lottery_num: 07,06,01,03,10,05,04,09,08,02
+2018-08-22 15:48:21,808 - append_predict_sandd.main - DEBUG - mingci [1]: 7
+2018-08-22 15:48:21,808 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 15:48:21,808 - append_predict_sandd.main - DEBUG - mingci [2]: 6
+2018-08-22 15:48:21,808 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:48:21,809 - append_predict_sandd.main - DEBUG - mingci [3]: 1
+2018-08-22 15:48:21,809 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:48:21,809 - append_predict_sandd.main - DEBUG - mingci [4]: 3
+2018-08-22 15:48:21,809 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:48:21,809 - append_predict_sandd.main - DEBUG - mingci [5]: 10
+2018-08-22 15:48:21,809 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:48:21,809 - append_predict_sandd.main - DEBUG - mingci [6]: 5
+2018-08-22 15:48:21,809 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:48:21,809 - append_predict_sandd.main - DEBUG - mingci [7]: 4
+2018-08-22 15:48:21,809 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:48:21,811 - append_predict_sandd.main - DEBUG - mingci [8]: 9
+2018-08-22 15:48:21,811 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:48:21,811 - append_predict_sandd.main - DEBUG - mingci [9]: 8
+2018-08-22 15:48:21,811 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:48:21,811 - append_predict_sandd.main - DEBUG - mingci [10]: 2
+2018-08-22 15:48:21,812 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 15:48:21,812 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 15:48:21,812 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 15:48:21,878 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 15:48:21,878 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 15:48:21,884 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 15:48:21,884 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 15:48:21,884 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 15:48:21,885 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 15:48:21,885 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 15:48:21,885 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 15:48:21,885 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 15:48:21,888 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 15:48:21,890 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 15:48:21,890 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 15:48:21,891 - append_predict_sandd.main - INFO - save predict_lottery_id : 699759
+2018-08-22 15:48:21,894 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 1, 1, 0, 1, 0, 1, 0, 0]
+2018-08-22 15:48:21,894 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 2, 0, 0, 0, 0, 0, 0]
+2018-08-22 15:53:05,046 - append_predict_sandd.thread - INFO - current_date:20180822 15:53:05
+2018-08-22 15:53:05,046 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 15:53:15,046 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 15:53:23,019 - append_predict_sandd.main - DEBUG - lottery_id: 699759
+2018-08-22 15:53:23,025 - append_predict_sandd.main - INFO - lottery_num: 03,02,04,05,06,10,08,07,09,01
+2018-08-22 15:53:23,025 - append_predict_sandd.main - DEBUG - mingci [1]: 3
+2018-08-22 15:53:23,026 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 15:53:23,026 - append_predict_sandd.main - DEBUG - mingci [2]: 2
+2018-08-22 15:53:23,026 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:53:23,026 - append_predict_sandd.main - DEBUG - mingci [3]: 4
+2018-08-22 15:53:23,026 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:53:23,026 - append_predict_sandd.main - DEBUG - mingci [4]: 5
+2018-08-22 15:53:23,029 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:53:23,032 - append_predict_sandd.main - DEBUG - mingci [5]: 6
+2018-08-22 15:53:23,032 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:53:23,032 - append_predict_sandd.main - DEBUG - mingci [6]: 10
+2018-08-22 15:53:23,032 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:53:23,033 - append_predict_sandd.main - DEBUG - mingci [7]: 8
+2018-08-22 15:53:23,033 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:53:23,033 - append_predict_sandd.main - DEBUG - mingci [8]: 7
+2018-08-22 15:53:23,033 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:53:23,033 - append_predict_sandd.main - DEBUG - mingci [9]: 9
+2018-08-22 15:53:23,035 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:53:23,035 - append_predict_sandd.main - DEBUG - mingci [10]: 1
+2018-08-22 15:53:23,035 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 15:53:23,035 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 15:53:23,035 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 15:53:23,101 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 15:53:23,101 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 15:53:23,105 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 15:53:23,105 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 15:53:23,105 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 15:53:23,105 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 15:53:23,107 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 15:53:23,107 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 15:53:23,108 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 15:53:23,108 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 15:53:23,108 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 15:53:23,108 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 15:53:23,108 - append_predict_sandd.main - INFO - save predict_lottery_id : 699760
+2018-08-22 15:53:23,111 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 0, 1, 0, 0, 0, 1, 1, 1]
+2018-08-22 15:53:23,112 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+2018-08-22 15:58:06,322 - append_predict_sandd.thread - INFO - current_date:20180822 15:58:06
+2018-08-22 15:58:06,323 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 15:58:16,336 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 15:58:34,858 - append_predict_sandd.main - DEBUG - lottery_id: 699760
+2018-08-22 15:58:34,859 - append_predict_sandd.main - INFO - lottery_num: 10,02,04,08,05,07,01,09,03,06
+2018-08-22 15:58:34,859 - append_predict_sandd.main - DEBUG - mingci [1]: 10
+2018-08-22 15:58:34,861 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 15:58:34,861 - append_predict_sandd.main - DEBUG - mingci [2]: 2
+2018-08-22 15:58:34,861 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:58:34,861 - append_predict_sandd.main - DEBUG - mingci [3]: 4
+2018-08-22 15:58:34,861 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:58:34,861 - append_predict_sandd.main - DEBUG - mingci [4]: 8
+2018-08-22 15:58:34,861 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:58:34,861 - append_predict_sandd.main - DEBUG - mingci [5]: 5
+2018-08-22 15:58:34,861 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:58:34,861 - append_predict_sandd.main - DEBUG - mingci [6]: 7
+2018-08-22 15:58:34,861 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:58:34,862 - append_predict_sandd.main - DEBUG - mingci [7]: 1
+2018-08-22 15:58:34,862 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 15:58:34,862 - append_predict_sandd.main - DEBUG - mingci [8]: 9
+2018-08-22 15:58:34,862 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:58:34,862 - append_predict_sandd.main - DEBUG - mingci [9]: 3
+2018-08-22 15:58:34,862 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 15:58:34,862 - append_predict_sandd.main - DEBUG - mingci [10]: 6
+2018-08-22 15:58:34,864 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 15:58:34,864 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 15:58:34,864 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 15:58:34,996 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 15:58:34,996 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 15:58:35,003 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 15:58:35,003 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 15:58:35,003 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 15:58:35,003 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 15:58:35,003 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 15:58:35,003 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 15:58:35,003 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 15:58:35,005 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 15:58:35,005 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 15:58:35,005 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 15:58:35,005 - append_predict_sandd.main - INFO - save predict_lottery_id : 699761
+2018-08-22 15:58:35,006 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 0, 0, 0, 1, 1, 1, 1, 1, 0]
+2018-08-22 15:58:35,006 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 1, 0, 0, 0, 2]
+2018-08-22 16:03:08,094 - append_predict_sandd.thread - INFO - current_date:20180822 16:03:08
+2018-08-22 16:03:08,094 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 16:03:18,095 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 16:03:26,691 - append_predict_sandd.main - DEBUG - lottery_id: 699761
+2018-08-22 16:03:26,694 - append_predict_sandd.main - INFO - lottery_num: 04,06,05,03,02,01,08,07,10,09
+2018-08-22 16:03:26,694 - append_predict_sandd.main - DEBUG - mingci [1]: 4
+2018-08-22 16:03:26,694 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 16:03:26,694 - append_predict_sandd.main - DEBUG - mingci [2]: 6
+2018-08-22 16:03:26,694 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:03:26,694 - append_predict_sandd.main - DEBUG - mingci [3]: 5
+2018-08-22 16:03:26,694 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:03:26,696 - append_predict_sandd.main - DEBUG - mingci [4]: 3
+2018-08-22 16:03:26,696 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:03:26,696 - append_predict_sandd.main - DEBUG - mingci [5]: 2
+2018-08-22 16:03:26,696 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:03:26,696 - append_predict_sandd.main - DEBUG - mingci [6]: 1
+2018-08-22 16:03:26,697 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:03:26,697 - append_predict_sandd.main - DEBUG - mingci [7]: 8
+2018-08-22 16:03:26,697 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:03:26,697 - append_predict_sandd.main - DEBUG - mingci [8]: 7
+2018-08-22 16:03:26,697 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:03:26,697 - append_predict_sandd.main - DEBUG - mingci [9]: 10
+2018-08-22 16:03:26,697 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:03:26,697 - append_predict_sandd.main - DEBUG - mingci [10]: 9
+2018-08-22 16:03:26,697 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 16:03:26,697 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 16:03:26,697 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 16:03:26,759 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 16:03:26,759 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 16:03:26,765 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 16:03:26,766 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 16:03:26,766 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 16:03:26,766 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 16:03:26,766 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 16:03:26,766 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 16:03:26,766 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 16:03:26,766 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 16:03:26,766 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 16:03:26,767 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 16:03:26,767 - append_predict_sandd.main - INFO - save predict_lottery_id : 699762
+2018-08-22 16:03:26,767 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 0, 1, 1, 0, 1, 0, 1, 0, 1]
+2018-08-22 16:03:26,767 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]
+2018-08-22 16:08:06,857 - append_predict_sandd.thread - INFO - current_date:20180822 16:08:06
+2018-08-22 16:08:06,858 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 16:08:16,859 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 16:08:26,398 - append_predict_sandd.main - DEBUG - lottery_id: 699762
+2018-08-22 16:08:26,398 - append_predict_sandd.main - INFO - lottery_num: 03,09,01,05,07,06,02,04,08,10
+2018-08-22 16:08:26,398 - append_predict_sandd.main - DEBUG - mingci [1]: 3
+2018-08-22 16:08:26,398 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 16:08:26,398 - append_predict_sandd.main - DEBUG - mingci [2]: 9
+2018-08-22 16:08:26,400 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:08:26,400 - append_predict_sandd.main - DEBUG - mingci [3]: 1
+2018-08-22 16:08:26,400 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:08:26,400 - append_predict_sandd.main - DEBUG - mingci [4]: 5
+2018-08-22 16:08:26,400 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:08:26,400 - append_predict_sandd.main - DEBUG - mingci [5]: 7
+2018-08-22 16:08:26,400 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:08:26,400 - append_predict_sandd.main - DEBUG - mingci [6]: 6
+2018-08-22 16:08:26,400 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:08:26,401 - append_predict_sandd.main - DEBUG - mingci [7]: 2
+2018-08-22 16:08:26,401 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:08:26,401 - append_predict_sandd.main - DEBUG - mingci [8]: 4
+2018-08-22 16:08:26,401 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:08:26,401 - append_predict_sandd.main - DEBUG - mingci [9]: 8
+2018-08-22 16:08:26,401 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:08:26,401 - append_predict_sandd.main - DEBUG - mingci [10]: 10
+2018-08-22 16:08:26,401 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 16:08:26,401 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 16:08:26,401 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 16:08:26,467 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 16:08:26,467 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 16:08:26,471 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 16:08:26,471 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 16:08:26,471 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 16:08:26,473 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 16:08:26,473 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 16:08:26,473 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 16:08:26,473 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 16:08:26,473 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 16:08:26,476 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 16:08:26,476 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 16:08:26,477 - append_predict_sandd.main - INFO - save predict_lottery_id : 699763
+2018-08-22 16:08:26,477 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 1, 1, 1, 1, 0, 0, 0, 0, 0]
+2018-08-22 16:08:26,477 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 1, 0, 0, 0, 0, 8]
+2018-08-22 16:13:09,638 - append_predict_sandd.thread - INFO - current_date:20180822 16:13:09
+2018-08-22 16:13:09,638 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 16:13:19,641 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 16:13:28,107 - append_predict_sandd.main - DEBUG - lottery_id: 699763
+2018-08-22 16:13:28,108 - append_predict_sandd.main - INFO - lottery_num: 03,07,04,06,01,08,10,05,02,09
+2018-08-22 16:13:28,108 - append_predict_sandd.main - DEBUG - mingci [1]: 3
+2018-08-22 16:13:28,108 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 16:13:28,108 - append_predict_sandd.main - DEBUG - mingci [2]: 7
+2018-08-22 16:13:28,108 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:13:28,108 - append_predict_sandd.main - DEBUG - mingci [3]: 4
+2018-08-22 16:13:28,108 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:13:28,108 - append_predict_sandd.main - DEBUG - mingci [4]: 6
+2018-08-22 16:13:28,109 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:13:28,109 - append_predict_sandd.main - DEBUG - mingci [5]: 1
+2018-08-22 16:13:28,109 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:13:28,109 - append_predict_sandd.main - DEBUG - mingci [6]: 8
+2018-08-22 16:13:28,109 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:13:28,109 - append_predict_sandd.main - DEBUG - mingci [7]: 10
+2018-08-22 16:13:28,111 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:13:28,111 - append_predict_sandd.main - DEBUG - mingci [8]: 5
+2018-08-22 16:13:28,111 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:13:28,111 - append_predict_sandd.main - DEBUG - mingci [9]: 2
+2018-08-22 16:13:28,111 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:13:28,111 - append_predict_sandd.main - DEBUG - mingci [10]: 9
+2018-08-22 16:13:28,111 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0]']
+2018-08-22 16:13:28,111 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 16:13:28,111 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 16:13:28,183 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 16:13:28,184 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 16:13:28,190 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 16:13:28,190 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 16:13:28,190 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 16:13:28,190 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 16:13:28,190 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 16:13:28,190 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 16:13:28,190 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 16:13:28,191 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 16:13:28,191 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 16:13:28,193 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 16:13:28,194 - append_predict_sandd.main - INFO - save predict_lottery_id : 699764
+2018-08-22 16:13:28,194 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 1, 0, 0, 1, 0, 0, 1, 0, 1]
+2018-08-22 16:13:28,194 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 16]
+2018-08-22 16:18:01,316 - append_predict_sandd.thread - INFO - current_date:20180822 16:18:01
+2018-08-22 16:18:01,316 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 16:18:11,318 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 16:18:20,378 - append_predict_sandd.main - DEBUG - lottery_id: 699764
+2018-08-22 16:18:20,380 - append_predict_sandd.main - INFO - lottery_num: 06,04,07,08,09,10,03,05,02,01
+2018-08-22 16:18:20,381 - append_predict_sandd.main - DEBUG - mingci [1]: 6
+2018-08-22 16:18:20,381 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[1']
+2018-08-22 16:18:20,381 - append_predict_sandd.main - DEBUG - mingci [2]: 4
+2018-08-22 16:18:20,381 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:18:20,381 - append_predict_sandd.main - DEBUG - mingci [3]: 7
+2018-08-22 16:18:20,381 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:18:20,381 - append_predict_sandd.main - DEBUG - mingci [4]: 8
+2018-08-22 16:18:20,381 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:18:20,381 - append_predict_sandd.main - DEBUG - mingci [5]: 9
+2018-08-22 16:18:20,381 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:18:20,381 - append_predict_sandd.main - DEBUG - mingci [6]: 10
+2018-08-22 16:18:20,381 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:18:20,381 - append_predict_sandd.main - DEBUG - mingci [7]: 3
+2018-08-22 16:18:20,381 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:18:20,382 - append_predict_sandd.main - DEBUG - mingci [8]: 5
+2018-08-22 16:18:20,382 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:18:20,382 - append_predict_sandd.main - DEBUG - mingci [9]: 2
+2018-08-22 16:18:20,382 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:18:20,382 - append_predict_sandd.main - DEBUG - mingci [10]: 1
+2018-08-22 16:18:20,382 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 16:18:20,382 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 16:18:20,382 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 16:18:20,451 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 16:18:20,451 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 16:18:20,460 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 16:18:20,464 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 16:18:20,464 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 16:18:20,466 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 16:18:20,467 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 16:18:20,467 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 16:18:20,467 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 16:18:20,467 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 16:18:20,469 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 16:18:20,470 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 16:18:20,473 - append_predict_sandd.main - INFO - save predict_lottery_id : 699765
+2018-08-22 16:18:20,474 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 0, 1, 0, 1, 0, 1, 1, 0, 1]
+2018-08-22 16:18:20,474 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2018-08-22 16:23:03,582 - append_predict_sandd.thread - INFO - current_date:20180822 16:23:03
+2018-08-22 16:23:03,582 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 16:23:13,585 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 16:33:59,690 - append_predict_sandd.main - INFO - test not start
+2018-08-22 16:34:01,036 - append_predict_sandd.main - DEBUG - thread is not alive start!!!
+2018-08-22 16:34:01,038 - append_predict_sandd.thread - INFO - current_date:20180822 16:34:01
+2018-08-22 16:34:01,039 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 16:34:11,042 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 16:34:20,651 - append_predict_sandd.main - DEBUG - lottery_id: 699765
+2018-08-22 16:34:20,654 - append_predict_sandd.main - INFO - lottery_num: 09,05,03,10,06,07,02,04,01,08
+2018-08-22 16:34:20,654 - append_predict_sandd.main - DEBUG - mingci [1]: 9
+2018-08-22 16:34:20,654 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 16:34:20,655 - append_predict_sandd.main - DEBUG - mingci [2]: 5
+2018-08-22 16:34:20,660 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:34:20,660 - append_predict_sandd.main - DEBUG - mingci [3]: 3
+2018-08-22 16:34:20,660 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:34:20,660 - append_predict_sandd.main - DEBUG - mingci [4]: 10
+2018-08-22 16:34:20,661 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:34:20,661 - append_predict_sandd.main - DEBUG - mingci [5]: 6
+2018-08-22 16:34:20,661 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:34:20,661 - append_predict_sandd.main - DEBUG - mingci [6]: 7
+2018-08-22 16:34:20,661 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:34:20,661 - append_predict_sandd.main - DEBUG - mingci [7]: 2
+2018-08-22 16:34:20,661 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:34:20,661 - append_predict_sandd.main - DEBUG - mingci [8]: 4
+2018-08-22 16:34:20,661 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:34:20,661 - append_predict_sandd.main - DEBUG - mingci [9]: 1
+2018-08-22 16:34:20,663 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:34:20,663 - append_predict_sandd.main - DEBUG - mingci [10]: 8
+2018-08-22 16:34:20,664 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 16:34:20,664 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 16:34:20,664 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 16:34:20,729 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 16:34:20,732 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 16:34:20,740 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 16:35:10,058 - append_predict_sandd.main - INFO - test not start
+2018-08-22 16:35:11,668 - append_predict_sandd.main - DEBUG - thread is not alive start!!!
+2018-08-22 16:38:01,710 - append_predict_sandd.thread - INFO - current_date:20180822 16:38:01
+2018-08-22 16:38:01,713 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 16:38:11,713 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 16:38:19,979 - append_predict_sandd.main - DEBUG - lottery_id: 699765
+2018-08-22 16:38:19,983 - append_predict_sandd.main - INFO - lottery_num: 09,05,03,10,06,07,02,04,01,08
+2018-08-22 16:38:19,983 - append_predict_sandd.main - DEBUG - mingci [1]: 9
+2018-08-22 16:38:19,983 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'[0']
+2018-08-22 16:38:19,983 - append_predict_sandd.main - DEBUG - mingci [2]: 5
+2018-08-22 16:38:19,983 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:38:19,983 - append_predict_sandd.main - DEBUG - mingci [3]: 3
+2018-08-22 16:38:19,983 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:38:19,983 - append_predict_sandd.main - DEBUG - mingci [4]: 10
+2018-08-22 16:38:19,983 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:38:19,983 - append_predict_sandd.main - DEBUG - mingci [5]: 6
+2018-08-22 16:38:19,984 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:38:19,984 - append_predict_sandd.main - DEBUG - mingci [6]: 7
+2018-08-22 16:38:19,984 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:38:19,984 - append_predict_sandd.main - DEBUG - mingci [7]: 2
+2018-08-22 16:38:19,984 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:38:19,986 - append_predict_sandd.main - DEBUG - mingci [8]: 4
+2018-08-22 16:38:19,986 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1']
+2018-08-22 16:38:19,986 - append_predict_sandd.main - DEBUG - mingci [9]: 1
+2018-08-22 16:38:19,986 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 0']
+2018-08-22 16:38:19,986 - append_predict_sandd.main - DEBUG - mingci [10]: 8
+2018-08-22 16:38:19,986 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u' 1]']
+2018-08-22 16:38:19,986 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 16:38:19,986 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 16:38:20,045 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 16:38:20,046 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 16:38:20,068 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 16:38:20,068 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 16:38:20,069 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 16:38:20,069 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 16:38:20,069 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 16:38:20,069 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 16:38:20,069 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 16:38:20,069 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 16:38:20,069 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 16:38:20,069 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 16:38:20,071 - append_predict_sandd.main - INFO - save predict_lottery_id : 699769
+2018-08-22 16:38:20,071 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 0, 1, 1, 0, 0, 1, 1, 1, 0]
+2018-08-22 16:38:20,071 - append_predict_sandd.main - INFO - save beishu_number_list : [4, 0, 0, 0, 0, 2, 4, 0, 0, 0]
+2018-08-22 16:43:03,265 - append_predict_sandd.thread - INFO - current_date:20180822 16:43:03
+2018-08-22 16:43:03,266 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 16:43:13,269 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 16:43:22,154 - append_predict_sandd.main - DEBUG - lottery_id: 699769
+2018-08-22 16:43:22,157 - append_predict_sandd.main - INFO - lottery_num: 08,01,03,04,06,05,09,02,10,07
+2018-08-22 16:43:22,163 - append_predict_sandd.main - DEBUG - mingci [3]: 3
+2018-08-22 16:43:22,164 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 16:43:22,164 - append_predict_sandd.main - DEBUG - mingci [4]: 4
+2018-08-22 16:43:22,164 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 16:43:22,165 - append_predict_sandd.main - DEBUG - mingci [7]: 9
+2018-08-22 16:43:22,165 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 16:43:22,165 - append_predict_sandd.main - DEBUG - mingci [8]: 2
+2018-08-22 16:43:22,165 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 16:43:22,165 - append_predict_sandd.main - DEBUG - mingci [9]: 10
+2018-08-22 16:43:22,167 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 16:43:22,167 - append_predict_sandd.main - DEBUG - ------all_count: 5  ----target_count: 0 
+2018-08-22 16:43:22,167 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 16:43:22,229 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 16:43:22,252 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 16:43:22,265 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 16:43:22,265 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 16:43:22,265 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 16:43:22,266 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 16:43:22,266 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 16:43:22,266 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 16:43:22,266 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 16:43:22,266 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 16:43:22,266 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 16:43:22,266 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 16:43:22,267 - append_predict_sandd.main - INFO - save predict_lottery_id : 699770
+2018-08-22 16:43:22,267 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 1, 1, 0, 0, 1, 1, 0, 0, 1]
+2018-08-22 16:43:22,267 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 4, 0, 0, 1, 0]
+2018-08-22 16:48:05,414 - append_predict_sandd.thread - INFO - current_date:20180822 16:48:05
+2018-08-22 16:48:05,414 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 16:48:15,415 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 16:48:23,586 - append_predict_sandd.main - DEBUG - lottery_id: 699770
+2018-08-22 16:48:23,588 - append_predict_sandd.main - INFO - lottery_num: 03,10,07,08,04,05,09,01,02,06
+2018-08-22 16:48:23,588 - append_predict_sandd.main - DEBUG - mingci [2]: 10
+2018-08-22 16:48:23,588 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 16:48:23,588 - append_predict_sandd.main - DEBUG - mingci [3]: 7
+2018-08-22 16:48:23,588 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 16:48:23,588 - append_predict_sandd.main - DEBUG - mingci [6]: 5
+2018-08-22 16:48:23,588 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 16:48:23,588 - append_predict_sandd.main - DEBUG - mingci [7]: 9
+2018-08-22 16:48:23,589 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 16:48:23,589 - append_predict_sandd.main - DEBUG - mingci [10]: 6
+2018-08-22 16:48:23,589 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 16:48:23,589 - append_predict_sandd.main - DEBUG - ------all_count: 5  ----target_count: 0 
+2018-08-22 16:48:23,589 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 16:48:23,651 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 16:48:23,651 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 16:48:23,657 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 16:48:23,657 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 16:48:23,657 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 16:48:23,658 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 16:48:23,658 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 16:48:23,658 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 16:48:23,658 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 16:48:23,660 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 16:48:23,660 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 16:48:23,660 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 16:48:23,661 - append_predict_sandd.main - INFO - save predict_lottery_id : 699771
+2018-08-22 16:48:23,661 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 1, 0, 0, 1, 1, 1, 0, 0]
+2018-08-22 16:48:23,661 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 1, 0, 0, 0, 0, 0, 0, 0, 1]
+2018-08-22 16:53:06,770 - append_predict_sandd.thread - INFO - current_date:20180822 16:53:06
+2018-08-22 16:53:06,772 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 16:53:16,773 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 16:53:27,380 - append_predict_sandd.main - DEBUG - lottery_id: 699771
+2018-08-22 16:53:27,381 - append_predict_sandd.main - INFO - lottery_num: 09,08,10,02,06,05,04,03,07,01
+2018-08-22 16:53:27,382 - append_predict_sandd.main - DEBUG - mingci [1]: 9
+2018-08-22 16:53:27,382 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 16:53:27,382 - append_predict_sandd.main - DEBUG - mingci [3]: 10
+2018-08-22 16:53:27,384 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 16:53:27,384 - append_predict_sandd.main - DEBUG - mingci [6]: 5
+2018-08-22 16:53:27,384 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 16:53:27,384 - append_predict_sandd.main - DEBUG - mingci [7]: 4
+2018-08-22 16:53:27,384 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 16:53:27,384 - append_predict_sandd.main - DEBUG - mingci [8]: 3
+2018-08-22 16:53:27,384 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 16:53:27,384 - append_predict_sandd.main - DEBUG - ------all_count: 5  ----target_count: 0 
+2018-08-22 16:53:27,384 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 16:53:27,624 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 16:53:27,625 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 16:53:27,637 - append_predict_sandd.predict_append_rule - INFO - 名次:1
+2018-08-22 16:53:27,638 - append_predict_sandd.predict_append_rule - INFO - 名次:2
+2018-08-22 16:53:27,638 - append_predict_sandd.predict_append_rule - INFO - 名次:3
+2018-08-22 16:53:27,638 - append_predict_sandd.predict_append_rule - INFO - 名次:4
+2018-08-22 16:53:27,640 - append_predict_sandd.predict_append_rule - INFO - 名次:5
+2018-08-22 16:53:27,640 - append_predict_sandd.predict_append_rule - INFO - 名次:6
+2018-08-22 16:53:27,640 - append_predict_sandd.predict_append_rule - INFO - 名次:7
+2018-08-22 16:53:27,641 - append_predict_sandd.predict_append_rule - INFO - 名次:8
+2018-08-22 16:53:27,642 - append_predict_sandd.predict_append_rule - INFO - 名次:9
+2018-08-22 16:53:27,642 - append_predict_sandd.predict_append_rule - INFO - 名次:10
+2018-08-22 16:53:27,644 - append_predict_sandd.main - INFO - save predict_lottery_id : 699772
+2018-08-22 16:53:27,644 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 0, 0, 0, 0, 1, 0, 1, 1, 1]
+2018-08-22 16:53:27,648 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 2]
+2018-08-22 17:05:04,540 - append_predict_sandd.main - INFO - test not start
+2018-08-22 17:05:06,286 - append_predict_sandd.main - DEBUG - thread is not alive start!!!
+2018-08-22 17:08:06,319 - append_predict_sandd.thread - INFO - current_date:20180822 17:08:06
+2018-08-22 17:08:06,319 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 17:08:16,319 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 17:08:26,108 - append_predict_sandd.main - DEBUG - lottery_id: 699772
+2018-08-22 17:08:26,109 - append_predict_sandd.main - INFO - lottery_num: 03,05,10,02,07,01,04,06,09,08
+2018-08-22 17:08:26,111 - append_predict_sandd.main - DEBUG - mingci [1]: 3
+2018-08-22 17:08:26,111 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 17:08:26,115 - append_predict_sandd.main - DEBUG - mingci [2]: 5
+2018-08-22 17:08:26,115 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'0']
+2018-08-22 17:08:26,115 - append_predict_sandd.main - DEBUG - mingci [3]: 10
+2018-08-22 17:08:26,115 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'0']
+2018-08-22 17:08:26,115 - append_predict_sandd.main - DEBUG - mingci [4]: 2
+2018-08-22 17:08:26,115 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'0']
+2018-08-22 17:08:26,115 - append_predict_sandd.main - DEBUG - mingci [5]: 7
+2018-08-22 17:08:26,117 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'0']
+2018-08-22 17:08:26,117 - append_predict_sandd.main - DEBUG - mingci [6]: 1
+2018-08-22 17:08:26,117 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 17:08:26,117 - append_predict_sandd.main - DEBUG - mingci [7]: 4
+2018-08-22 17:08:26,117 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'0']
+2018-08-22 17:08:26,117 - append_predict_sandd.main - DEBUG - mingci [8]: 6
+2018-08-22 17:08:26,118 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 17:08:26,118 - append_predict_sandd.main - DEBUG - mingci [9]: 9
+2018-08-22 17:08:26,118 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 17:08:26,118 - append_predict_sandd.main - DEBUG - mingci [10]: 8
+2018-08-22 17:08:26,118 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 17:08:26,118 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 17:08:26,118 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 17:08:26,190 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 17:08:26,211 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 17:08:26,217 - append_predict_sandd.main - INFO - save predict_lottery_id : 699775
+2018-08-22 17:08:26,219 - append_predict_sandd.main - INFO - save purchase_number_list : [1, 1, 0, 0, 0, 0, 0, 1, 1, 1]
+2018-08-22 17:08:26,220 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+2018-08-22 17:13:09,355 - append_predict_sandd.thread - INFO - current_date:20180822 17:13:09
+2018-08-22 17:13:09,355 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 17:13:19,358 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 17:13:28,198 - append_predict_sandd.main - DEBUG - lottery_id: 699775
+2018-08-22 17:13:28,203 - append_predict_sandd.main - INFO - lottery_num: 04,05,10,06,09,07,02,01,08,03
+2018-08-22 17:13:28,217 - append_predict_sandd.main - DEBUG - mingci [1]: 4
+2018-08-22 17:13:28,220 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 17:13:28,220 - append_predict_sandd.main - DEBUG - mingci [2]: 5
+2018-08-22 17:13:28,220 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 17:13:28,220 - append_predict_sandd.main - DEBUG - mingci [3]: 10
+2018-08-22 17:13:28,220 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'0']
+2018-08-22 17:13:28,220 - append_predict_sandd.main - DEBUG - mingci [4]: 6
+2018-08-22 17:13:28,220 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'0']
+2018-08-22 17:13:28,221 - append_predict_sandd.main - DEBUG - mingci [5]: 9
+2018-08-22 17:13:28,221 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'0']
+2018-08-22 17:13:28,221 - append_predict_sandd.main - DEBUG - mingci [6]: 7
+2018-08-22 17:13:28,221 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'0']
+2018-08-22 17:13:28,221 - append_predict_sandd.main - DEBUG - mingci [7]: 2
+2018-08-22 17:13:28,221 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'0']
+2018-08-22 17:13:28,223 - append_predict_sandd.main - DEBUG - mingci [8]: 1
+2018-08-22 17:13:28,223 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 17:13:28,223 - append_predict_sandd.main - DEBUG - mingci [9]: 8
+2018-08-22 17:13:28,223 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 17:13:28,223 - append_predict_sandd.main - DEBUG - mingci [10]: 3
+2018-08-22 17:13:28,223 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 17:13:28,223 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 1 
+2018-08-22 17:13:28,223 - append_predict_sandd.main - DEBUG - target_count: 0.100000
+2018-08-22 17:13:28,305 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 17:13:28,305 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 17:13:28,312 - append_predict_sandd.main - INFO - save predict_lottery_id : 699776
+2018-08-22 17:13:28,312 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 1, 0, 0, 1, 1, 0, 1, 0, 1]
+2018-08-22 17:13:28,312 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2018-08-22 17:18:01,443 - append_predict_sandd.thread - INFO - current_date:20180822 17:18:01
+2018-08-22 17:18:01,444 - append_predict_sandd.thread - INFO - start purchase
+2018-08-22 17:18:11,444 - append_predict_sandd.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-08-22
+2018-08-22 17:18:21,395 - append_predict_sandd.main - DEBUG - lottery_id: 699776
+2018-08-22 17:18:21,397 - append_predict_sandd.main - INFO - lottery_num: 02,10,05,07,08,09,01,03,06,04
+2018-08-22 17:18:21,398 - append_predict_sandd.main - DEBUG - mingci [1]: 2
+2018-08-22 17:18:21,398 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'0']
+2018-08-22 17:18:21,398 - append_predict_sandd.main - DEBUG - mingci [2]: 10
+2018-08-22 17:18:21,398 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 17:18:21,398 - append_predict_sandd.main - DEBUG - mingci [3]: 5
+2018-08-22 17:18:21,398 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'0']
+2018-08-22 17:18:21,398 - append_predict_sandd.main - DEBUG - mingci [4]: 7
+2018-08-22 17:18:21,398 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'0']
+2018-08-22 17:18:21,398 - append_predict_sandd.main - DEBUG - mingci [5]: 8
+2018-08-22 17:18:21,398 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 17:18:21,398 - append_predict_sandd.main - DEBUG - mingci [6]: 9
+2018-08-22 17:18:21,400 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 17:18:21,400 - append_predict_sandd.main - DEBUG - mingci [7]: 1
+2018-08-22 17:18:21,400 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'0']
+2018-08-22 17:18:21,400 - append_predict_sandd.main - DEBUG - mingci [8]: 3
+2018-08-22 17:18:21,400 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 17:18:21,400 - append_predict_sandd.main - DEBUG - mingci [9]: 6
+2018-08-22 17:18:21,401 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'0']
+2018-08-22 17:18:21,401 - append_predict_sandd.main - DEBUG - mingci [10]: 4
+2018-08-22 17:18:21,401 - append_predict_sandd.main - DEBUG - purchase_number_list[i]: [u'1']
+2018-08-22 17:18:21,401 - append_predict_sandd.main - DEBUG - ------all_count: 10  ----target_count: 0 
+2018-08-22 17:18:21,401 - append_predict_sandd.main - DEBUG - target_count: 0.000000
+2018-08-22 17:18:21,513 - append_predict_sandd.main - INFO - last_purchase_hit: False
+2018-08-22 17:18:21,513 - append_predict_sandd.main - INFO - xiazhu_nums: 0
+2018-08-22 17:18:21,522 - append_predict_sandd.main - INFO - save predict_lottery_id : 699777
+2018-08-22 17:18:21,529 - append_predict_sandd.main - INFO - save purchase_number_list : [0, 0, 1, 1, 0, 1, 1, 1, 0, 0]
+2018-08-22 17:18:21,529 - append_predict_sandd.main - INFO - save beishu_number_list : [0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
