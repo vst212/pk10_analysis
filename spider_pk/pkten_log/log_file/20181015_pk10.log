@@ -1,0 +1,242 @@
+2018-10-15 10:56:52,808 - append_purchase_hf.purchase_client_main - INFO - a1008 not start
+2018-10-15 10:56:53,170 - append_purchase_hf.purchase_client_main - INFO - xiao1235 not start
+2018-10-15 10:56:53,349 - append_purchase_hf.purchase_client_main - INFO - xiao147 not start
+2018-10-15 10:56:53,486 - append_purchase_hf.purchase_client_main - INFO - qwe12345678 not start
+2018-10-15 10:56:53,588 - append_purchase_hf.purchase_client_main - INFO - hyy01245 not start
+2018-10-15 10:56:53,710 - append_purchase_hf.purchase_client_main - INFO - qtm123 not start
+2018-10-15 10:56:53,779 - append_purchase_hf.purchase_client_main - INFO - lv6868 not start
+2018-10-15 10:56:53,828 - append_purchase_hf.purchase_client_main - INFO - qq5338 not start
+2018-10-15 10:56:53,944 - append_purchase_hf.purchase_client_main - INFO - vf2299 not start
+2018-10-15 10:57:03,398 - append_purchase_hf.purchase_client_main - INFO - user_name:hyy01245
+2018-10-15 10:57:03,398 - append_purchase_hf.purchase_client_main - INFO - password:Abcd2018
+2018-10-15 10:57:03,398 - append_purchase_hf.purchase_client_main - INFO - init monry:1
+2018-10-15 10:57:40,055 - append_purchase_lide.purchase_driver - WARNING - no notice or click notice error!
+2018-10-15 11:15:48,966 - append_purchase_hf.purchase_client_main - INFO - a1008 not start
+2018-10-15 11:15:49,036 - append_purchase_hf.purchase_client_main - INFO - xiao1235 not start
+2018-10-15 11:15:49,121 - append_purchase_hf.purchase_client_main - INFO - xiao147 not start
+2018-10-15 11:15:49,305 - append_purchase_hf.purchase_client_main - INFO - qwe12345678 not start
+2018-10-15 11:15:49,437 - append_purchase_hf.purchase_client_main - INFO - hyy01245 not start
+2018-10-15 11:15:49,628 - append_purchase_hf.purchase_client_main - INFO - qtm123 not start
+2018-10-15 11:15:49,687 - append_purchase_hf.purchase_client_main - INFO - lv6868 not start
+2018-10-15 11:15:49,753 - append_purchase_hf.purchase_client_main - INFO - qq5338 not start
+2018-10-15 11:15:49,821 - append_purchase_hf.purchase_client_main - INFO - vf2299 not start
+2018-10-15 11:15:49,924 - append_purchase_hf.purchase_client_main - INFO - bm88 not start
+2018-10-15 11:15:52,400 - append_purchase_hf.purchase_client_main - INFO - user_name:bm88
+2018-10-15 11:15:52,400 - append_purchase_hf.purchase_client_main - INFO - password:aa123456
+2018-10-15 11:15:52,401 - append_purchase_hf.purchase_client_main - INFO - init monry:1
+2018-10-15 11:16:11,494 - append_purchase_lide.purchase_driver - INFO - click notice ok
+2018-10-15 11:16:13,398 - append_purchase_lide.purchase_driver - WARNING - 登录异常，重新登录
+2018-10-15 11:18:04,311 - append_purchase_hf.purchase_client_main - INFO - a1008 not start
+2018-10-15 11:18:04,397 - append_purchase_hf.purchase_client_main - INFO - xiao1235 not start
+2018-10-15 11:18:04,456 - append_purchase_hf.purchase_client_main - INFO - xiao147 not start
+2018-10-15 11:18:04,516 - append_purchase_hf.purchase_client_main - INFO - qwe12345678 not start
+2018-10-15 11:18:04,579 - append_purchase_hf.purchase_client_main - INFO - hyy01245 not start
+2018-10-15 11:18:04,706 - append_purchase_hf.purchase_client_main - INFO - qtm123 not start
+2018-10-15 11:18:04,846 - append_purchase_hf.purchase_client_main - INFO - lv6868 not start
+2018-10-15 11:18:04,914 - append_purchase_hf.purchase_client_main - INFO - qq5338 not start
+2018-10-15 11:18:04,980 - append_purchase_hf.purchase_client_main - INFO - vf2299 not start
+2018-10-15 11:18:05,082 - append_purchase_hf.purchase_client_main - INFO - bm88 not start
+2018-10-15 11:18:11,230 - append_purchase_hf.purchase_client_main - INFO - user_name:bm88
+2018-10-15 11:18:11,230 - append_purchase_hf.purchase_client_main - INFO - password:aa123456
+2018-10-15 11:18:11,230 - append_purchase_hf.purchase_client_main - INFO - init monry:1
+2018-10-15 11:21:54,388 - append_purchase_hf.purchase_client_main - INFO - a1008 not start
+2018-10-15 11:21:54,502 - append_purchase_hf.purchase_client_main - INFO - xiao1235 not start
+2018-10-15 11:21:54,559 - append_purchase_hf.purchase_client_main - INFO - xiao147 not start
+2018-10-15 11:21:54,755 - append_purchase_hf.purchase_client_main - INFO - qwe12345678 not start
+2018-10-15 11:21:54,858 - append_purchase_hf.purchase_client_main - INFO - hyy01245 not start
+2018-10-15 11:21:55,000 - append_purchase_hf.purchase_client_main - INFO - qtm123 not start
+2018-10-15 11:21:55,200 - append_purchase_hf.purchase_client_main - INFO - lv6868 not start
+2018-10-15 11:21:55,594 - append_purchase_hf.purchase_client_main - INFO - qq5338 not start
+2018-10-15 11:21:55,894 - append_purchase_hf.purchase_client_main - INFO - vf2299 not start
+2018-10-15 11:21:56,028 - append_purchase_hf.purchase_client_main - INFO - bm88 not start
+2018-10-15 11:21:56,938 - append_purchase_hf.purchase_client_main - INFO - a1008 not start
+2018-10-15 11:21:57,052 - append_purchase_hf.purchase_client_main - INFO - xiao1235 not start
+2018-10-15 11:21:57,153 - append_purchase_hf.purchase_client_main - INFO - xiao147 not start
+2018-10-15 11:21:57,211 - append_purchase_hf.purchase_client_main - INFO - qwe12345678 not start
+2018-10-15 11:21:57,319 - append_purchase_hf.purchase_client_main - INFO - hyy01245 not start
+2018-10-15 11:21:57,387 - append_purchase_hf.purchase_client_main - INFO - qtm123 not start
+2018-10-15 11:21:57,453 - append_purchase_hf.purchase_client_main - INFO - lv6868 not start
+2018-10-15 11:21:57,526 - append_purchase_hf.purchase_client_main - INFO - qq5338 not start
+2018-10-15 11:21:57,586 - append_purchase_hf.purchase_client_main - INFO - vf2299 not start
+2018-10-15 11:21:57,647 - append_purchase_hf.purchase_client_main - INFO - bm88 not start
+2018-10-15 11:22:00,213 - append_purchase_hf.purchase_client_main - INFO - user_name:bm88
+2018-10-15 11:22:00,213 - append_purchase_hf.purchase_client_main - INFO - password:aa123456
+2018-10-15 11:22:00,213 - append_purchase_hf.purchase_client_main - INFO - init monry:1
+2018-10-15 11:29:11,240 - append_purchase_hf.purchase_client_main - INFO - a1008 not start
+2018-10-15 11:29:11,331 - append_purchase_hf.purchase_client_main - INFO - xiao1235 not start
+2018-10-15 11:29:11,467 - append_purchase_hf.purchase_client_main - INFO - xiao147 not start
+2018-10-15 11:29:11,542 - append_purchase_hf.purchase_client_main - INFO - qwe12345678 not start
+2018-10-15 11:29:11,604 - append_purchase_hf.purchase_client_main - INFO - hyy01245 not start
+2018-10-15 11:29:11,743 - append_purchase_hf.purchase_client_main - INFO - qtm123 not start
+2018-10-15 11:29:11,819 - append_purchase_hf.purchase_client_main - INFO - lv6868 not start
+2018-10-15 11:29:11,887 - append_purchase_hf.purchase_client_main - INFO - qq5338 not start
+2018-10-15 11:29:11,970 - append_purchase_hf.purchase_client_main - INFO - vf2299 not start
+2018-10-15 11:29:12,081 - append_purchase_hf.purchase_client_main - INFO - bm88 not start
+2018-10-15 11:29:13,924 - append_purchase_hf.purchase_client_main - INFO - user_name:bm88
+2018-10-15 11:29:13,926 - append_purchase_hf.purchase_client_main - INFO - password:aa123456
+2018-10-15 11:29:13,926 - append_purchase_hf.purchase_client_main - INFO - init monry:1
+2018-10-15 11:33:58,937 - append_purchase_hf.purchase_client_main - INFO - a1008 not start
+2018-10-15 11:33:59,013 - append_purchase_hf.purchase_client_main - INFO - xiao1235 not start
+2018-10-15 11:33:59,072 - append_purchase_hf.purchase_client_main - INFO - xiao147 not start
+2018-10-15 11:33:59,168 - append_purchase_hf.purchase_client_main - INFO - qwe12345678 not start
+2018-10-15 11:33:59,288 - append_purchase_hf.purchase_client_main - INFO - hyy01245 not start
+2018-10-15 11:33:59,404 - append_purchase_hf.purchase_client_main - INFO - qtm123 not start
+2018-10-15 11:33:59,470 - append_purchase_hf.purchase_client_main - INFO - lv6868 not start
+2018-10-15 11:33:59,548 - append_purchase_hf.purchase_client_main - INFO - qq5338 not start
+2018-10-15 11:33:59,612 - append_purchase_hf.purchase_client_main - INFO - vf2299 not start
+2018-10-15 11:33:59,671 - append_purchase_hf.purchase_client_main - INFO - bm88 not start
+2018-10-15 11:34:01,397 - append_purchase_hf.purchase_client_main - INFO - user_name:bm88
+2018-10-15 11:34:01,397 - append_purchase_hf.purchase_client_main - INFO - password:aa123456
+2018-10-15 11:34:01,398 - append_purchase_hf.purchase_client_main - INFO - init monry:1
+2018-10-15 11:41:23,496 - append_purchase_hf.purchase_client_main - INFO - a1008 not start
+2018-10-15 11:41:23,575 - append_purchase_hf.purchase_client_main - INFO - xiao1235 not start
+2018-10-15 11:41:23,641 - append_purchase_hf.purchase_client_main - INFO - xiao147 not start
+2018-10-15 11:41:23,700 - append_purchase_hf.purchase_client_main - INFO - qwe12345678 not start
+2018-10-15 11:41:23,796 - append_purchase_hf.purchase_client_main - INFO - hyy01245 not start
+2018-10-15 11:41:23,885 - append_purchase_hf.purchase_client_main - INFO - qtm123 not start
+2018-10-15 11:41:23,941 - append_purchase_hf.purchase_client_main - INFO - lv6868 not start
+2018-10-15 11:41:24,048 - append_purchase_hf.purchase_client_main - INFO - qq5338 not start
+2018-10-15 11:41:24,141 - append_purchase_hf.purchase_client_main - INFO - vf2299 not start
+2018-10-15 11:41:24,216 - append_purchase_hf.purchase_client_main - INFO - bm88 not start
+2018-10-15 11:41:26,020 - append_purchase_hf.purchase_client_main - INFO - user_name:bm88
+2018-10-15 11:41:26,022 - append_purchase_hf.purchase_client_main - INFO - password:aa123456
+2018-10-15 11:41:26,022 - append_purchase_hf.purchase_client_main - INFO - init monry:1
+2018-10-15 11:41:44,836 - append_purchase_hf.purchase_driver - INFO - click agree ok
+2018-10-15 11:41:49,947 - append_purchase_hf.purchase_driver - INFO - close ad!
+2018-10-15 11:41:49,964 - append_purchase_hf.purchase_driver - ERROR - login error, relogin
+2018-10-15 14:03:13,223 - append_purchase_hf.purchase_client_main - INFO - a1008 not start
+2018-10-15 14:03:13,443 - append_purchase_hf.purchase_client_main - INFO - xiao1235 not start
+2018-10-15 14:03:13,674 - append_purchase_hf.purchase_client_main - INFO - xiao147 not start
+2018-10-15 14:03:13,842 - append_purchase_hf.purchase_client_main - INFO - qwe12345678 not start
+2018-10-15 14:03:14,098 - append_purchase_hf.purchase_client_main - INFO - hyy01245 not start
+2018-10-15 14:03:14,283 - append_purchase_hf.purchase_client_main - INFO - qtm123 not start
+2018-10-15 14:03:14,483 - append_purchase_hf.purchase_client_main - INFO - lv6868 not start
+2018-10-15 14:03:14,683 - append_purchase_hf.purchase_client_main - INFO - qq5338 not start
+2018-10-15 14:03:14,897 - append_purchase_hf.purchase_client_main - INFO - vf2299 not start
+2018-10-15 14:03:15,109 - append_purchase_hf.purchase_client_main - INFO - bm88 not start
+2018-10-15 14:03:17,019 - append_purchase_hf.purchase_client_main - INFO - a1008 not start
+2018-10-15 14:03:17,344 - append_purchase_hf.purchase_client_main - INFO - xiao1235 not start
+2018-10-15 14:03:17,634 - append_purchase_hf.purchase_client_main - INFO - xiao147 not start
+2018-10-15 14:03:17,970 - append_purchase_hf.purchase_client_main - INFO - qwe12345678 not start
+2018-10-15 14:03:18,177 - append_purchase_hf.purchase_client_main - INFO - hyy01245 not start
+2018-10-15 14:03:18,309 - append_purchase_hf.purchase_client_main - INFO - qtm123 not start
+2018-10-15 14:03:18,440 - append_purchase_hf.purchase_client_main - INFO - lv6868 not start
+2018-10-15 14:03:18,635 - append_purchase_hf.purchase_client_main - INFO - qq5338 not start
+2018-10-15 14:03:18,826 - append_purchase_hf.purchase_client_main - INFO - vf2299 not start
+2018-10-15 14:03:19,019 - append_purchase_hf.purchase_client_main - INFO - bm88 not start
+2018-10-15 14:03:21,752 - append_purchase_hf.purchase_client_main - INFO - user_name:bm88
+2018-10-15 14:03:21,752 - append_purchase_hf.purchase_client_main - INFO - password:aa123456
+2018-10-15 14:03:21,752 - append_purchase_hf.purchase_client_main - INFO - init monry:1
+2018-10-15 14:05:08,841 - append_purchase_hf.purchase_client_main - INFO - a1008 not start
+2018-10-15 14:05:08,928 - append_purchase_hf.purchase_client_main - INFO - xiao1235 not start
+2018-10-15 14:05:09,005 - append_purchase_hf.purchase_client_main - INFO - xiao147 not start
+2018-10-15 14:05:09,079 - append_purchase_hf.purchase_client_main - INFO - qwe12345678 not start
+2018-10-15 14:05:09,151 - append_purchase_hf.purchase_client_main - INFO - hyy01245 not start
+2018-10-15 14:05:09,253 - append_purchase_hf.purchase_client_main - INFO - qtm123 not start
+2018-10-15 14:05:09,331 - append_purchase_hf.purchase_client_main - INFO - lv6868 not start
+2018-10-15 14:05:09,453 - append_purchase_hf.purchase_client_main - INFO - qq5338 not start
+2018-10-15 14:05:09,535 - append_purchase_hf.purchase_client_main - INFO - vf2299 not start
+2018-10-15 14:05:09,601 - append_purchase_hf.purchase_client_main - INFO - bm88 not start
+2018-10-15 14:05:34,801 - append_purchase_hf.purchase_client_main - INFO - user_name:bm88
+2018-10-15 14:05:34,802 - append_purchase_hf.purchase_client_main - INFO - password:aa123456
+2018-10-15 14:05:34,802 - append_purchase_hf.purchase_client_main - INFO - init monry:1
+2018-10-15 14:05:54,782 - append_purchase_hf.purchase_driver - INFO - click agree ok
+2018-10-15 14:05:59,878 - append_purchase_hf.purchase_driver - INFO - close ad!
+2018-10-15 14:06:06,036 - append_purchase_hf.purchase_driver - INFO - cllick pk10!
+2018-10-15 14:06:06,092 - append_purchase_hf.purchase_driver - ERROR - login error, relogin
+2018-10-15 14:20:49,002 - append_purchase_hf.purchase_client_main - INFO - a1008 not start
+2018-10-15 14:20:49,095 - append_purchase_hf.purchase_client_main - INFO - xiao1235 not start
+2018-10-15 14:20:49,203 - append_purchase_hf.purchase_client_main - INFO - xiao147 not start
+2018-10-15 14:20:49,262 - append_purchase_hf.purchase_client_main - INFO - qwe12345678 not start
+2018-10-15 14:20:49,348 - append_purchase_hf.purchase_client_main - INFO - hyy01245 not start
+2018-10-15 14:20:49,421 - append_purchase_hf.purchase_client_main - INFO - qtm123 not start
+2018-10-15 14:20:49,486 - append_purchase_hf.purchase_client_main - INFO - lv6868 not start
+2018-10-15 14:20:49,562 - append_purchase_hf.purchase_client_main - INFO - qq5338 not start
+2018-10-15 14:20:49,661 - append_purchase_hf.purchase_client_main - INFO - vf2299 not start
+2018-10-15 14:20:49,752 - append_purchase_hf.purchase_client_main - INFO - bm88 not start
+2018-10-15 14:20:52,115 - append_purchase_hf.purchase_client_main - INFO - user_name:bm88
+2018-10-15 14:20:52,117 - append_purchase_hf.purchase_client_main - INFO - password:aa123456
+2018-10-15 14:20:52,117 - append_purchase_hf.purchase_client_main - INFO - init monry:1
+2018-10-15 14:22:44,019 - append_purchase_hf.purchase_client_main - INFO - a1008 not start
+2018-10-15 14:22:44,148 - append_purchase_hf.purchase_client_main - INFO - xiao1235 not start
+2018-10-15 14:22:44,279 - append_purchase_hf.purchase_client_main - INFO - xiao147 not start
+2018-10-15 14:22:44,346 - append_purchase_hf.purchase_client_main - INFO - qwe12345678 not start
+2018-10-15 14:22:44,420 - append_purchase_hf.purchase_client_main - INFO - hyy01245 not start
+2018-10-15 14:22:44,483 - append_purchase_hf.purchase_client_main - INFO - qtm123 not start
+2018-10-15 14:22:44,555 - append_purchase_hf.purchase_client_main - INFO - lv6868 not start
+2018-10-15 14:22:44,625 - append_purchase_hf.purchase_client_main - INFO - qq5338 not start
+2018-10-15 14:22:44,713 - append_purchase_hf.purchase_client_main - INFO - vf2299 not start
+2018-10-15 14:22:44,773 - append_purchase_hf.purchase_client_main - INFO - bm88 not start
+2018-10-15 14:22:46,844 - append_purchase_hf.purchase_client_main - INFO - user_name:bm88
+2018-10-15 14:22:46,844 - append_purchase_hf.purchase_client_main - INFO - password:aa123456
+2018-10-15 14:22:46,845 - append_purchase_hf.purchase_client_main - INFO - init monry:1
+2018-10-15 14:23:05,217 - append_purchase_hf.purchase_driver - INFO - click agree ok
+2018-10-15 14:23:10,316 - append_purchase_hf.purchase_driver - INFO - close ad!
+2018-10-15 14:23:16,486 - append_purchase_hf.purchase_driver - INFO - cllick pk10!
+2018-10-15 14:37:02,594 - append_purchase_hf.purchase_client_main - INFO - a1008 not start
+2018-10-15 14:37:02,677 - append_purchase_hf.purchase_client_main - INFO - xiao1235 not start
+2018-10-15 14:37:02,752 - append_purchase_hf.purchase_client_main - INFO - xiao147 not start
+2018-10-15 14:37:02,809 - append_purchase_hf.purchase_client_main - INFO - qwe12345678 not start
+2018-10-15 14:37:02,875 - append_purchase_hf.purchase_client_main - INFO - hyy01245 not start
+2018-10-15 14:37:02,934 - append_purchase_hf.purchase_client_main - INFO - qtm123 not start
+2018-10-15 14:37:03,013 - append_purchase_hf.purchase_client_main - INFO - lv6868 not start
+2018-10-15 14:37:03,184 - append_purchase_hf.purchase_client_main - INFO - qq5338 not start
+2018-10-15 14:37:03,296 - append_purchase_hf.purchase_client_main - INFO - vf2299 not start
+2018-10-15 14:37:03,410 - append_purchase_hf.purchase_client_main - INFO - bm88 not start
+2018-10-15 14:37:05,289 - append_purchase_hf.purchase_client_main - INFO - user_name:bm88
+2018-10-15 14:37:05,289 - append_purchase_hf.purchase_client_main - INFO - password:aa123456
+2018-10-15 14:37:05,290 - append_purchase_hf.purchase_client_main - INFO - init monry:1
+2018-10-15 14:37:24,042 - append_purchase_hf.purchase_driver - INFO - click agree ok
+2018-10-15 14:37:29,134 - append_purchase_hf.purchase_driver - INFO - close ad!
+2018-10-15 14:37:35,289 - append_purchase_hf.purchase_driver - INFO - cllick pk10!
+2018-10-15 14:37:39,431 - append_purchase_hf.purchase_driver - INFO - click NUMERIC
+2018-10-15 14:37:54,433 - append_purchase_hf.purchase_client_main - WARNING - thread is not alive start!!!
+2018-10-15 14:38:04,434 - append_purchase_hf.client_thread - INFO - 开始购买
+2018-10-15 14:38:19,437 - append_purchase_lide.purchase_client_main - INFO - purchase time is no region!
+2018-10-15 14:38:34,437 - append_purchase_lide.purchase_client_main - INFO - purchase time is no region!
+2018-10-15 14:38:49,440 - append_purchase_lide.purchase_client_main - INFO - purchase time is no region!
+2018-10-15 14:39:04,441 - append_purchase_lide.purchase_client_main - INFO - purchase time is no region!
+2018-10-15 14:39:05,505 - append_purchase_lide.purchase_client_main - ERROR -  get server request info request server faild!
+2018-10-15 14:39:09,507 - append_purchase_lide.purchase_client_main - ERROR -  get server request info request server faild!
+2018-10-15 14:39:13,510 - append_purchase_lide.purchase_client_main - ERROR -  get server request info request server faild!
+2018-10-15 18:32:34,115 - append_purchase_hf.purchase_client_main - INFO - a1008 not start
+2018-10-15 18:32:34,226 - append_purchase_hf.purchase_client_main - INFO - xiao1235 not start
+2018-10-15 18:32:34,374 - append_purchase_hf.purchase_client_main - INFO - xiao147 not start
+2018-10-15 18:32:34,519 - append_purchase_hf.purchase_client_main - INFO - qwe12345678 not start
+2018-10-15 18:32:34,576 - append_purchase_hf.purchase_client_main - INFO - hyy01245 not start
+2018-10-15 18:32:34,644 - append_purchase_hf.purchase_client_main - INFO - qtm123 not start
+2018-10-15 18:32:34,710 - append_purchase_hf.purchase_client_main - INFO - lv6868 not start
+2018-10-15 18:32:34,785 - append_purchase_hf.purchase_client_main - INFO - qq5338 not start
+2018-10-15 18:32:34,854 - append_purchase_hf.purchase_client_main - INFO - vf2299 not start
+2018-10-15 18:32:34,934 - append_purchase_hf.purchase_client_main - INFO - bm88 not start
+2018-10-15 18:32:37,801 - append_purchase_hf.purchase_client_main - INFO - user_name:bm88
+2018-10-15 18:32:37,802 - append_purchase_hf.purchase_client_main - INFO - password:aa123456
+2018-10-15 18:32:37,802 - append_purchase_hf.purchase_client_main - INFO - init monry:1
+2018-10-15 18:32:59,746 - append_purchase_hf.purchase_driver - INFO - click agree ok
+2018-10-15 18:33:04,857 - append_purchase_hf.purchase_driver - INFO - close ad!
+2018-10-15 18:33:11,013 - append_purchase_hf.purchase_driver - INFO - cllick pk10!
+2018-10-15 18:33:15,168 - append_purchase_hf.purchase_driver - INFO - click NUMERIC
+2018-10-15 18:33:30,168 - append_purchase_hf.purchase_client_main - WARNING - thread is not alive start!!!
+2018-10-15 18:33:30,170 - append_purchase_hf.client_thread - INFO - 开始购买
+2018-10-15 18:33:45,171 - append_purchase_lide.purchase_client_main - INFO - purchase time is no region!
+2018-10-15 18:33:51,760 - append_predict.main - INFO - a1008 not start
+2018-10-15 18:33:52,164 - append_predict.main - INFO - xiao1235 not start
+2018-10-15 18:33:52,773 - append_predict.main - INFO - xiao147 not start
+2018-10-15 18:33:53,142 - append_predict.main - INFO - qwe12345678 not start
+2018-10-15 18:33:53,250 - append_predict.main - INFO - hyy01245 not start
+2018-10-15 18:33:53,334 - append_predict.main - INFO - qtm123 not start
+2018-10-15 18:33:53,411 - append_predict.main - INFO - lv6868 not start
+2018-10-15 18:33:53,483 - append_predict.main - INFO - qq5338 not start
+2018-10-15 18:33:53,614 - append_predict.main - INFO - vf2299 not start
+2018-10-15 18:33:53,703 - append_predict.main - INFO - bm88 not start
+2018-10-15 18:34:00,174 - append_purchase_lide.purchase_client_main - INFO - purchase time is no region!
+2018-10-15 18:34:01,311 - append_purchase_lide.purchase_client_main - ERROR -  get server request info request server faild!
+2018-10-15 18:34:05,315 - append_purchase_lide.purchase_client_main - ERROR -  get server request info request server faild!
+2018-10-15 18:34:09,322 - append_purchase_lide.purchase_client_main - ERROR -  get server request info request server faild!
+2018-10-15 18:34:13,328 - append_purchase_lide.purchase_client_main - ERROR -  get server request info request server faild!
+2018-10-15 18:34:16,331 - append_purchase_lide.purchase_client_main - INFO - get server interface error!
+2018-10-15 18:34:21,125 - append_predict.main - DEBUG - thread is not alive start!!!
+2018-10-15 18:34:21,132 - append_predict.thread - INFO - current_date:20181015 18:34:21
+2018-10-15 18:34:21,138 - append_predict.thread - INFO - start purchase
+2018-10-15 18:34:22,348 - append_purchase_lide.purchase_client_main - ERROR -  get server request info request server faild!
+2018-10-15 18:34:26,354 - append_purchase_lide.purchase_client_main - ERROR -  get server request info request server faild!

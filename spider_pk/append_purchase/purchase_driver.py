@@ -15,7 +15,7 @@ def get_driver(username,password):
     # options = webdriver.ChromeOptions()
     # options.add_experimental_option("excludeSwitches",["ignore-certificate-errors"])
     # driver = webdriver.Chrome(executable_path=chromedriver,chrome_options=options )
-    driver = webdriver.Firefox(executable_path = 'E:\\python\\webdriver\\firefox\\geckodriver.exe')
+    driver = webdriver.Firefox(executable_path = './pkten_log/geckodriver.exe')
 
 
     driver.get("https://7989674523-bdgj.qq168.ws/login")

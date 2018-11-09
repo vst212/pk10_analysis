@@ -1,0 +1,13 @@
+2018-11-09 14:26:10,069 - append_predict.main - INFO - vf2299 not start
+2018-11-09 14:26:10,259 - append_predict.main - INFO - bm88 not start
+2018-11-09 14:26:10,326 - append_predict.main - INFO - aih58 not start
+2018-11-09 14:26:52,628 - append_predict.main - DEBUG - thread is not alive start!!!
+2018-11-09 14:28:02,632 - append_predict.thread - INFO - current_date:20181109 14:28:02
+2018-11-09 14:28:02,632 - append_predict.thread - INFO - start purchase
+2018-11-09 14:28:12,634 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-11-09
+2018-11-09 14:28:21,900 - append_predict.main - DEBUG - predicts is null
+2018-11-09 14:28:21,901 - append_predict.main - DEBUG - lottery_id: 0
+2018-11-09 14:28:21,901 - append_predict.main - DEBUG - no predict record in history
+2018-11-09 14:32:44,572 - append_predict.main - INFO - vf2299 not start
+2018-11-09 14:32:44,753 - append_predict.main - INFO - bm88 not start
+2018-11-09 14:32:44,819 - append_predict.main - INFO - aih58 not start

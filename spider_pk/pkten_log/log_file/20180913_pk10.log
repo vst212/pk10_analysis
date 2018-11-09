@@ -1,0 +1,588 @@
+2018-09-13 17:45:48,171 - append_predict.main - INFO - a1008 not start
+2018-09-13 17:45:48,293 - append_predict.main - INFO - xiao1235 not start
+2018-09-13 17:45:48,443 - append_predict.main - INFO - xiao147 not start
+2018-09-13 17:45:48,528 - append_predict.main - INFO - qwe12345678 not start
+2018-09-13 17:45:48,747 - append_predict.main - INFO - hyy01245 not start
+2018-09-13 17:45:48,875 - append_predict.main - INFO - qtm123 not start
+2018-09-13 17:45:48,951 - append_predict.main - INFO - lv6868 not start
+2018-09-13 17:45:49,032 - append_predict.main - INFO - qq5338 not start
+2018-09-13 17:45:49,125 - append_predict.main - INFO - vf2299 not start
+2018-09-13 17:46:17,065 - append_predict.main - DEBUG - thread is not alive start!!!
+2018-09-13 17:47:36,579 - append_purchase.purchase_client_main - INFO - a1008 not start
+2018-09-13 17:47:36,826 - append_purchase.purchase_client_main - INFO - xiao1235 not start
+2018-09-13 17:47:37,313 - append_purchase.purchase_client_main - INFO - xiao147 not start
+2018-09-13 17:47:37,724 - append_purchase.purchase_client_main - INFO - qwe12345678 not start
+2018-09-13 17:47:38,164 - append_purchase.purchase_client_main - INFO - hyy01245 not start
+2018-09-13 17:47:38,644 - append_purchase.purchase_client_main - INFO - qtm123 not start
+2018-09-13 17:47:38,974 - append_purchase.purchase_client_main - INFO - lv6868 not start
+2018-09-13 17:47:39,358 - append_purchase.purchase_client_main - INFO - qq5338 not start
+2018-09-13 17:47:39,500 - append_purchase.purchase_client_main - INFO - vf2299 not start
+2018-09-13 17:48:07,075 - append_predict.thread - INFO - current_date:20180913 17:48:07
+2018-09-13 17:48:07,076 - append_predict.thread - INFO - start purchase
+2018-09-13 17:48:17,078 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-09-13
+2018-09-13 17:48:29,522 - append_predict.main - DEBUG - predicts is null
+2018-09-13 17:48:29,523 - append_predict.main - DEBUG - lottery_id: 0
+2018-09-13 17:48:29,523 - append_predict.main - DEBUG - no predict record in history
+2018-09-13 17:48:33,099 - append_predict.predict_append_rule_fixed - INFO - scroll finish!
+2018-09-13 17:48:33,099 - append_predict.predict_append_rule_fixed - INFO - click select
+2018-09-13 17:48:34,500 - append_predict.predict_append_rule_fixed - INFO - click 100
+2018-09-13 17:48:55,516 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 29.29
+2018-09-13 17:48:55,516 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 17:48:55,530 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 38.38
+2018-09-13 17:48:55,530 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 17:48:55,545 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 25.25
+2018-09-13 17:48:55,546 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 17:48:55,562 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 31.31
+2018-09-13 17:48:55,562 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 17:48:55,578 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 28.28
+2018-09-13 17:48:55,578 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 2
+2018-09-13 17:48:55,596 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 33.33
+2018-09-13 17:48:55,598 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 17:48:55,612 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 37.37
+2018-09-13 17:48:55,612 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 17:48:55,625 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 36.36
+2018-09-13 17:48:55,625 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 17:48:55,637 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 36.36
+2018-09-13 17:48:55,638 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 17:48:55,654 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 31.31
+2018-09-13 17:48:55,654 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 17:48:55,654 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_min: 25.25
+2018-09-13 17:48:55,654 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_second_min: 28.28
+2018-09-13 17:48:55,654 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_min: 25.25
+2018-09-13 17:48:55,654 - append_predict.predict_append_rule_fixed - INFO - current_all_continue_hit_max: 2
+2018-09-13 17:48:55,668 - append_predict.predict_append_rule_fixed - INFO - number_list: [2, 3, 8, 5, 6, 3, 8, 7, 2, 6]
+2018-09-13 17:48:55,680 - append_predict.predict_append_rule_fixed - INFO - number_list: [7, 8, 9, 7, 6, 1, 9, 10, 10, 5]
+2018-09-13 17:48:55,694 - append_predict.predict_append_rule_fixed - INFO - number_list: [8, 6, 7, 1, 10, 3, 1, 7, 1, 6]
+2018-09-13 17:48:55,694 - append_predict.predict_append_rule_fixed - INFO - last hit
+2018-09-13 17:48:55,707 - append_predict.predict_append_rule_fixed - INFO - number_list: [9, 8, 9, 7, 1, 10, 5, 9, 6, 2]
+2018-09-13 17:48:55,720 - append_predict.predict_append_rule_fixed - INFO - number_list: [9, 9, 7, 4, 3, 3, 10, 8, 8, 4]
+2018-09-13 17:48:55,733 - append_predict.predict_append_rule_fixed - INFO - number_list: [3, 4, 8, 2, 6, 2, 8, 9, 8, 9]
+2018-09-13 17:48:55,746 - append_predict.predict_append_rule_fixed - INFO - number_list: [3, 9, 3, 7, 5, 1, 8, 2, 4, 5]
+2018-09-13 17:48:55,759 - append_predict.predict_append_rule_fixed - INFO - number_list: [9, 5, 7, 7, 4, 5, 3, 2, 4, 8]
+2018-09-13 17:48:55,773 - append_predict.predict_append_rule_fixed - INFO - number_list: [4, 9, 4, 2, 6, 1, 8, 8, 5, 9]
+2018-09-13 17:48:55,786 - append_predict.predict_append_rule_fixed - INFO - number_list: [8, 10, 6, 2, 8, 6, 7, 8, 7, 8]
+2018-09-13 17:48:55,786 - append_predict.main - INFO - save predict_lottery_id : 703721
+2018-09-13 17:48:55,786 - append_predict.main - INFO - save purchase_number_list : 0,0,0,0,2|3|5|6|7|8|9,0,0,0,0,0
+2018-09-13 17:48:55,788 - append_predict.main - INFO - gain_money_total total : 0
+2018-09-13 17:48:55,789 - append_predict.main - DEBUG - purchase_number_list len: 7
+2018-09-13 17:48:55,789 - append_predict.main - INFO - result xiazhu : 1
+2018-09-13 17:49:08,003 - append_purchase.purchase_client_main - INFO - user_name:vf2299
+2018-09-13 17:49:08,005 - append_purchase.purchase_client_main - INFO - password:abcd1234
+2018-09-13 17:49:08,005 - append_purchase.purchase_client_main - INFO - init monry:1
+2018-09-13 17:49:50,469 - append_purchase.purchase_client_main - WARNING - thread is not alive start!!!
+2018-09-13 17:49:50,470 - append_purchase.client_thread - INFO - 开始购买
+2018-09-13 17:49:50,750 - append_purchase.purchase_client_main - INFO - start purchase, xiazhu money:1
+2018-09-13 17:49:50,757 - append_purchase.purchase_client_main - INFO - calc gain_all_money:0
+2018-09-13 17:49:50,775 - append_purchase.purchase_client_main - INFO - purchase_url:https://7989674523-bdgj.qq168.ws/member/index#
+2018-09-13 17:49:50,789 - append_purchase.purchase_client_main - INFO - purchase_url reload ok
+2018-09-13 17:50:03,362 - append_purchase.purchase_client_main - INFO - web get gain_all_money:0
+2018-09-13 17:50:03,364 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_2"]/input
+2018-09-13 17:50:03,364 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:50:03,388 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_3"]/input
+2018-09-13 17:50:03,388 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:50:03,423 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_5"]/input
+2018-09-13 17:50:03,423 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:50:03,437 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_6"]/input
+2018-09-13 17:50:03,438 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:50:03,450 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_7"]/input
+2018-09-13 17:50:03,450 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:50:03,463 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_8"]/input
+2018-09-13 17:50:03,463 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:50:03,476 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_9"]/input
+2018-09-13 17:50:03,476 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:50:07,816 - append_purchase.purchase_client_main - INFO - 余额充足
+2018-09-13 17:50:08,835 - append_purchase.purchase_client_main - INFO - current url:https://7989674523-bdgj.qq168.ws/member/index#
+2018-09-13 17:50:08,836 - append_purchase.purchase_client_main - INFO - purchase sucess!, input money:7
+2018-09-13 17:50:09,032 - append_purchase.purchase_client_main - INFO - save xiazhu args sucess!
+2018-09-13 17:53:07,048 - append_purchase.client_thread - INFO - 开始购买
+2018-09-13 17:53:08,904 - append_predict.thread - INFO - current_date:20180913 17:53:08
+2018-09-13 17:53:08,904 - append_predict.thread - INFO - start purchase
+2018-09-13 17:53:18,905 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-09-13
+2018-09-13 17:53:22,049 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 17:53:29,821 - append_predict.main - DEBUG - lottery_id: 703721
+2018-09-13 17:53:29,823 - append_predict.main - INFO - lottery_num: 08,03,02,10,05,01,07,06,04,09
+2018-09-13 17:53:29,825 - append_predict.main - DEBUG - mingci [5]: 5
+2018-09-13 17:53:29,825 - append_predict.main - DEBUG - purchase_number_list[i]: [u'2', u'3', u'5', u'6', u'7', u'8', u'9']
+2018-09-13 17:53:29,825 - append_predict.main - DEBUG - ------all_count: 7  ----target_count: 1 
+2018-09-13 17:53:29,825 - append_predict.main - DEBUG - target_count: 0.142857
+2018-09-13 17:53:29,979 - append_predict.main - INFO - last_purchase_hit: True
+2018-09-13 17:53:29,980 - append_predict.main - INFO - xiazhu_nums: 5
+2018-09-13 17:53:33,786 - append_predict.predict_append_rule_fixed - INFO - scroll finish!
+2018-09-13 17:53:33,786 - append_predict.predict_append_rule_fixed - INFO - click select
+2018-09-13 17:53:35,180 - append_predict.predict_append_rule_fixed - INFO - click 100
+2018-09-13 17:53:37,051 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 17:53:52,052 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 17:53:56,266 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 29.29
+2018-09-13 17:53:56,267 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 17:53:56,280 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 39.39
+2018-09-13 17:53:56,282 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 17:53:56,296 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 26.26
+2018-09-13 17:53:56,296 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 17:53:56,309 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 30.3
+2018-09-13 17:53:56,309 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 17:53:56,321 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 29.29
+2018-09-13 17:53:56,321 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 3
+2018-09-13 17:53:56,335 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 34.34
+2018-09-13 17:53:56,336 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 2
+2018-09-13 17:53:56,349 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 37.37
+2018-09-13 17:53:56,349 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 17:53:56,362 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 36.36
+2018-09-13 17:53:56,362 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 17:53:56,375 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 35.35
+2018-09-13 17:53:56,375 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 17:53:56,391 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 32.32
+2018-09-13 17:53:56,392 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 17:53:56,392 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_min: 26.26
+2018-09-13 17:53:56,394 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_second_min: 29.29
+2018-09-13 17:53:56,394 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_min: 26.26
+2018-09-13 17:53:56,394 - append_predict.predict_append_rule_fixed - INFO - current_all_continue_hit_max: 3
+2018-09-13 17:53:56,407 - append_predict.predict_append_rule_fixed - INFO - number_list: [7, 1, 3, 6, 7, 3, 3, 7, 9, 9]
+2018-09-13 17:53:56,421 - append_predict.predict_append_rule_fixed - INFO - number_list: [6, 1, 4, 1, 7, 6, 10, 3, 2, 3]
+2018-09-13 17:53:56,434 - append_predict.predict_append_rule_fixed - INFO - number_list: [8, 6, 8, 3, 1, 3, 9, 9, 6, 7]
+2018-09-13 17:53:56,434 - append_predict.predict_append_rule_fixed - INFO - last hit
+2018-09-13 17:53:56,447 - append_predict.predict_append_rule_fixed - INFO - number_list: [7, 10, 6, 5, 7, 10, 5, 4, 5, 6]
+2018-09-13 17:53:56,460 - append_predict.predict_append_rule_fixed - INFO - number_list: [9, 6, 1, 6, 10, 4, 3, 4, 8, 2]
+2018-09-13 17:53:56,476 - append_predict.predict_append_rule_fixed - INFO - number_list: [9, 1, 3, 1, 6, 5, 2, 10, 1, 9]
+2018-09-13 17:53:56,489 - append_predict.predict_append_rule_fixed - INFO - number_list: [5, 9, 4, 6, 6, 8, 8, 5, 8, 10]
+2018-09-13 17:53:56,500 - append_predict.predict_append_rule_fixed - INFO - number_list: [2, 6, 7, 2, 2, 8, 6, 6, 1, 7]
+2018-09-13 17:53:56,515 - append_predict.predict_append_rule_fixed - INFO - number_list: [7, 9, 2, 5, 6, 8, 7, 6, 3, 2]
+2018-09-13 17:53:56,528 - append_predict.predict_append_rule_fixed - INFO - number_list: [8, 4, 1, 5, 4, 9, 4, 8, 2, 10]
+2018-09-13 17:53:56,528 - append_predict.main - INFO - save predict_lottery_id : 703722
+2018-09-13 17:53:56,529 - append_predict.main - INFO - save purchase_number_list : 0,0,0,0,2|3|5|6|7|8|9,0,0,0,0,0
+2018-09-13 17:53:56,530 - append_predict.main - INFO - gain_money_total total : 2
+2018-09-13 17:53:56,532 - append_predict.main - DEBUG - purchase_number_list len: 7
+2018-09-13 17:53:56,532 - append_predict.main - INFO - result xiazhu : 1
+2018-09-13 17:54:07,052 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 17:54:07,073 - append_purchase.purchase_client_main - INFO - start purchase, xiazhu money:1
+2018-09-13 17:54:07,082 - append_purchase.purchase_client_main - INFO - calc gain_all_money:2
+2018-09-13 17:54:07,085 - append_purchase.purchase_client_main - INFO - purchase_url:https://7989674523-bdgj.qq168.ws/member/index#
+2018-09-13 17:54:07,105 - append_purchase.purchase_client_main - INFO - purchase_url reload ok
+2018-09-13 17:54:19,266 - append_purchase.purchase_client_main - ERROR - web get gain_all_money error!
+2018-09-13 17:54:19,266 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_2"]/input
+2018-09-13 17:54:19,266 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:54:19,286 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_3"]/input
+2018-09-13 17:54:19,286 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:54:19,305 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_5"]/input
+2018-09-13 17:54:19,306 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:54:19,321 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_6"]/input
+2018-09-13 17:54:19,321 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:54:19,335 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_7"]/input
+2018-09-13 17:54:19,335 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:54:19,348 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_8"]/input
+2018-09-13 17:54:19,348 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:54:19,364 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_9"]/input
+2018-09-13 17:54:19,364 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:54:23,539 - append_purchase.purchase_client_main - INFO - 余额充足
+2018-09-13 17:54:24,542 - append_purchase.purchase_client_main - INFO - current url:https://7989674523-bdgj.qq168.ws/member/index#
+2018-09-13 17:54:24,543 - append_purchase.purchase_client_main - INFO - purchase sucess!, input money:7
+2018-09-13 17:54:24,618 - append_purchase.purchase_client_main - INFO - save xiazhu args sucess!
+2018-09-13 17:58:02,635 - append_purchase.client_thread - INFO - 开始购买
+2018-09-13 17:58:09,638 - append_predict.thread - INFO - current_date:20180913 17:58:09
+2018-09-13 17:58:09,638 - append_predict.thread - INFO - start purchase
+2018-09-13 17:58:17,638 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 17:58:19,641 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-09-13
+2018-09-13 17:58:32,640 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 17:58:35,104 - append_predict.main - DEBUG - lottery_id: 703722
+2018-09-13 17:58:35,109 - append_predict.main - INFO - lottery_num: 10,08,04,07,03,06,02,05,09,01
+2018-09-13 17:58:35,109 - append_predict.main - DEBUG - mingci [5]: 3
+2018-09-13 17:58:35,111 - append_predict.main - DEBUG - purchase_number_list[i]: [u'2', u'3', u'5', u'6', u'7', u'8', u'9']
+2018-09-13 17:58:35,111 - append_predict.main - DEBUG - ------all_count: 7  ----target_count: 1 
+2018-09-13 17:58:35,111 - append_predict.main - DEBUG - target_count: 0.142857
+2018-09-13 17:58:35,302 - append_predict.main - INFO - last_purchase_hit: True
+2018-09-13 17:58:35,302 - append_predict.main - INFO - xiazhu_nums: 5
+2018-09-13 17:58:39,174 - append_predict.predict_append_rule_fixed - INFO - scroll finish!
+2018-09-13 17:58:39,176 - append_predict.predict_append_rule_fixed - INFO - click select
+2018-09-13 17:58:40,477 - append_predict.predict_append_rule_fixed - INFO - click 100
+2018-09-13 17:58:47,641 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 17:59:01,578 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 30.3
+2018-09-13 17:59:01,578 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 17:59:01,592 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 39.39
+2018-09-13 17:59:01,594 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 2
+2018-09-13 17:59:01,608 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 26.26
+2018-09-13 17:59:01,609 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 2
+2018-09-13 17:59:01,621 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 30.3
+2018-09-13 17:59:01,621 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 17:59:01,634 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 28.28
+2018-09-13 17:59:01,634 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 17:59:01,648 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 33.33
+2018-09-13 17:59:01,648 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 17:59:01,661 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 38.38
+2018-09-13 17:59:01,661 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 17:59:01,674 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 37.37
+2018-09-13 17:59:01,674 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 2
+2018-09-13 17:59:01,687 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 34.34
+2018-09-13 17:59:01,687 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 17:59:01,700 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 31.31
+2018-09-13 17:59:01,701 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 17:59:01,701 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_min: 26.26
+2018-09-13 17:59:01,701 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_second_min: 28.28
+2018-09-13 17:59:01,701 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_min: 26.26
+2018-09-13 17:59:01,703 - append_predict.predict_append_rule_fixed - INFO - current_all_continue_hit_max: 2
+2018-09-13 17:59:01,714 - append_predict.predict_append_rule_fixed - INFO - number_list: [2, 9, 1, 4, 6, 5, 7, 2, 10, 7]
+2018-09-13 17:59:01,727 - append_predict.predict_append_rule_fixed - INFO - number_list: [3, 6, 8, 1, 9, 7, 4, 5, 8, 8]
+2018-09-13 17:59:01,742 - append_predict.predict_append_rule_fixed - INFO - number_list: [9, 1, 4, 6, 9, 8, 8, 8, 7, 2]
+2018-09-13 17:59:01,742 - append_predict.predict_append_rule_fixed - INFO - last hit
+2018-09-13 17:59:01,756 - append_predict.predict_append_rule_fixed - INFO - number_list: [6, 7, 3, 8, 8, 5, 10, 2, 10, 3]
+2018-09-13 17:59:01,767 - append_predict.predict_append_rule_fixed - INFO - number_list: [6, 7, 1, 6, 3, 8, 1, 7, 4, 10]
+2018-09-13 17:59:01,782 - append_predict.predict_append_rule_fixed - INFO - number_list: [1, 8, 5, 3, 6, 9, 1, 4, 5, 5]
+2018-09-13 17:59:01,795 - append_predict.predict_append_rule_fixed - INFO - number_list: [2, 3, 1, 6, 5, 8, 9, 6, 9, 3]
+2018-09-13 17:59:01,809 - append_predict.predict_append_rule_fixed - INFO - number_list: [7, 5, 10, 10, 2, 2, 9, 4, 6, 3]
+2018-09-13 17:59:01,822 - append_predict.predict_append_rule_fixed - INFO - number_list: [10, 4, 4, 1, 8, 5, 3, 6, 6, 3]
+2018-09-13 17:59:01,835 - append_predict.predict_append_rule_fixed - INFO - number_list: [8, 5, 5, 4, 3, 7, 8, 8, 10, 2]
+2018-09-13 17:59:01,835 - append_predict.main - INFO - save predict_lottery_id : 703723
+2018-09-13 17:59:01,835 - append_predict.main - INFO - save purchase_number_list : 0,0,0,0,2|3|5|6|7|8|9,0,0,0,0,0
+2018-09-13 17:59:01,839 - append_predict.main - INFO - gain_money_total total : 2
+2018-09-13 17:59:01,841 - append_predict.main - DEBUG - purchase_number_list len: 7
+2018-09-13 17:59:01,841 - append_predict.main - INFO - result xiazhu : 1
+2018-09-13 17:59:02,642 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 17:59:02,671 - append_purchase.purchase_client_main - INFO - start purchase, xiazhu money:1
+2018-09-13 17:59:02,677 - append_purchase.purchase_client_main - INFO - calc gain_all_money:5
+2018-09-13 17:59:02,681 - append_purchase.purchase_client_main - INFO - purchase_url:https://7989674523-bdgj.qq168.ws/member/index#
+2018-09-13 17:59:02,698 - append_purchase.purchase_client_main - INFO - purchase_url reload ok
+2018-09-13 17:59:15,025 - append_purchase.purchase_client_main - ERROR - web get gain_all_money error!
+2018-09-13 17:59:15,026 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_2"]/input
+2018-09-13 17:59:15,028 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:59:15,048 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_3"]/input
+2018-09-13 17:59:15,048 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:59:15,062 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_5"]/input
+2018-09-13 17:59:15,062 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:59:15,075 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_6"]/input
+2018-09-13 17:59:15,075 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:59:15,088 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_7"]/input
+2018-09-13 17:59:15,091 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:59:15,101 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_8"]/input
+2018-09-13 17:59:15,101 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:59:15,115 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_9"]/input
+2018-09-13 17:59:15,115 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 17:59:19,565 - append_purchase.purchase_client_main - INFO - 余额充足
+2018-09-13 17:59:20,569 - append_purchase.purchase_client_main - INFO - current url:https://7989674523-bdgj.qq168.ws/member/index#
+2018-09-13 17:59:20,569 - append_purchase.purchase_client_main - INFO - purchase sucess!, input money:7
+2018-09-13 17:59:20,667 - append_purchase.purchase_client_main - INFO - save xiazhu args sucess!
+2018-09-13 18:03:04,967 - append_predict.thread - INFO - current_date:20180913 18:03:04
+2018-09-13 18:03:04,967 - append_predict.thread - INFO - start purchase
+2018-09-13 18:03:08,684 - append_purchase.client_thread - INFO - 开始购买
+2018-09-13 18:03:14,969 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-09-13
+2018-09-13 18:03:23,686 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 18:03:27,818 - append_predict.main - DEBUG - lottery_id: 703723
+2018-09-13 18:03:27,821 - append_predict.main - INFO - lottery_num: 10,04,05,03,09,02,07,06,08,01
+2018-09-13 18:03:27,821 - append_predict.main - DEBUG - mingci [5]: 9
+2018-09-13 18:03:27,821 - append_predict.main - DEBUG - purchase_number_list[i]: [u'2', u'3', u'5', u'6', u'7', u'8', u'9']
+2018-09-13 18:03:27,822 - append_predict.main - DEBUG - ------all_count: 7  ----target_count: 1 
+2018-09-13 18:03:27,822 - append_predict.main - DEBUG - target_count: 0.142857
+2018-09-13 18:03:27,898 - append_predict.main - INFO - last_purchase_hit: True
+2018-09-13 18:03:27,898 - append_predict.main - INFO - xiazhu_nums: 5
+2018-09-13 18:03:31,638 - append_predict.predict_append_rule_fixed - INFO - scroll finish!
+2018-09-13 18:03:31,638 - append_predict.predict_append_rule_fixed - INFO - click select
+2018-09-13 18:03:33,354 - append_predict.predict_append_rule_fixed - INFO - click 100
+2018-09-13 18:03:38,686 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 18:03:53,687 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 18:03:54,275 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 29.29
+2018-09-13 18:03:54,275 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:03:54,290 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 39.39
+2018-09-13 18:03:54,292 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:03:54,309 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 27.27
+2018-09-13 18:03:54,309 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 3
+2018-09-13 18:03:54,326 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 29.29
+2018-09-13 18:03:54,326 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:03:54,342 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 28.28
+2018-09-13 18:03:54,344 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 18:03:54,358 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 34.34
+2018-09-13 18:03:54,359 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 18:03:54,372 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 39.39
+2018-09-13 18:03:54,372 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 2
+2018-09-13 18:03:54,388 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 37.37
+2018-09-13 18:03:54,388 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:03:54,404 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 33.33
+2018-09-13 18:03:54,404 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:03:54,421 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 32.32
+2018-09-13 18:03:54,421 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 18:03:54,421 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_min: 27.27
+2018-09-13 18:03:54,423 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_second_min: 28.28
+2018-09-13 18:03:54,424 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_min: 27.27
+2018-09-13 18:03:54,424 - append_predict.predict_append_rule_fixed - INFO - current_all_continue_hit_max: 3
+2018-09-13 18:03:54,437 - append_predict.predict_append_rule_fixed - INFO - number_list: [1, 7, 9, 4, 7, 2, 6, 1, 4, 2]
+2018-09-13 18:03:54,454 - append_predict.predict_append_rule_fixed - INFO - number_list: [6, 6, 7, 6, 6, 10, 1, 7, 8, 7]
+2018-09-13 18:03:54,470 - append_predict.predict_append_rule_fixed - INFO - number_list: [6, 1, 5, 4, 5, 3, 2, 2, 6, 8]
+2018-09-13 18:03:54,470 - append_predict.predict_append_rule_fixed - INFO - last hit
+2018-09-13 18:03:54,486 - append_predict.predict_append_rule_fixed - INFO - number_list: [6, 10, 10, 9, 4, 1, 10, 3, 5, 4]
+2018-09-13 18:03:54,503 - append_predict.predict_append_rule_fixed - INFO - number_list: [4, 2, 3, 2, 9, 2, 6, 10, 10, 6]
+2018-09-13 18:03:54,519 - append_predict.predict_append_rule_fixed - INFO - number_list: [1, 3, 6, 9, 3, 8, 5, 10, 3, 8]
+2018-09-13 18:03:54,532 - append_predict.predict_append_rule_fixed - INFO - number_list: [8, 6, 2, 2, 7, 9, 8, 3, 9, 6]
+2018-09-13 18:03:54,549 - append_predict.predict_append_rule_fixed - INFO - number_list: [2, 7, 10, 5, 6, 6, 6, 1, 6, 1]
+2018-09-13 18:03:54,562 - append_predict.predict_append_rule_fixed - INFO - number_list: [5, 9, 6, 7, 6, 7, 3, 1, 3, 6]
+2018-09-13 18:03:54,578 - append_predict.predict_append_rule_fixed - INFO - number_list: [4, 2, 10, 3, 8, 9, 5, 4, 3, 9]
+2018-09-13 18:03:54,578 - append_predict.main - INFO - save predict_lottery_id : 703724
+2018-09-13 18:03:54,578 - append_predict.main - INFO - save purchase_number_list : 0,0,0,0,2|3|5|6|7|8|9,0,0,0,0,0
+2018-09-13 18:03:54,582 - append_predict.main - INFO - gain_money_total total : 2
+2018-09-13 18:03:54,582 - append_predict.main - DEBUG - purchase_number_list len: 7
+2018-09-13 18:03:54,582 - append_predict.main - INFO - result xiazhu : 1
+2018-09-13 18:04:08,688 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 18:04:08,709 - append_purchase.purchase_client_main - INFO - start purchase, xiazhu money:1
+2018-09-13 18:04:08,717 - append_purchase.purchase_client_main - INFO - calc gain_all_money:8
+2018-09-13 18:04:08,720 - append_purchase.purchase_client_main - INFO - purchase_url:https://7989674523-bdgj.qq168.ws/member/index#
+2018-09-13 18:04:08,740 - append_purchase.purchase_client_main - INFO - purchase_url reload ok
+2018-09-13 18:04:21,125 - append_purchase.purchase_client_main - ERROR - web get gain_all_money error!
+2018-09-13 18:04:21,125 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_2"]/input
+2018-09-13 18:04:21,125 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 18:04:21,145 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_3"]/input
+2018-09-13 18:04:21,145 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 18:04:21,160 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_5"]/input
+2018-09-13 18:04:21,160 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 18:04:21,174 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_6"]/input
+2018-09-13 18:04:21,174 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 18:04:21,187 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_7"]/input
+2018-09-13 18:04:21,187 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 18:04:21,200 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_8"]/input
+2018-09-13 18:04:21,200 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 18:04:21,213 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_9"]/input
+2018-09-13 18:04:21,213 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 18:04:25,371 - append_purchase.purchase_client_main - INFO - 余额充足
+2018-09-13 18:04:26,375 - append_purchase.purchase_client_main - INFO - current url:https://7989674523-bdgj.qq168.ws/member/index#
+2018-09-13 18:04:26,377 - append_purchase.purchase_client_main - INFO - purchase sucess!, input money:7
+2018-09-13 18:04:26,520 - append_purchase.purchase_client_main - INFO - save xiazhu args sucess!
+2018-09-13 18:08:01,529 - append_purchase.client_thread - INFO - 开始购买
+2018-09-13 18:08:04,747 - append_predict.thread - INFO - current_date:20180913 18:08:04
+2018-09-13 18:08:04,747 - append_predict.thread - INFO - start purchase
+2018-09-13 18:08:14,749 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-09-13
+2018-09-13 18:08:16,532 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 18:08:26,368 - append_predict.main - DEBUG - lottery_id: 703724
+2018-09-13 18:08:26,371 - append_predict.main - INFO - lottery_num: 03,09,05,02,10,04,07,08,06,01
+2018-09-13 18:08:26,371 - append_predict.main - DEBUG - mingci [5]: 10
+2018-09-13 18:08:26,374 - append_predict.main - DEBUG - purchase_number_list[i]: [u'2', u'3', u'5', u'6', u'7', u'8', u'9']
+2018-09-13 18:08:26,375 - append_predict.main - DEBUG - ------all_count: 7  ----target_count: 0 
+2018-09-13 18:08:26,375 - append_predict.main - DEBUG - target_count: 0.000000
+2018-09-13 18:08:26,523 - append_predict.main - INFO - last_purchase_hit: False
+2018-09-13 18:08:26,523 - append_predict.main - INFO - xiazhu_nums: 5
+2018-09-13 18:08:30,361 - append_predict.predict_append_rule_fixed - INFO - scroll finish!
+2018-09-13 18:08:30,362 - append_predict.predict_append_rule_fixed - INFO - click select
+2018-09-13 18:08:31,532 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 18:08:32,081 - append_predict.predict_append_rule_fixed - INFO - click 100
+2018-09-13 18:08:46,533 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 18:08:52,904 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 30.3
+2018-09-13 18:08:52,904 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 18:08:52,920 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 40.4
+2018-09-13 18:08:52,921 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 18:08:52,936 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 26.26
+2018-09-13 18:08:52,936 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:08:52,953 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 30.3
+2018-09-13 18:08:52,953 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 18:08:52,967 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 27.27
+2018-09-13 18:08:52,969 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:08:52,984 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 35.35
+2018-09-13 18:08:52,984 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 2
+2018-09-13 18:08:53,000 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 39.39
+2018-09-13 18:08:53,000 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:08:53,016 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 38.38
+2018-09-13 18:08:53,016 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 18:08:53,032 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 32.32
+2018-09-13 18:08:53,032 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:08:53,046 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 33.33
+2018-09-13 18:08:53,046 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 2
+2018-09-13 18:08:53,046 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_min: 26.26
+2018-09-13 18:08:53,046 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_second_min: 27.27
+2018-09-13 18:08:53,046 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_min: 26.26
+2018-09-13 18:08:53,046 - append_predict.predict_append_rule_fixed - INFO - current_all_continue_hit_max: 2
+2018-09-13 18:08:53,062 - append_predict.predict_append_rule_fixed - INFO - number_list: [5, 10, 7, 9, 2, 10, 10, 2, 1, 1]
+2018-09-13 18:08:53,078 - append_predict.predict_append_rule_fixed - INFO - number_list: [10, 8, 7, 4, 6, 2, 9, 5, 4, 5]
+2018-09-13 18:08:53,096 - append_predict.predict_append_rule_fixed - INFO - number_list: [4, 9, 8, 2, 7, 2, 8, 5, 4, 8]
+2018-09-13 18:08:53,096 - append_predict.predict_append_rule_fixed - INFO - last not hit
+2018-09-13 18:08:53,114 - append_predict.predict_append_rule_fixed - INFO - number_list: [3, 9, 7, 6, 3, 7, 7, 7, 9, 1]
+2018-09-13 18:08:53,131 - append_predict.predict_append_rule_fixed - INFO - number_list: [10, 10, 7, 3, 3, 7, 10, 1, 6, 1]
+2018-09-13 18:08:53,148 - append_predict.predict_append_rule_fixed - INFO - number_list: [1, 10, 2, 10, 2, 3, 3, 9, 10, 3]
+2018-09-13 18:08:53,167 - append_predict.predict_append_rule_fixed - INFO - number_list: [5, 6, 8, 8, 5, 1, 6, 5, 4, 7]
+2018-09-13 18:08:53,180 - append_predict.predict_append_rule_fixed - INFO - number_list: [7, 9, 10, 6, 5, 2, 1, 2, 8, 4]
+2018-09-13 18:08:53,191 - append_predict.predict_append_rule_fixed - INFO - number_list: [5, 7, 2, 4, 1, 2, 4, 9, 7, 5]
+2018-09-13 18:08:53,204 - append_predict.predict_append_rule_fixed - INFO - number_list: [7, 9, 3, 3, 4, 3, 3, 4, 4, 6]
+2018-09-13 18:08:53,204 - append_predict.main - INFO - save predict_lottery_id : 703725
+2018-09-13 18:08:53,206 - append_predict.main - INFO - save purchase_number_list : 0,0,0,0,2|3|5|6|7|8|9,0,0,0,0,0
+2018-09-13 18:08:53,207 - append_predict.main - INFO - gain_money_total total : -7
+2018-09-13 18:08:53,207 - append_predict.main - DEBUG - purchase_number_list len: 7
+2018-09-13 18:08:53,233 - append_predict.main - INFO - result xiazhu : 3
+2018-09-13 18:09:01,535 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 18:09:01,555 - append_purchase.purchase_client_main - INFO - start purchase, xiazhu money:3
+2018-09-13 18:09:01,562 - append_purchase.purchase_client_main - INFO - calc gain_all_money:1
+2018-09-13 18:09:01,565 - append_purchase.purchase_client_main - INFO - purchase_url:https://7989674523-bdgj.qq168.ws/member/index#
+2018-09-13 18:09:01,578 - append_purchase.purchase_client_main - INFO - purchase_url reload ok
+2018-09-13 18:09:13,684 - append_purchase.purchase_client_main - ERROR - web get gain_all_money error!
+2018-09-13 18:09:13,684 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_2"]/input
+2018-09-13 18:09:13,684 - append_purchase.purchase_client_main - INFO - current xaizhu money:3
+2018-09-13 18:09:13,703 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_3"]/input
+2018-09-13 18:09:13,707 - append_purchase.purchase_client_main - INFO - current xaizhu money:3
+2018-09-13 18:09:13,720 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_5"]/input
+2018-09-13 18:09:13,720 - append_purchase.purchase_client_main - INFO - current xaizhu money:3
+2018-09-13 18:09:13,733 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_6"]/input
+2018-09-13 18:09:13,733 - append_purchase.purchase_client_main - INFO - current xaizhu money:3
+2018-09-13 18:09:13,746 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_7"]/input
+2018-09-13 18:09:13,747 - append_purchase.purchase_client_main - INFO - current xaizhu money:3
+2018-09-13 18:09:13,762 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_8"]/input
+2018-09-13 18:09:13,763 - append_purchase.purchase_client_main - INFO - current xaizhu money:3
+2018-09-13 18:09:13,776 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_9"]/input
+2018-09-13 18:09:13,776 - append_purchase.purchase_client_main - INFO - current xaizhu money:3
+2018-09-13 18:09:18,229 - append_purchase.purchase_client_main - INFO - 余额充足
+2018-09-13 18:09:19,233 - append_purchase.purchase_client_main - INFO - current url:https://7989674523-bdgj.qq168.ws/member/index#
+2018-09-13 18:09:19,234 - append_purchase.purchase_client_main - INFO - purchase sucess!, input money:21
+2018-09-13 18:09:19,325 - append_purchase.purchase_client_main - INFO - save xiazhu args sucess!
+2018-09-13 18:13:06,378 - append_predict.thread - INFO - current_date:20180913 18:13:06
+2018-09-13 18:13:06,378 - append_predict.thread - INFO - start purchase
+2018-09-13 18:13:07,348 - append_purchase.client_thread - INFO - 开始购买
+2018-09-13 18:13:16,380 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-09-13
+2018-09-13 18:13:22,349 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 18:13:37,351 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 18:13:38,256 - append_predict.main - DEBUG - lottery_id: 703725
+2018-09-13 18:13:38,257 - append_predict.main - INFO - lottery_num: 10,09,05,04,07,01,03,08,02,06
+2018-09-13 18:13:38,257 - append_predict.main - DEBUG - mingci [5]: 7
+2018-09-13 18:13:38,259 - append_predict.main - DEBUG - purchase_number_list[i]: [u'2', u'3', u'5', u'6', u'7', u'8', u'9']
+2018-09-13 18:13:38,259 - append_predict.main - DEBUG - ------all_count: 7  ----target_count: 1 
+2018-09-13 18:13:38,259 - append_predict.main - DEBUG - target_count: 0.142857
+2018-09-13 18:13:38,529 - append_predict.main - INFO - last_purchase_hit: True
+2018-09-13 18:13:38,529 - append_predict.main - INFO - xiazhu_nums: 5
+2018-09-13 18:13:42,209 - append_predict.predict_append_rule_fixed - INFO - scroll finish!
+2018-09-13 18:13:42,209 - append_predict.predict_append_rule_fixed - INFO - click select
+2018-09-13 18:13:43,924 - append_predict.predict_append_rule_fixed - INFO - click 100
+2018-09-13 18:13:52,352 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 18:14:04,835 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 30.3
+2018-09-13 18:14:04,835 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:14:04,849 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 40.4
+2018-09-13 18:14:04,851 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:14:04,865 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 26.26
+2018-09-13 18:14:04,865 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:14:04,881 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 31.31
+2018-09-13 18:14:04,881 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 2
+2018-09-13 18:14:04,895 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 27.27
+2018-09-13 18:14:04,895 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:14:04,910 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 34.34
+2018-09-13 18:14:04,911 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:14:04,926 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 40.4
+2018-09-13 18:14:04,926 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 18:14:04,940 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 38.38
+2018-09-13 18:14:04,940 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:14:04,957 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 32.32
+2018-09-13 18:14:04,957 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:14:04,973 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 32.32
+2018-09-13 18:14:04,973 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:14:04,973 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_min: 26.26
+2018-09-13 18:14:04,973 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_second_min: 27.27
+2018-09-13 18:14:04,973 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_min: 26.26
+2018-09-13 18:14:04,973 - append_predict.predict_append_rule_fixed - INFO - current_all_continue_hit_max: 2
+2018-09-13 18:14:04,989 - append_predict.predict_append_rule_fixed - INFO - number_list: [6, 8, 1, 1, 1, 7, 2, 3, 10, 3]
+2018-09-13 18:14:05,003 - append_predict.predict_append_rule_fixed - INFO - number_list: [7, 5, 3, 6, 4, 3, 4, 7, 1, 9]
+2018-09-13 18:14:05,016 - append_predict.predict_append_rule_fixed - INFO - number_list: [6, 8, 4, 6, 8, 5, 8, 1, 8, 8]
+2018-09-13 18:14:05,016 - append_predict.predict_append_rule_fixed - INFO - last hit
+2018-09-13 18:14:05,029 - append_predict.predict_append_rule_fixed - INFO - number_list: [8, 1, 10, 3, 3, 4, 10, 2, 2, 2]
+2018-09-13 18:14:05,043 - append_predict.predict_append_rule_fixed - INFO - number_list: [3, 4, 2, 4, 9, 9, 4, 3, 9, 4]
+2018-09-13 18:14:05,055 - append_predict.predict_append_rule_fixed - INFO - number_list: [5, 3, 8, 10, 10, 1, 5, 3, 9, 8]
+2018-09-13 18:14:05,069 - append_predict.predict_append_rule_fixed - INFO - number_list: [4, 10, 7, 3, 6, 7, 8, 1, 6, 2]
+2018-09-13 18:14:05,082 - append_predict.predict_append_rule_fixed - INFO - number_list: [8, 8, 3, 2, 7, 3, 3, 2, 3, 3]
+2018-09-13 18:14:05,095 - append_predict.predict_append_rule_fixed - INFO - number_list: [10, 2, 10, 4, 6, 9, 4, 10, 10, 3]
+2018-09-13 18:14:05,108 - append_predict.predict_append_rule_fixed - INFO - number_list: [9, 9, 2, 7, 2, 9, 4, 7, 6, 3]
+2018-09-13 18:14:05,108 - append_predict.main - INFO - save predict_lottery_id : 703726
+2018-09-13 18:14:05,108 - append_predict.main - INFO - save purchase_number_list : 0,0,0,0,2|3|5|6|7|8|9,0,0,0,0,0
+2018-09-13 18:14:05,109 - append_predict.main - INFO - gain_money_total total : 1
+2018-09-13 18:14:05,109 - append_predict.main - DEBUG - purchase_number_list len: 7
+2018-09-13 18:14:05,111 - append_predict.main - INFO - result xiazhu : 1
+2018-09-13 18:14:07,355 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 18:14:07,381 - append_purchase.purchase_client_main - INFO - start purchase, xiazhu money:1
+2018-09-13 18:14:07,391 - append_purchase.purchase_client_main - INFO - calc gain_all_money:10
+2018-09-13 18:14:07,394 - append_purchase.purchase_client_main - INFO - purchase_url:https://7989674523-bdgj.qq168.ws/member/index#
+2018-09-13 18:14:07,411 - append_purchase.purchase_client_main - INFO - purchase_url reload ok
+2018-09-13 18:14:19,944 - append_purchase.purchase_client_main - ERROR - web get gain_all_money error!
+2018-09-13 18:14:19,944 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_2"]/input
+2018-09-13 18:14:19,946 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 18:14:19,967 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_3"]/input
+2018-09-13 18:14:19,969 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 18:14:19,980 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_5"]/input
+2018-09-13 18:14:19,980 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 18:14:19,993 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_6"]/input
+2018-09-13 18:14:19,993 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 18:14:20,006 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_7"]/input
+2018-09-13 18:14:20,006 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 18:14:20,019 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_8"]/input
+2018-09-13 18:14:20,019 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 18:14:20,033 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_9"]/input
+2018-09-13 18:14:20,035 - append_purchase.purchase_client_main - INFO - current xaizhu money:1
+2018-09-13 18:14:24,099 - append_purchase.purchase_client_main - INFO - 余额充足
+2018-09-13 18:14:25,104 - append_purchase.purchase_client_main - INFO - current url:https://7989674523-bdgj.qq168.ws/member/index#
+2018-09-13 18:14:25,104 - append_purchase.purchase_client_main - INFO - purchase sucess!, input money:7
+2018-09-13 18:14:25,326 - append_purchase.purchase_client_main - INFO - save xiazhu args sucess!
+2018-09-13 18:18:03,339 - append_purchase.client_thread - INFO - 开始购买
+2018-09-13 18:18:08,213 - append_predict.thread - INFO - current_date:20180913 18:18:08
+2018-09-13 18:18:08,213 - append_predict.thread - INFO - start purchase
+2018-09-13 18:18:18,213 - append_predict.spider_pk10 - INFO - url:http://z.apiplus.net/daily.do?token=t3cffb3f43eb3c9b1k&code=bjpk10&format=json&date=2018-09-13
+2018-09-13 18:18:18,341 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 18:18:33,342 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 18:18:48,344 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 18:18:59,690 - append_predict.main - DEBUG - lottery_id: 703726
+2018-09-13 18:18:59,691 - append_predict.main - INFO - lottery_num: 10,03,05,02,04,08,06,07,01,09
+2018-09-13 18:18:59,693 - append_predict.main - DEBUG - mingci [5]: 4
+2018-09-13 18:18:59,693 - append_predict.main - DEBUG - purchase_number_list[i]: [u'2', u'3', u'5', u'6', u'7', u'8', u'9']
+2018-09-13 18:18:59,693 - append_predict.main - DEBUG - ------all_count: 7  ----target_count: 0 
+2018-09-13 18:18:59,694 - append_predict.main - DEBUG - target_count: 0.000000
+2018-09-13 18:19:00,234 - append_predict.main - INFO - last_purchase_hit: False
+2018-09-13 18:19:00,237 - append_predict.main - INFO - xiazhu_nums: 5
+2018-09-13 18:19:03,434 - append_purchase.purchase_client_main - INFO - purchase time is no region!
+2018-09-13 18:19:13,273 - append_predict.predict_append_rule_fixed - INFO - scroll finish!
+2018-09-13 18:19:13,273 - append_predict.predict_append_rule_fixed - INFO - click select
+2018-09-13 18:19:14,773 - append_predict.predict_append_rule_fixed - INFO - click 100
+2018-09-13 18:19:35,964 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 30.3
+2018-09-13 18:19:35,966 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:19:35,976 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 39.39
+2018-09-13 18:19:35,976 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:19:35,990 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 26.26
+2018-09-13 18:19:35,990 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:19:36,003 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 31.31
+2018-09-13 18:19:36,005 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:19:36,017 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 27.27
+2018-09-13 18:19:36,019 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:19:36,032 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 33.33
+2018-09-13 18:19:36,032 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:19:36,046 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 40.4
+2018-09-13 18:19:36,046 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:19:36,058 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 38.38
+2018-09-13 18:19:36,058 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:19:36,071 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 33.33
+2018-09-13 18:19:36,071 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 1
+2018-09-13 18:19:36,085 - append_predict.predict_append_rule_fixed - INFO - current_percent_all: 31.31
+2018-09-13 18:19:36,085 - append_predict.predict_append_rule_fixed - INFO - all_continue_hit_number: 0
+2018-09-13 18:19:36,085 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_min: 26.26
+2018-09-13 18:19:36,085 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_second_min: 27.27
+2018-09-13 18:19:36,085 - append_predict.predict_append_rule_fixed - INFO - current_percent_all_min: 26.26
+2018-09-13 18:19:36,085 - append_predict.predict_append_rule_fixed - INFO - current_all_continue_hit_max: 1
+2018-09-13 18:19:36,099 - append_predict.predict_append_rule_fixed - INFO - number_list: [7, 6, 9, 6, 4, 5, 8, 1, 8, 5]
+2018-09-13 18:19:36,114 - append_predict.predict_append_rule_fixed - INFO - number_list: [7, 5, 10, 4, 3, 7, 7, 5, 8, 5]
+2018-09-13 18:19:36,128 - append_predict.predict_append_rule_fixed - INFO - number_list: [2, 6, 3, 4, 10, 3, 2, 9, 6, 5]
+2018-09-13 18:19:36,128 - append_predict.predict_append_rule_fixed - INFO - last not hit
+2018-09-13 18:19:36,141 - append_predict.predict_append_rule_fixed - INFO - number_list: [9, 7, 5, 8, 2, 8, 4, 3, 5, 6]
+2018-09-13 18:19:36,157 - append_predict.predict_append_rule_fixed - INFO - number_list: [9, 1, 1, 5, 5, 3, 6, 1, 9, 6]
+2018-09-13 18:19:36,170 - append_predict.predict_append_rule_fixed - INFO - number_list: [2, 4, 9, 7, 1, 8, 10, 2, 8, 6]
+2018-09-13 18:19:36,181 - append_predict.predict_append_rule_fixed - INFO - number_list: [10, 6, 10, 5, 5, 7, 8, 9, 9, 7]
+2018-09-13 18:19:36,194 - append_predict.predict_append_rule_fixed - INFO - number_list: [9, 6, 10, 8, 1, 6, 5, 7, 4, 8]
+2018-09-13 18:19:36,210 - append_predict.predict_append_rule_fixed - INFO - number_list: [5, 4, 7, 2, 8, 3, 8, 6, 2, 1]
+2018-09-13 18:19:36,223 - append_predict.predict_append_rule_fixed - INFO - number_list: [6, 7, 9, 4, 8, 7, 5, 5, 7, 4]
+2018-09-13 18:19:36,223 - append_predict.main - INFO - save predict_lottery_id : 703727
+2018-09-13 18:19:36,224 - append_predict.main - INFO - save purchase_number_list : 0,0,0,0,2|3|5|6|7|8|9,0,0,0,0,0
+2018-09-13 18:19:36,226 - append_predict.main - INFO - gain_money_total total : -7
+2018-09-13 18:19:36,226 - append_predict.main - DEBUG - purchase_number_list len: 7
+2018-09-13 18:19:36,226 - append_predict.main - INFO - result xiazhu : 3
+2018-09-13 18:19:38,767 - append_purchase.purchase_client_main - INFO - start purchase, xiazhu money:3
+2018-09-13 18:19:38,776 - append_purchase.purchase_client_main - INFO - calc gain_all_money:3
+2018-09-13 18:19:38,779 - append_purchase.purchase_client_main - INFO - purchase_url:https://7989674523-bdgj.qq168.ws/member/index#
+2018-09-13 18:19:38,796 - append_purchase.purchase_client_main - INFO - purchase_url reload ok
+2018-09-13 18:19:51,125 - append_purchase.purchase_client_main - ERROR - web get gain_all_money error!
+2018-09-13 18:19:51,125 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_2"]/input
+2018-09-13 18:19:51,125 - append_purchase.purchase_client_main - INFO - current xaizhu money:3
+2018-09-13 18:19:51,145 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_3"]/input
+2018-09-13 18:19:51,147 - append_purchase.purchase_client_main - INFO - current xaizhu money:3
+2018-09-13 18:19:51,163 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_5"]/input
+2018-09-13 18:19:51,163 - append_purchase.purchase_client_main - INFO - current xaizhu money:3
+2018-09-13 18:19:51,176 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_6"]/input
+2018-09-13 18:19:51,176 - append_purchase.purchase_client_main - INFO - current xaizhu money:3
+2018-09-13 18:19:51,190 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_7"]/input
+2018-09-13 18:19:51,190 - append_purchase.purchase_client_main - INFO - current xaizhu money:3
+2018-09-13 18:19:51,201 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_8"]/input
+2018-09-13 18:19:51,201 - append_purchase.purchase_client_main - INFO - current xaizhu money:3
+2018-09-13 18:19:51,214 - append_purchase.purchase_client_main - INFO - start purchase purchase_element://*[@id="a_B5_9"]/input
+2018-09-13 18:19:51,216 - append_purchase.purchase_client_main - INFO - current xaizhu money:3
+2018-09-13 18:19:55,477 - append_purchase.purchase_client_main - INFO - 余额充足
+2018-09-13 18:19:56,483 - append_purchase.purchase_client_main - INFO - current url:https://7989674523-bdgj.qq168.ws/member/index#
+2018-09-13 18:19:56,483 - append_purchase.purchase_client_main - INFO - purchase sucess!, input money:21
+2018-09-13 18:19:56,585 - append_purchase.purchase_client_main - INFO - save xiazhu args sucess!

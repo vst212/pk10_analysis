@@ -60,6 +60,9 @@ import append_purchase_jinsha.purchase_client_main
 #####力德 自动化购买
 import append_purchase_lide.purchase_client_main
 
+#####HF 自动化购买
+import append_purchase_hf.purchase_client_main
+
 
 
 #######################追加方式自动化 --两面盘
@@ -182,6 +185,12 @@ urlpatterns = [
     ######基于杀号自动化购买####
     url(r'^append_purchase_lide/$', append_purchase_lide.purchase_client_main.auto_admin),
     url(r'^append_purchase_lide_control/$', append_purchase_lide.purchase_client_main.control_probuser_thread),
+
+
+    #######!!!++++++++++++++++++++++++++++++++基于追加方式的新一期优化  HF系统自动化购买++++++++++++++++++######################
+    ######基于杀号自动化购买####
+    url(r'^append_purchase_hf/$', append_purchase_hf.purchase_client_main.auto_admin),
+    url(r'^append_purchase_hf_control/$', append_purchase_hf.purchase_client_main.control_probuser_thread),
 
 
     ###################################################################################################

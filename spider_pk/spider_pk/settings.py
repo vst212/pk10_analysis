@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'append_purchase_dianyou',
     'append_purchase_jinsha',
     'append_purchase_lide',
+    'append_purchase_hf',
     'pkten_log',
     'append_purchase_baodao_sandd',
     'append_predict_sandd',

@@ -485,7 +485,7 @@ def get_server_request_info():
     headers = {
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
     }
-    url = 'http://127.0.0.1:8006/get_append_predict_data/'
+    url = 'http://127.0.0.1:8106/get_append_predict_data/'
     request_flag = True
     count = 0
     while(request_flag):

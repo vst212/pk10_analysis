@@ -18,7 +18,7 @@ def spider_predict_selenium():
 
     driver_flag = True
     while(driver_flag):
-        driver = webdriver.Firefox(executable_path = 'E:\\python\\webdriver\\firefox\\geckodriver.exe')
+        driver = webdriver.Firefox(executable_path = './pkten_log/geckodriver.exe')
 
         driver.get("https://www.1399p.com/pk10/shdd")
         try:
